@@ -1,0 +1,1068 @@
+[
+  {
+    "source_id": "fc-erdosproblems-274",
+    "target_id": "fc-wikipedia-gapconjecture",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/ErdosProblems/274.lean#L81-L91",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/ErdosProblems/274.lean#L81-L91",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/GapConjecture.lean#L35-L46"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-wikipedia-gapconjecture",
+    "target_id": "fc-wikipedia-kaplansky",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/GapConjecture.lean#L35-L46",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/GapConjecture.lean#L35-L46",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/Kaplansky.lean#L60-L67"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-wikipedia-kaplansky",
+    "target_id": "fc-wikipedia-koethe",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/Kaplansky.lean#L60-L67",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/Kaplansky.lean#L60-L67",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/Koethe.lean#L125-L129"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-wikipedia-localuniformization",
+    "target_id": "fc-wikipedia-serremultiplicityconjectures",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/LocalUniformization.lean#L113-L126",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/LocalUniformization.lean#L113-L126",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/SerreMultiplicityConjectures.lean#L101-L112"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-erdosproblems-513",
+    "target_id": "fc-erdosproblems-517",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/ErdosProblems/513.lean#L41-L46",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/ErdosProblems/513.lean#L41-L46",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/ErdosProblems/517.lean#L35-L40"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-erdosproblems-517",
+    "target_id": "fc-erdosproblems-906",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/ErdosProblems/517.lean#L35-L40",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/ErdosProblems/517.lean#L35-L40",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/ErdosProblems/906.lean#L30-L35"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-wikipedia-diametersimplefinitegroups",
+    "target_id": "fc-other-beavermatholympiad",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/DiameterSimpleFiniteGroups.lean#L149-L158",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/DiameterSimpleFiniteGroups.lean#L149-L158",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Other/BeaverMathOlympiad.lean#L46-L77"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-other-beavermatholympiad",
+    "target_id": "fc-wikipedia-beckfialaconjecture",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Other/BeaverMathOlympiad.lean#L46-L77",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Other/BeaverMathOlympiad.lean#L46-L77",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/BeckFialaConjecture.lean#L78-L91"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-wikipedia-beckfialaconjecture",
+    "target_id": "fc-greensopenproblems-14",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/BeckFialaConjecture.lean#L78-L91",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/BeckFialaConjecture.lean#L78-L91",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/GreensOpenProblems/14.lean#L140-L154"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-greensopenproblems-14",
+    "target_id": "fc-greensopenproblems-21",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/GreensOpenProblems/14.lean#L140-L154",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/GreensOpenProblems/14.lean#L140-L154",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/GreensOpenProblems/21.lean#L93-L103"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-greensopenproblems-21",
+    "target_id": "fc-greensopenproblems-31",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/GreensOpenProblems/21.lean#L93-L103",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/GreensOpenProblems/21.lean#L93-L103",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/GreensOpenProblems/31.lean#L83-L91"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-greensopenproblems-31",
+    "target_id": "fc-greensopenproblems-33",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/GreensOpenProblems/31.lean#L83-L91",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/GreensOpenProblems/31.lean#L83-L91",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/GreensOpenProblems/33.lean#L38-L48"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-greensopenproblems-33",
+    "target_id": "fc-greensopenproblems-37",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/GreensOpenProblems/33.lean#L38-L48",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/GreensOpenProblems/33.lean#L38-L48",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/GreensOpenProblems/37.lean#L60-L67"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-greensopenproblems-37",
+    "target_id": "fc-greensopenproblems-40",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/GreensOpenProblems/37.lean#L60-L67",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/GreensOpenProblems/37.lean#L60-L67",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/GreensOpenProblems/40.lean#L153-L159"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-greensopenproblems-40",
+    "target_id": "fc-greensopenproblems-5",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/GreensOpenProblems/40.lean#L153-L159",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/GreensOpenProblems/40.lean#L153-L159",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/GreensOpenProblems/5.lean#L45-L60"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-greensopenproblems-5",
+    "target_id": "fc-greensopenproblems-50",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/GreensOpenProblems/5.lean#L45-L60",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/GreensOpenProblems/5.lean#L45-L60",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/GreensOpenProblems/50.lean#L39-L60"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-greensopenproblems-50",
+    "target_id": "fc-greensopenproblems-58",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/GreensOpenProblems/50.lean#L39-L60",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/GreensOpenProblems/50.lean#L39-L60",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/GreensOpenProblems/58.lean#L31-L40"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-greensopenproblems-58",
+    "target_id": "fc-greensopenproblems-72",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/GreensOpenProblems/58.lean#L31-L40",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/GreensOpenProblems/58.lean#L31-L40",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/GreensOpenProblems/72.lean#L101-L105"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-greensopenproblems-72",
+    "target_id": "fc-greensopenproblems-77",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/GreensOpenProblems/72.lean#L101-L105",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/GreensOpenProblems/72.lean#L101-L105",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/GreensOpenProblems/77.lean#L34-L41"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-greensopenproblems-77",
+    "target_id": "fc-wikipedia-dedekindnumber",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/GreensOpenProblems/77.lean#L34-L41",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/GreensOpenProblems/77.lean#L34-L41",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/DedekindNumber.lean#L264-L269"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-wikipedia-dedekindnumber",
+    "target_id": "fc-erdosproblems-10",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/DedekindNumber.lean#L264-L269",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/DedekindNumber.lean#L264-L269",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/ErdosProblems/10.lean#L58-L63"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-erdosproblems-10",
+    "target_id": "fc-erdosproblems-1029",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/ErdosProblems/10.lean#L58-L63",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/ErdosProblems/10.lean#L58-L63",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/ErdosProblems/1029.lean#L39-L50"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-erdosproblems-1029",
+    "target_id": "fc-wikipedia-gracefullabeling",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/ErdosProblems/1029.lean#L39-L50",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/ErdosProblems/1029.lean#L39-L50",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/GracefulLabeling.lean#L69-L87"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-wikipedia-gracefullabeling",
+    "target_id": "fc-greensopenproblems-12",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/GracefulLabeling.lean#L69-L87",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/GracefulLabeling.lean#L69-L87",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/GreensOpenProblems/12.lean#L33-L48"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-greensopenproblems-12",
+    "target_id": "fc-greensopenproblems-15",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/GreensOpenProblems/12.lean#L33-L48",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/GreensOpenProblems/12.lean#L33-L48",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/GreensOpenProblems/15.lean#L38-L45"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-greensopenproblems-15",
+    "target_id": "fc-greensopenproblems-38",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/GreensOpenProblems/15.lean#L38-L45",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/GreensOpenProblems/15.lean#L38-L45",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/GreensOpenProblems/38.lean#L103-L109"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-greensopenproblems-38",
+    "target_id": "fc-greensopenproblems-39",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/GreensOpenProblems/38.lean#L103-L109",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/GreensOpenProblems/38.lean#L103-L109",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/GreensOpenProblems/39.lean#L110-L127"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-greensopenproblems-39",
+    "target_id": "fc-greensopenproblems-51",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/GreensOpenProblems/39.lean#L110-L127",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/GreensOpenProblems/39.lean#L110-L127",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/GreensOpenProblems/51.lean#L72-L81"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-greensopenproblems-51",
+    "target_id": "fc-greensopenproblems-52",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/GreensOpenProblems/51.lean#L72-L81",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/GreensOpenProblems/51.lean#L72-L81",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/GreensOpenProblems/52.lean#L34-L43"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-greensopenproblems-52",
+    "target_id": "fc-greensopenproblems-53",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/GreensOpenProblems/52.lean#L34-L43",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/GreensOpenProblems/52.lean#L34-L43",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/GreensOpenProblems/53.lean#L35-L46"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-greensopenproblems-53",
+    "target_id": "fc-wikipedia-pebblingnumberconjecture",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/GreensOpenProblems/53.lean#L35-L46",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/GreensOpenProblems/53.lean#L35-L46",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/PebblingNumberConjecture.lean#L127-L136"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-wikipedia-pebblingnumberconjecture",
+    "target_id": "fc-wikipedia-ramseynumbers",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/PebblingNumberConjecture.lean#L127-L136",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/PebblingNumberConjecture.lean#L127-L136",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/RamseyNumbers.lean#L92-L99"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-wikipedia-ramseynumbers",
+    "target_id": "fc-wikipedia-sidorenkoconjecture",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/RamseyNumbers.lean#L92-L99",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/RamseyNumbers.lean#L92-L99",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/SidorenkoConjecture.lean#L141-L158"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-wikipedia-sidorenkoconjecture",
+    "target_id": "fc-wikipedia-snakeinthebox",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/SidorenkoConjecture.lean#L141-L158",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/SidorenkoConjecture.lean#L141-L158",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/SnakeInTheBox.lean#L140-L145"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-wikipedia-snakeinthebox",
+    "target_id": "fc-wikipedia-unionclosed",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/SnakeInTheBox.lean#L140-L145",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/SnakeInTheBox.lean#L140-L145",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/UnionClosed.lean#L54-L63"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-wikipedia-unionclosed",
+    "target_id": "fc-wikipedia-vizingconjecture",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/UnionClosed.lean#L54-L63",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/UnionClosed.lean#L54-L63",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/VizingConjecture.lean#L42-L52"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-greensopenproblems-41",
+    "target_id": "fc-erdosproblems-102",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/GreensOpenProblems/41.lean#L64-L72",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/GreensOpenProblems/41.lean#L64-L72",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/ErdosProblems/102.lean#L110-L117"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-erdosproblems-1088",
+    "target_id": "fc-erdosproblems-352",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/ErdosProblems/1088.lean#L61-L75",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/ErdosProblems/1088.lean#L61-L75",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/ErdosProblems/352.lean#L33-L42"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-erdosproblems-352",
+    "target_id": "fc-erdosproblems-503",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/ErdosProblems/352.lean#L33-L42",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/ErdosProblems/352.lean#L33-L42",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/ErdosProblems/503.lean#L34-L41"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-erdosproblems-503",
+    "target_id": "fc-erdosproblems-506",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/ErdosProblems/503.lean#L34-L41",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/ErdosProblems/503.lean#L34-L41",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/ErdosProblems/506.lean#L91-L101"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-erdosproblems-506",
+    "target_id": "fc-erdosproblems-508",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/ErdosProblems/506.lean#L91-L101",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/ErdosProblems/506.lean#L91-L101",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/ErdosProblems/508.lean#L47-L56"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-erdosproblems-508",
+    "target_id": "fc-erdosproblems-604",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/ErdosProblems/508.lean#L47-L56",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/ErdosProblems/508.lean#L47-L56",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/ErdosProblems/604.lean#L81-L88"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-erdosproblems-604",
+    "target_id": "fc-erdosproblems-660",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/ErdosProblems/604.lean#L81-L88",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/ErdosProblems/604.lean#L81-L88",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/ErdosProblems/660.lean#L73-L81"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-erdosproblems-660",
+    "target_id": "fc-erdosproblems-661",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/ErdosProblems/660.lean#L73-L81",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/ErdosProblems/660.lean#L73-L81",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/ErdosProblems/661.lean#L102-L113"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-erdosproblems-661",
+    "target_id": "fc-erdosproblems-668",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/ErdosProblems/661.lean#L102-L113",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/ErdosProblems/661.lean#L102-L113",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/ErdosProblems/668.lean#L44-L57"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-erdosproblems-668",
+    "target_id": "fc-erdosproblems-769",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/ErdosProblems/668.lean#L44-L57",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/ErdosProblems/668.lean#L44-L57",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/ErdosProblems/769.lean#L87-L98"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-erdosproblems-769",
+    "target_id": "fc-erdosproblems-89",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/ErdosProblems/769.lean#L87-L98",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/ErdosProblems/769.lean#L87-L98",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/ErdosProblems/89.lean#L45-L52"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-erdosproblems-89",
+    "target_id": "fc-erdosproblems-97",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/ErdosProblems/89.lean#L45-L52",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/ErdosProblems/89.lean#L45-L52",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/ErdosProblems/97.lean#L107-L113"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-erdosproblems-97",
+    "target_id": "fc-erdosproblems-982",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/ErdosProblems/97.lean#L107-L113",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/ErdosProblems/97.lean#L107-L113",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/ErdosProblems/982.lean#L32-L39"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-erdosproblems-1176",
+    "target_id": "fc-erdosproblems-1177",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/ErdosProblems/1176.lean#L32-L46",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/ErdosProblems/1176.lean#L32-L46",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/ErdosProblems/1177.lean#L33-L47"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-erdosproblems-1177",
+    "target_id": "fc-erdosproblems-592",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/ErdosProblems/1177.lean#L33-L47",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/ErdosProblems/1177.lean#L33-L47",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/ErdosProblems/592.lean#L36-L42"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-erdosproblems-592",
+    "target_id": "fc-erdosproblems-623",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/ErdosProblems/592.lean#L36-L42",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/ErdosProblems/592.lean#L36-L42",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/ErdosProblems/623.lean#L33-L41"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-erdosproblems-623",
+    "target_id": "fc-erdosproblems-70",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/ErdosProblems/623.lean#L33-L41",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/ErdosProblems/623.lean#L33-L41",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/ErdosProblems/70.lean#L133-L144"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-wikipedia-abc",
+    "target_id": "fc-wikipedia-agrawal",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/ABC.lean#L68-L74",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/ABC.lean#L68-L74",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/Agrawal.lean#L42-L58"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-wikipedia-agrawal",
+    "target_id": "fc-wikipedia-amicablenumbers",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/Agrawal.lean#L42-L58",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/Agrawal.lean#L42-L58",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/AmicableNumbers.lean#L56-L67"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-wikipedia-amicablenumbers",
+    "target_id": "fc-wikipedia-andrica",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/AmicableNumbers.lean#L56-L67",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/AmicableNumbers.lean#L56-L67",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/Andrica.lean#L33-L39"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-wikipedia-andrica",
+    "target_id": "fc-wikipedia-artinprimitiverootsconjecture",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/Andrica.lean#L33-L39",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/Andrica.lean#L33-L39",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/ArtinPrimitiveRootsConjecture.lean#L135-L147"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-wikipedia-artinprimitiverootsconjecture",
+    "target_id": "fc-wikipedia-balancedprimes",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/ArtinPrimitiveRootsConjecture.lean#L135-L147",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/ArtinPrimitiveRootsConjecture.lean#L135-L147",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/BalancedPrimes.lean#L32-L38"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-wikipedia-balancedprimes",
+    "target_id": "fc-wikipedia-bealconjecture",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/BalancedPrimes.lean#L32-L38",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/BalancedPrimes.lean#L32-L38",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/BealConjecture.lean#L34-L39"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-wikipedia-bealconjecture",
+    "target_id": "fc-wikipedia-betrothednumbers",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/BealConjecture.lean#L34-L39",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/BealConjecture.lean#L34-L39",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/BetrothedNumbers.lean#L55-L68"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-wikipedia-betrothednumbers",
+    "target_id": "fc-wikipedia-brocardconjecture",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/BetrothedNumbers.lean#L55-L68",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/BetrothedNumbers.lean#L55-L68",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/BrocardConjecture.lean#L34-L43"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-wikipedia-brocardconjecture",
+    "target_id": "fc-wikipedia-bunyakovsky",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/BrocardConjecture.lean#L34-L43",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/BrocardConjecture.lean#L34-L43",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/Bunyakovsky.lean#L31-L39"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-wikipedia-bunyakovsky",
+    "target_id": "fc-wikipedia-buchi",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/Bunyakovsky.lean#L31-L39",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/Bunyakovsky.lean#L31-L39",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/Buchi.lean#L47-L55"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-wikipedia-buchi",
+    "target_id": "fc-wikipedia-carmichaeltotient",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/Buchi.lean#L47-L55",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/Buchi.lean#L47-L55",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/CarmichaelTotient.lean#L56-L60"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-wikipedia-carmichaeltotient",
+    "target_id": "fc-wikipedia-catalan",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/CarmichaelTotient.lean#L56-L60",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/CarmichaelTotient.lean#L56-L60",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/Catalan.lean#L42-L50"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-wikipedia-catalan",
+    "target_id": "fc-wikipedia-classnumberproblem",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/Catalan.lean#L42-L50",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/Catalan.lean#L42-L50",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/ClassNumberProblem.lean#L36-L42"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-wikipedia-classnumberproblem",
+    "target_id": "fc-wikipedia-congruentnumber",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/ClassNumberProblem.lean#L36-L42",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/ClassNumberProblem.lean#L36-L42",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/CongruentNumber.lean#L116-L119"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-wikipedia-congruentnumber",
+    "target_id": "fc-wikipedia-dickson",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/CongruentNumber.lean#L116-L119",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/CongruentNumber.lean#L116-L119",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/Dickson.lean#L37-L44"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-wikipedia-dickson",
+    "target_id": "fc-wikipedia-eulersumofpowers",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/Dickson.lean#L37-L44",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/Dickson.lean#L37-L44",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/EulerSumOfPowers.lean#L30-L40"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-wikipedia-eulersumofpowers",
+    "target_id": "fc-wikipedia-feitthompsonprimeconjecture",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/EulerSumOfPowers.lean#L30-L40",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/EulerSumOfPowers.lean#L30-L40",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/FeitThompsonPrimeConjecture.lean#L30-L35"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-wikipedia-feitthompsonprimeconjecture",
+    "target_id": "fc-wikipedia-fibonacciprimes",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/FeitThompsonPrimeConjecture.lean#L30-L35",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/FeitThompsonPrimeConjecture.lean#L30-L35",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/FibonacciPrimes.lean#L30-L37"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-wikipedia-fibonacciprimes",
+    "target_id": "fc-wikipedia-hardylittlewood",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/FibonacciPrimes.lean#L30-L37",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/FibonacciPrimes.lean#L30-L37",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/HardyLittlewood.lean#L103-L113"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-wikipedia-hardylittlewood",
+    "target_id": "fc-wikipedia-gausscircleproblem",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/HardyLittlewood.lean#L103-L113",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/HardyLittlewood.lean#L103-L113",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/GaussCircleProblem.lean#L81-L93"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-wikipedia-gausscircleproblem",
+    "target_id": "fc-wikipedia-grimm",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/GaussCircleProblem.lean#L81-L93",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/GaussCircleProblem.lean#L81-L93",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/Grimm.lean#L32-L40"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-wikipedia-grimm",
+    "target_id": "fc-wikipedia-kummervandiver",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/Grimm.lean#L32-L40",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/Grimm.lean#L32-L40",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/KummerVandiver.lean#L34-L40"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-wikipedia-kummervandiver",
+    "target_id": "fc-wikipedia-landerparkinandselfridgeconjecture",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/KummerVandiver.lean#L34-L40",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/KummerVandiver.lean#L34-L40",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/LanderParkinAndSelfridgeConjecture.lean#L30-L46"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-wikipedia-landerparkinandselfridgeconjecture",
+    "target_id": "fc-wikipedia-lehmermahlermeasureproblem",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/LanderParkinAndSelfridgeConjecture.lean#L30-L46",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/LanderParkinAndSelfridgeConjecture.lean#L30-L46",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/LehmerMahlerMeasureProblem.lean#L54-L59"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-wikipedia-lehmermahlermeasureproblem",
+    "target_id": "fc-wikipedia-algebraicnormality",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/LehmerMahlerMeasureProblem.lean#L54-L59",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/LehmerMahlerMeasureProblem.lean#L54-L59",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/AlgebraicNormality.lean#L72-L75"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-wikipedia-algebraicnormality",
+    "target_id": "fc-millennium-riemannhypothesis",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/AlgebraicNormality.lean#L72-L75",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/AlgebraicNormality.lean#L72-L75",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Millennium/RiemannHypothesis.lean#L51-L61"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-millennium-riemannhypothesis",
+    "target_id": "fc-wikipedia-ellipticcurverank",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Millennium/RiemannHypothesis.lean#L51-L61",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Millennium/RiemannHypothesis.lean#L51-L61",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/EllipticCurveRank.lean#L104-L110"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-wikipedia-ellipticcurverank",
+    "target_id": "fc-millennium-bsd",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/EllipticCurveRank.lean#L104-L110",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/EllipticCurveRank.lean#L104-L110",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Millennium/BSD.lean#L71-L74"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  },
+  {
+    "source_id": "fc-millennium-bsd",
+    "target_id": "fc-wikipedia-hasseweil",
+    "type": "related_to",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Millennium/BSD.lean#L71-L74",
+    "evidence_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Millennium/BSD.lean#L71-L74",
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/HasseWeil.lean#L87-L93"
+    ],
+    "review_status": "unverified",
+    "review_date": null,
+    "basis": "Shared upstream AMS subject tag; a navigation association only, not a logical or mathematical dependency."
+  }
+]

@@ -1,0 +1,161 @@
+'use client';
+import Link from 'next/link';
+import { useMemo, useState } from 'react';
+import { ArrowDownUp, ArrowUpRight, Search, SlidersHorizontal, X } from 'lucide-react';
+import { queryProblems, type Filters } from '@/lib/query';
+import type { Problem } from '@/lib/schema';
+import { Badge } from './status';
+
+export function ProblemExplorer({
+  problems,
+  fields,
+  initial,
+}: {
+  problems: Problem[];
+  fields: string[];
+  initial: Filters;
+}) {
+  const [filters, setFilters] = useState<Filters>(initial);
+  const [page, setPage] = useState(1);
+  const results = useMemo(() => queryProblems(problems, filters), [problems, filters]);
+  function update(key: keyof Filters, value: string) {
+    const next = { ...filters, [key]: value };
+    setFilters(next);
+    setPage(1);
+    const params = new URLSearchParams();
+    for (const [k, v] of Object.entries(next)) if (v) params.set(k, v);
+    window.history.replaceState(null, '', `/problems${params.size ? `?${params}` : ''}`);
+  }
+  return (
+    <>
+      <div className="explorer-toolbar">
+        <label className="search-input">
+          <Search size={18} />
+          <input
+            aria-label="Search problems"
+            placeholder="Search problems, statements, aliases, MSC…"
+            value={filters.q ?? ''}
+            onChange={(e) => update('q', e.target.value)}
+          />
+          {filters.q ? (
+            <button aria-label="Clear search" onClick={() => update('q', '')}>
+              <X size={15} />
+            </button>
+          ) : (
+            <kbd>/</kbd>
+          )}
+        </label>
+        <label className="select-label">
+          <SlidersHorizontal size={15} />
+          <select
+            aria-label="Filter by field"
+            value={filters.field ?? ''}
+            onChange={(e) => update('field', e.target.value)}
+          >
+            <option value="">All fields</option>
+            {fields.map((f) => (
+              <option key={f}>{f}</option>
+            ))}
+          </select>
+        </label>
+        <label className="select-label">
+          <select
+            aria-label="Filter by status"
+            value={filters.status ?? ''}
+            onChange={(e) => update('status', e.target.value)}
+          >
+            <option value="">All statuses</option>
+            {['open', 'partially_resolved', 'solved', 'disputed', 'unknown'].map((s) => (
+              <option key={s} value={s}>
+                {s.replaceAll('_', ' ')}
+              </option>
+            ))}
+          </select>
+        </label>
+      </div>
+      <div className="result-meta">
+        <span aria-live="polite">
+          <strong>{results.length}</strong> problems found{' '}
+          <span className="dim">/ {problems.length} indexed</span>
+        </span>
+        <label className="sort-label">
+          <ArrowDownUp size={14} />
+          <select
+            aria-label="Sort problems"
+            value={filters.sort ?? 'title-asc'}
+            onChange={(e) => update('sort', e.target.value)}
+          >
+            <option value="title-asc">Title: A → Z</option>
+            <option value="title-desc">Title: Z → A</option>
+            <option value="field">Mathematical field</option>
+            <option value="status">Status</option>
+          </select>
+        </label>
+      </div>
+      <div className="problem-table" role="table" aria-label="Mathematical problems">
+        <div className="table-head" role="row">
+          <span role="columnheader">PROBLEM / CANONICAL ID</span>
+          <span role="columnheader">FIELD</span>
+          <span role="columnheader">STATUS</span>
+          <span role="columnheader">EVIDENCE</span>
+          <span />
+        </div>
+        {results.slice((page - 1) * 20, page * 20).map((p) => (
+          <Link href={`/problems/${p.id}`} key={p.id} className="problem-row" role="row">
+            <span role="cell">
+              <strong>{p.title}</strong>
+              <small>{p.id}</small>
+            </span>
+            <span role="cell" className="field-cell">
+              {p.field}
+              <small>MSC {p.MSC.join(' · ')}</small>
+            </span>
+            <span role="cell">
+              <Badge>{p.status}</Badge>
+            </span>
+            <span role="cell">
+              <Badge tone="amber">{p.review_status}</Badge>
+            </span>
+            <ArrowUpRight size={16} />
+          </Link>
+        ))}
+      </div>
+      {!results.length ? (
+        <div className="empty-state">
+          <Search size={26} />
+          <h3>No matching problems</h3>
+          <p>
+            Try a different term or clear the filters. Independent status review is pending for this
+            first collection.
+          </p>
+          <button
+            onClick={() => {
+              setFilters({});
+              setPage(1);
+              window.history.replaceState(null, '', '/problems');
+            }}
+          >
+            Reset filters
+          </button>
+        </div>
+      ) : (
+        <div className="pagination">
+          <span>
+            Showing {(page - 1) * 20 + 1}–{Math.min(page * 20, results.length)} of {results.length}
+          </span>
+          <div>
+            <button disabled={page === 1} onClick={() => setPage((p) => p - 1)}>
+              Previous
+            </button>
+            <span>
+              {page} / {Math.ceil(results.length / 20)}
+            </span>
+            <button disabled={page * 20 >= results.length} onClick={() => setPage((p) => p + 1)}>
+              Next
+            </button>
+          </div>
+        </div>
+      )}
+    </>
+  );
+}

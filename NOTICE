@@ -1,0 +1,24 @@
+ConjMap V0.1
+Copyright 2026 ConjMap contributors
+
+This product includes a selected, transformed catalog and source files from:
+Formal Conjectures, The Formal Conjectures Authors
+https://github.com/google-deepmind/formal-conjectures
+Revision: 2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6
+Licensed under Apache License, Version 2.0.
+The upstream license and individual source copyright notices are preserved in
+data/upstream/formal-conjectures/LICENSE and the corresponding .lean files.
+
+Changes: bounded extraction of documented research-open theorem statements;
+source-aware display titles; field grouping from AMS attributes; canonical IDs,
+aliases, source mappings and integrity manifest; independent status set unknown;
+all automatic imports and subject-tag discovery links marked unverified.
+The complete selected Lean files are retained with LF line endings and are not
+claimed as authored, independently reviewed, compiled or proved by ConjMap.
+
+Linked websites, papers and references remain subject to their own terms.
+No rights over linked third-party material are granted by this repository.
+
+Formal Conjectures requested citation:
+The Formal Conjectures Authors. The Formal Conjectures Repository (2025).
+https://github.com/google-deepmind/formal-conjectures

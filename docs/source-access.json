@@ -1,0 +1,141 @@
+{
+  "policy": "Single bounded GET per explicit audit URL; no crawling; response bodies not redistributed.",
+  "probes": [
+    {
+      "url": "https://www.erdosproblems.com/",
+      "checked_at_utc": "2026-10-15T07:17:47.795950+00:00",
+      "status": 200,
+      "final_url": "https://www.erdosproblems.com/",
+      "content_type": "text/html; charset=utf-8",
+      "truncated": false,
+      "bytes_read": 31426,
+      "sha256": "407c2c6c996bdabd185b804f08bb4e1db02027b6cc868e7667fd0665e6b695e4"
+    },
+    {
+      "url": "https://api.github.com/repos/teorth/erdosproblems",
+      "checked_at_utc": "2026-10-15T07:17:47.796585+00:00",
+      "status": 200,
+      "final_url": "https://api.github.com/repos/teorth/erdosproblems",
+      "content_type": "application/json; charset=utf-8",
+      "truncated": false,
+      "bytes_read": 5306,
+      "sha256": "bfb092049873c62104f1ec01a6167587c2e200adb2a6ca1f304b5fe4b56fbd6d",
+      "repository_metadata": {
+        "full_name": "teorth/erdosproblems",
+        "pushed_at": "2026-10-13T17:13:21Z",
+        "archived": false,
+        "default_branch": "main",
+        "license": {
+          "key": "apache-2.0",
+          "name": "Apache License 2.0",
+          "spdx_id": "Apache-2.0",
+          "url": "https://api.github.com/licenses/apache-2.0",
+          "node_id": "MDc6TGljZW5zZTI="
+        }
+      }
+    },
+    {
+      "url": "https://aimath.org/problemlists/",
+      "checked_at_utc": "2026-10-15T07:17:47.796941+00:00",
+      "status": 200,
+      "final_url": "https://aimath.org/problemlists/",
+      "content_type": "text/html; charset=UTF-8",
+      "truncated": false,
+      "bytes_read": 69271,
+      "sha256": "3571f2169de6a11b06666c7b4144e459db1a2214dde78766881ec4ecc04f6121"
+    },
+    {
+      "url": "https://api.github.com/repos/google-deepmind/formal-conjectures",
+      "checked_at_utc": "2026-10-15T07:17:47.797322+00:00",
+      "status": 200,
+      "final_url": "https://api.github.com/repos/google-deepmind/formal-conjectures",
+      "content_type": "application/json; charset=utf-8",
+      "truncated": false,
+      "bytes_read": 7374,
+      "sha256": "11a482841452681ff832a234436661b03393101d91a637a645a0934a9663d5fb",
+      "repository_metadata": {
+        "full_name": "google-deepmind/formal-conjectures",
+        "pushed_at": "2026-10-14T22:59:45Z",
+        "archived": false,
+        "default_branch": "main",
+        "license": {
+          "key": "apache-2.0",
+          "name": "Apache License 2.0",
+          "spdx_id": "Apache-2.0",
+          "url": "https://api.github.com/licenses/apache-2.0",
+          "node_id": "MDc6TGljZW5zZTI="
+        }
+      }
+    },
+    {
+      "url": "https://raw.githubusercontent.com/google-deepmind/formal-conjectures/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/LICENSE",
+      "checked_at_utc": "2026-10-15T07:17:49.273975+00:00",
+      "status": 200,
+      "final_url": "https://raw.githubusercontent.com/google-deepmind/formal-conjectures/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/LICENSE",
+      "content_type": "text/plain; charset=utf-8",
+      "truncated": false,
+      "bytes_read": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "url": "https://huggingface.co/datasets/ulamai/UnsolvedMath/raw/main/README.md",
+      "checked_at_utc": "2026-10-15T07:17:49.569076+00:00",
+      "status": 200,
+      "final_url": "https://huggingface.co/datasets/ulamai/UnsolvedMath/raw/main/README.md",
+      "content_type": "text/plain; charset=utf-8",
+      "truncated": false,
+      "bytes_read": 21145,
+      "sha256": "18fc2caa2164377f73332d6ea513fae8ac984687d47c6c332987f15a94439d59"
+    },
+    {
+      "url": "https://huggingface.co/datasets/OpenConjecture/openconjecture/raw/main/README.md",
+      "checked_at_utc": "2026-10-15T07:17:50.116416+00:00",
+      "status": 200,
+      "final_url": "https://huggingface.co/datasets/OpenConjecture/openconjecture/raw/main/README.md",
+      "content_type": "text/plain; charset=utf-8",
+      "truncated": false,
+      "bytes_read": 2902,
+      "sha256": "588c0c74e76d0c067dcba28d08a18630084200a11f88f85c23f40952cf74f095"
+    },
+    {
+      "url": "https://www.openproblemgarden.org/",
+      "checked_at_utc": "2026-10-15T07:17:50.177069+00:00",
+      "status": 200,
+      "final_url": "https://www.openproblemgarden.org/",
+      "content_type": "text/html; charset=utf-8",
+      "truncated": false,
+      "bytes_read": 8724,
+      "sha256": "f2fee0857bfb3eec2901aa3a941b03ae04527eb5ecbcf36343a755fe9ca37c33"
+    },
+    {
+      "url": "https://openproblem.ai/mathematical-discovery-ledger/legal",
+      "checked_at_utc": "2026-10-15T07:17:50.354261+00:00",
+      "status": 200,
+      "final_url": "https://openproblem.ai/mathematical-discovery-ledger/legal",
+      "content_type": "text/html; charset=utf-8",
+      "truncated": false,
+      "bytes_read": 9355,
+      "sha256": "45e65e6fc5e97cee641946a4632a9839e9f542b9bab284a86508fc97f29739d2"
+    },
+    {
+      "url": "https://cairn-commons.com/",
+      "checked_at_utc": "2026-10-15T07:17:50.613329+00:00",
+      "status": 200,
+      "final_url": "https://cairn-commons.com/",
+      "content_type": "text/html",
+      "truncated": false,
+      "bytes_read": 53188,
+      "sha256": "b3bb1939ed83f8b466e6b58de60e6f81a1f30f0a2e821c5aa3654955ebe80d6f"
+    },
+    {
+      "url": "https://cairncommons.dev/about",
+      "checked_at_utc": "2026-10-15T07:17:51.104829+00:00",
+      "status": 200,
+      "final_url": "https://cairncommons.dev/about",
+      "content_type": "text/html; charset=utf-8",
+      "truncated": false,
+      "bytes_read": 48233,
+      "sha256": "b8e470678ff7d57f5c5cc7937f807bce320ae255b0acc7084394c194022ce97c"
+    }
+  ]
+}
