@@ -1,0 +1,9 @@
+.cache
+.next
+.local
+node_modules
+data
+docs/screenshots
+package-lock.json
+playwright-report
+test-results
