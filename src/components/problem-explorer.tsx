@@ -1,5 +1,6 @@
 'use client';
 import Link from 'next/link';
+import { T, ProblemName, problemTitle, useLanguage, translate } from './i18n';
 import { useEffect, useMemo, useState } from 'react';
 import { ArrowDownUp, ArrowUpRight, Search, SlidersHorizontal, X } from 'lucide-react';
 import { queryProblems, type Filters } from '@/lib/query';
@@ -15,6 +16,7 @@ export function ProblemExplorer({
   fields: string[];
   initial: Filters;
 }) {
+  const { language } = useLanguage();
   const [filters, setFilters] = useState<Filters>(initial);
   const [page, setPage] = useState(1);
   useEffect(() => {
@@ -30,7 +32,15 @@ export function ProblemExplorer({
     });
     return () => window.cancelAnimationFrame(frame);
   }, []);
-  const results = useMemo(() => queryProblems(problems, filters), [problems, filters]);
+  const results = useMemo(() => {
+    if (language !== 'zh' || !filters.q?.trim()) return queryProblems(problems, filters);
+    const plain = queryProblems(problems, { ...filters, q: '' });
+    const englishIds = new Set(queryProblems(problems, filters).map((p) => p.id));
+    const q = filters.q.toLocaleLowerCase();
+    return plain.filter((p) =>
+      englishIds.has(p.id) || problemTitle(p.title, 'zh').toLocaleLowerCase().includes(q),
+    );
+  }, [problems, filters, language]);
   function update(key: keyof Filters, value: string) {
     const next = { ...filters, [key]: value };
     setFilters(next);
@@ -46,7 +56,7 @@ export function ProblemExplorer({
           <Search size={18} />
           <input
             aria-label="Search problems"
-            placeholder="Search problems, statements, aliases, MSC…"
+            placeholder={translate("Search problems, statements, aliases, MSC…", language)}
             value={filters.q ?? ''}
             onChange={(e) => update('q', e.target.value)}
           />
@@ -65,9 +75,9 @@ export function ProblemExplorer({
             value={filters.field ?? ''}
             onChange={(e) => update('field', e.target.value)}
           >
-            <option value="">All fields</option>
+            <option value=""><T en="All fields" /></option>
             {fields.map((f) => (
-              <option key={f}>{f}</option>
+              <option key={f}><T en={f} /></option>
             ))}
           </select>
         </label>
@@ -77,10 +87,10 @@ export function ProblemExplorer({
             value={filters.status ?? ''}
             onChange={(e) => update('status', e.target.value)}
           >
-            <option value="">All statuses</option>
+            <option value=""><T en="All statuses" /></option>
             {['open', 'partially_resolved', 'solved', 'disputed', 'unknown'].map((s) => (
               <option key={s} value={s}>
-                {s.replaceAll('_', ' ')}
+                <T en={s} />
               </option>
             ))}
           </select>
@@ -88,8 +98,8 @@ export function ProblemExplorer({
       </div>
       <div className="result-meta">
         <span aria-live="polite">
-          <strong>{results.length}</strong> problems found{' '}
-          <span className="dim">/ {problems.length} indexed</span>
+          <strong>{results.length}</strong> <T en="problems found" />{' '}
+          <span className="dim">/ {problems.length} <T en="indexed" /></span>
         </span>
         <label className="sort-label">
           <ArrowDownUp size={14} />
@@ -98,36 +108,36 @@ export function ProblemExplorer({
             value={filters.sort ?? 'title-asc'}
             onChange={(e) => update('sort', e.target.value)}
           >
-            <option value="title-asc">Title: A → Z</option>
-            <option value="title-desc">Title: Z → A</option>
-            <option value="field">Mathematical field</option>
-            <option value="status">Status</option>
+            <option value="title-asc"><T en="Title: A → Z" /></option>
+            <option value="title-desc"><T en="Title: Z → A" /></option>
+            <option value="field"><T en="Mathematical field" /></option>
+            <option value="status"><T en="Status" /></option>
           </select>
         </label>
       </div>
       <div className="problem-table" role="table" aria-label="Mathematical problems">
         <div className="table-head" role="row">
-          <span role="columnheader">PROBLEM / CANONICAL ID</span>
-          <span role="columnheader">FIELD</span>
-          <span role="columnheader">STATUS</span>
-          <span role="columnheader">EVIDENCE</span>
+          <span role="columnheader"><T en="PROBLEM / CANONICAL ID" /></span>
+          <span role="columnheader"><T en="FIELD" /></span>
+          <span role="columnheader"><T en="STATUS" /></span>
+          <span role="columnheader"><T en="EVIDENCE" /></span>
           <span />
         </div>
         {results.slice((page - 1) * 20, page * 20).map((p) => (
           <Link href={`/problems/${p.id}`} key={p.id} className="problem-row" role="row">
             <span role="cell">
-              <strong>{p.title}</strong>
+              <strong><ProblemName title={p.title} /></strong>
               <small>{p.id}</small>
             </span>
             <span role="cell" className="field-cell">
-              {p.field}
+              <T en={p.field} />
               <small>MSC {p.MSC.join(' · ')}</small>
             </span>
             <span role="cell">
-              <Badge>{p.status}</Badge>
+              <Badge><T en={p.status} /></Badge>
             </span>
             <span role="cell">
-              <Badge tone="amber">{p.review_status}</Badge>
+              <Badge tone="amber"><T en={p.review_status} /></Badge>
             </span>
             <ArrowUpRight size={16} />
           </Link>
@@ -136,10 +146,9 @@ export function ProblemExplorer({
       {!results.length ? (
         <div className="empty-state">
           <Search size={26} />
-          <h3>No matching problems</h3>
+          <h3><T en="No matching problems" /></h3>
           <p>
-            Try a different term or clear the filters. Independent status review is pending for this
-            first collection.
+            <T en="Try a different term or clear the filters. Independent status review is pending for this first collection." />
           </p>
           <button
             onClick={() => {
@@ -154,7 +163,7 @@ export function ProblemExplorer({
       ) : (
         <div className="pagination">
           <span>
-            Showing {(page - 1) * 20 + 1}–{Math.min(page * 20, results.length)} of {results.length}
+            <T en="Showing" /> {(page - 1) * 20 + 1}–{Math.min(page * 20, results.length)} <T en="of" zh=" / 共" /> {results.length}
           </span>
           <div>
             <button disabled={page === 1} onClick={() => setPage((p) => p - 1)}>
