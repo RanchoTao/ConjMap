@@ -11,7 +11,7 @@ export default function AtlasPage() {
       <div className="page-heading">
         <div className="eyebrow"><T en="THE RESEARCH LANDSCAPE" /></div>
         <h1>
-          The atlas<span className="title-period">.</span>
+          <T en="The atlas" /><span className="title-period">.</span>
         </h1>
         <p><T en="Follow a question. Discover its neighborhood. Find a new direction." /></p>
       </div>
