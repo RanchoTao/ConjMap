@@ -45,7 +45,6 @@ export function Atlas({ problems, relationships, colors, preview = false }: Prop
           elements: [],
           minZoom: 0.15,
           maxZoom: 4,
-          wheelSensitivity: 0.2,
           style: [
             {
               selector: 'node',
