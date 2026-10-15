@@ -1,6 +1,6 @@
 {
   "audited_at": "2026-10-15",
-  "scope": "npm audit, full installed dependency tree",
+  "scope": "npm audit after clean lockfile install, full dependency tree",
   "metadata": {
     "vulnerabilities": {
       "info": 0,
@@ -12,9 +12,9 @@
     },
     "dependencies": {
       "prod": 21,
-      "dev": 389,
-      "optional": 118,
-      "peer": 15,
+      "dev": 388,
+      "optional": 120,
+      "peer": 16,
       "peerOptional": 0,
       "total": 450
     }

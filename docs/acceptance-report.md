@@ -24,7 +24,7 @@ Date: **2026-10-15, Asia/Shanghai**. This is an engineering acceptance report. I
 | Persistence evolution | DONE | Replaceable adapter, atomic local JSON journal and lock; PostgreSQL schema design recorded. SQL has not been executed; no database connected. |
 | Docs / license / contribution / environment | DONE | README, Apache-2.0 LICENSE and NOTICE, CONTRIBUTING, architecture ADRs, source audit, data contract, API docs, credential-free `.env.example`, manual E2E steps. |
 | Local checks and screenshots | DONE | Results below; screenshots committed under `docs/screenshots/`. |
-| GitHub Actions / push / PR | Pending remote confirmation | Workflow is implemented. The PR checks are the authority for the current remote head; this row will be updated after observing a completed run. |
+| GitHub Actions / push / PR | DONE | [PR #1](https://github.com/RanchoTao/ConjMap/pull/1) open, not merged. [Ubuntu / Node 24 PR run](https://github.com/RanchoTao/ConjMap/actions/runs/38701029304) and [push run](https://github.com/RanchoTao/ConjMap/actions/runs/38701022242) passed at implementation head `49931193f8538f54033e1bfb27689a9ec4abc54b`; `ci-verification.json` preserves the completed run/step receipt. Later report/screenshot-only commits are checked independently in the PR. |
 | Public deployment / paid services | Not requested | No deployment, production credentials, paid resource or automatic merge performed. |
 
 ## Executed local checks
@@ -36,13 +36,14 @@ Environment: Windows, Node **25.2.1**, npm **11.6.2**, Python **3.13**, Next.js 
 | `npm run validate:data` | PASS: 120 records, 82 relations, six fields, all source hashes and exact source spans match manifest |
 | `npm run lint` | PASS: no errors or warnings |
 | `npm run typecheck` | PASS: generated Next route types and TypeScript |
-| `npm test` | PASS: **25 tests in 3 files**, final run 1.33 s |
+| `npm test` | PASS: **25 tests in 3 files**, clean-install run 2.77 s |
 | `python -m unittest discover -s adapters -p "test_*.py"` | PASS: **3 tests**, all 120 records roundtrip through extractor |
 | `npm run build` | PASS: optimized build; all six page types and four API route patterns generated, no application build warnings |
-| `npm run test:e2e` | PASS: **6 Chromium tests**, final run 14.0 s against a real production-mode server |
+| `npm run test:e2e` | PASS: **6 Chromium tests**, clean-install run 17.7 s against a real production-mode server |
 | `npm audit --json` | PASS: **0 known vulnerabilities**, entire installed dependency tree; see `dependency-audit.json` |
 | `npm run dev -- --port 3101` + HTTP probe | PASS: one-command launcher ready; homepage HTTP 200 |
 | `npm ci --dry-run --ignore-scripts --os=linux --cpu=x64` | PASS after clean lockfile regeneration; resolves Linux optional dependency closure |
+| `npm ci` then checks and browser tests | PASS: actual fresh dependency installation, 0 known vulnerabilities; full local checks and all 6 E2E tests passed afterward |
 
 Playwright's inherited FORCE_COLOR/NO_COLOR message is an environment warning, not an application exception. Chromium installation initially hit a headless-shell download timeout and then completed on the installer's retry. The first browser round found single-result node positioning inconsistent with canvas center; implementation was corrected and the expanded six-test suite passed. Initial type errors and dependency audit findings were corrected before final acceptance. The project uses explicit TypeScript, React Hooks and accessibility ESLint plugins, avoiding an unnecessary vulnerable transitive glob chain in the framework lint preset; no runtime framework downgrade was used.
 
@@ -83,7 +84,7 @@ Screenshots are genuine local Chromium captures. Mock records visible in the det
 
 ## Known limitations
 
-The first remote workflow failed during clean installation: the Windows-generated lockfile had omitted optional WebAssembly transitive dependencies (`@emnapi/runtime` / `@emnapi/core`). The lockfile was regenerated from an isolated directory without an existing node_modules tree, then Linux-target install resolution was checked. Remote post-fix results remain tracked by PR checks; the initial failure is not hidden or described as passing.
+The first remote workflow failed during clean installation: the Windows-generated lockfile had omitted optional WebAssembly transitive dependencies (`@emnapi/runtime` / `@emnapi/core`). The lockfile was regenerated from an isolated directory without an existing node_modules tree, then Linux-target install resolution, actual local clean installation, and remote Ubuntu checks passed. The initial failure is retained in run history and is not described as passing.
 
 Imported source whitespace is preserved exactly, including an upstream trailing space. Git's end-of-line whitespace check is scoped out for `data/upstream/**` so provenance is not altered merely to satisfy a style check.
 
