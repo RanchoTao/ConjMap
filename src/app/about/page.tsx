@@ -8,7 +8,7 @@ export default function About() {
       <div className="page-heading">
         <div className="eyebrow"><T en="MAPPING THE FRONTIERS OF MATHEMATICS" /></div>
         <h1>
-          An atlas for the questions ahead<span className="title-period">.</span>
+          <T en="An atlas for the questions ahead" /><span className="title-period">.</span>
         </h1>
         <p>
           <T en="ConjMap is open research infrastructure for finding problems and following their evidence." />
