@@ -42,6 +42,7 @@ jobs:
           npm run build
           test -f out/index.html
           test -f out/atlas/index.html
+          test -f out/frontier/index.html
           test -f out/problems/index.html
           test -f out/problems/cm-000104/index.html
           test -f out/problems/fc-millennium-riemannhypothesis/index.html
@@ -58,7 +59,7 @@ jobs:
             if curl -fsS http://127.0.0.1:4173/ConjMap/ >/dev/null; then break; fi
             sleep 1
           done
-          for route in / /atlas/ /problems/ /problems/cm-000104/ /problems/fc-millennium-riemannhypothesis/ /sources/ /about/; do
+          for route in / /atlas/ /frontier/ /problems/ /problems/cm-000104/ /problems/fc-millennium-riemannhypothesis/ /sources/ /about/; do
             curl -fsS "http://127.0.0.1:4173/ConjMap${route}" >/dev/null
           done
           asset=$(find out/_next/static -type f -name '*.js' | head -n 1 | sed 's|^out||')

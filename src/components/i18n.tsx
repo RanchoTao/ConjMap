@@ -31,7 +31,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
 export const useLanguage = () => useContext(Context);
 
 const translations: Record<string, string> = {
-  'Atlas':'图谱','Problems':'问题','Sources':'数据来源','About':'关于',
+  'SOURCE-REPORTED OPEN INDEX':'来源标注开放问题','Frontier':'前沿','Atlas':'图谱','Problems':'问题','Sources':'数据来源','About':'关于',
   'Contribute':'参与贡献','Skip to content':'跳转到正文',
   'Mapping the frontiers. Preserving the evidence.':'绘制数学前沿，保留研究证据。',
   'Open source · Apache-2.0':'开源 · Apache-2.0',

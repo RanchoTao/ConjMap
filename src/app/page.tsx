@@ -4,6 +4,7 @@ import { ArrowRight, ArrowUpRight, BookOpen, GitBranch, Network, ShieldCheck } f
 import { Atlas } from '@/components/atlas';
 import { Badge, EvidenceNote } from '@/components/status';
 import { fields, fieldColors, manifest, problems, relationships, getProblem } from '@/lib/catalog';
+import { frontierStats } from '@/lib/frontier';
 
 export default function Home() {
   const featured = [
@@ -33,7 +34,7 @@ export default function Home() {
             <Link className="button primary" href="/atlas">
               Explore the atlas <ArrowUpRight size={18} />
             </Link>
-            <Link className="button secondary" href="/problems">
+            <Link className="button secondary" href="/frontier">
               Browse problems <ArrowRight size={17} />
             </Link>
           </div>
@@ -64,6 +65,7 @@ export default function Home() {
           [String(fields.length), 'MATHEMATICAL FIELDS'],
           [String(relationships.length), 'DISCOVERY ASSOCIATIONS'],
           ['0', 'INDEPENDENTLY VERIFIED'],
+          [String(frontierStats.sourceReportedOpen), 'SOURCE-REPORTED OPEN INDEX'],
         ].map(([value, label]) => (
           <div key={label}>
             <strong>
