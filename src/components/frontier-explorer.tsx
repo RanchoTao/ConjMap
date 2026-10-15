@@ -18,12 +18,20 @@ export function FrontierExplorer({ records }: { records: FrontierRecord[] }) {
   const fields = useMemo(() => [...new Set(records.map((r) => r.field))].sort(), [records]);
   const filtered = useMemo(() => {
     const q = query.toLocaleLowerCase().trim();
-    return records.filter((r) =>
+    const candidates = records.filter((r) =>
       (!field || r.field === field) &&
-      (linkage === 'all' || (linkage === 'matched' ? Boolean(r.matched_problem_id) : !r.matched_problem_id)) &&
-      (!q || [r.title, title(r, 'zh'), r.external_id, ...r.tags]
-        .join(' ').toLocaleLowerCase().includes(q))
+      (linkage === 'all' || (linkage === 'matched' ? Boolean(r.matched_problem_id) : !r.matched_problem_id))
     );
+    if (!q) return candidates;
+    // Exact IDs and full titles win over prefix matches (Erdős 10 vs 102/1029).
+    const exact = candidates.filter((r) =>
+      [r.id, r.title, title(r, 'zh'), r.external_id].some(
+        value => value.toLocaleLowerCase() === q,
+      )
+    );
+    if (exact.length) return exact;
+    return candidates.filter((r) => [r.title, title(r, 'zh'), r.external_id, ...r.tags]
+      .join(' ').toLocaleLowerCase().includes(q));
   }, [records, query, field, linkage]);
   const maxPage = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
   const currentPage = Math.min(page, maxPage);
