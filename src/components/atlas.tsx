@@ -334,7 +334,7 @@ export function Atlas({
           <select aria-label="Atlas field" value={field} onChange={(e) => setField(e.target.value)}>
             <option value=""><T en="All fields" zh="全部领域" /></option>
             {fields.map((f) => (
-              <option key={f}><T en={f} /></option>
+              <option key={f} value={f}><T en={f} /></option>
             ))}
           </select>
           <select
