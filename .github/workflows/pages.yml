@@ -36,8 +36,9 @@ jobs:
           NEXT_TELEMETRY_DISABLED: '1'
         run: |
           # GitHub Pages has no Node runtime: remove server-only routes
-          # from this temporary Actions checkout (never from Git history).
-          rm -rf src/app/api src/app/bench
+          # and test modules that import those routes from this ephemeral checkout.
+          # The complete tests already passed in the previous step; Git history is unchanged.
+          rm -rf src/app/api src/app/bench tests
           npm run build
           test -f out/index.html
           test -f out/atlas/index.html
