@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { T, ProblemName } from '@/components/i18n';
 import { ArrowRight, ArrowUpRight, BookOpen, GitBranch, Network, ShieldCheck } from 'lucide-react';
 import { Atlas } from '@/components/atlas';
 import { Badge, EvidenceNote } from '@/components/status';
@@ -17,17 +18,16 @@ export default function Home() {
       <section className="hero">
         <div className="hero-copy">
           <div className="eyebrow">
-            <span className="live-dot" /> AN OPEN MAP OF MATHEMATICAL POSSIBILITY
+            <span className="live-dot" /> <T en="AN OPEN MAP OF MATHEMATICAL POSSIBILITY" />
           </div>
           <h1>
-            Every answer begins
+            <T en="Every answer begins" />
             <br />
-            at the <em>frontier.</em>
+            <em><T en="at the frontier." /></em>
           </h1>
           <p>
-            Explore the questions mathematics has yet to settle.
-            <br className="desktop-break" /> Follow the connections. Trace the evidence. Find your
-            next problem.
+            <T en="Explore the questions mathematics has yet to settle." />
+            <br className="desktop-break" /> <T en="Follow the connections. Trace the evidence. Find your next problem." />
           </p>
           <div className="hero-actions">
             <Link className="button primary" href="/atlas">
@@ -38,12 +38,12 @@ export default function Home() {
             </Link>
           </div>
           <div className="hero-footnote">
-            <GitBranch size={14} /> Open infrastructure for mathematical discovery{' '}
-            <span>V0.2 · {process.env.CONJMAP_STATIC_EXPORT === '1' ? 'PUBLIC READ-ONLY' : 'LOCAL EDITION'}</span>
+            <GitBranch size={14} /> <T en="Open infrastructure for mathematical discovery" />{' '}
+            <span>V0.2 · {process.env.CONJMAP_STATIC_EXPORT === '1' ? <T en="PUBLIC READ-ONLY" /> : <T en="LOCAL EDITION" />}</span>
           </div>
         </div>
         <div className="hero-marginalia">
-          <span>THE KNOWN</span>
+          <span><T en="THE KNOWN" /></span>
           <svg viewBox="0 0 210 130" fill="none" aria-hidden="true">
             <path
               d="M5 97C35 90 31 25 76 40s38 77 79 37 21-45 49-52"
@@ -54,7 +54,7 @@ export default function Home() {
             <circle cx="76" cy="40" r="4" fill="currentColor" />
             <circle cx="155" cy="77" r="4" fill="currentColor" />
           </svg>
-          <span>THE STILL POSSIBLE ↗</span>
+          <span><T en="THE STILL POSSIBLE ↗" /></span>
           <small>∂ knowledge</small>
         </div>
       </section>
@@ -70,15 +70,15 @@ export default function Home() {
               {value.padStart(2, '0')}
               <span>{label === 'SOURCE-BACKED PROBLEMS' ? '↗' : ''}</span>
             </strong>
-            <small>{label}</small>
+            <small><T en={label} /></small>
           </div>
         ))}
       </section>
       <section className="landscape-section">
         <div className="section-heading">
           <div>
-            <div className="eyebrow">01 / THE LANDSCAPE</div>
-            <h2>Ideas don’t live in isolation.</h2>
+            <div className="eyebrow"><T en="01 / THE LANDSCAPE" /></div>
+            <h2><T en="Ideas don’t live in isolation." /></h2>
           </div>
           <Link href="/atlas" className="text-link">
             Explore all connections <ArrowUpRight size={16} />
@@ -90,10 +90,10 @@ export default function Home() {
       <section className="fields-section">
         <div className="section-heading">
           <div>
-            <div className="eyebrow">02 / FIND YOUR FIELD</div>
-            <h2>Many disciplines. One frontier.</h2>
+            <div className="eyebrow"><T en="02 / FIND YOUR FIELD" /></div>
+            <h2><T en="Many disciplines. One frontier." /></h2>
           </div>
-          <span className="muted">Choose a direction to explore.</span>
+          <span className="muted"><T en="Choose a direction to explore." /></span>
         </div>
         <div className="field-grid">
           {fields.map((f, i) => (
@@ -102,9 +102,9 @@ export default function Home() {
               <div className="field-glyph" style={{ color: fieldColors[f] }}>
                 {['⊗', '∫', 'Σ', '△', '∀', 'ℙ'][i]}
               </div>
-              <h3>{f}</h3>
+              <h3><T en={f} /></h3>
               <p>
-                {problems.filter((p) => p.field === f).length} problems{' '}
+                {problems.filter((p) => p.field === f).length} <T en="problems" zh="个问题" />{' '}
                 <span>
                   MSC{' '}
                   {[...new Set(problems.filter((p) => p.field === f).flatMap((p) => p.MSC))]
@@ -120,8 +120,8 @@ export default function Home() {
       <section>
         <div className="section-heading">
           <div>
-            <div className="eyebrow">03 / A PLACE TO START</div>
-            <h2>Questions with a long horizon.</h2>
+            <div className="eyebrow"><T en="03 / A PLACE TO START" /></div>
+            <h2><T en="Questions with a long horizon." /></h2>
           </div>
           <Link href="/problems" className="text-link">
             View the problem index <ArrowUpRight size={16} />
@@ -131,12 +131,12 @@ export default function Home() {
           {featured.map((p) => (
             <Link className="feature-card" key={p.id} href={`/problems/${p.id}`}>
               <div className="eyebrow" style={{ color: fieldColors[p.field] }}>
-                {p.field}
+                <T en={p.field} />
               </div>
-              <h3>{p.title}</h3>
+              <h3><ProblemName title={p.title} /></h3>
               <p>{p.statement.replace(/[$*`]/g, '').slice(0, 165)}…</p>
               <div>
-                <Badge>status unknown</Badge>
+                <Badge><T en="status unknown" /></Badge>
                 <ArrowUpRight size={18} />
               </div>
             </Link>
@@ -146,31 +146,28 @@ export default function Home() {
       <section className="principles">
         <div>
           <ShieldCheck size={22} />
-          <h3>Evidence is part of the map.</h3>
+          <h3><T en="Evidence is part of the map." /></h3>
           <p>
-            Every statement links to a pinned source. Retrieval, review, and mathematical
-            verification remain distinct.
+            <T en="Every statement links to a pinned source. Retrieval, review, and mathematical verification remain distinct." />
           </p>
         </div>
         <div>
           <Network size={22} />
-          <h3>A map built in the open.</h3>
+          <h3><T en="A map built in the open." /></h3>
           <p>
-            Source code, data contracts, and import provenance are inspectable. Better references
-            and corrections are welcome.
+            <T en="Source code, data contracts, and import provenance are inspectable. Better references and corrections are welcome." />
           </p>
         </div>
         <div>
           <BookOpen size={22} />
-          <h3>Connected to what comes next.</h3>
+          <h3><T en="Connected to what comes next." /></h3>
           <p>
-            Separate mock and authenticated real adapters preserve research provenance. The real
-            MathForge connection remains blocked pending a compatible engine API.
+            <T en="Separate mock and authenticated real adapters preserve research provenance. The real MathForge connection remains blocked pending a compatible engine API." />
           </p>
         </div>
       </section>
       <div className="collection-note">
-        <span className="live-dot" /> COLLECTION SNAPSHOT{' '}
+        <span className="live-dot" /> <T en="COLLECTION SNAPSHOT" />{' '}
         <span>{manifest.retrieved_at} · Formal Conjectures · Apache-2.0</span>
         <Link href="/sources">
           Read the source audit <ArrowUpRight size={14} />

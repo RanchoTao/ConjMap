@@ -1,5 +1,6 @@
 'use client';
 import Link from 'next/link';
+import { LanguageSwitcher, T } from './i18n';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { ArrowUpRight, Github, Moon, Sun } from 'lucide-react';
@@ -66,11 +67,12 @@ export function Header() {
               className={path.startsWith(href) ? 'active' : ''}
               aria-current={path.startsWith(href) ? 'page' : undefined}
             >
-              {label}
+              <T en={label} />
             </Link>
           ))}
         </nav>
         <div className="header-actions">
+          <LanguageSwitcher />
           <a
             href="https://github.com/RanchoTao/ConjMap"
             target="_blank"
@@ -78,7 +80,7 @@ export function Header() {
             className="github"
           >
             <Github size={16} />
-            <span>Contribute</span>
+            <span><T en="Contribute" /></span>
             <ArrowUpRight size={13} />
           </a>
           <button
@@ -100,12 +102,12 @@ export function Footer() {
         <span className="footer-brand">
           <Mark small /> ConjMap
         </span>
-        <span>Mapping the frontiers. Preserving the evidence.</span>
+        <span><T en="Mapping the frontiers. Preserving the evidence." /></span>
       </div>
       <div>
-        <span>Open source · Apache-2.0</span>
+        <span><T en="Open source · Apache-2.0" /></span>
         <Link href="/sources">
-          Data & attribution <ArrowUpRight size={13} />
+          <T en="Data & attribution" /> <ArrowUpRight size={13} />
         </Link>
       </div>
     </footer>

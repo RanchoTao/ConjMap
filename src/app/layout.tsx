@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Footer, Header } from '@/components/shell';
+import { LanguageProvider, T } from '@/components/i18n';
 import 'katex/dist/katex.min.css';
 import './globals.css';
 
@@ -16,12 +17,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
       <body>
-        <a href="#main" className="skip-link">
-          Skip to content
-        </a>
-        <Header />
-        <main id="main">{children}</main>
-        <Footer />
+        <LanguageProvider>
+          <a href="#main" className="skip-link">
+            <T en="Skip to content" />
+          </a>
+          <Header />
+          <main id="main">{children}</main>
+          <Footer />
+        </LanguageProvider>
       </body>
     </html>
   );
