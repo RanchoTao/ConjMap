@@ -11,7 +11,7 @@ export default function SourcesPage() {
       <div className="page-heading">
         <div className="eyebrow"><T en="PROVENANCE IS A FIRST-CLASS CITIZEN" /></div>
         <h1>
-          Built on traceable sources<span className="title-period">.</span>
+          <T en="Built on traceable sources" /><span className="title-period">.</span>
         </h1>
         <p>
           <T en="Eight resources audited on 15 October 2026. Availability, permissions, and mathematical accuracy are separate questions." zh="截至 2026 年 10 月 15 日，已审计八项资源。可访问性、使用许可与数学正确性是不同问题。" />
