@@ -268,6 +268,7 @@ export async function submitRealTask(input: unknown, key: string, transport: typ
     task.events.push({ at: now, kind: 'request_recorded', digest: digest(task.context) });
     await save(task);
     if (!cfg.ready) return task;
+    let definitiveRejection: number | null = null;
     try {
       const response = await transport(
         new URL('research-tasks', cfg.url.href.endsWith('/') ? cfg.url.href : cfg.url.href + '/'),
@@ -288,7 +289,11 @@ export async function submitRealTask(input: unknown, key: string, transport: typ
           signal: AbortSignal.timeout(5000),
         },
       );
-      if (!response.ok) throw new Error('Engine rejected request; reconcile using idempotency key');
+      if (!response.ok) {
+        if ([400, 401, 403, 404, 409, 422, 429].includes(response.status))
+          definitiveRejection = response.status;
+        throw new Error('Engine rejected request; reconcile using idempotency key');
+      }
       const reader = response.body?.getReader();
       if (!reader) throw new Error('Empty engine response');
       let raw = '',
@@ -316,13 +321,22 @@ export async function submitRealTask(input: unknown, key: string, transport: typ
       });
     } catch {
       task.status = 'blocked';
-      task.blocker =
-        'Submission outcome uncertain or rejected. Reconcile with engine by idempotency key; no automatic retry.';
-      task.events.push({
-        at: new Date().toISOString(),
-        kind: 'submission_uncertain',
-        digest: digest({ key }),
-      });
+      if (definitiveRejection !== null) {
+        task.blocker = `Engine definitively rejected request (HTTP ${definitiveRejection}); no task admitted.`;
+        task.events.push({
+          at: new Date().toISOString(),
+          kind: 'engine_rejected',
+          digest: digest({ key, status: definitiveRejection }),
+        });
+      } else {
+        task.blocker =
+          'Submission outcome uncertain. Reconcile with engine by idempotency key; no automatic retry.';
+        task.events.push({
+          at: new Date().toISOString(),
+          kind: 'submission_uncertain',
+          digest: digest({ key }),
+        });
+      }
     }
     task.updated_at = new Date().toISOString();
     await save(task);
