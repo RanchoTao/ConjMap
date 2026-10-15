@@ -110,7 +110,7 @@ const translations: Record<string, string> = {
   'No second-source observation linked to this record.':'暂无关联的第二来源记录。',
   'Pending for all imported content':'所有导入内容仍待核验',
   'PROJECT NOTES':'项目说明',
-  'THE RESEARCH LANDSCAPE':'研究前沿地图',
+  
   'MAPPING THE FRONTIERS OF MATHEMATICS':'绘制数学研究前沿',
   'An atlas for the questions ahead':'面向未解问题的数学地图',
   'ConjMap is open research infrastructure for finding problems and following their evidence.':'ConjMap 是一套开放科研基础设施，用于发现数学问题并追踪证据。',
