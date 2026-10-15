@@ -85,7 +85,10 @@ export const mockResearch: ResearchAdapter = {
         .map((n) => mockResearch.get(n.slice(0, -5))),
     );
     return tasks
-      .filter((t): t is ResearchTask => t !== null && t.problem_id === problemId)
+      .filter(
+        (t): t is ResearchTask =>
+          t !== null && (getProblem(t.problem_id)?.id ?? t.problem_id) === problemId,
+      )
       .sort((a, b) => b.created_at.localeCompare(a.created_at));
   },
   async receive(id, input) {

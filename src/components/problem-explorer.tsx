@@ -1,6 +1,6 @@
 'use client';
 import Link from 'next/link';
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { ArrowDownUp, ArrowUpRight, Search, SlidersHorizontal, X } from 'lucide-react';
 import { queryProblems, type Filters } from '@/lib/query';
 import type { Problem } from '@/lib/schema';
@@ -17,6 +17,19 @@ export function ProblemExplorer({
 }) {
   const [filters, setFilters] = useState<Filters>(initial);
   const [page, setPage] = useState(1);
+  useEffect(() => {
+    // Read client-only URL parameters after hydration; GitHub Pages has no request server.
+    const frame = window.requestAnimationFrame(() => {
+      const params = new URLSearchParams(window.location.search);
+      const fromUrl: Filters = {};
+      for (const k of ['q', 'field', 'status', 'sort'] as const) {
+        const value = params.get(k);
+        if (value) fromUrl[k] = value;
+      }
+      setFilters(fromUrl);
+    });
+    return () => window.cancelAnimationFrame(frame);
+  }, []);
   const results = useMemo(() => queryProblems(problems, filters), [problems, filters]);
   function update(key: keyof Filters, value: string) {
     const next = { ...filters, [key]: value };
@@ -24,7 +37,7 @@ export function ProblemExplorer({
     setPage(1);
     const params = new URLSearchParams();
     for (const [k, v] of Object.entries(next)) if (v) params.set(k, v);
-    window.history.replaceState(null, '', `/problems${params.size ? `?${params}` : ''}`);
+    window.history.replaceState(null, '', `${window.location.pathname}${params.size ? `?${params}` : ''}`);
   }
   return (
     <>
@@ -132,7 +145,7 @@ export function ProblemExplorer({
             onClick={() => {
               setFilters({});
               setPage(1);
-              window.history.replaceState(null, '', '/problems');
+              window.history.replaceState(null, '', window.location.pathname);
             }}
           >
             Reset filters

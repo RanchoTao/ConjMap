@@ -1,0 +1,1020 @@
+[
+  {
+    "id": "audit-cm-000104",
+    "problem_id": "cm-000104",
+    "title": "Riemann hypothesis",
+    "statement": "The **Riemann Hypothesis**: all non-trivial zeros of the Riemann zeta function have real\npart $\\frac{1}{2}$. That is, if $\\zeta(s) = 0$, $s \\neq 1$, and $s$ is not a trivial zero\n$-2(n+1)$ for some $n \\in \\mathbb{N}$, then $\\operatorname{Re}(s) = \\frac{1}{2}$.\n\nThis is the official Millennium Prize Problem as posed by the\n[Clay Mathematics Institute](https://www.claymath.org/wp-content/uploads/2022/05/riemann.pdf).\n\nThis uses the `RiemannHypothesis` type from Mathlib, which is defined as\n`∀ (s : ℂ), riemannZeta s = 0 → (¬∃ n : ℕ, s = -2 * (n + 1)) → s ≠ 1 → s.re = 1 / 2`.",
+    "formal_statement": "riemannHypothesis : RiemannHypothesis",
+    "source_path": "FormalConjectures/Millennium/RiemannHypothesis.lean",
+    "source_sha256": "db04f2f25a73fb0fc473843227fb3a28bca6ef1808e222e2d365f97120c46f67",
+    "scope_review": "All zeros of the meromorphically continued zeta function, excluding s=1 and negative-even trivial zeros; real part exactly 1/2. The Dirichlet-series convergence half-plane is not the domain of the conjecture.",
+    "findings": "The current Clay tracker labels RH unsolved. This supports a source-reported status, not a checked proof or exhaustive exclusion of recent claims. The pinned Lean signature aliases Mathlib's definition; its import closure and axioms were not executed.",
+    "search_query": "site.claymath.org riemann hypothesis millennium problem",
+    "literature_leads": [
+      "https://www.claymath.org/millennium/riemann-hypothesis/"
+    ],
+    "literature_access": "metadata/abstract unless specifically noted; no exhaustive review claimed",
+    "original_reference_status": "Riemann 1859 is identified by Clay; original manuscript/full formulation correspondence remains pending.",
+    "source_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Millennium/RiemannHypothesis.lean#L51-L61",
+      "https://www.claymath.org/wp-content/uploads/2022/05/riemann.pdf",
+      "https://en.wikipedia.org/wiki/Riemann_hypothesis",
+      "https://en.wikipedia.org/wiki/Generalized_Riemann_hypothesis",
+      "https://en.wikipedia.org/wiki/Dedekind_zeta_function"
+    ],
+    "reviewed_at": "2026-10-15",
+    "formal_systems": {
+      "Lean": "Source declaration present; typecheck, full assumptions and axioms not independently checked.",
+      "Coq": "UNKNOWN"
+    },
+    "current_status": "unknown",
+    "human_review": "pending",
+    "completion": "PARTIAL",
+    "gaps": [
+      "Current primary literature and all competing proof claims need full-method review.",
+      "Formalization fidelity, source attribution and original bibliographic priority require independent review."
+    ]
+  },
+  {
+    "id": "audit-cm-000112",
+    "problem_id": "cm-000112",
+    "title": "Weak Birch and Swinnerton-Dyer conjecture over Q",
+    "statement": "The **weak Birch and Swinnerton-Dyer conjecture** over $\\mathbb{Q}$, a Clay Millennium Prize\nProblem.",
+    "formal_statement": "weak_birch_swinnerton_dyer_conjecture_rat : Weak ℚ",
+    "source_path": "FormalConjectures/Millennium/BSD.lean",
+    "source_sha256": "cb2ceb3f28bd35d8dabb880dfc929ab1986d239602aeddbe34ac23d1dbd5fa87",
+    "scope_review": "Weak BSD over Q for elliptic curves: distinguish rank/order-of-vanishing from the refined leading-coefficient formula and from arbitrary number fields. Expand Weak Q before accepting correspondence.",
+    "findings": "Clay lists BSD unsolved. General rank statements do not become established because rank-zero/one special cases or numerical evidence exist. The exact Weak Q definition and analytic continuation dependencies need a separate fidelity review.",
+    "search_query": "site.claymath.org birch swinnerton dyer conjecture status",
+    "literature_leads": [
+      "https://www.claymath.org/Millennium%20Problems/",
+      "https://www.claymath.org/wp-content/uploads/2022/02/MPPc.pdf"
+    ],
+    "literature_access": "metadata/abstract unless specifically noted; no exhaustive review claimed",
+    "original_reference_status": "Birch and Swinnerton-Dyer attribution is source-supported by Clay; original papers and full-method status review pending.",
+    "source_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Millennium/BSD.lean#L71-L74",
+      "https://www.claymath.org/millennium/birch-and-swinnerton-dyer-conjecture/",
+      "https://www.claymath.org/wp-content/uploads/2022/05/birchswin.pdf",
+      "https://doi.org/10.1515/crll.1965.218.79",
+      "https://www.numdam.org/item/SB_1964-1966__9__415_0/",
+      "https://people.math.harvard.edu/~gross/preprints/lectures-pcmi.pdf",
+      "https://discovery.ucl.ac.uk/10223687/1/main-pages.pdf",
+      "https://tadamcz.com/autoformalization-results/#/p/wp-birch-and-swinnerton-dyer-conjecture"
+    ],
+    "reviewed_at": "2026-10-15",
+    "formal_systems": {
+      "Lean": "Source declaration present; typecheck, full assumptions and axioms not independently checked.",
+      "Coq": "UNKNOWN"
+    },
+    "current_status": "unknown",
+    "human_review": "pending",
+    "completion": "PARTIAL",
+    "gaps": [
+      "Current primary literature and all competing proof claims need full-method review.",
+      "Formalization fidelity, source attribution and original bibliographic priority require independent review."
+    ]
+  },
+  {
+    "id": "audit-cm-000100",
+    "problem_id": "cm-000100",
+    "title": "Smooth four-dimensional Poincaré conjecture",
+    "statement": "The four dimensional case of the smooth version of the conjecture is still open.\nSee [Wang2017].",
+    "formal_statement": "poincare_conjecture.variants.smooth_dimension_four : SmoothConjectureFor 4",
+    "source_path": "FormalConjectures/Millennium/Poincare.lean",
+    "source_sha256": "19215b7eb592990765a114d2f5622434dc4a656e379aed31f2b785c57b2e337d",
+    "scope_review": "Smooth dimension four, with the precise manifold/category hypotheses in SmoothConjectureFor 4; not the solved topological dimension-three Poincare problem.",
+    "findings": "Clay's solved three-dimensional problem cannot resolve this selected smooth four-dimensional variant. The 2009 paper is historical evidence of the distinct question, not a fresh 2026 open-status certification.",
+    "search_query": "site:arxiv.org four dimensional smooth Poincare conjecture open",
+    "literature_leads": [
+      "https://arxiv.org/abs/0906.5177"
+    ],
+    "literature_access": "metadata/abstract unless specifically noted; no exhaustive review claimed",
+    "original_reference_status": "The pinned source cites Wang2017; primary bibliographic and dimension/category correspondence still need checking.",
+    "source_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Millennium/Poincare.lean#L107-L110",
+      "https://www.claymath.org/wp-content/uploads/2022/06/poincare.pdf",
+      "https://annals.math.princeton.edu/2017/186-2/p03",
+      "https://mathoverflow.net/questions/296171/unique-smooth-structure-on-3-manifolds",
+      "https://github.com/leanprover-community/mathlib4"
+    ],
+    "reviewed_at": "2026-10-15",
+    "formal_systems": {
+      "Lean": "Source declaration present; typecheck, full assumptions and axioms not independently checked.",
+      "Coq": "UNKNOWN"
+    },
+    "current_status": "unknown",
+    "human_review": "pending",
+    "completion": "PARTIAL",
+    "gaps": [
+      "Current primary literature and all competing proof claims need full-method review.",
+      "Formalization fidelity, source attribution and original bibliographic priority require independent review."
+    ]
+  },
+  {
+    "id": "audit-cm-000001",
+    "problem_id": "cm-000001",
+    "title": "abc conjecture (constant-bound formulation)",
+    "statement": "For every positive real number ε, there exists a constant `K_ε` such that for all triples (a, b, c) of coprime positive integers, with a + b = c we have `c < K_ε rad(abc)^(1+ε)`.",
+    "formal_statement": "abc.variants.lt_constant_mul (ε : ℝ) (hε : 0 < ε) : ∃ K,\n    ∀ (a b c : ℕ), 0 < a → 0 < b → 0 < c → ({a, b, c} : Set ℕ).Pairwise Nat.Coprime → a + b = c →\n    c < K * (radical <| a * b * c : ℝ)^(1 + ε)",
+    "source_path": "FormalConjectures/Wikipedia/ABC.lean",
+    "source_sha256": "e05d9ee80f0e05233958028176323b94341eececc0defd9449b8ddeb11dbca88",
+    "scope_review": "For every epsilon>0, exists K(epsilon), for all coprime positive triples a+b=c, c<K rad(abc)^(1+epsilon). Pairwise coprimality, strict inequalities and exponent quantifiers must match.",
+    "findings": "IUT-related proof claims and competing assessments require full-method review. A retrieved paper announcing a proof does not establish community acceptance or settle the selected constant-bound formulation. Keep unknown.",
+    "search_query": "site:arxiv.org abc conjecture Mochizuki Scholze Stix",
+    "literature_leads": [
+      "https://arxiv.org/abs/2403.10430"
+    ],
+    "literature_access": "metadata/abstract unless specifically noted; no exhaustive review claimed",
+    "original_reference_status": "Original Masser/Oesterle attribution is not independently established by this pass; do not infer it from a modern proof announcement.",
+    "source_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/ABC.lean#L68-L74",
+      "https://en.wikipedia.org/wiki/Abc_conjecture"
+    ],
+    "reviewed_at": "2026-10-15",
+    "formal_systems": {
+      "Lean": "Source declaration present; typecheck, full assumptions and axioms not independently checked.",
+      "Coq": "UNKNOWN"
+    },
+    "current_status": "unknown",
+    "human_review": "pending",
+    "completion": "PARTIAL",
+    "gaps": [
+      "Current primary literature and all competing proof claims need full-method review.",
+      "Formalization fidelity, source attribution and original bibliographic priority require independent review."
+    ]
+  },
+  {
+    "id": "audit-cm-000004",
+    "problem_id": "cm-000004",
+    "title": "Andrica's conjecture",
+    "statement": "**Andrica's conjecture**\nThe inequality $\\sqrt{p_{n+1}}-\\sqrt{p_n} < 1$ holds for all $n$, where $p_n$ is the $n$-th prime number.",
+    "formal_statement": "andrica_conjecture (n : ℕ) :\n    Real.sqrt ((n+1).nth Nat.Prime) - Real.sqrt (n.nth Nat.Prime) < 1",
+    "source_path": "FormalConjectures/Wikipedia/Andrica.lean",
+    "source_sha256": "06011bf2450863043e06a42228ff1f897f8f779142e4bc248bda21d7af74fc9e",
+    "scope_review": "Every consecutive pair of primes, indexed by Nat.nth; strict difference of square roots below one. Check zero-based versus one-based indexing.",
+    "findings": "A heuristic prime-gap paper was found. Heuristics and finite computations do not prove a universal bound. The unrelated Andrica-Tomescu partition result is a name collision and was excluded.",
+    "search_query": "site:arxiv.org Andrica conjecture",
+    "literature_leads": [
+      "https://arxiv.org/abs/1010.3945"
+    ],
+    "literature_access": "metadata/abstract unless specifically noted; no exhaustive review claimed",
+    "original_reference_status": "Original 1980s proposal and current definitive status not independently established.",
+    "source_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/Andrica.lean#L33-L39",
+      "https://en.wikipedia.org/wiki/Andrica%27s_conjecture",
+      "https://arxiv.org/abs/2307.08725"
+    ],
+    "reviewed_at": "2026-10-15",
+    "formal_systems": {
+      "Lean": "Source declaration present; typecheck, full assumptions and axioms not independently checked.",
+      "Coq": "UNKNOWN"
+    },
+    "current_status": "unknown",
+    "human_review": "pending",
+    "completion": "PARTIAL",
+    "gaps": [
+      "Current primary literature and all competing proof claims need full-method review.",
+      "Formalization fidelity, source attribution and original bibliographic priority require independent review."
+    ]
+  },
+  {
+    "id": "audit-cm-000005",
+    "problem_id": "cm-000005",
+    "title": "Artin primitive roots: the selected density statement",
+    "statement": "**Artin's Conjecture on Primitive Roots**, second half.\nWrite $a = a_0 b^2$ where $a_0$ is squarefree. Under the conditions that $a$ is not a perfect\npower and $a_0\\not\\equiv 1\\pmod{4}$ (sequence A85397 in the OEIS), the density of the set\n$S(a)$ of primes $p$ such that $a$ is a primitive root modulo $p$ is independent of $a$ and\nequals Artin's constant.",
+    "formal_statement": "artin_primitive_roots.parts.ii\n    (a a_0 b : ℤ) (ha : a = a_0 * b ^ 2)\n    (ha' : ∀ n m, m ≠ 1 → a ≠ n ^ m) (ha_0 : Squarefree a_0)\n    (ha_0' : ¬a_0 ≡ 1 [ZMOD 4]) :\n    (S a).HasDensity ArtinConstant {p | p.Prime}",
+    "source_path": "FormalConjectures/Wikipedia/ArtinPrimitiveRootsConjecture.lean",
+    "source_sha256": "91af7725c51d485c59e89e682e5304118e340b55cb7c5d647ee0d964733fd976",
+    "scope_review": "The selected density statement imposes a=a0*b^2, squarefree a0, no perfect-power representation and a0 not congruent to 1 modulo 4. This is not the unqualified all-integer constant-density claim.",
+    "findings": "Pinned context explicitly says Hooley's conditional result needs RH for Dedekind zeta functions of Kummer fields, not merely Dirichlet GRH. No GRH-to-Artin edge is inferred from the imported RH problem. Degenerate a=0,+/-1 and perfect-power conventions need audit.",
+    "search_query": "site:arxiv.org Artin primitive roots Hooley GRH",
+    "literature_leads": [
+      "https://arxiv.org/abs/1112.4816"
+    ],
+    "literature_access": "metadata/abstract unless specifically noted; no exhaustive review claimed",
+    "original_reference_status": "Hooley 1967 and Lenstra et al. are cited in the retained source context; the classical paper was not fully reviewed here.",
+    "source_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/ArtinPrimitiveRootsConjecture.lean#L135-L147",
+      "https://en.wikipedia.org/wiki/Artin%27s_conjecture_on_primitive_roots",
+      "https://oeis.org/A85397",
+      "https://arxiv.org/pdf/1112.4816"
+    ],
+    "reviewed_at": "2026-10-15",
+    "formal_systems": {
+      "Lean": "Source declaration present; typecheck, full assumptions and axioms not independently checked.",
+      "Coq": "UNKNOWN"
+    },
+    "current_status": "unknown",
+    "human_review": "pending",
+    "completion": "PARTIAL",
+    "gaps": [
+      "Current primary literature and all competing proof claims need full-method review.",
+      "Formalization fidelity, source attribution and original bibliographic priority require independent review."
+    ]
+  },
+  {
+    "id": "audit-cm-000008",
+    "problem_id": "cm-000008",
+    "title": "Beal conjecture",
+    "statement": "The **Beal Conjecture**: if we are given positive integers $A, B, C, x, y, z$ such that\n$x, y, z > 2$ and $A^x + B^y = C^z$ then $A, B, C$ have a common divisor.",
+    "formal_statement": "beal_conjecture : bealConjecture",
+    "source_path": "FormalConjectures/Wikipedia/BealConjecture.lean",
+    "source_sha256": "eb7bd938b23049783832bc95c239115960d05e4a5d3f0e4c3d13547af9b6b614",
+    "scope_review": "Positive natural A,B,C and exponents x,y,z>2, with A^x+B^y=C^z, imply gcd(A,B,C)>1. Real exponents and zeros are excluded.",
+    "findings": "Proof-claim titles were located but not accepted. The source also contains a Beal-to-FLT argument using primitive rescaling; FLT being proved does not prove Beal. No claim of a current accepted proof is made.",
+    "search_query": "site:arxiv.org Beal conjecture",
+    "literature_leads": [
+      "https://arxiv.org/abs/2510.05448",
+      "https://arxiv.org/abs/2409.03758"
+    ],
+    "literature_access": "metadata/abstract unless specifically noted; no exhaustive review claimed",
+    "original_reference_status": "Proposal attribution and exact original statement need primary-source checking; modern claimed proofs are not original-source evidence.",
+    "source_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/BealConjecture.lean#L34-L39",
+      "https://en.wikipedia.org/wiki/Beal_conjecture"
+    ],
+    "reviewed_at": "2026-10-15",
+    "formal_systems": {
+      "Lean": "Source declaration present; typecheck, full assumptions and axioms not independently checked.",
+      "Coq": "UNKNOWN"
+    },
+    "current_status": "unknown",
+    "human_review": "pending",
+    "completion": "PARTIAL",
+    "gaps": [
+      "Current primary literature and all competing proof claims need full-method review.",
+      "Formalization fidelity, source attribution and original bibliographic priority require independent review."
+    ]
+  },
+  {
+    "id": "audit-cm-000010",
+    "problem_id": "cm-000010",
+    "title": "Beck–Fiala theorem and conjecture",
+    "statement": "**The Beck–Fiala conjecture**\n\nThere exists a universal constant $C > 0$ such that every set system\n$S_1, \\dots, S_m \\subseteq [n]$ of degree at most $t$ admits a colouring\n$\\chi \\colon [n] \\to \\{-1, +1\\}$ with\n$\\left|\\sum_{j \\in S_i} \\chi(j)\\right| \\le C \\sqrt{t}$ for every $i$.",
+    "formal_statement": "beck_fiala_conjecture :\n    ∃ C : ℝ, 0 < C ∧ ∀ (n m t : ℕ) (S : Fin m → Finset (Fin n)),\n      (∀ j, (Finset.univ.filter fun i => j ∈ S i).card ≤ t) →\n      ∃ χ : Fin n → ℝ, (∀ j, χ j = 1 ∨ χ j = -1) ∧\n        ∀ i, |∑ j ∈ S i, χ j| ≤ C * Real.sqrt t",
+    "source_path": "FormalConjectures/Wikipedia/BeckFialaConjecture.lean",
+    "source_sha256": "42a2b6238446a4fef998310aacb57519ff26853573c5a13c41685f755600f06a",
+    "scope_review": "A single universal C>0 works for all finite set systems with each element in at most t sets, with +/-1 coloring discrepancy <=C*sqrt(t). C cannot depend on n,m,t.",
+    "findings": "The square-root conjecture must be separated from the classical linear-in-t theorem, logarithmic factors and algorithmic variants. This bounded search did not establish a current sharp universal theorem.",
+    "search_query": "site:arxiv.org Beck-Fiala conjecture discrepancy",
+    "literature_leads": [],
+    "literature_access": "metadata/abstract unless specifically noted; no exhaustive review claimed",
+    "original_reference_status": "Beck/Fiala original theorem and conjecture citation need full bibliographic recovery and hypothesis comparison.",
+    "source_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/BeckFialaConjecture.lean#L78-L91",
+      "https://en.wikipedia.org/wiki/Beck%E2%80%93Fiala_theorem",
+      "https://doi.org/10.1016/0166-218X(81",
+      "https://doi.org/10.1017/S0963548315000140",
+      "https://doi.org/10.1002/(SICI"
+    ],
+    "reviewed_at": "2026-10-15",
+    "formal_systems": {
+      "Lean": "Source declaration present; typecheck, full assumptions and axioms not independently checked.",
+      "Coq": "UNKNOWN"
+    },
+    "current_status": "unknown",
+    "human_review": "pending",
+    "completion": "PARTIAL",
+    "gaps": [
+      "Current primary literature and all competing proof claims need full-method review.",
+      "Formalization fidelity, source attribution and original bibliographic priority require independent review."
+    ]
+  },
+  {
+    "id": "audit-cm-000027",
+    "problem_id": "cm-000027",
+    "title": "Bunyakovsky conjecture",
+    "statement": "**Bunyakovsky conjecture**\nIf a polynomial $f$ over integers satisfies both Schinzel and Bunyakovsky conditions,\nthere exist infinitely many natural numbers $m$ such that $f(m)$ is prime.",
+    "formal_statement": "bunyakovsky_conjecture (f : ℤ[X]) :\n    BunyakovskyCondition f ∧ SchinzelCondition {f} →\n    Infinite {n : ℕ | (f.eval (n : ℤ)).natAbs.Prime}",
+    "source_path": "FormalConjectures/Wikipedia/Bunyakovsky.lean",
+    "source_sha256": "bd6318fdfbe2edd554ff3a7f6698346e47df912e204a92887a4997481dff9565",
+    "scope_review": "Integer polynomial with both source-defined Bunyakovsky and Schinzel conditions, infinitely many natural inputs yielding prime absolute value. Expand these definitions before equating with the classical formulation.",
+    "findings": "A singleton polynomial and a family of linear polynomials are different scopes. NatAbs primality, positive leading coefficient and fixed-divisor conditions require definition-level matching; no implication from a similarly named prime-pattern conjecture is accepted.",
+    "search_query": "site:arxiv.org Bunyakovsky conjecture",
+    "literature_leads": [],
+    "literature_access": "metadata/abstract unless specifically noted; no exhaustive review claimed",
+    "original_reference_status": "Original statement and current publication status not established by this pass.",
+    "source_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/Bunyakovsky.lean#L31-L39",
+      "https://en.wikipedia.org/wiki/Bunyakovsky_conjecture"
+    ],
+    "reviewed_at": "2026-10-15",
+    "formal_systems": {
+      "Lean": "Source declaration present; typecheck, full assumptions and axioms not independently checked.",
+      "Coq": "UNKNOWN"
+    },
+    "current_status": "unknown",
+    "human_review": "pending",
+    "completion": "PARTIAL",
+    "gaps": [
+      "Current primary literature and all competing proof claims need full-method review.",
+      "Formalization fidelity, source attribution and original bibliographic priority require independent review."
+    ]
+  },
+  {
+    "id": "audit-cm-000028",
+    "problem_id": "cm-000028",
+    "title": "Büchi's problem",
+    "statement": "**Büchi's problem (first open case, $M = 5$)**:\nFor all integers $x$ and $a$, if $(x+n)^2 + a$ is a perfect square for $n = 0, 1, 2, 3, 4$,\nthen $a = 0$.\n\nNon-trivial sequences of length 3 and 4 are known to exist, so $M = 5$ is the first open case.",
+    "formal_statement": "buchi_problem_M5 : IsBuchi 5",
+    "source_path": "FormalConjectures/Wikipedia/Buchi.lean",
+    "source_sha256": "71716cb13181d43db271bdcab062a3844cea3fda157438b452b897d5d865b2ce",
+    "scope_review": "Selected IsBuchi 5 concerns integer x,a and five squares (x+n)^2+a. General second-difference-two sequences may require a parity/offset correspondence argument.",
+    "findings": "A 2024 preprint claims a five-square solution. Neither its proof nor the equivalence of its general sequence formulation with this integer-offset definition has been checked. The source's first-open-case label therefore cannot be promoted into independent open or solved status.",
+    "search_query": "site:arxiv.org Buchi problem five squares nontrivial sequences integers",
+    "literature_leads": [
+      "https://arxiv.org/abs/2412.16740"
+    ],
+    "literature_access": "metadata/abstract unless specifically noted; no exhaustive review claimed",
+    "original_reference_status": "Buchi problem history and Hensley examples appear in source context; original-paper and parity-scope review pending.",
+    "source_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/Buchi.lean#L47-L55",
+      "https://en.wikipedia.org/wiki/B%C3%BCchi%27s_problem"
+    ],
+    "reviewed_at": "2026-10-15",
+    "formal_systems": {
+      "Lean": "Source declaration present; typecheck, full assumptions and axioms not independently checked.",
+      "Coq": "UNKNOWN"
+    },
+    "current_status": "unknown",
+    "human_review": "pending",
+    "completion": "PARTIAL",
+    "gaps": [
+      "Current primary literature and all competing proof claims need full-method review.",
+      "Formalization fidelity, source attribution and original bibliographic priority require independent review."
+    ]
+  },
+  {
+    "id": "audit-cm-000029",
+    "problem_id": "cm-000029",
+    "title": "Carmichael's totient function conjecture",
+    "statement": "*Carmichael's totient function conjecture*: For every positive natural number $n$,\nthere exists a natural number $m$ with $m ≠ n$, such that $φ(n) = φ(m)$.",
+    "formal_statement": "charmichaelTotient :\n    ∀ ⦃n : ℕ⦄, 0 < n → CarmichaelTotientFor n",
+    "source_path": "FormalConjectures/Wikipedia/CarmichaelTotient.lean",
+    "source_sha256": "d821ac4fd6dd735edd31a0d020161b9ab795a843043905c50ff765b6f430160b",
+    "scope_review": "For every positive n, exists a different natural m with identical Euler totient. Distinguish existence of a partner from claims about exactly k preimages.",
+    "findings": "No adequate current primary-status result was retained in this bounded search. The quantified statement and multiplicity variants require separate review; unknown is retained.",
+    "search_query": "site:arxiv.org Carmichael totient conjecture",
+    "literature_leads": [],
+    "literature_access": "metadata/abstract unless specifically noted; no exhaustive review claimed",
+    "original_reference_status": "Carmichael attribution appears in source title; original publication and modern status not independently checked.",
+    "source_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/CarmichaelTotient.lean#L56-L60",
+      "https://en.wikipedia.org/wiki/Carmichael%27s_totient_function_conjecture"
+    ],
+    "reviewed_at": "2026-10-15",
+    "formal_systems": {
+      "Lean": "Source declaration present; typecheck, full assumptions and axioms not independently checked.",
+      "Coq": "UNKNOWN"
+    },
+    "current_status": "unknown",
+    "human_review": "pending",
+    "completion": "PARTIAL",
+    "gaps": [
+      "Current primary literature and all competing proof claims need full-method review.",
+      "Formalization fidelity, source attribution and original bibliographic priority require independent review."
+    ]
+  },
+  {
+    "id": "audit-cm-000032",
+    "problem_id": "cm-000032",
+    "title": "Congruent numbers: the odd converse to Tunnell's criterion",
+    "statement": "Tunnell's theorem (sufficient condition assuming BSD) for odd squarefree congruent numbers.",
+    "formal_statement": "Tunnell_odd_converse (n : ℕ) (hsqf : Squarefree n) (hodd : Odd n) :\n    2 * (A n).ncard = (B n).ncard → congruentNumber n",
+    "source_path": "FormalConjectures/Wikipedia/CongruentNumber.lean",
+    "source_sha256": "276ee0854a91152930f7fbdc862ecb58eec8972af57f3c7f8bc3df8f2e52f5dd",
+    "scope_review": "Odd squarefree natural n satisfying a specific equality of finite integer-solution counts implies n is congruent. The condition is not the unrestricted congruent-number classification.",
+    "findings": "Clay's BSD account describes Tunnell's conditional sufficient direction and an unconditional necessary direction. The selected source signature has no BSD hypothesis: it is the open sufficient conjecture, not an unconditional attribution to Tunnell's proved theorem.",
+    "search_query": "Tunnell congruent number site:arxiv.org",
+    "literature_leads": [
+      "https://www.claymath.org/wp-content/uploads/2022/02/MPPc.pdf"
+    ],
+    "literature_access": "metadata/abstract unless specifically noted; no exhaustive review claimed",
+    "original_reference_status": "Tunnell's original criterion and count conventions must be reviewed against the original paper; Clay provides documentary context only.",
+    "source_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/CongruentNumber.lean#L116-L119",
+      "https://en.wikipedia.org/wiki/Congruent_number",
+      "https://en.wikipedia.org/wiki/Tunnell%27s_theorem",
+      "https://kconrad.math.uconn.edu/blurbs/ugradnumthy/congnumber.pdf"
+    ],
+    "reviewed_at": "2026-10-15",
+    "formal_systems": {
+      "Lean": "Source declaration present; typecheck, full assumptions and axioms not independently checked.",
+      "Coq": "UNKNOWN"
+    },
+    "current_status": "unknown",
+    "human_review": "pending",
+    "completion": "PARTIAL",
+    "gaps": [
+      "Current primary literature and all competing proof claims need full-method review.",
+      "Formalization fidelity, source attribution and original bibliographic priority require independent review."
+    ]
+  },
+  {
+    "id": "audit-cm-000072",
+    "problem_id": "cm-000072",
+    "title": "Four exponentials conjecture",
+    "statement": "**Four exponentials conjecture**\nLet $x_0, x_1$ and $y_0, y_1$ be $\\mathbb Q$-linearly independent pairs of complex numbers,\nthen some $e^{x_i y_j}$ is transcendental.",
+    "formal_statement": "four_exponentials_conjecture (x : Fin 2 → ℂ) (y : Fin 2 → ℂ)\n    (h1 : LinearIndependent ℚ x) (h2 : LinearIndependent ℚ y) :\n    ∃ i j : Fin 2, Transcendental ℚ (exp (x i * y j))",
+    "source_path": "FormalConjectures/Wikipedia/Exponentials.lean",
+    "source_sha256": "d66a164acaff7b58e97836fa7cb6d02870098f2484bf035907aaf163c98e8e50",
+    "scope_review": "Two Q-linearly independent complex pairs x and y imply at least one of four exp(x_i*y_j) is transcendental. Complex versus real inputs and both independence assumptions are essential.",
+    "findings": "Conditional applications do not prove the conjecture. The source's irrational-t consequence for 2^t and 3^t is recorded as a candidate implication, with the logarithmic independence argument still pending.",
+    "search_query": "site:arxiv.org four exponentials conjecture",
+    "literature_leads": [
+      "https://arxiv.org/abs/2105.03955"
+    ],
+    "literature_access": "metadata/abstract unless specifically noted; no exhaustive review claimed",
+    "original_reference_status": "Classical attribution and original statement were not recovered sufficiently for a priority claim.",
+    "source_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/Exponentials.lean#L32-L40",
+      "https://en.wikipedia.org/wiki/Four_exponentials_conjecture"
+    ],
+    "reviewed_at": "2026-10-15",
+    "formal_systems": {
+      "Lean": "Source declaration present; typecheck, full assumptions and axioms not independently checked.",
+      "Coq": "UNKNOWN"
+    },
+    "current_status": "unknown",
+    "human_review": "pending",
+    "completion": "PARTIAL",
+    "gaps": [
+      "Current primary literature and all competing proof claims need full-method review.",
+      "Formalization fidelity, source attribution and original bibliographic priority require independent review."
+    ]
+  },
+  {
+    "id": "audit-cm-000076",
+    "problem_id": "cm-000076",
+    "title": "Fuglede's conjecture in dimensions 1 and 2 (dim 2)",
+    "statement": "**Fuglede's conjecture** in two dimensions: A bounded subset of ℝ^2 with positive Lebesgue measure is spectral iff it tiles ℝ^2 by translation.\n\n[Zh26], a July 2026 preprint, announces a negative answer in both directions, from two\nexplicit $60$-point subsets of $\\mathbb{Z}_{60} \\times \\mathbb{Z}_{12}$ lifted to finite\nunions of unit squares in $\\mathbb{R}^2$. It is not yet published.",
+    "formal_statement": "FugledeConjecture.variants.dim_2 :\n    FugledeConjectureFor 2",
+    "source_path": "FormalConjectures/Wikipedia/Fuglede.lean",
+    "source_sha256": "dc6adc0f52c79bba603a383b03b225071cc1999c68c6e6a3ea22e3647d997b52",
+    "scope_review": "Bounded positive-measure subsets of R^2: spectral iff translational tiling, with exact conventions for spectra and almost-everywhere tilings.",
+    "findings": "The July 2026 Zhang preprint announces counterexamples in both directions, and the source comment already flags that claim. Its finite-to-Euclidean transference and proofs were not independently verified; do not keep an unqualified certified-open label or promote a preprint abstract to a certified refutation.",
+    "search_query": "site:arxiv.org Fuglede conjecture dimension two 2026 Zhang",
+    "literature_leads": [
+      "https://arxiv.org/abs/2607.15632"
+    ],
+    "literature_access": "metadata/abstract unless specifically noted; no exhaustive review claimed",
+    "original_reference_status": "Fuglede's original paper and the dimension-two reduction require a full-method review; no bibliography priority is inferred.",
+    "source_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/Fuglede.lean#L51-L60",
+      "https://en.wikipedia.org/wiki/Fuglede%27s_conjecture",
+      "https://arxiv.org/abs/2607.15632"
+    ],
+    "reviewed_at": "2026-10-15",
+    "formal_systems": {
+      "Lean": "Source declaration present; typecheck, full assumptions and axioms not independently checked.",
+      "Coq": "UNKNOWN"
+    },
+    "current_status": "unknown",
+    "human_review": "pending",
+    "completion": "PARTIAL",
+    "gaps": [
+      "Current primary literature and all competing proof claims need full-method review.",
+      "Formalization fidelity, source attribution and original bibliographic priority require independent review."
+    ]
+  },
+  {
+    "id": "audit-cm-000090",
+    "problem_id": "cm-000090",
+    "title": "Kaplansky's Conjectures",
+    "statement": "**The idempotent conjecture**\n\nIf `G` is torsion-free, then `K[G]` has no non-trivial idempotents.",
+    "formal_statement": "idempotent_conjecture (a : MonoidAlgebra K G) (h : IsIdempotentElem a) :\n    a = 0 ∨ a = 1",
+    "source_path": "FormalConjectures/Wikipedia/Kaplansky.lean",
+    "source_sha256": "1053e7f52d4692d0f63a2de114309901ce49d418016c4c1756a817b27cdd7753",
+    "scope_review": "Torsion-free group algebra K[G] has no nontrivial idempotents, with the source's field/group assumptions. Not the unit conjecture or the zero-divisor conjecture.",
+    "findings": "Pinned context distinguishes a zero-divisor refutation from the idempotent problem. A counterexample to a stronger property does not automatically refute a weaker one. Exact group, field characteristic and algebra conventions remain review obligations.",
+    "search_query": "site:arxiv.org Kaplansky idempotent conjecture",
+    "literature_leads": [],
+    "literature_access": "metadata/abstract unless specifically noted; no exhaustive review claimed",
+    "original_reference_status": "Classical Kaplansky source and contemporary idempotent status not independently cleared.",
+    "source_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/Kaplansky.lean#L60-L67",
+      "https://en.wikipedia.org/wiki/Kaplansky%27s_conjectures"
+    ],
+    "reviewed_at": "2026-10-15",
+    "formal_systems": {
+      "Lean": "Source declaration present; typecheck, full assumptions and axioms not independently checked.",
+      "Coq": "UNKNOWN"
+    },
+    "current_status": "unknown",
+    "human_review": "pending",
+    "completion": "PARTIAL",
+    "gaps": [
+      "Current primary literature and all competing proof claims need full-method review.",
+      "Formalization fidelity, source attribution and original bibliographic priority require independent review."
+    ]
+  },
+  {
+    "id": "audit-cm-000092",
+    "problem_id": "cm-000092",
+    "title": "Köthe conjecture (general matrix)",
+    "statement": "The **Köthe conjecture**: for any nil ideal `I` of `R`, the matrix ideal `M_n(I)` is a nil ideal\nof the matrix ring `M_n(R)`.",
+    "formal_statement": "KotherConjecture.variants.general_matrix {I : TwoSidedIdeal R} (hI : IsNil I)\n    (n : Type*) [Fintype n] : IsNil (matrix n I)",
+    "source_path": "FormalConjectures/Wikipedia/Koethe.lean",
+    "source_sha256": "4288dafae4f3792105602cad97b7f067f7cc3213b5e4c0a675b269e53b5dcac3",
+    "scope_review": "For each nil two-sided ideal I in the source ring R, every finite matrix ideal M_n(I) is nil. Nil versus nilpotent and one-sided versus two-sided formulations require care.",
+    "findings": "A September 2026 point-module paper explicitly claims a refutation. The construction and equivalence to this matrix-ideal formulation have not been reviewed, so no automatic status change is permitted.",
+    "search_query": "site:arxiv.org Kothe conjecture",
+    "literature_leads": [
+      "https://arxiv.org/abs/2609.15080",
+      "https://arxiv.org/abs/2609.26909"
+    ],
+    "literature_access": "metadata/abstract unless specifically noted; no exhaustive review claimed",
+    "original_reference_status": "Original Kothe statement and formulation-equivalence history still require primary source review.",
+    "source_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/Koethe.lean#L125-L129",
+      "https://en.wikipedia.org/wiki/K%C3%B6the_conjecture"
+    ],
+    "reviewed_at": "2026-10-15",
+    "formal_systems": {
+      "Lean": "Source declaration present; typecheck, full assumptions and axioms not independently checked.",
+      "Coq": "UNKNOWN"
+    },
+    "current_status": "unknown",
+    "human_review": "pending",
+    "completion": "PARTIAL",
+    "gaps": [
+      "Current primary literature and all competing proof claims need full-method review.",
+      "Formalization fidelity, source attribution and original bibliographic priority require independent review."
+    ]
+  },
+  {
+    "id": "audit-cm-000094",
+    "problem_id": "cm-000094",
+    "title": "Lehmer's Mahler measure problem (best)",
+    "statement": "`μ=M(X^10 + X^9 - X^7 - X^6 - X^5 - X^4 - X^3 + X + 1)` is the best value for `lehmer_mahler_measure_problem`.",
+    "formal_statement": "lehmer_mahler_measure_problem.variants.best (f : ℤ[X])\n    (hf : mahlerMeasureZ f > 1) : mahlerMeasureZ f ≥ mahlerMeasureZ lehmerPolynomial",
+    "source_path": "FormalConjectures/Wikipedia/LehmerMahlerMeasureProblem.lean",
+    "source_sha256": "8afc411d9916a5ec3b582e10f7aade6e6a6706d6bb22fc86cc5b4651ce9be5ac",
+    "scope_review": "Every integer polynomial of Mahler measure >1 has measure at least that of the specified Lehmer polynomial. This sharp-minimum claim is stronger in presentation than merely asking for a gap above one.",
+    "findings": "Do not merge a positive universal lower-gap conjecture with the precise optimal Lehmer-polynomial threshold without an equivalence proof. Nonmonic polynomials, cyclotomic factors and normalization must be examined.",
+    "search_query": "site:arxiv.org Lehmer Mahler measure problem",
+    "literature_leads": [],
+    "literature_access": "metadata/abstract unless specifically noted; no exhaustive review claimed",
+    "original_reference_status": "Lehmer's original example and subsequent best-bound literature were not fully audited.",
+    "source_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/LehmerMahlerMeasureProblem.lean#L54-L59",
+      "https://en.wikipedia.org/wiki/Lehmer%27s_conjecture"
+    ],
+    "reviewed_at": "2026-10-15",
+    "formal_systems": {
+      "Lean": "Source declaration present; typecheck, full assumptions and axioms not independently checked.",
+      "Coq": "UNKNOWN"
+    },
+    "current_status": "unknown",
+    "human_review": "pending",
+    "completion": "PARTIAL",
+    "gaps": [
+      "Current primary literature and all competing proof claims need full-method review.",
+      "Formalization fidelity, source attribution and original bibliographic priority require independent review."
+    ]
+  },
+  {
+    "id": "audit-cm-000097",
+    "problem_id": "cm-000097",
+    "title": "Normality of Irrational Algebraic Numbers",
+    "statement": "Borel's normality conjecture [Bor50]: every irrational algebraic real is absolutely normal.",
+    "formal_statement": "irrational_algebraic_absolutely_normal :\n    ∀ x : ℝ, IsIrrationalAlgebraic x → IsAbsolutelyNormal x",
+    "source_path": "FormalConjectures/Wikipedia/AlgebraicNormality.lean",
+    "source_sha256": "a51cba30e950e5b88ff742b3df0d8e51c471d4907924c0d6d16f53f68e325604",
+    "scope_review": "Every irrational algebraic real is absolutely normal, meaning normal in every relevant integer base. Simple normality, absolute normality and transcendence are different properties.",
+    "findings": "The exact IsIrrationalAlgebraic and IsAbsolutelyNormal definitions remain part of the fidelity obligation. Examples of computable normal numbers or finite digit tests cannot establish the algebraic universal claim.",
+    "search_query": "site:arxiv.org normality algebraic Borel conjecture",
+    "literature_leads": [],
+    "literature_access": "metadata/abstract unless specifically noted; no exhaustive review claimed",
+    "original_reference_status": "Borel1950 is cited upstream; original text and current partial results require direct examination.",
+    "source_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/AlgebraicNormality.lean#L72-L75",
+      "https://en.wikipedia.org/wiki/Normal_number"
+    ],
+    "reviewed_at": "2026-10-15",
+    "formal_systems": {
+      "Lean": "Source declaration present; typecheck, full assumptions and axioms not independently checked.",
+      "Coq": "UNKNOWN"
+    },
+    "current_status": "unknown",
+    "human_review": "pending",
+    "completion": "PARTIAL",
+    "gaps": [
+      "Current primary literature and all competing proof claims need full-method review.",
+      "Formalization fidelity, source attribution and original bibliographic priority require independent review."
+    ]
+  },
+  {
+    "id": "audit-cm-000102",
+    "problem_id": "cm-000102",
+    "title": "The Ramsey number R(5,5)",
+    "statement": "The open problem: determine the Ramsey number $R(5,5)$.\n\nIt is known that $43 \\le R(5,5) \\le 46$.",
+    "formal_statement": "ramsey_number_five_five :\n    R(5, 5) = ramsey_number_five_five.answer",
+    "source_path": "FormalConjectures/Wikipedia/RamseyNumbers.lean",
+    "source_sha256": "d968e8602e12428644421f6440d9351d11f267862be24990a5d650d93cc70457",
+    "scope_review": "Determine the exact integer R(5,5); bounds are historical source assertions, not the requested answer or a proof.",
+    "findings": "A 2025 paper reports a heuristic/spectral estimate of 45. A probabilistic diagnostic is not a complete coloring certificate or exhaustive upper-bound proof. The source's 43..46 interval needs its own current-source reconciliation.",
+    "search_query": "site:arxiv.org R(5,5) 2025",
+    "literature_leads": [
+      "https://arxiv.org/abs/2508.16699"
+    ],
+    "literature_access": "metadata/abstract unless specifically noted; no exhaustive review claimed",
+    "original_reference_status": "Classical Ramsey definition is retained in source; authoritative current bound certificates and exact result remain unverified.",
+    "source_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/RamseyNumbers.lean#L92-L99",
+      "https://en.wikipedia.org/wiki/Ramsey_number",
+      "https://oeis.org/A212954",
+      "https://mathworld.wolfram.com/RamseyNumber.html"
+    ],
+    "reviewed_at": "2026-10-15",
+    "formal_systems": {
+      "Lean": "Source declaration present; typecheck, full assumptions and axioms not independently checked.",
+      "Coq": "UNKNOWN"
+    },
+    "current_status": "unknown",
+    "human_review": "pending",
+    "completion": "PARTIAL",
+    "gaps": [
+      "Current primary literature and all competing proof claims need full-method review.",
+      "Formalization fidelity, source attribution and original bibliographic priority require independent review."
+    ]
+  },
+  {
+    "id": "audit-cm-000103",
+    "problem_id": "cm-000103",
+    "title": "Resolution of singularities",
+    "statement": "**Resolution of singularities in positive characteristic.**\nLet $k$ be a perfect field of characteristic $p > 0$ and let $X$ be an integral scheme that is\nseparated and of finite type over $k$. Then there is an integral scheme $Y$ that is smooth over\n$k$ together with a proper birational morphism $Y \\to X$.\n\nThis is open from dimension four on; see [Hau2010]. Perfectness of $k$ is needed for the\nconclusion as stated; see `exists_not_hasResolution_of_not_perfectField`.",
+    "formal_statement": "resolution_of_singularities (k : Type u) [Field k] [PerfectField k] (p : ℕ)\n    [Fact p.Prime] [CharP k p] {X : Scheme.{u}} (sX : X ⟶ Spec (.of k)) [IsIntegral X]\n    [LocallyOfFiniteType sX] [QuasiCompact sX] [IsSeparated sX] :\n    Scheme.HasResolution sX",
+    "source_path": "FormalConjectures/Wikipedia/ResolutionOfSingularities.lean",
+    "source_sha256": "424fe7fcf689b208a6e96fbaeaa2dde74b70ccae372fbe164d24c85044db7795",
+    "scope_review": "Perfect positive-characteristic field; integral separated finite-type scheme; a proper birational morphism from a smooth integral scheme. Not arbitrary imperfect fields or merely alterations.",
+    "findings": "Historical dimension-three results and programs with an unresolved termination step were found. Characteristic-zero resolution is outside the selected positive-characteristic scope. Imperfect-field counterexamples do not refute the perfect-field statement.",
+    "search_query": "site:arxiv.org resolution of singularities positive characteristic four",
+    "literature_leads": [
+      "https://arxiv.org/abs/math/0607009",
+      "https://arxiv.org/abs/math/0606530"
+    ],
+    "literature_access": "metadata/abstract unless specifically noted; no exhaustive review claimed",
+    "original_reference_status": "Source cites Hironaka/Hausen and dimension-three work; exact bibliographic and theorem-hypothesis checking remains open.",
+    "source_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/ResolutionOfSingularities.lean#L95-L108",
+      "https://en.wikipedia.org/wiki/Resolution_of_singularities",
+      "https://doi.org/10.2307/1970486",
+      "https://doi.org/10.2307/1970547",
+      "https://arxiv.org/abs/math/0508332",
+      "https://doi.org/10.1090/S0273-0979-09-01274-9",
+      "https://doi.org/10.2307/1971141",
+      "https://doi.org/10.1016/j.jalgebra.2008.03.032",
+      "https://doi.org/10.1016/j.jalgebra.2008.11.030",
+      "https://doi.org/10.1016/j.jalgebra.2019.02.017"
+    ],
+    "reviewed_at": "2026-10-15",
+    "formal_systems": {
+      "Lean": "Source declaration present; typecheck, full assumptions and axioms not independently checked.",
+      "Coq": "UNKNOWN"
+    },
+    "current_status": "unknown",
+    "human_review": "pending",
+    "completion": "PARTIAL",
+    "gaps": [
+      "Current primary literature and all competing proof claims need full-method review.",
+      "Formalization fidelity, source attribution and original bibliographic priority require independent review."
+    ]
+  },
+  {
+    "id": "audit-cm-000105",
+    "problem_id": "cm-000105",
+    "title": "Serre's multiplicity conjectures",
+    "statement": "**Positivity conjecture.** Let $R$ be a regular local ring and let $M$, $N$ be finitely\ngenerated $R$-modules such that $M \\otimes_R N$ has finite length. If\n$\\dim M + \\dim N = \\dim R$, then $\\chi(M, N) > 0$.\n\nThe hypothesis on dimensions forces $M$ and $N$ to be nonzero, since the dimension of the zero\nmodule is $\\bot$.",
+    "formal_statement": "intersectionMultiplicity_pos (h : IsFiniteLength R (M ⊗[R] N))\n    (hdim : Module.supportDim R M + Module.supportDim R N = ringKrullDim R) :\n    0 < intersectionMultiplicity R M N",
+    "source_path": "FormalConjectures/Wikipedia/SerreMultiplicityConjectures.lean",
+    "source_sha256": "821633b00443b85927eeb6223139a294f0b2bf89685c3a9e3cb106e5d418d6b1",
+    "scope_review": "Regular local ring, finitely generated modules with finite-length tensor product, and support dimensions summing to the ring dimension; intersection multiplicity strictly positive.",
+    "findings": "Positivity, vanishing and nonnegativity are different Serre conjectures. Equicharacteristic and mixed-characteristic results cannot be transferred without matching hypotheses. The bounded search did not establish the full selected case.",
+    "search_query": "site:arxiv.org Serre positivity intersection multiplicity conjecture",
+    "literature_leads": [],
+    "literature_access": "metadata/abstract unless specifically noted; no exhaustive review claimed",
+    "original_reference_status": "Serre's original formulation and exact current mixed-characteristic coverage require primary theorem review.",
+    "source_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/SerreMultiplicityConjectures.lean#L101-L112",
+      "https://en.wikipedia.org/wiki/Serre%27s_multiplicity_conjectures",
+      "https://arxiv.org/abs/1510.05146"
+    ],
+    "reviewed_at": "2026-10-15",
+    "formal_systems": {
+      "Lean": "Source declaration present; typecheck, full assumptions and axioms not independently checked.",
+      "Coq": "UNKNOWN"
+    },
+    "current_status": "unknown",
+    "human_review": "pending",
+    "completion": "PARTIAL",
+    "gaps": [
+      "Current primary literature and all competing proof claims need full-method review.",
+      "Formalization fidelity, source attribution and original bibliographic priority require independent review."
+    ]
+  },
+  {
+    "id": "audit-cm-000106",
+    "problem_id": "cm-000106",
+    "title": "Tournament anti-Sidorenko trees conjecture",
+    "statement": "**Tournament Anti-Sidorenko (TAS) Trees Conjecture.**\n\nFor every finite undirected tree $T$, there exists an orientation $\\vec{T}$ of its edges such that\nfor any finite tournament $G$, the homomorphism density satisfies:\n$$ t_{\\vec{T}}(G) \\le 2^{-e(T)} $$\nwhere $e(T)$ is the total number of edges in $T$.",
+    "formal_statement": "tournament_anti_sidorenko_trees_conjecture :\n    ∀ {V : Type*} [Fintype V] [DecidableEq V] (T : SimpleGraph V) [DecidableRel T.Adj],\n      T.IsTree →\n      ∃ (D : Digraph V),\n        D.IsOrientation T ∧\n        ∀ {W : Type*} [Fintype W] [DecidableEq W] [Nonempty W]\n          (G : Digraph W) [DecidableRel G.Adj],\n          G.IsTournament →\n          Digraph.homDensity D G ≤ (1 / 2 : ℝ) ^ T.edgeFinset.card",
+    "source_path": "FormalConjectures/Wikipedia/SidorenkoConjecture.lean",
+    "source_sha256": "94e2af445a02e245fd944f569baa276d003fd94adae5d1cf65d04b39f70cc7d3",
+    "scope_review": "For each finite undirected tree, exists one orientation whose homomorphism density in every finite nonempty tournament is at most 2^(-edge count). Not the undirected Sidorenko conjecture.",
+    "findings": "2025/2026 papers establish particular orientations, paths and spiders and describe progress toward the universal statement. Quantifier order exists-orientation then all-tournaments is essential. No general solution is inferred from the title Sidorenko.",
+    "search_query": "site:arxiv.org tournament anti-Sidorenko trees",
+    "literature_leads": [
+      "https://arxiv.org/abs/2605.14138",
+      "https://arxiv.org/abs/2512.11222",
+      "https://arxiv.org/abs/2609.14655"
+    ],
+    "literature_access": "metadata/abstract unless specifically noted; no exhaustive review claimed",
+    "original_reference_status": "Fox/Himwich/Mani/Zhou conjecture lineage needs exact original paper comparison; newer abstracts provide scoped leads.",
+    "source_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/SidorenkoConjecture.lean#L141-L158",
+      "https://en.wikipedia.org/wiki/Sidorenko%27s_conjecture",
+      "https://arxiv.org/abs/2605.14138"
+    ],
+    "reviewed_at": "2026-10-15",
+    "formal_systems": {
+      "Lean": "Source declaration present; typecheck, full assumptions and axioms not independently checked.",
+      "Coq": "UNKNOWN"
+    },
+    "current_status": "unknown",
+    "human_review": "pending",
+    "completion": "PARTIAL",
+    "gaps": [
+      "Current primary literature and all competing proof claims need full-method review.",
+      "Formalization fidelity, source attribution and original bibliographic priority require independent review."
+    ]
+  },
+  {
+    "id": "audit-cm-000109",
+    "problem_id": "cm-000109",
+    "title": "Tarski's exponential function problem",
+    "statement": "**Tarski's exponential function problem.** Is the first-order theory of the real exponential\nfield $\\mathbb{R}_{\\exp} = (\\mathbb{R}, +, \\cdot, -, 0, 1, \\le, \\exp)$ decidable?",
+    "formal_statement": "tarski_exponential_function_problem :\n    (Language.orderedExpField.completeTheory ℝ).IsDecidable",
+    "source_path": "FormalConjectures/Wikipedia/TarskiExponentialFunctionProblem.lean",
+    "source_sha256": "cee8fb2a2eca8d675d78c2735529904ca56a29f6c8ae0bda374db71a0ae808a3",
+    "scope_review": "Decidability of the complete first-order theory of the ordered real exponential field, not just elementary arithmetic or quantifier-free polynomial formulas.",
+    "findings": "Conditional decidability under transcendence assumptions must remain conditional. The source's IsDecidable type requires semantic and algorithmic interpretation review; classical choice is not an algorithm.",
+    "search_query": "site:arxiv.org Tarski exponential decidability Schanuel",
+    "literature_leads": [],
+    "literature_access": "metadata/abstract unless specifically noted; no exhaustive review claimed",
+    "original_reference_status": "Original Tarski question and Macintyre-Wilkie conditional theorem not fully retrieved/reviewed in this pass.",
+    "source_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/TarskiExponentialFunctionProblem.lean#L70-L76",
+      "https://en.wikipedia.org/wiki/Tarski%27s_exponential_function_problem",
+      "https://en.wikipedia.org/wiki/List_of_unsolved_problems_in_mathematics#Model_theory_and_formal_languages",
+      "https://encyclopediaofmath.org/wiki/Model_theory_of_the_real_exponential_function",
+      "https://arxiv.org/abs/2603.08365"
+    ],
+    "reviewed_at": "2026-10-15",
+    "formal_systems": {
+      "Lean": "Source declaration present; typecheck, full assumptions and axioms not independently checked.",
+      "Coq": "UNKNOWN"
+    },
+    "current_status": "unknown",
+    "human_review": "pending",
+    "completion": "PARTIAL",
+    "gaps": [
+      "Current primary literature and all competing proof claims need full-method review.",
+      "Formalization fidelity, source attribution and original bibliographic priority require independent review."
+    ]
+  },
+  {
+    "id": "audit-cm-000110",
+    "problem_id": "cm-000110",
+    "title": "The 1/3–2/3 conjecture",
+    "statement": "Does every finite partially ordered set that is not totally ordered\ncontain two elements $x$ and $y$ such that the probability that\n$x$ appears before $y$ in a random linear extension is between $\\frac 1 3$ and $\\frac 2 3$?\n\nThe set of all total order extensions is represented as order preserving\nbijections $P$ of $1, ..., n$.",
+    "formal_statement": "conjecture_1_3_to_2_3 : ∀ (P : Type) [Finite P] [PartialOrder P]\n    (not_total : ¬ Std.Total (α := P) (· ≤ ·)) (total_ext : Set <| OrderHom P ℕ)\n    (total_ext_def : ∀ σ, σ ∈ total_ext ↔ Set.range σ = Set.Icc 1 (Nat.card P)),\n    ∃ x y : P, ({σ ∈ total_ext | σ x < σ y}.ncard / total_ext.ncard : ℚ)\n      ∈ Set.Icc (1/3) (2/3)",
+    "source_path": "FormalConjectures/Wikipedia/conjecture_1_3_to_2_3.lean",
+    "source_sha256": "0e0a1fd15009ef21b5aa399a1e27825212039a04972dd341eb88834a1ef22b1d",
+    "scope_review": "Finite non-total partial order; uniform distribution on actual linear extensions; existence of a pair with probability in [1/3,2/3]. Source OrderHom encoding and bijectivity need correspondence checking.",
+    "findings": "A September 2026 preprint announces improvement of a general lower balance bound, not a solution at 1/3. A 2017 paper gives particular poset families. Neither clears all finite nonchains.",
+    "search_query": "site:arxiv.org 1/3 2/3 poset conjecture",
+    "literature_leads": [
+      "https://arxiv.org/abs/2609.30888",
+      "https://arxiv.org/abs/1706.04985"
+    ],
+    "literature_access": "metadata/abstract unless specifically noted; no exhaustive review claimed",
+    "original_reference_status": "Classical proposal and exact linear-extension encoding require original-source and definition review.",
+    "source_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/conjecture_1_3_to_2_3.lean#L30-L43",
+      "https://en.wikipedia.org/wiki/1/3%E2%80%932/3_conjecture"
+    ],
+    "reviewed_at": "2026-10-15",
+    "formal_systems": {
+      "Lean": "Source declaration present; typecheck, full assumptions and axioms not independently checked.",
+      "Coq": "UNKNOWN"
+    },
+    "current_status": "unknown",
+    "human_review": "pending",
+    "completion": "PARTIAL",
+    "gaps": [
+      "Current primary literature and all competing proof claims need full-method review.",
+      "Formalization fidelity, source attribution and original bibliographic priority require independent review."
+    ]
+  },
+  {
+    "id": "audit-cm-000111",
+    "problem_id": "cm-000111",
+    "title": "The Bing-Borsuk Conjecture",
+    "statement": "The Bing-Borsuk Conjecture: every $n$-dimensional homogeneous absolute neighborhood retract\nis a topological $n$-manifold. A topological space $X$ is an $n$-dimensional manifold\nwhen `T2Space X ∧ Nonempty (ChartedSpace (Fin n → ℝ) X)`. The hypothesis `[MetrizableSpace X]`\nimplies `T2Space X` so this does not appear in the conclusion.",
+    "formal_statement": "bing_borsuk_conjecture : ∀ n : ℕ, ∀ (X : Type) [TopologicalSpace X] [MetrizableSpace X] [HomogeneousSpace X] [IsAbsoluteNeighborhoodRetract X],\n    HasLebesgueCoveringDimensionEq X n → Nonempty (ChartedSpace (Fin n → ℝ) X)",
+    "source_path": "FormalConjectures/Wikipedia/BingBorsuk.lean",
+    "source_sha256": "558d33f6c2e322d63ab8c0e78a47774c0c083382e2befa46e120fd6f8aa91bd9",
+    "scope_review": "Metrizable homogeneous ANR of covering dimension n is a topological n-manifold, with the exact ChartedSpace/manifold separation and dimension conventions.",
+    "findings": "Historical survey distinguishes Bing-Borsuk from Busemann and from weaker generalized-manifold assertions. A 2008 survey cannot alone certify current 2026 status. Source imports and ANR definitions have not been typechecked here.",
+    "search_query": "site:arxiv.org Bing-Borsuk conjecture",
+    "literature_leads": [
+      "https://arxiv.org/abs/0811.0886"
+    ],
+    "literature_access": "metadata/abstract unless specifically noted; no exhaustive review claimed",
+    "original_reference_status": "Bing and Borsuk attribution needs original text; historical survey is a lineage lead rather than current certification.",
+    "source_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/BingBorsuk.lean#L44-L52",
+      "https://en.wikipedia.org/wiki/Bing%E2%80%93Borsuk_conjecture"
+    ],
+    "reviewed_at": "2026-10-15",
+    "formal_systems": {
+      "Lean": "Source declaration present; typecheck, full assumptions and axioms not independently checked.",
+      "Coq": "UNKNOWN"
+    },
+    "current_status": "unknown",
+    "human_review": "pending",
+    "completion": "PARTIAL",
+    "gaps": [
+      "Current primary literature and all competing proof claims need full-method review.",
+      "Formalization fidelity, source attribution and original bibliographic priority require independent review."
+    ]
+  },
+  {
+    "id": "audit-cm-000118",
+    "problem_id": "cm-000118",
+    "title": "Union-closed sets conjecture",
+    "statement": "For every finite union-closed family of sets, other than the family containing only the empty set,\nthere exists an element that belongs to at least half of the sets in the family.",
+    "formal_statement": "union_closed\n    [Nonempty n]\n    (h_ne_singleton_empty : A ≠ {∅})\n    (h_union_closed : IsUnionClosed A) :\n    ∃ i : n, (1 / 2 : ℚ) * #A ≤ #{x ∈ A | i ∈ x}",
+    "source_path": "FormalConjectures/Wikipedia/UnionClosed.lean",
+    "source_sha256": "2eed6f767e60e2103c3edb55d74416ab58961129cf89edcb0f9861b47698a265",
+    "scope_review": "Finite union-closed family, excluding the singleton family containing only the empty set, on a nonempty ground type; one element occurs in at least half of members. Empty-family case is vacuous under nonempty ground type.",
+    "findings": "October 2026 work reports an improved lower frequency strictly below 1/2. This is progress toward, not a proof of, Frankl's half bound. Source's old 0.38234 comment is not a current best-bound claim.",
+    "search_query": "site:arxiv.org union closed conjecture 2026 improved bound",
+    "literature_leads": [
+      "https://arxiv.org/abs/2610.02295",
+      "https://arxiv.org/abs/2211.11504"
+    ],
+    "literature_access": "metadata/abstract unless specifically noted; no exhaustive review claimed",
+    "original_reference_status": "Frankl attribution and original proposal remain a primary-source obligation; recent preprints are bounded literature leads.",
+    "source_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/UnionClosed.lean#L54-L63",
+      "https://en.wikipedia.org/wiki/Union-closed_sets_conjecture"
+    ],
+    "reviewed_at": "2026-10-15",
+    "formal_systems": {
+      "Lean": "Source declaration present; typecheck, full assumptions and axioms not independently checked.",
+      "Coq": "UNKNOWN"
+    },
+    "current_status": "unknown",
+    "human_review": "pending",
+    "completion": "PARTIAL",
+    "gaps": [
+      "Current primary literature and all competing proof claims need full-method review.",
+      "Formalization fidelity, source attribution and original bibliographic priority require independent review."
+    ]
+  },
+  {
+    "id": "audit-cm-000119",
+    "problem_id": "cm-000119",
+    "title": "Vizing's conjecture (1968)",
+    "statement": "**Vizing's conjecture (1968).**\n\nFor all finite simple graphs $G$ and $H$, the domination number of the Cartesian (box)\nproduct satisfies $\\gamma(G \\,\\square\\, H) \\ge \\gamma(G)\\,\\gamma(H)$.",
+    "formal_statement": "vizing_conjecture :\n    ∀ {α β : Type} [Fintype α] [Fintype β] [DecidableEq α] [DecidableEq β]\n      (G : SimpleGraph α) (H : SimpleGraph β),\n      G.dominationNumber * H.dominationNumber ≤ (G □ H).dominationNumber",
+    "source_path": "FormalConjectures/Wikipedia/VizingConjecture.lean",
+    "source_sha256": "f0f1f733408d88b96e1d45aaef318c40b8a563ad55b84755ae01ae4dfd55249e",
+    "scope_review": "All finite simple graphs G,H: domination number of Cartesian product at least the product of domination numbers. Not Vizing's edge-coloring theorem or other graph products.",
+    "findings": "An old claimed full proof and a later almost-all-pairs result were both found. A proof-title claim is not sufficient acceptance evidence. Exact hypotheses of each paper must be inspected before changing universal status.",
+    "search_query": "site:arxiv.org Vizing conjecture domination Cartesian",
+    "literature_leads": [
+      "https://arxiv.org/abs/1109.0707",
+      "https://arxiv.org/abs/1502.00708"
+    ],
+    "literature_access": "metadata/abstract unless specifically noted; no exhaustive review claimed",
+    "original_reference_status": "Source title gives1968 while a retrieved abstract attributes a1963 conjecture; chronology remains unresolved rather than silently normalized.",
+    "source_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/VizingConjecture.lean#L42-L52",
+      "https://en.wikipedia.org/wiki/Vizing%27s_conjecture"
+    ],
+    "reviewed_at": "2026-10-15",
+    "formal_systems": {
+      "Lean": "Source declaration present; typecheck, full assumptions and axioms not independently checked.",
+      "Coq": "UNKNOWN"
+    },
+    "current_status": "unknown",
+    "human_review": "pending",
+    "completion": "PARTIAL",
+    "gaps": [
+      "Current primary literature and all competing proof claims need full-method review.",
+      "Formalization fidelity, source attribution and original bibliographic priority require independent review."
+    ]
+  },
+  {
+    "id": "audit-cm-000120",
+    "problem_id": "cm-000120",
+    "title": "Černý Conjecture",
+    "statement": "**Černý Conjecture**: Every synchronizing DFA with $n$ states admits a\nsynchronizing word of length at most $(n - 1)^2$.",
+    "formal_statement": "cerny_conjecture :\n    ∀ {α : Type*} {σ : Type*} [Fintype σ] (M : DFA α σ) (hM : M.IsSynchronizing) ,\n    ∃ w : List α, M.IsSynchronizingWord w ∧ w.length ≤ (Fintype.card σ - 1)^2",
+    "source_path": "FormalConjectures/Wikipedia/CernyConjecture.lean",
+    "source_sha256": "089ce262e3b57203de914aa2bf6bf8533c8466e0612e7cd54db198c0e1d76d2d",
+    "scope_review": "Every synchronizing finite-state DFA with n states has a reset word of length at most (n-1)^2. Existence of a longer bound or examples attaining the lower bound do not prove the conjecture.",
+    "findings": "State count, alphabet finiteness and synchronization definitions must match. Current sharp general upper bounds and recent proof claims were not established by this pass; source remains unverified.",
+    "search_query": "site:arxiv.org Cerny conjecture synchronizing 2025",
+    "literature_leads": [],
+    "literature_access": "metadata/abstract unless specifically noted; no exhaustive review claimed",
+    "original_reference_status": "Cerny's original examples and proposal, and current universal bounds, require primary-source inspection.",
+    "source_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/CernyConjecture.lean#L56-L62",
+      "https://en.wikipedia.org/wiki/Synchronizing_word",
+      "https://dml.cz/bitstream/handle/10338.dmlcz/126647/MathSlov_14-1964-3_2.pdf"
+    ],
+    "reviewed_at": "2026-10-15",
+    "formal_systems": {
+      "Lean": "Source declaration present; typecheck, full assumptions and axioms not independently checked.",
+      "Coq": "UNKNOWN"
+    },
+    "current_status": "unknown",
+    "human_review": "pending",
+    "completion": "PARTIAL",
+    "gaps": [
+      "Current primary literature and all competing proof claims need full-method review.",
+      "Formalization fidelity, source attribution and original bibliographic priority require independent review."
+    ]
+  },
+  {
+    "id": "audit-cm-000078",
+    "problem_id": "cm-000078",
+    "title": "Gauss circle problem",
+    "statement": "It is conjectured that the correct bound is\n$$\n  |E(r)| = O\\left(r^{1/2 + o(1)}\\right)\n$$\n\n[Ha59]  Hardy, G. H. (1959). _Ramanujan: Twelve Lectures on Subjects Suggested by His Life and Work_(3rd ed.). New York: Chelsea Publishing Company. p. 67\n\nSee also https://arxiv.org/abs/2305.03549",
+    "formal_statement": "error_isBigO : ∃ (o : ℝ → ℝ) (_ : Tendsto o atTop (𝓝 0)),\n    E =O[atTop] fun r => r ^ (1/2 + o r)",
+    "source_path": "FormalConjectures/Wikipedia/GaussCircleProblem.lean",
+    "source_sha256": "bf125c74acec8a505c2a2d270787c454157d7996a3ac22f6e228e18528cf5f2d",
+    "scope_review": "Error term for lattice points in a disk as radius tends to infinity; requested O(r^(1/2+o(1))). Radius and squared-radius conventions change exponents.",
+    "findings": "No current best exponent is asserted. Big-O constants, radius normalization and equivalence between o(1)-exponent and all-epsilon formulations need an explicit analytic comparison.",
+    "search_query": "site:arxiv.org Gauss circle problem bound",
+    "literature_leads": [],
+    "literature_access": "metadata/abstract unless specifically noted; no exhaustive review claimed",
+    "original_reference_status": "Classical Gauss-circle and latest exponent papers were not sufficiently retrieved for an authoritative current-bound claim.",
+    "source_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/GaussCircleProblem.lean#L81-L93",
+      "https://en.wikipedia.org/wiki/Gauss_circle_problem"
+    ],
+    "reviewed_at": "2026-10-15",
+    "formal_systems": {
+      "Lean": "Source declaration present; typecheck, full assumptions and axioms not independently checked.",
+      "Coq": "UNKNOWN"
+    },
+    "current_status": "unknown",
+    "human_review": "pending",
+    "completion": "PARTIAL",
+    "gaps": [
+      "Current primary literature and all competing proof claims need full-method review.",
+      "Formalization fidelity, source attribution and original bibliographic priority require independent review."
+    ]
+  },
+  {
+    "id": "audit-cm-000079",
+    "problem_id": "cm-000079",
+    "title": "Graceful Tree Conjecture (Ringel–Kotzig conjecture)",
+    "statement": "Every tree admits a graceful labeling.\n\nA graceful labeling of a tree $T$ with $m$ edges is an injective map $f : V \\to \\{0, \\dots, m\\}$\nsuch that the multiset of absolute differences $|f(u) - f(v)|$ over edges $\\{u,v\\}$ of $T$\nequals $\\{1, \\dots, m\\}$.",
+    "formal_statement": "graceful_tree_conjecture {V : Type*} [Fintype V] [DecidableEq V]\n    (T : SimpleGraph V) [DecidableRel T.Adj] (hT : T.IsTree) :\n    let m := T.edgeFinset.card\n    ∃ f : V → ℕ,\n      Function.Injective f ∧\n      (∀ v, f v ≤ m) ∧\n      T.edgeFinset.image (fun e =>\n        e.lift ⟨fun u v => Int.natAbs ((f u : ℤ) - (f v : ℤ)),\n                fun u v => by\n                  show ((f u : ℤ) - f v).natAbs = ((f v : ℤ) - f u).natAbs\n                  rw [← Int.natAbs_neg, neg_sub]⟩) = Finset.Icc 1 m",
+    "source_path": "FormalConjectures/Wikipedia/GracefulLabeling.lean",
+    "source_sha256": "d8c05f3bf9e23fd20e2e5a0caba0514e467b95551a270c752a8b69b245e1f896",
+    "scope_review": "Every finite simple tree with m edges has an injective labeling in0..m whose absolute edge differences are exactly1..m. Not approximate label ranges or a bounded-order computation.",
+    "findings": "A paper reports checking trees up to35 vertices and another proves an approximate asymptotic relaxation. Neither proves the exact all-tree statement. An old full-proof title is not accepted without checking its argument and status.",
+    "search_query": "site:arxiv.org graceful tree conjecture",
+    "literature_leads": [
+      "https://arxiv.org/abs/1003.3045",
+      "https://arxiv.org/abs/1608.01577",
+      "https://arxiv.org/abs/1403.1564"
+    ],
+    "literature_access": "metadata/abstract unless specifically noted; no exhaustive review claimed",
+    "original_reference_status": "Rosa1967 attribution is stated in a research abstract; original article and Ringel-Kotzig correspondence need full review.",
+    "source_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/GracefulLabeling.lean#L69-L87",
+      "https://en.wikipedia.org/wiki/Graceful_labeling"
+    ],
+    "reviewed_at": "2026-10-15",
+    "formal_systems": {
+      "Lean": "Source declaration present; typecheck, full assumptions and axioms not independently checked.",
+      "Coq": "UNKNOWN"
+    },
+    "current_status": "unknown",
+    "human_review": "pending",
+    "completion": "PARTIAL",
+    "gaps": [
+      "Current primary literature and all competing proof claims need full-method review.",
+      "Formalization fidelity, source attribution and original bibliographic priority require independent review."
+    ]
+  }
+]

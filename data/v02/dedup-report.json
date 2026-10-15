@@ -1,0 +1,895 @@
+{
+  "algorithm": "lexical-symbol-citation-v1",
+  "date": "2026-10-15",
+  "canonical_problems": 120,
+  "source_observations": 32,
+  "new_problems_from_second_source": 0,
+  "automatic_merges": 0,
+  "candidates": [
+    {
+      "source_id": "cm-000011",
+      "target_id": "cm-000013",
+      "kind": "near_duplicate",
+      "score": 0.7142857142857143,
+      "basis": [
+        "normalized-text-jaccard:0.050",
+        "title-jaccard:0.714",
+        "shared-citation:false",
+        "same-symbol-signature:false",
+        "same-source-identity:false"
+      ],
+      "review_status": "unverified",
+      "auto_merge": false,
+      "id": "dedup-0cc537d9b625cbcb"
+    },
+    {
+      "source_id": "cm-000011",
+      "target_id": "cm-000014",
+      "kind": "near_duplicate",
+      "score": 0.7142857142857143,
+      "basis": [
+        "normalized-text-jaccard:0.105",
+        "title-jaccard:0.714",
+        "shared-citation:false",
+        "same-symbol-signature:false",
+        "same-source-identity:false"
+      ],
+      "review_status": "unverified",
+      "auto_merge": false,
+      "id": "dedup-b3652e6a925f34fd"
+    },
+    {
+      "source_id": "cm-000011",
+      "target_id": "cm-000015",
+      "kind": "near_duplicate",
+      "score": 0.7142857142857143,
+      "basis": [
+        "normalized-text-jaccard:0.026",
+        "title-jaccard:0.714",
+        "shared-citation:false",
+        "same-symbol-signature:false",
+        "same-source-identity:false"
+      ],
+      "review_status": "unverified",
+      "auto_merge": false,
+      "id": "dedup-290c700344919c3c"
+    },
+    {
+      "source_id": "cm-000011",
+      "target_id": "cm-000016",
+      "kind": "near_duplicate",
+      "score": 0.7142857142857143,
+      "basis": [
+        "normalized-text-jaccard:0.068",
+        "title-jaccard:0.714",
+        "shared-citation:false",
+        "same-symbol-signature:false",
+        "same-source-identity:false"
+      ],
+      "review_status": "unverified",
+      "auto_merge": false,
+      "id": "dedup-062deb6261865eb9"
+    },
+    {
+      "source_id": "cm-000011",
+      "target_id": "cm-000018",
+      "kind": "near_duplicate",
+      "score": 0.7142857142857143,
+      "basis": [
+        "normalized-text-jaccard:0.074",
+        "title-jaccard:0.714",
+        "shared-citation:false",
+        "same-symbol-signature:false",
+        "same-source-identity:false"
+      ],
+      "review_status": "unverified",
+      "auto_merge": false,
+      "id": "dedup-6d6220ebc45cafe3"
+    },
+    {
+      "source_id": "cm-000011",
+      "target_id": "cm-000019",
+      "kind": "near_duplicate",
+      "score": 0.7142857142857143,
+      "basis": [
+        "normalized-text-jaccard:0.057",
+        "title-jaccard:0.714",
+        "shared-citation:false",
+        "same-symbol-signature:false",
+        "same-source-identity:false"
+      ],
+      "review_status": "unverified",
+      "auto_merge": false,
+      "id": "dedup-ea3918e71db5d218"
+    },
+    {
+      "source_id": "cm-000011",
+      "target_id": "cm-000020",
+      "kind": "near_duplicate",
+      "score": 0.7142857142857143,
+      "basis": [
+        "normalized-text-jaccard:0.056",
+        "title-jaccard:0.714",
+        "shared-citation:false",
+        "same-symbol-signature:false",
+        "same-source-identity:false"
+      ],
+      "review_status": "unverified",
+      "auto_merge": false,
+      "id": "dedup-acf4056a5ac07b64"
+    },
+    {
+      "source_id": "cm-000011",
+      "target_id": "cm-000021",
+      "kind": "near_duplicate",
+      "score": 0.7142857142857143,
+      "basis": [
+        "normalized-text-jaccard:0.024",
+        "title-jaccard:0.714",
+        "shared-citation:false",
+        "same-symbol-signature:false",
+        "same-source-identity:false"
+      ],
+      "review_status": "unverified",
+      "auto_merge": false,
+      "id": "dedup-90004475566ac3f3"
+    },
+    {
+      "source_id": "cm-000011",
+      "target_id": "cm-000022",
+      "kind": "near_duplicate",
+      "score": 0.7142857142857143,
+      "basis": [
+        "normalized-text-jaccard:0.167",
+        "title-jaccard:0.714",
+        "shared-citation:false",
+        "same-symbol-signature:false",
+        "same-source-identity:false"
+      ],
+      "review_status": "unverified",
+      "auto_merge": false,
+      "id": "dedup-aaf527c76d16a91c"
+    },
+    {
+      "source_id": "cm-000011",
+      "target_id": "cm-000023",
+      "kind": "near_duplicate",
+      "score": 0.7142857142857143,
+      "basis": [
+        "normalized-text-jaccard:0.047",
+        "title-jaccard:0.714",
+        "shared-citation:false",
+        "same-symbol-signature:false",
+        "same-source-identity:false"
+      ],
+      "review_status": "unverified",
+      "auto_merge": false,
+      "id": "dedup-9cc47914c7e8eb47"
+    },
+    {
+      "source_id": "cm-000013",
+      "target_id": "cm-000014",
+      "kind": "near_duplicate",
+      "score": 0.7142857142857143,
+      "basis": [
+        "normalized-text-jaccard:0.188",
+        "title-jaccard:0.714",
+        "shared-citation:false",
+        "same-symbol-signature:false",
+        "same-source-identity:false"
+      ],
+      "review_status": "unverified",
+      "auto_merge": false,
+      "id": "dedup-203142fd01189a52"
+    },
+    {
+      "source_id": "cm-000013",
+      "target_id": "cm-000015",
+      "kind": "near_duplicate",
+      "score": 0.7142857142857143,
+      "basis": [
+        "normalized-text-jaccard:0.250",
+        "title-jaccard:0.714",
+        "shared-citation:false",
+        "same-symbol-signature:false",
+        "same-source-identity:false"
+      ],
+      "review_status": "unverified",
+      "auto_merge": false,
+      "id": "dedup-f715ed77602b322b"
+    },
+    {
+      "source_id": "cm-000013",
+      "target_id": "cm-000016",
+      "kind": "near_duplicate",
+      "score": 0.7142857142857143,
+      "basis": [
+        "normalized-text-jaccard:0.075",
+        "title-jaccard:0.714",
+        "shared-citation:false",
+        "same-symbol-signature:false",
+        "same-source-identity:false"
+      ],
+      "review_status": "unverified",
+      "auto_merge": false,
+      "id": "dedup-bc915d5b424d5d99"
+    },
+    {
+      "source_id": "cm-000013",
+      "target_id": "cm-000018",
+      "kind": "near_duplicate",
+      "score": 0.7142857142857143,
+      "basis": [
+        "normalized-text-jaccard:0.080",
+        "title-jaccard:0.714",
+        "shared-citation:false",
+        "same-symbol-signature:false",
+        "same-source-identity:false"
+      ],
+      "review_status": "unverified",
+      "auto_merge": false,
+      "id": "dedup-487506f076863b30"
+    },
+    {
+      "source_id": "cm-000013",
+      "target_id": "cm-000019",
+      "kind": "near_duplicate",
+      "score": 0.7142857142857143,
+      "basis": [
+        "normalized-text-jaccard:0.086",
+        "title-jaccard:0.714",
+        "shared-citation:false",
+        "same-symbol-signature:true",
+        "same-source-identity:false"
+      ],
+      "review_status": "unverified",
+      "auto_merge": false,
+      "id": "dedup-68fa45df799b1646"
+    },
+    {
+      "source_id": "cm-000013",
+      "target_id": "cm-000020",
+      "kind": "near_duplicate",
+      "score": 0.7142857142857143,
+      "basis": [
+        "normalized-text-jaccard:0.125",
+        "title-jaccard:0.714",
+        "shared-citation:false",
+        "same-symbol-signature:false",
+        "same-source-identity:false"
+      ],
+      "review_status": "unverified",
+      "auto_merge": false,
+      "id": "dedup-5b1924a116fa606e"
+    },
+    {
+      "source_id": "cm-000013",
+      "target_id": "cm-000021",
+      "kind": "near_duplicate",
+      "score": 0.7142857142857143,
+      "basis": [
+        "normalized-text-jaccard:0.188",
+        "title-jaccard:0.714",
+        "shared-citation:false",
+        "same-symbol-signature:false",
+        "same-source-identity:false"
+      ],
+      "review_status": "unverified",
+      "auto_merge": false,
+      "id": "dedup-e0d98587ef2bbf13"
+    },
+    {
+      "source_id": "cm-000013",
+      "target_id": "cm-000022",
+      "kind": "near_duplicate",
+      "score": 0.7142857142857143,
+      "basis": [
+        "normalized-text-jaccard:0.130",
+        "title-jaccard:0.714",
+        "shared-citation:false",
+        "same-symbol-signature:false",
+        "same-source-identity:false"
+      ],
+      "review_status": "unverified",
+      "auto_merge": false,
+      "id": "dedup-69a3a8f85f4e5c35"
+    },
+    {
+      "source_id": "cm-000013",
+      "target_id": "cm-000023",
+      "kind": "near_duplicate",
+      "score": 0.7142857142857143,
+      "basis": [
+        "normalized-text-jaccard:0.171",
+        "title-jaccard:0.714",
+        "shared-citation:false",
+        "same-symbol-signature:false",
+        "same-source-identity:false"
+      ],
+      "review_status": "unverified",
+      "auto_merge": false,
+      "id": "dedup-02ae865eaf62fab2"
+    },
+    {
+      "source_id": "cm-000014",
+      "target_id": "cm-000015",
+      "kind": "near_duplicate",
+      "score": 0.7142857142857143,
+      "basis": [
+        "normalized-text-jaccard:0.061",
+        "title-jaccard:0.714",
+        "shared-citation:false",
+        "same-symbol-signature:false",
+        "same-source-identity:false"
+      ],
+      "review_status": "unverified",
+      "auto_merge": false,
+      "id": "dedup-4567cc1fcc2d64bf"
+    },
+    {
+      "source_id": "cm-000014",
+      "target_id": "cm-000016",
+      "kind": "near_duplicate",
+      "score": 0.7142857142857143,
+      "basis": [
+        "normalized-text-jaccard:0.049",
+        "title-jaccard:0.714",
+        "shared-citation:false",
+        "same-symbol-signature:false",
+        "same-source-identity:false"
+      ],
+      "review_status": "unverified",
+      "auto_merge": false,
+      "id": "dedup-613ad94cd10ebe4b"
+    },
+    {
+      "source_id": "cm-000014",
+      "target_id": "cm-000018",
+      "kind": "near_duplicate",
+      "score": 0.7142857142857143,
+      "basis": [
+        "normalized-text-jaccard:0.174",
+        "title-jaccard:0.714",
+        "shared-citation:false",
+        "same-symbol-signature:false",
+        "same-source-identity:false"
+      ],
+      "review_status": "unverified",
+      "auto_merge": false,
+      "id": "dedup-6a70950533c0fa78"
+    },
+    {
+      "source_id": "cm-000014",
+      "target_id": "cm-000019",
+      "kind": "near_duplicate",
+      "score": 0.7142857142857143,
+      "basis": [
+        "normalized-text-jaccard:0.114",
+        "title-jaccard:0.714",
+        "shared-citation:false",
+        "same-symbol-signature:false",
+        "same-source-identity:false"
+      ],
+      "review_status": "unverified",
+      "auto_merge": false,
+      "id": "dedup-24b3dac18f49f505"
+    },
+    {
+      "source_id": "cm-000014",
+      "target_id": "cm-000020",
+      "kind": "near_duplicate",
+      "score": 0.7142857142857143,
+      "basis": [
+        "normalized-text-jaccard:0.154",
+        "title-jaccard:0.714",
+        "shared-citation:false",
+        "same-symbol-signature:false",
+        "same-source-identity:false"
+      ],
+      "review_status": "unverified",
+      "auto_merge": false,
+      "id": "dedup-fa63f9465863f1ca"
+    },
+    {
+      "source_id": "cm-000014",
+      "target_id": "cm-000021",
+      "kind": "near_duplicate",
+      "score": 0.7142857142857143,
+      "basis": [
+        "normalized-text-jaccard:0.056",
+        "title-jaccard:0.714",
+        "shared-citation:false",
+        "same-symbol-signature:false",
+        "same-source-identity:false"
+      ],
+      "review_status": "unverified",
+      "auto_merge": false,
+      "id": "dedup-58e3c7f2da1223f6"
+    },
+    {
+      "source_id": "cm-000014",
+      "target_id": "cm-000022",
+      "kind": "near_duplicate",
+      "score": 0.7142857142857143,
+      "basis": [
+        "normalized-text-jaccard:0.156",
+        "title-jaccard:0.714",
+        "shared-citation:false",
+        "same-symbol-signature:false",
+        "same-source-identity:false"
+      ],
+      "review_status": "unverified",
+      "auto_merge": false,
+      "id": "dedup-cb6a3f2c168b75f5"
+    },
+    {
+      "source_id": "cm-000014",
+      "target_id": "cm-000023",
+      "kind": "near_duplicate",
+      "score": 0.7142857142857143,
+      "basis": [
+        "normalized-text-jaccard:0.139",
+        "title-jaccard:0.714",
+        "shared-citation:false",
+        "same-symbol-signature:false",
+        "same-source-identity:false"
+      ],
+      "review_status": "unverified",
+      "auto_merge": false,
+      "id": "dedup-c45f6306e80883af"
+    },
+    {
+      "source_id": "cm-000015",
+      "target_id": "cm-000016",
+      "kind": "near_duplicate",
+      "score": 0.7142857142857143,
+      "basis": [
+        "normalized-text-jaccard:0.053",
+        "title-jaccard:0.714",
+        "shared-citation:false",
+        "same-symbol-signature:false",
+        "same-source-identity:false"
+      ],
+      "review_status": "unverified",
+      "auto_merge": false,
+      "id": "dedup-b7ec94c9046047bf"
+    },
+    {
+      "source_id": "cm-000015",
+      "target_id": "cm-000018",
+      "kind": "near_duplicate",
+      "score": 0.7142857142857143,
+      "basis": [
+        "normalized-text-jaccard:0.041",
+        "title-jaccard:0.714",
+        "shared-citation:false",
+        "same-symbol-signature:false",
+        "same-source-identity:false"
+      ],
+      "review_status": "unverified",
+      "auto_merge": false,
+      "id": "dedup-7a46a5027096f4f1"
+    },
+    {
+      "source_id": "cm-000015",
+      "target_id": "cm-000019",
+      "kind": "near_duplicate",
+      "score": 0.7142857142857143,
+      "basis": [
+        "normalized-text-jaccard:0.063",
+        "title-jaccard:0.714",
+        "shared-citation:false",
+        "same-symbol-signature:false",
+        "same-source-identity:false"
+      ],
+      "review_status": "unverified",
+      "auto_merge": false,
+      "id": "dedup-f3ee9a6c219747be"
+    },
+    {
+      "source_id": "cm-000015",
+      "target_id": "cm-000020",
+      "kind": "near_duplicate",
+      "score": 0.7142857142857143,
+      "basis": [
+        "normalized-text-jaccard:0.074",
+        "title-jaccard:0.714",
+        "shared-citation:false",
+        "same-symbol-signature:false",
+        "same-source-identity:false"
+      ],
+      "review_status": "unverified",
+      "auto_merge": false,
+      "id": "dedup-ebe1b1f6291d9f1a"
+    },
+    {
+      "source_id": "cm-000015",
+      "target_id": "cm-000021",
+      "kind": "near_duplicate",
+      "score": 0.7142857142857143,
+      "basis": [
+        "normalized-text-jaccard:0.129",
+        "title-jaccard:0.714",
+        "shared-citation:false",
+        "same-symbol-signature:false",
+        "same-source-identity:false"
+      ],
+      "review_status": "unverified",
+      "auto_merge": false,
+      "id": "dedup-8b1c8d718d6f8faa"
+    },
+    {
+      "source_id": "cm-000015",
+      "target_id": "cm-000022",
+      "kind": "near_duplicate",
+      "score": 0.7142857142857143,
+      "basis": [
+        "normalized-text-jaccard:0.065",
+        "title-jaccard:0.714",
+        "shared-citation:false",
+        "same-symbol-signature:false",
+        "same-source-identity:false"
+      ],
+      "review_status": "unverified",
+      "auto_merge": false,
+      "id": "dedup-901a0593bd43cc40"
+    },
+    {
+      "source_id": "cm-000015",
+      "target_id": "cm-000023",
+      "kind": "near_duplicate",
+      "score": 0.7142857142857143,
+      "basis": [
+        "normalized-text-jaccard:0.086",
+        "title-jaccard:0.714",
+        "shared-citation:false",
+        "same-symbol-signature:false",
+        "same-source-identity:false"
+      ],
+      "review_status": "unverified",
+      "auto_merge": false,
+      "id": "dedup-08adfdb90466ff95"
+    },
+    {
+      "source_id": "cm-000016",
+      "target_id": "cm-000018",
+      "kind": "near_duplicate",
+      "score": 0.7142857142857143,
+      "basis": [
+        "normalized-text-jaccard:0.157",
+        "title-jaccard:0.714",
+        "shared-citation:false",
+        "same-symbol-signature:false",
+        "same-source-identity:false"
+      ],
+      "review_status": "unverified",
+      "auto_merge": false,
+      "id": "dedup-cd59e43339807841"
+    },
+    {
+      "source_id": "cm-000016",
+      "target_id": "cm-000019",
+      "kind": "near_duplicate",
+      "score": 0.7142857142857143,
+      "basis": [
+        "normalized-text-jaccard:0.107",
+        "title-jaccard:0.714",
+        "shared-citation:false",
+        "same-symbol-signature:false",
+        "same-source-identity:false"
+      ],
+      "review_status": "unverified",
+      "auto_merge": false,
+      "id": "dedup-73e2f0295f7f83ac"
+    },
+    {
+      "source_id": "cm-000016",
+      "target_id": "cm-000020",
+      "kind": "near_duplicate",
+      "score": 0.7142857142857143,
+      "basis": [
+        "normalized-text-jaccard:0.105",
+        "title-jaccard:0.714",
+        "shared-citation:false",
+        "same-symbol-signature:false",
+        "same-source-identity:false"
+      ],
+      "review_status": "unverified",
+      "auto_merge": false,
+      "id": "dedup-055049ebc644904b"
+    },
+    {
+      "source_id": "cm-000016",
+      "target_id": "cm-000021",
+      "kind": "near_duplicate",
+      "score": 0.7142857142857143,
+      "basis": [
+        "normalized-text-jaccard:0.075",
+        "title-jaccard:0.714",
+        "shared-citation:false",
+        "same-symbol-signature:false",
+        "same-source-identity:false"
+      ],
+      "review_status": "unverified",
+      "auto_merge": false,
+      "id": "dedup-89eb5bbce4fae9c9"
+    },
+    {
+      "source_id": "cm-000016",
+      "target_id": "cm-000022",
+      "kind": "near_duplicate",
+      "score": 0.7142857142857143,
+      "basis": [
+        "normalized-text-jaccard:0.096",
+        "title-jaccard:0.714",
+        "shared-citation:false",
+        "same-symbol-signature:false",
+        "same-source-identity:false"
+      ],
+      "review_status": "unverified",
+      "auto_merge": false,
+      "id": "dedup-d1c5c9fd504d271a"
+    },
+    {
+      "source_id": "cm-000016",
+      "target_id": "cm-000023",
+      "kind": "near_duplicate",
+      "score": 0.7142857142857143,
+      "basis": [
+        "normalized-text-jaccard:0.095",
+        "title-jaccard:0.714",
+        "shared-citation:false",
+        "same-symbol-signature:false",
+        "same-source-identity:false"
+      ],
+      "review_status": "unverified",
+      "auto_merge": false,
+      "id": "dedup-11cea9e56c7379c6"
+    },
+    {
+      "source_id": "cm-000018",
+      "target_id": "cm-000019",
+      "kind": "near_duplicate",
+      "score": 0.7142857142857143,
+      "basis": [
+        "normalized-text-jaccard:0.106",
+        "title-jaccard:0.714",
+        "shared-citation:false",
+        "same-symbol-signature:false",
+        "same-source-identity:false"
+      ],
+      "review_status": "unverified",
+      "auto_merge": false,
+      "id": "dedup-47ff53632d2f03e9"
+    },
+    {
+      "source_id": "cm-000018",
+      "target_id": "cm-000020",
+      "kind": "near_duplicate",
+      "score": 0.7142857142857143,
+      "basis": [
+        "normalized-text-jaccard:0.116",
+        "title-jaccard:0.714",
+        "shared-citation:false",
+        "same-symbol-signature:false",
+        "same-source-identity:false"
+      ],
+      "review_status": "unverified",
+      "auto_merge": false,
+      "id": "dedup-7b94ccdb752b815c"
+    },
+    {
+      "source_id": "cm-000018",
+      "target_id": "cm-000021",
+      "kind": "near_duplicate",
+      "score": 0.7142857142857143,
+      "basis": [
+        "normalized-text-jaccard:0.080",
+        "title-jaccard:0.714",
+        "shared-citation:false",
+        "same-symbol-signature:false",
+        "same-source-identity:false"
+      ],
+      "review_status": "unverified",
+      "auto_merge": false,
+      "id": "dedup-5a3e18b1c5132428"
+    },
+    {
+      "source_id": "cm-000018",
+      "target_id": "cm-000022",
+      "kind": "near_duplicate",
+      "score": 0.7142857142857143,
+      "basis": [
+        "normalized-text-jaccard:0.115",
+        "title-jaccard:0.714",
+        "shared-citation:false",
+        "same-symbol-signature:false",
+        "same-source-identity:false"
+      ],
+      "review_status": "unverified",
+      "auto_merge": false,
+      "id": "dedup-bcb521fc2d249bbb"
+    },
+    {
+      "source_id": "cm-000018",
+      "target_id": "cm-000023",
+      "kind": "near_duplicate",
+      "score": 0.7142857142857143,
+      "basis": [
+        "normalized-text-jaccard:0.096",
+        "title-jaccard:0.714",
+        "shared-citation:false",
+        "same-symbol-signature:false",
+        "same-source-identity:false"
+      ],
+      "review_status": "unverified",
+      "auto_merge": false,
+      "id": "dedup-2af5203485a956ab"
+    },
+    {
+      "source_id": "cm-000019",
+      "target_id": "cm-000020",
+      "kind": "near_duplicate",
+      "score": 0.7142857142857143,
+      "basis": [
+        "normalized-text-jaccard:0.217",
+        "title-jaccard:0.714",
+        "shared-citation:false",
+        "same-symbol-signature:false",
+        "same-source-identity:false"
+      ],
+      "review_status": "unverified",
+      "auto_merge": false,
+      "id": "dedup-6b757e73520ad4ba"
+    },
+    {
+      "source_id": "cm-000019",
+      "target_id": "cm-000021",
+      "kind": "near_duplicate",
+      "score": 0.7142857142857143,
+      "basis": [
+        "normalized-text-jaccard:0.086",
+        "title-jaccard:0.714",
+        "shared-citation:false",
+        "same-symbol-signature:false",
+        "same-source-identity:false"
+      ],
+      "review_status": "unverified",
+      "auto_merge": false,
+      "id": "dedup-a83decbfe81e9e5d"
+    },
+    {
+      "source_id": "cm-000019",
+      "target_id": "cm-000022",
+      "kind": "near_duplicate",
+      "score": 0.7142857142857143,
+      "basis": [
+        "normalized-text-jaccard:0.133",
+        "title-jaccard:0.714",
+        "shared-citation:false",
+        "same-symbol-signature:false",
+        "same-source-identity:false"
+      ],
+      "review_status": "unverified",
+      "auto_merge": false,
+      "id": "dedup-728075173390af94"
+    },
+    {
+      "source_id": "cm-000019",
+      "target_id": "cm-000023",
+      "kind": "near_duplicate",
+      "score": 0.7142857142857143,
+      "basis": [
+        "normalized-text-jaccard:0.083",
+        "title-jaccard:0.714",
+        "shared-citation:false",
+        "same-symbol-signature:false",
+        "same-source-identity:false"
+      ],
+      "review_status": "unverified",
+      "auto_merge": false,
+      "id": "dedup-7f2ed8ecc63bd725"
+    },
+    {
+      "source_id": "cm-000020",
+      "target_id": "cm-000021",
+      "kind": "near_duplicate",
+      "score": 0.7142857142857143,
+      "basis": [
+        "normalized-text-jaccard:0.111",
+        "title-jaccard:0.714",
+        "shared-citation:false",
+        "same-symbol-signature:false",
+        "same-source-identity:false"
+      ],
+      "review_status": "unverified",
+      "auto_merge": false,
+      "id": "dedup-d67339c6e173f13b"
+    },
+    {
+      "source_id": "cm-000020",
+      "target_id": "cm-000022",
+      "kind": "near_duplicate",
+      "score": 0.7142857142857143,
+      "basis": [
+        "normalized-text-jaccard:0.130",
+        "title-jaccard:0.714",
+        "shared-citation:false",
+        "same-symbol-signature:false",
+        "same-source-identity:false"
+      ],
+      "review_status": "unverified",
+      "auto_merge": false,
+      "id": "dedup-f8be068c9133b14c"
+    },
+    {
+      "source_id": "cm-000020",
+      "target_id": "cm-000023",
+      "kind": "near_duplicate",
+      "score": 0.7142857142857143,
+      "basis": [
+        "normalized-text-jaccard:0.134",
+        "title-jaccard:0.714",
+        "shared-citation:false",
+        "same-symbol-signature:false",
+        "same-source-identity:false"
+      ],
+      "review_status": "unverified",
+      "auto_merge": false,
+      "id": "dedup-83d080cfe5ab1238"
+    },
+    {
+      "source_id": "cm-000021",
+      "target_id": "cm-000022",
+      "kind": "near_duplicate",
+      "score": 0.7142857142857143,
+      "basis": [
+        "normalized-text-jaccard:0.106",
+        "title-jaccard:0.714",
+        "shared-citation:false",
+        "same-symbol-signature:false",
+        "same-source-identity:false"
+      ],
+      "review_status": "unverified",
+      "auto_merge": false,
+      "id": "dedup-b27efd3523158c0a"
+    },
+    {
+      "source_id": "cm-000021",
+      "target_id": "cm-000023",
+      "kind": "near_duplicate",
+      "score": 0.7142857142857143,
+      "basis": [
+        "normalized-text-jaccard:0.171",
+        "title-jaccard:0.714",
+        "shared-citation:false",
+        "same-symbol-signature:false",
+        "same-source-identity:false"
+      ],
+      "review_status": "unverified",
+      "auto_merge": false,
+      "id": "dedup-9892d46f39cfd4d2"
+    },
+    {
+      "source_id": "cm-000022",
+      "target_id": "cm-000023",
+      "kind": "near_duplicate",
+      "score": 0.7142857142857143,
+      "basis": [
+        "normalized-text-jaccard:0.170",
+        "title-jaccard:0.714",
+        "shared-citation:false",
+        "same-symbol-signature:false",
+        "same-source-identity:false"
+      ],
+      "review_status": "unverified",
+      "auto_merge": false,
+      "id": "dedup-bcaf4245b2392bb7"
+    }
+  ],
+  "limitations": [
+    "Lexical/title/symbol/citation heuristics only; no semantic embedding model used.",
+    "candidate_equivalence is a screening hypothesis, never a theorem or merge authority.",
+    "A shared original Erdős number does not establish equivalence of a selected variant."
+  ]
+}

@@ -1,0 +1,242 @@
+[
+  {
+    "id": "relation-v02-01",
+    "source_id": "cm-000008",
+    "target_id": "claim-v02-01",
+    "type": "implies",
+    "layer": "logic",
+    "hypotheses": [
+      "Positive natural bases and common exponent n>2; primitive rescaling required."
+    ],
+    "scope": "Source contains an explicit implication proof; this build has not kernel-checked it.",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/BealConjecture.lean#L46-L47",
+    "source_revision": "2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6",
+    "locator": "flt_of_beal_conjecture",
+    "review_date": "2026-10-15",
+    "review_status": "source_reviewed",
+    "reviewer": "Codex scoped source inspection; human review pending",
+    "proof_receipt": null,
+    "human_approval": "pending",
+    "is_candidate": true
+  },
+  {
+    "id": "relation-v02-02",
+    "source_id": "cm-000001",
+    "target_id": "claim-v02-02",
+    "type": "equivalent",
+    "layer": "logic",
+    "hypotheses": [
+      "For every epsilon>0, coprime positive triples a+b=c; constants may depend on epsilon."
+    ],
+    "scope": "Finite-exception and constant-bound formulations; equivalence needs both directions and exponent/constant audit.",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/ABC.lean#L63-L65",
+    "source_revision": "2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6",
+    "locator": "abc",
+    "review_date": "2026-10-15",
+    "review_status": "source_reviewed",
+    "reviewer": "Codex scoped source inspection; human review pending",
+    "proof_receipt": null,
+    "human_approval": "pending",
+    "is_candidate": true
+  },
+  {
+    "id": "relation-v02-03",
+    "source_id": "cm-000001",
+    "target_id": "claim-v02-03",
+    "type": "equivalent",
+    "layer": "logic",
+    "hypotheses": [
+      "Coprime positive triples; logarithm/zero denominators and epsilon quantifiers must match."
+    ],
+    "scope": "Quality formulation; no proof of equivalence is accepted from co-location.",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/ABC.lean#L81-L83",
+    "source_revision": "2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6",
+    "locator": "abc.variants.quality",
+    "review_date": "2026-10-15",
+    "review_status": "source_reviewed",
+    "reviewer": "Codex scoped source inspection; human review pending",
+    "proof_receipt": null,
+    "human_approval": "pending",
+    "is_candidate": true
+  },
+  {
+    "id": "relation-v02-04",
+    "source_id": "cm-000072",
+    "target_id": "claim-v02-04",
+    "type": "implies",
+    "layer": "logic",
+    "hypotheses": [
+      "Irrational real t; Q-linear independence of 1,t and of log 2,log 3."
+    ],
+    "scope": "Upstream explicitly states this consequence; transcendence argument still awaits independent review.",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/Exponentials.lean#L48-L49",
+    "source_revision": "2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6",
+    "locator": "two_pow_three_pow_transcendental",
+    "review_date": "2026-10-15",
+    "review_status": "source_reviewed",
+    "reviewer": "Codex scoped source inspection; human review pending",
+    "proof_receipt": null,
+    "human_approval": "pending",
+    "is_candidate": true
+  },
+  {
+    "id": "relation-v02-05",
+    "source_id": "cm-000118",
+    "target_id": "claim-v02-05",
+    "type": "implies",
+    "layer": "logic",
+    "hypotheses": [
+      "Finite union-closed family on nonempty ground type; same excluded family; 0.38234<=1/2."
+    ],
+    "scope": "Relaxed frequency conclusion; source report is not a verification of the sharp bound or recent improvements.",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/UnionClosed.lean#L72-L76",
+    "source_revision": "2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6",
+    "locator": "union_closed.variants.yu",
+    "review_date": "2026-10-15",
+    "review_status": "source_reviewed",
+    "reviewer": "Codex scoped source inspection; human review pending",
+    "proof_receipt": null,
+    "human_approval": "pending",
+    "is_candidate": true
+  },
+  {
+    "id": "relation-v02-06",
+    "source_id": "claim-v02-06",
+    "target_id": "cm-000118",
+    "type": "special_case_of",
+    "layer": "special_cases",
+    "hypotheses": [
+      "Same family assumptions plus finite ground set cardinality <=12."
+    ],
+    "scope": "Restricted ground-set case; its truth does not establish the general conjecture.",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/UnionClosed.lean#L85-L90",
+    "source_revision": "2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6",
+    "locator": "union_closed.variants.univ_card",
+    "review_date": "2026-10-15",
+    "review_status": "source_reviewed",
+    "reviewer": "Codex scoped source inspection; human review pending",
+    "proof_receipt": null,
+    "human_approval": "pending",
+    "is_candidate": true
+  },
+  {
+    "id": "relation-v02-07",
+    "source_id": "claim-v02-07",
+    "target_id": "cm-000118",
+    "type": "special_case_of",
+    "layer": "special_cases",
+    "hypotheses": [
+      "Same family assumptions plus the exact family-cardinality bound in the source declaration."
+    ],
+    "scope": "Read the declaration for its bound; do not substitute ground-set size for family size.",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/UnionClosed.lean#L102-L107",
+    "source_revision": "2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6",
+    "locator": "union_closed.variants.family_card",
+    "review_date": "2026-10-15",
+    "review_status": "source_reviewed",
+    "reviewer": "Codex scoped source inspection; human review pending",
+    "proof_receipt": null,
+    "human_approval": "pending",
+    "is_candidate": true
+  },
+  {
+    "id": "relation-v02-08",
+    "source_id": "claim-v02-08",
+    "target_id": "cm-000118",
+    "type": "special_case_of",
+    "layer": "special_cases",
+    "hypotheses": [
+      "Ground type Fin 2 and all family assumptions in the declaration."
+    ],
+    "scope": "Finite two-element ground-set case; candidate source relation, not a universal solution.",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/UnionClosed.lean#L115-L118",
+    "source_revision": "2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6",
+    "locator": "union_closed.variants.univ_card_two",
+    "review_date": "2026-10-15",
+    "review_status": "source_reviewed",
+    "reviewer": "Codex scoped source inspection; human review pending",
+    "proof_receipt": null,
+    "human_approval": "pending",
+    "is_candidate": true
+  },
+  {
+    "id": "relation-v02-09",
+    "source_id": "claim-v02-09",
+    "target_id": "cm-000118",
+    "type": "special_case_of",
+    "layer": "special_cases",
+    "hypotheses": [
+      "Union-closed family containing a singleton, with exact nonempty assumptions in source."
+    ],
+    "scope": "Additional singleton assumption is essential; does not cover arbitrary families.",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/UnionClosed.lean#L126-L129",
+    "source_revision": "2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6",
+    "locator": "union_closed.variants.singleton_mem",
+    "review_date": "2026-10-15",
+    "review_status": "source_reviewed",
+    "reviewer": "Codex scoped source inspection; human review pending",
+    "proof_receipt": null,
+    "human_approval": "pending",
+    "is_candidate": true
+  },
+  {
+    "id": "relation-v02-10",
+    "source_id": "claim-v02-10",
+    "target_id": "cm-000103",
+    "type": "special_case_of",
+    "layer": "special_cases",
+    "hypotheses": [
+      "Perfect field of positive characteristic, integral separated finite-type scheme, dimension <=3."
+    ],
+    "scope": "Source specialization; field/perfectness and scheme hypotheses need correspondence review.",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/ResolutionOfSingularities.lean#L134-L138",
+    "source_revision": "2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6",
+    "locator": "resolution_of_singularities_of_topologicalKrullDim_le_three",
+    "review_date": "2026-10-15",
+    "review_status": "source_reviewed",
+    "reviewer": "Codex scoped source inspection; human review pending",
+    "proof_receipt": null,
+    "human_approval": "pending",
+    "is_candidate": true
+  },
+  {
+    "id": "relation-v02-11",
+    "source_id": "claim-v02-11",
+    "target_id": "cm-000028",
+    "type": "generalizes",
+    "layer": "special_cases",
+    "hypotheses": [
+      "The existential M formulation versus the specifically selected M=5 integer-offset formulation."
+    ],
+    "scope": "M=5 would supply an existential witness, but an arbitrary existential M does not imply M=5.",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/Buchi.lean#L42-L43",
+    "source_revision": "2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6",
+    "locator": "buchi_problem",
+    "review_date": "2026-10-15",
+    "review_status": "source_reviewed",
+    "reviewer": "Codex scoped source inspection; human review pending",
+    "proof_receipt": null,
+    "human_approval": "pending",
+    "is_candidate": true
+  },
+  {
+    "id": "relation-v02-12",
+    "source_id": "claim-v02-12",
+    "target_id": "cm-000104",
+    "type": "generalizes",
+    "layer": "logic",
+    "hypotheses": [
+      "Primitive Dirichlet characters with nontrivial zeros excluded; q=1 specializes to zeta."
+    ],
+    "scope": "Source includes implies_riemannHypothesis test; this is Dirichlet GRH, not Dedekind/Kummer hypotheses for Artin.",
+    "evidence_url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Millennium/RiemannHypothesis.lean#L83-L86",
+    "source_revision": "2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6",
+    "locator": "generalized_riemann_hypothesis",
+    "review_date": "2026-10-15",
+    "review_status": "source_reviewed",
+    "reviewer": "Codex scoped source inspection; human review pending",
+    "proof_receipt": null,
+    "human_approval": "pending",
+    "is_candidate": true
+  }
+]

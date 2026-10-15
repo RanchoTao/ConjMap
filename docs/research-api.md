@@ -1,4 +1,38 @@
-# Research Task API · v1
+# Research Task API · v1 mock and v2 real transport
+
+## V2 real-adapter contract and actual availability
+
+Base `/api/v2/research-tasks`. The default runtime is **BLOCKED**, engine task ID null, actual runs 0. A compatible MathForge HTTP API was not found; source-bound controller admission cannot be bypassed. Contract-fixture tests are not real MathForge execution. See `mathforge-discovery-v0.2.md`.
+
+Four configuration values are required: `CONJMAP_MATHFORGE_URL` (loopback only, no embedded credentials/query/fragment), `CONJMAP_MATHFORGE_TOKEN` (outbound engine bearer), `CONJMAP_RESEARCH_ACCESS_TOKEN` (inbound local bearer), `CONJMAP_CALLBACK_SECRET` (HMAC callback). Each secret must be at least 32 characters. The app still binds loopback and applies V1 host/origin/body boundaries. No production credentials are configured. The problem-page token input remains in page memory, never browser storage or request bodies.
+
+Submit `POST` with JSON and `Idempotency-Key` (16–100 alphanumeric/hyphen characters); when configured require `Authorization: Bearer <research access token>`:
+
+```json
+{"problem_id":"cm-000104","objective":"Audit exact source hypotheses without a solved-status claim.","budget":{"wall_seconds":30,"max_tasks":1,"network":false}}
+```
+
+Return 201 for accepted bound engine tasks, 202 for locally blocked records. Without configuration, a blocked record can be created/read locally without bearer; it makes no network call. Request context includes canonical ID, exact original statement/Lean signature, references, source mappings, current unknown/unverified state and explicitly empty independently established results. No established result is fabricated from an audit lead.
+
+Configured outbound `POST <base>/research-tasks` includes `api_version:v2`, `conjmap_task_id`, input and context, engine bearer and same idempotency key. Journal writes before network; redirect following is disabled, timeout 5 seconds, response 64KiB max. Engine must enforce the declared one-task/60-second/no-network budget. Global idempotency rejects changed payload even across problems. At most 3 submitted/queued/running/uncertain tasks are active. Uncertain submission blocks automatic retry: reconcile with engine by the original key. The UI retains the key during page lifetime; after reload inspect history before issuing another request.
+
+- `GET ?problem_id=<id>`: configuration blocked/configured and persistent tasks; `GET /<uuid>` reads one task. Bearer required when configured.
+- `POST /<uuid>/poll`: bearer required, GETs `<base>/research-tasks/<encoded engine ID>`, never resubmits. Unchanged responses do not append duplicate events; changed responses append `engine_poll`.
+- `POST /<uuid>/results`: signed callback, no bearer replacement for signature. JSON raw-body HMAC SHA-256 is `sha256=<lowercase hex>` in `X-ConjMap-Signature`, computed over `<X-ConjMap-Timestamp>.<raw UTF-8 body>`. Timestamp is 13-digit Unix milliseconds within ±5 minutes. Loopback host/origin, 64KiB limit and strict schema still apply.
+
+Engine response / callback:
+
+```json
+{"engine":"mathforge","is_mock":false,"engine_task_id":"ENGINE-ISSUED-ID","status":"running","attempts":[{"kind":"failed_route","result":"Engine-owned actual log summary, if a real run exists.","verification_status":"unverified","artifact_urls":[]}]}
+```
+
+Process states: queued/running/completed/failed/blocked; attempts: failed_route/candidate_proof/counterexample/partial_result. Engine identity must match the submitted task. Running→queued, repeated result digest and terminal overwrites return 409. Attempt verification must be literal unverified; mock payloads, solved status and extra fields are rejected. Artifacts are HTTP(S) links only; never downloaded/executed by this app. A completed task never changes catalog status.
+
+Each task has UTC events/digests and exclusive historical snapshots in `CONJMAP_REAL_TASK_DIR` (default `.local/real-tasks`). Trusted local filesystem access is assumed. A global lock serializes writes; atomic rename publishes current JSON. Snapshot-before-current crashes need manual reconciliation, not history deletion. These journals are ignored by Git. Audit snapshots are not tamperproof or remotely backed up. This transport is tested local infrastructure; engine compatibility, real authorization and end-to-end scientific execution remain unestablished.
+
+V2 adds 401 invalid bearer/signature, 429 active quota, 502 polling failure, 503 unconfigured credentials/engine; shared V1 error limits below still apply. Missing callback configuration returns 503 and records no claimed engine result.
+
+## V1 preserved mock contract
 
 Base path `/api/v1/research-tasks`. This version is a **local mock contract**, not a connection to MathForge. No private repository, engine credential, server-side research computation, or genuine proof is involved.
 

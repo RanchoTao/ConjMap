@@ -1,0 +1,963 @@
+[
+  {
+    "id": "review-cm-000104-v1",
+    "problem_id": "cm-000104",
+    "version": 1,
+    "supersedes": null,
+    "reviewer": "Codex source-scope audit; not an independent human expert",
+    "method": "agent_source_review",
+    "human_approval": "pending",
+    "approval_receipt": null,
+    "reviewed_at": "2026-10-15",
+    "dimensions": {
+      "SOURCE_IMPORTED": "established",
+      "STATEMENT_CHECKED": "pending",
+      "LITERATURE_REVIEWED": "pending",
+      "MATHEMATICAL_RELATION_VERIFIED": "not_run",
+      "FORMAL_STATEMENT_CHECKED": "not_run",
+      "PROOF_KERNEL_VERIFIED": "not_run",
+      "HUMAN_REVIEW_PENDING": "pending"
+    },
+    "source_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Millennium/RiemannHypothesis.lean#L51-L61",
+      "https://www.claymath.org/millennium/riemann-hypothesis/"
+    ],
+    "scope": "All zeros of the meromorphically continued zeta function, excluding s=1 and negative-even trivial zeros; real part exactly 1/2. The Dirichlet-series convergence half-plane is not the domain of the conjecture.",
+    "limitations": [
+      "The current Clay tracker labels RH unsolved. This supports a source-reported status, not a checked proof or exhaustive exclusion of recent claims. The pinned Lean signature aliases Mathlib's definition; its import closure and axioms were not executed.",
+      "Current primary literature and all competing proof claims need full-method review.",
+      "Formalization fidelity, source attribution and original bibliographic priority require independent review."
+    ],
+    "status_recommendation": "unknown",
+    "statement_sha256": "1db436ff5123e5aeb6fd0b4665e94b6c37fa4dc776907b073115c16da5aa710c"
+  },
+  {
+    "id": "review-cm-000112-v1",
+    "problem_id": "cm-000112",
+    "version": 1,
+    "supersedes": null,
+    "reviewer": "Codex source-scope audit; not an independent human expert",
+    "method": "agent_source_review",
+    "human_approval": "pending",
+    "approval_receipt": null,
+    "reviewed_at": "2026-10-15",
+    "dimensions": {
+      "SOURCE_IMPORTED": "established",
+      "STATEMENT_CHECKED": "pending",
+      "LITERATURE_REVIEWED": "pending",
+      "MATHEMATICAL_RELATION_VERIFIED": "not_run",
+      "FORMAL_STATEMENT_CHECKED": "not_run",
+      "PROOF_KERNEL_VERIFIED": "not_run",
+      "HUMAN_REVIEW_PENDING": "pending"
+    },
+    "source_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Millennium/BSD.lean#L71-L74",
+      "https://www.claymath.org/Millennium%20Problems/",
+      "https://www.claymath.org/wp-content/uploads/2022/02/MPPc.pdf"
+    ],
+    "scope": "Weak BSD over Q for elliptic curves: distinguish rank/order-of-vanishing from the refined leading-coefficient formula and from arbitrary number fields. Expand Weak Q before accepting correspondence.",
+    "limitations": [
+      "Clay lists BSD unsolved. General rank statements do not become established because rank-zero/one special cases or numerical evidence exist. The exact Weak Q definition and analytic continuation dependencies need a separate fidelity review.",
+      "Current primary literature and all competing proof claims need full-method review.",
+      "Formalization fidelity, source attribution and original bibliographic priority require independent review."
+    ],
+    "status_recommendation": "unknown",
+    "statement_sha256": "ecf1122ebc7f33c614675d9ed383081fb83c3814416cc33df74339083fa68a09"
+  },
+  {
+    "id": "review-cm-000100-v1",
+    "problem_id": "cm-000100",
+    "version": 1,
+    "supersedes": null,
+    "reviewer": "Codex source-scope audit; not an independent human expert",
+    "method": "agent_source_review",
+    "human_approval": "pending",
+    "approval_receipt": null,
+    "reviewed_at": "2026-10-15",
+    "dimensions": {
+      "SOURCE_IMPORTED": "established",
+      "STATEMENT_CHECKED": "pending",
+      "LITERATURE_REVIEWED": "pending",
+      "MATHEMATICAL_RELATION_VERIFIED": "not_run",
+      "FORMAL_STATEMENT_CHECKED": "not_run",
+      "PROOF_KERNEL_VERIFIED": "not_run",
+      "HUMAN_REVIEW_PENDING": "pending"
+    },
+    "source_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Millennium/Poincare.lean#L107-L110",
+      "https://arxiv.org/abs/0906.5177"
+    ],
+    "scope": "Smooth dimension four, with the precise manifold/category hypotheses in SmoothConjectureFor 4; not the solved topological dimension-three Poincare problem.",
+    "limitations": [
+      "Clay's solved three-dimensional problem cannot resolve this selected smooth four-dimensional variant. The 2009 paper is historical evidence of the distinct question, not a fresh 2026 open-status certification.",
+      "Current primary literature and all competing proof claims need full-method review.",
+      "Formalization fidelity, source attribution and original bibliographic priority require independent review."
+    ],
+    "status_recommendation": "unknown",
+    "statement_sha256": "390a28cdcdced1740259728b5d68175b256f5f6bdeb4a98d0b68e0a8e77b0442"
+  },
+  {
+    "id": "review-cm-000001-v1",
+    "problem_id": "cm-000001",
+    "version": 1,
+    "supersedes": null,
+    "reviewer": "Codex source-scope audit; not an independent human expert",
+    "method": "agent_source_review",
+    "human_approval": "pending",
+    "approval_receipt": null,
+    "reviewed_at": "2026-10-15",
+    "dimensions": {
+      "SOURCE_IMPORTED": "established",
+      "STATEMENT_CHECKED": "pending",
+      "LITERATURE_REVIEWED": "pending",
+      "MATHEMATICAL_RELATION_VERIFIED": "not_run",
+      "FORMAL_STATEMENT_CHECKED": "not_run",
+      "PROOF_KERNEL_VERIFIED": "not_run",
+      "HUMAN_REVIEW_PENDING": "pending"
+    },
+    "source_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/ABC.lean#L68-L74",
+      "https://arxiv.org/abs/2403.10430"
+    ],
+    "scope": "For every epsilon>0, exists K(epsilon), for all coprime positive triples a+b=c, c<K rad(abc)^(1+epsilon). Pairwise coprimality, strict inequalities and exponent quantifiers must match.",
+    "limitations": [
+      "IUT-related proof claims and competing assessments require full-method review. A retrieved paper announcing a proof does not establish community acceptance or settle the selected constant-bound formulation. Keep unknown.",
+      "Current primary literature and all competing proof claims need full-method review.",
+      "Formalization fidelity, source attribution and original bibliographic priority require independent review."
+    ],
+    "status_recommendation": "unknown",
+    "statement_sha256": "d6c5fc5495c7eb553568328fe75debd2bc0e253115ba477e07d115c02ad50996"
+  },
+  {
+    "id": "review-cm-000004-v1",
+    "problem_id": "cm-000004",
+    "version": 1,
+    "supersedes": null,
+    "reviewer": "Codex source-scope audit; not an independent human expert",
+    "method": "agent_source_review",
+    "human_approval": "pending",
+    "approval_receipt": null,
+    "reviewed_at": "2026-10-15",
+    "dimensions": {
+      "SOURCE_IMPORTED": "established",
+      "STATEMENT_CHECKED": "pending",
+      "LITERATURE_REVIEWED": "pending",
+      "MATHEMATICAL_RELATION_VERIFIED": "not_run",
+      "FORMAL_STATEMENT_CHECKED": "not_run",
+      "PROOF_KERNEL_VERIFIED": "not_run",
+      "HUMAN_REVIEW_PENDING": "pending"
+    },
+    "source_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/Andrica.lean#L33-L39",
+      "https://arxiv.org/abs/1010.3945"
+    ],
+    "scope": "Every consecutive pair of primes, indexed by Nat.nth; strict difference of square roots below one. Check zero-based versus one-based indexing.",
+    "limitations": [
+      "A heuristic prime-gap paper was found. Heuristics and finite computations do not prove a universal bound. The unrelated Andrica-Tomescu partition result is a name collision and was excluded.",
+      "Current primary literature and all competing proof claims need full-method review.",
+      "Formalization fidelity, source attribution and original bibliographic priority require independent review."
+    ],
+    "status_recommendation": "unknown",
+    "statement_sha256": "b6063a4309534f46d3b27dbdc49e4ff469b8ffe8f4cce4cf5f1e518d0811f6ca"
+  },
+  {
+    "id": "review-cm-000005-v1",
+    "problem_id": "cm-000005",
+    "version": 1,
+    "supersedes": null,
+    "reviewer": "Codex source-scope audit; not an independent human expert",
+    "method": "agent_source_review",
+    "human_approval": "pending",
+    "approval_receipt": null,
+    "reviewed_at": "2026-10-15",
+    "dimensions": {
+      "SOURCE_IMPORTED": "established",
+      "STATEMENT_CHECKED": "pending",
+      "LITERATURE_REVIEWED": "pending",
+      "MATHEMATICAL_RELATION_VERIFIED": "not_run",
+      "FORMAL_STATEMENT_CHECKED": "not_run",
+      "PROOF_KERNEL_VERIFIED": "not_run",
+      "HUMAN_REVIEW_PENDING": "pending"
+    },
+    "source_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/ArtinPrimitiveRootsConjecture.lean#L135-L147",
+      "https://arxiv.org/abs/1112.4816"
+    ],
+    "scope": "The selected density statement imposes a=a0*b^2, squarefree a0, no perfect-power representation and a0 not congruent to 1 modulo 4. This is not the unqualified all-integer constant-density claim.",
+    "limitations": [
+      "Pinned context explicitly says Hooley's conditional result needs RH for Dedekind zeta functions of Kummer fields, not merely Dirichlet GRH. No GRH-to-Artin edge is inferred from the imported RH problem. Degenerate a=0,+/-1 and perfect-power conventions need audit.",
+      "Current primary literature and all competing proof claims need full-method review.",
+      "Formalization fidelity, source attribution and original bibliographic priority require independent review."
+    ],
+    "status_recommendation": "unknown",
+    "statement_sha256": "efbf32e65e9f3cb85c40d1e9368ba859b755d59d8c87b4674635b5bda2d7742c"
+  },
+  {
+    "id": "review-cm-000008-v1",
+    "problem_id": "cm-000008",
+    "version": 1,
+    "supersedes": null,
+    "reviewer": "Codex source-scope audit; not an independent human expert",
+    "method": "agent_source_review",
+    "human_approval": "pending",
+    "approval_receipt": null,
+    "reviewed_at": "2026-10-15",
+    "dimensions": {
+      "SOURCE_IMPORTED": "established",
+      "STATEMENT_CHECKED": "pending",
+      "LITERATURE_REVIEWED": "pending",
+      "MATHEMATICAL_RELATION_VERIFIED": "not_run",
+      "FORMAL_STATEMENT_CHECKED": "not_run",
+      "PROOF_KERNEL_VERIFIED": "not_run",
+      "HUMAN_REVIEW_PENDING": "pending"
+    },
+    "source_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/BealConjecture.lean#L34-L39",
+      "https://arxiv.org/abs/2510.05448",
+      "https://arxiv.org/abs/2409.03758"
+    ],
+    "scope": "Positive natural A,B,C and exponents x,y,z>2, with A^x+B^y=C^z, imply gcd(A,B,C)>1. Real exponents and zeros are excluded.",
+    "limitations": [
+      "Proof-claim titles were located but not accepted. The source also contains a Beal-to-FLT argument using primitive rescaling; FLT being proved does not prove Beal. No claim of a current accepted proof is made.",
+      "Current primary literature and all competing proof claims need full-method review.",
+      "Formalization fidelity, source attribution and original bibliographic priority require independent review."
+    ],
+    "status_recommendation": "unknown",
+    "statement_sha256": "c1510418cb5cd93553a8a605e5589dc2ebf6fa7218ce15a90a2d02fb6d3bb637"
+  },
+  {
+    "id": "review-cm-000010-v1",
+    "problem_id": "cm-000010",
+    "version": 1,
+    "supersedes": null,
+    "reviewer": "Codex source-scope audit; not an independent human expert",
+    "method": "agent_source_review",
+    "human_approval": "pending",
+    "approval_receipt": null,
+    "reviewed_at": "2026-10-15",
+    "dimensions": {
+      "SOURCE_IMPORTED": "established",
+      "STATEMENT_CHECKED": "pending",
+      "LITERATURE_REVIEWED": "pending",
+      "MATHEMATICAL_RELATION_VERIFIED": "not_run",
+      "FORMAL_STATEMENT_CHECKED": "not_run",
+      "PROOF_KERNEL_VERIFIED": "not_run",
+      "HUMAN_REVIEW_PENDING": "pending"
+    },
+    "source_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/BeckFialaConjecture.lean#L78-L91"
+    ],
+    "scope": "A single universal C>0 works for all finite set systems with each element in at most t sets, with +/-1 coloring discrepancy <=C*sqrt(t). C cannot depend on n,m,t.",
+    "limitations": [
+      "The square-root conjecture must be separated from the classical linear-in-t theorem, logarithmic factors and algorithmic variants. This bounded search did not establish a current sharp universal theorem.",
+      "Current primary literature and all competing proof claims need full-method review.",
+      "Formalization fidelity, source attribution and original bibliographic priority require independent review."
+    ],
+    "status_recommendation": "unknown",
+    "statement_sha256": "35ae96cd0cfb700f4784aaeaedcc8dbac80a1ba6d98eba26b4fb0294429d4d88"
+  },
+  {
+    "id": "review-cm-000027-v1",
+    "problem_id": "cm-000027",
+    "version": 1,
+    "supersedes": null,
+    "reviewer": "Codex source-scope audit; not an independent human expert",
+    "method": "agent_source_review",
+    "human_approval": "pending",
+    "approval_receipt": null,
+    "reviewed_at": "2026-10-15",
+    "dimensions": {
+      "SOURCE_IMPORTED": "established",
+      "STATEMENT_CHECKED": "pending",
+      "LITERATURE_REVIEWED": "pending",
+      "MATHEMATICAL_RELATION_VERIFIED": "not_run",
+      "FORMAL_STATEMENT_CHECKED": "not_run",
+      "PROOF_KERNEL_VERIFIED": "not_run",
+      "HUMAN_REVIEW_PENDING": "pending"
+    },
+    "source_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/Bunyakovsky.lean#L31-L39"
+    ],
+    "scope": "Integer polynomial with both source-defined Bunyakovsky and Schinzel conditions, infinitely many natural inputs yielding prime absolute value. Expand these definitions before equating with the classical formulation.",
+    "limitations": [
+      "A singleton polynomial and a family of linear polynomials are different scopes. NatAbs primality, positive leading coefficient and fixed-divisor conditions require definition-level matching; no implication from a similarly named prime-pattern conjecture is accepted.",
+      "Current primary literature and all competing proof claims need full-method review.",
+      "Formalization fidelity, source attribution and original bibliographic priority require independent review."
+    ],
+    "status_recommendation": "unknown",
+    "statement_sha256": "a1d1dc85168330a0bf55c0f8390a8243bd9f47b3e6fd0e401f0dbc45c88e50c6"
+  },
+  {
+    "id": "review-cm-000028-v1",
+    "problem_id": "cm-000028",
+    "version": 1,
+    "supersedes": null,
+    "reviewer": "Codex source-scope audit; not an independent human expert",
+    "method": "agent_source_review",
+    "human_approval": "pending",
+    "approval_receipt": null,
+    "reviewed_at": "2026-10-15",
+    "dimensions": {
+      "SOURCE_IMPORTED": "established",
+      "STATEMENT_CHECKED": "pending",
+      "LITERATURE_REVIEWED": "pending",
+      "MATHEMATICAL_RELATION_VERIFIED": "not_run",
+      "FORMAL_STATEMENT_CHECKED": "not_run",
+      "PROOF_KERNEL_VERIFIED": "not_run",
+      "HUMAN_REVIEW_PENDING": "pending"
+    },
+    "source_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/Buchi.lean#L47-L55",
+      "https://arxiv.org/abs/2412.16740"
+    ],
+    "scope": "Selected IsBuchi 5 concerns integer x,a and five squares (x+n)^2+a. General second-difference-two sequences may require a parity/offset correspondence argument.",
+    "limitations": [
+      "A 2024 preprint claims a five-square solution. Neither its proof nor the equivalence of its general sequence formulation with this integer-offset definition has been checked. The source's first-open-case label therefore cannot be promoted into independent open or solved status.",
+      "Current primary literature and all competing proof claims need full-method review.",
+      "Formalization fidelity, source attribution and original bibliographic priority require independent review."
+    ],
+    "status_recommendation": "unknown",
+    "statement_sha256": "b0b36fef43a92dc1b1a03917bed51eb23cdf43ff19e360f729522cd9b98ac6aa"
+  },
+  {
+    "id": "review-cm-000029-v1",
+    "problem_id": "cm-000029",
+    "version": 1,
+    "supersedes": null,
+    "reviewer": "Codex source-scope audit; not an independent human expert",
+    "method": "agent_source_review",
+    "human_approval": "pending",
+    "approval_receipt": null,
+    "reviewed_at": "2026-10-15",
+    "dimensions": {
+      "SOURCE_IMPORTED": "established",
+      "STATEMENT_CHECKED": "pending",
+      "LITERATURE_REVIEWED": "pending",
+      "MATHEMATICAL_RELATION_VERIFIED": "not_run",
+      "FORMAL_STATEMENT_CHECKED": "not_run",
+      "PROOF_KERNEL_VERIFIED": "not_run",
+      "HUMAN_REVIEW_PENDING": "pending"
+    },
+    "source_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/CarmichaelTotient.lean#L56-L60"
+    ],
+    "scope": "For every positive n, exists a different natural m with identical Euler totient. Distinguish existence of a partner from claims about exactly k preimages.",
+    "limitations": [
+      "No adequate current primary-status result was retained in this bounded search. The quantified statement and multiplicity variants require separate review; unknown is retained.",
+      "Current primary literature and all competing proof claims need full-method review.",
+      "Formalization fidelity, source attribution and original bibliographic priority require independent review."
+    ],
+    "status_recommendation": "unknown",
+    "statement_sha256": "3599e6f7c62a765b9dbd13f239d14e151ff3303ef66d359970cc23fdaf177ced"
+  },
+  {
+    "id": "review-cm-000032-v1",
+    "problem_id": "cm-000032",
+    "version": 1,
+    "supersedes": null,
+    "reviewer": "Codex source-scope audit; not an independent human expert",
+    "method": "agent_source_review",
+    "human_approval": "pending",
+    "approval_receipt": null,
+    "reviewed_at": "2026-10-15",
+    "dimensions": {
+      "SOURCE_IMPORTED": "established",
+      "STATEMENT_CHECKED": "pending",
+      "LITERATURE_REVIEWED": "pending",
+      "MATHEMATICAL_RELATION_VERIFIED": "not_run",
+      "FORMAL_STATEMENT_CHECKED": "not_run",
+      "PROOF_KERNEL_VERIFIED": "not_run",
+      "HUMAN_REVIEW_PENDING": "pending"
+    },
+    "source_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/CongruentNumber.lean#L116-L119",
+      "https://www.claymath.org/wp-content/uploads/2022/02/MPPc.pdf"
+    ],
+    "scope": "Odd squarefree natural n satisfying a specific equality of finite integer-solution counts implies n is congruent. The condition is not the unrestricted congruent-number classification.",
+    "limitations": [
+      "Clay's BSD account describes Tunnell's conditional sufficient direction and an unconditional necessary direction. The selected source signature has no BSD hypothesis: it is the open sufficient conjecture, not an unconditional attribution to Tunnell's proved theorem.",
+      "Current primary literature and all competing proof claims need full-method review.",
+      "Formalization fidelity, source attribution and original bibliographic priority require independent review."
+    ],
+    "status_recommendation": "unknown",
+    "statement_sha256": "2e078acc7b303adba1b316ad7aa2e78b01299b296ddf6a176ae1a686c1461569"
+  },
+  {
+    "id": "review-cm-000072-v1",
+    "problem_id": "cm-000072",
+    "version": 1,
+    "supersedes": null,
+    "reviewer": "Codex source-scope audit; not an independent human expert",
+    "method": "agent_source_review",
+    "human_approval": "pending",
+    "approval_receipt": null,
+    "reviewed_at": "2026-10-15",
+    "dimensions": {
+      "SOURCE_IMPORTED": "established",
+      "STATEMENT_CHECKED": "pending",
+      "LITERATURE_REVIEWED": "pending",
+      "MATHEMATICAL_RELATION_VERIFIED": "not_run",
+      "FORMAL_STATEMENT_CHECKED": "not_run",
+      "PROOF_KERNEL_VERIFIED": "not_run",
+      "HUMAN_REVIEW_PENDING": "pending"
+    },
+    "source_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/Exponentials.lean#L32-L40",
+      "https://arxiv.org/abs/2105.03955"
+    ],
+    "scope": "Two Q-linearly independent complex pairs x and y imply at least one of four exp(x_i*y_j) is transcendental. Complex versus real inputs and both independence assumptions are essential.",
+    "limitations": [
+      "Conditional applications do not prove the conjecture. The source's irrational-t consequence for 2^t and 3^t is recorded as a candidate implication, with the logarithmic independence argument still pending.",
+      "Current primary literature and all competing proof claims need full-method review.",
+      "Formalization fidelity, source attribution and original bibliographic priority require independent review."
+    ],
+    "status_recommendation": "unknown",
+    "statement_sha256": "f193931c21771480c054f1f57b7db48252f5c510a3b3973e010ffa4add384f09"
+  },
+  {
+    "id": "review-cm-000076-v1",
+    "problem_id": "cm-000076",
+    "version": 1,
+    "supersedes": null,
+    "reviewer": "Codex source-scope audit; not an independent human expert",
+    "method": "agent_source_review",
+    "human_approval": "pending",
+    "approval_receipt": null,
+    "reviewed_at": "2026-10-15",
+    "dimensions": {
+      "SOURCE_IMPORTED": "established",
+      "STATEMENT_CHECKED": "pending",
+      "LITERATURE_REVIEWED": "pending",
+      "MATHEMATICAL_RELATION_VERIFIED": "not_run",
+      "FORMAL_STATEMENT_CHECKED": "not_run",
+      "PROOF_KERNEL_VERIFIED": "not_run",
+      "HUMAN_REVIEW_PENDING": "pending"
+    },
+    "source_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/Fuglede.lean#L51-L60",
+      "https://arxiv.org/abs/2607.15632"
+    ],
+    "scope": "Bounded positive-measure subsets of R^2: spectral iff translational tiling, with exact conventions for spectra and almost-everywhere tilings.",
+    "limitations": [
+      "The July 2026 Zhang preprint announces counterexamples in both directions, and the source comment already flags that claim. Its finite-to-Euclidean transference and proofs were not independently verified; do not keep an unqualified certified-open label or promote a preprint abstract to a certified refutation.",
+      "Current primary literature and all competing proof claims need full-method review.",
+      "Formalization fidelity, source attribution and original bibliographic priority require independent review."
+    ],
+    "status_recommendation": "unknown",
+    "statement_sha256": "85b594c078f3b9cc99df74cb9007d29d0e022a6ffd81b20f43cc471ce872883e"
+  },
+  {
+    "id": "review-cm-000090-v1",
+    "problem_id": "cm-000090",
+    "version": 1,
+    "supersedes": null,
+    "reviewer": "Codex source-scope audit; not an independent human expert",
+    "method": "agent_source_review",
+    "human_approval": "pending",
+    "approval_receipt": null,
+    "reviewed_at": "2026-10-15",
+    "dimensions": {
+      "SOURCE_IMPORTED": "established",
+      "STATEMENT_CHECKED": "pending",
+      "LITERATURE_REVIEWED": "pending",
+      "MATHEMATICAL_RELATION_VERIFIED": "not_run",
+      "FORMAL_STATEMENT_CHECKED": "not_run",
+      "PROOF_KERNEL_VERIFIED": "not_run",
+      "HUMAN_REVIEW_PENDING": "pending"
+    },
+    "source_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/Kaplansky.lean#L60-L67"
+    ],
+    "scope": "Torsion-free group algebra K[G] has no nontrivial idempotents, with the source's field/group assumptions. Not the unit conjecture or the zero-divisor conjecture.",
+    "limitations": [
+      "Pinned context distinguishes a zero-divisor refutation from the idempotent problem. A counterexample to a stronger property does not automatically refute a weaker one. Exact group, field characteristic and algebra conventions remain review obligations.",
+      "Current primary literature and all competing proof claims need full-method review.",
+      "Formalization fidelity, source attribution and original bibliographic priority require independent review."
+    ],
+    "status_recommendation": "unknown",
+    "statement_sha256": "2c7b929b579fd2cd2cb39f01de32be336b30543a56c2b93006814fb176080215"
+  },
+  {
+    "id": "review-cm-000092-v1",
+    "problem_id": "cm-000092",
+    "version": 1,
+    "supersedes": null,
+    "reviewer": "Codex source-scope audit; not an independent human expert",
+    "method": "agent_source_review",
+    "human_approval": "pending",
+    "approval_receipt": null,
+    "reviewed_at": "2026-10-15",
+    "dimensions": {
+      "SOURCE_IMPORTED": "established",
+      "STATEMENT_CHECKED": "pending",
+      "LITERATURE_REVIEWED": "pending",
+      "MATHEMATICAL_RELATION_VERIFIED": "not_run",
+      "FORMAL_STATEMENT_CHECKED": "not_run",
+      "PROOF_KERNEL_VERIFIED": "not_run",
+      "HUMAN_REVIEW_PENDING": "pending"
+    },
+    "source_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/Koethe.lean#L125-L129",
+      "https://arxiv.org/abs/2609.15080",
+      "https://arxiv.org/abs/2609.26909"
+    ],
+    "scope": "For each nil two-sided ideal I in the source ring R, every finite matrix ideal M_n(I) is nil. Nil versus nilpotent and one-sided versus two-sided formulations require care.",
+    "limitations": [
+      "A September 2026 point-module paper explicitly claims a refutation. The construction and equivalence to this matrix-ideal formulation have not been reviewed, so no automatic status change is permitted.",
+      "Current primary literature and all competing proof claims need full-method review.",
+      "Formalization fidelity, source attribution and original bibliographic priority require independent review."
+    ],
+    "status_recommendation": "unknown",
+    "statement_sha256": "5016fec50294abe99bd25fa4e74ba6939fd38b316ff6d2f2a2708dffe5126171"
+  },
+  {
+    "id": "review-cm-000094-v1",
+    "problem_id": "cm-000094",
+    "version": 1,
+    "supersedes": null,
+    "reviewer": "Codex source-scope audit; not an independent human expert",
+    "method": "agent_source_review",
+    "human_approval": "pending",
+    "approval_receipt": null,
+    "reviewed_at": "2026-10-15",
+    "dimensions": {
+      "SOURCE_IMPORTED": "established",
+      "STATEMENT_CHECKED": "pending",
+      "LITERATURE_REVIEWED": "pending",
+      "MATHEMATICAL_RELATION_VERIFIED": "not_run",
+      "FORMAL_STATEMENT_CHECKED": "not_run",
+      "PROOF_KERNEL_VERIFIED": "not_run",
+      "HUMAN_REVIEW_PENDING": "pending"
+    },
+    "source_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/LehmerMahlerMeasureProblem.lean#L54-L59"
+    ],
+    "scope": "Every integer polynomial of Mahler measure >1 has measure at least that of the specified Lehmer polynomial. This sharp-minimum claim is stronger in presentation than merely asking for a gap above one.",
+    "limitations": [
+      "Do not merge a positive universal lower-gap conjecture with the precise optimal Lehmer-polynomial threshold without an equivalence proof. Nonmonic polynomials, cyclotomic factors and normalization must be examined.",
+      "Current primary literature and all competing proof claims need full-method review.",
+      "Formalization fidelity, source attribution and original bibliographic priority require independent review."
+    ],
+    "status_recommendation": "unknown",
+    "statement_sha256": "da63049cde332204f06bba415f486f6fde8167a06a1a64c08628c2fb171ddcb2"
+  },
+  {
+    "id": "review-cm-000097-v1",
+    "problem_id": "cm-000097",
+    "version": 1,
+    "supersedes": null,
+    "reviewer": "Codex source-scope audit; not an independent human expert",
+    "method": "agent_source_review",
+    "human_approval": "pending",
+    "approval_receipt": null,
+    "reviewed_at": "2026-10-15",
+    "dimensions": {
+      "SOURCE_IMPORTED": "established",
+      "STATEMENT_CHECKED": "pending",
+      "LITERATURE_REVIEWED": "pending",
+      "MATHEMATICAL_RELATION_VERIFIED": "not_run",
+      "FORMAL_STATEMENT_CHECKED": "not_run",
+      "PROOF_KERNEL_VERIFIED": "not_run",
+      "HUMAN_REVIEW_PENDING": "pending"
+    },
+    "source_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/AlgebraicNormality.lean#L72-L75"
+    ],
+    "scope": "Every irrational algebraic real is absolutely normal, meaning normal in every relevant integer base. Simple normality, absolute normality and transcendence are different properties.",
+    "limitations": [
+      "The exact IsIrrationalAlgebraic and IsAbsolutelyNormal definitions remain part of the fidelity obligation. Examples of computable normal numbers or finite digit tests cannot establish the algebraic universal claim.",
+      "Current primary literature and all competing proof claims need full-method review.",
+      "Formalization fidelity, source attribution and original bibliographic priority require independent review."
+    ],
+    "status_recommendation": "unknown",
+    "statement_sha256": "d1dce0f0833fad5880393bf6e68cac6f170125a067246b62350c97785a07d52a"
+  },
+  {
+    "id": "review-cm-000102-v1",
+    "problem_id": "cm-000102",
+    "version": 1,
+    "supersedes": null,
+    "reviewer": "Codex source-scope audit; not an independent human expert",
+    "method": "agent_source_review",
+    "human_approval": "pending",
+    "approval_receipt": null,
+    "reviewed_at": "2026-10-15",
+    "dimensions": {
+      "SOURCE_IMPORTED": "established",
+      "STATEMENT_CHECKED": "pending",
+      "LITERATURE_REVIEWED": "pending",
+      "MATHEMATICAL_RELATION_VERIFIED": "not_run",
+      "FORMAL_STATEMENT_CHECKED": "not_run",
+      "PROOF_KERNEL_VERIFIED": "not_run",
+      "HUMAN_REVIEW_PENDING": "pending"
+    },
+    "source_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/RamseyNumbers.lean#L92-L99",
+      "https://arxiv.org/abs/2508.16699"
+    ],
+    "scope": "Determine the exact integer R(5,5); bounds are historical source assertions, not the requested answer or a proof.",
+    "limitations": [
+      "A 2025 paper reports a heuristic/spectral estimate of 45. A probabilistic diagnostic is not a complete coloring certificate or exhaustive upper-bound proof. The source's 43..46 interval needs its own current-source reconciliation.",
+      "Current primary literature and all competing proof claims need full-method review.",
+      "Formalization fidelity, source attribution and original bibliographic priority require independent review."
+    ],
+    "status_recommendation": "unknown",
+    "statement_sha256": "86a079b1aacba963c2673070fc4d865f11420078c2ac8c676af1352c47491f23"
+  },
+  {
+    "id": "review-cm-000103-v1",
+    "problem_id": "cm-000103",
+    "version": 1,
+    "supersedes": null,
+    "reviewer": "Codex source-scope audit; not an independent human expert",
+    "method": "agent_source_review",
+    "human_approval": "pending",
+    "approval_receipt": null,
+    "reviewed_at": "2026-10-15",
+    "dimensions": {
+      "SOURCE_IMPORTED": "established",
+      "STATEMENT_CHECKED": "pending",
+      "LITERATURE_REVIEWED": "pending",
+      "MATHEMATICAL_RELATION_VERIFIED": "not_run",
+      "FORMAL_STATEMENT_CHECKED": "not_run",
+      "PROOF_KERNEL_VERIFIED": "not_run",
+      "HUMAN_REVIEW_PENDING": "pending"
+    },
+    "source_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/ResolutionOfSingularities.lean#L95-L108",
+      "https://arxiv.org/abs/math/0607009",
+      "https://arxiv.org/abs/math/0606530"
+    ],
+    "scope": "Perfect positive-characteristic field; integral separated finite-type scheme; a proper birational morphism from a smooth integral scheme. Not arbitrary imperfect fields or merely alterations.",
+    "limitations": [
+      "Historical dimension-three results and programs with an unresolved termination step were found. Characteristic-zero resolution is outside the selected positive-characteristic scope. Imperfect-field counterexamples do not refute the perfect-field statement.",
+      "Current primary literature and all competing proof claims need full-method review.",
+      "Formalization fidelity, source attribution and original bibliographic priority require independent review."
+    ],
+    "status_recommendation": "unknown",
+    "statement_sha256": "450a8e09e94af924d1708bfca92f93a57ac178f41c3227ffad0211af70d26372"
+  },
+  {
+    "id": "review-cm-000105-v1",
+    "problem_id": "cm-000105",
+    "version": 1,
+    "supersedes": null,
+    "reviewer": "Codex source-scope audit; not an independent human expert",
+    "method": "agent_source_review",
+    "human_approval": "pending",
+    "approval_receipt": null,
+    "reviewed_at": "2026-10-15",
+    "dimensions": {
+      "SOURCE_IMPORTED": "established",
+      "STATEMENT_CHECKED": "pending",
+      "LITERATURE_REVIEWED": "pending",
+      "MATHEMATICAL_RELATION_VERIFIED": "not_run",
+      "FORMAL_STATEMENT_CHECKED": "not_run",
+      "PROOF_KERNEL_VERIFIED": "not_run",
+      "HUMAN_REVIEW_PENDING": "pending"
+    },
+    "source_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/SerreMultiplicityConjectures.lean#L101-L112"
+    ],
+    "scope": "Regular local ring, finitely generated modules with finite-length tensor product, and support dimensions summing to the ring dimension; intersection multiplicity strictly positive.",
+    "limitations": [
+      "Positivity, vanishing and nonnegativity are different Serre conjectures. Equicharacteristic and mixed-characteristic results cannot be transferred without matching hypotheses. The bounded search did not establish the full selected case.",
+      "Current primary literature and all competing proof claims need full-method review.",
+      "Formalization fidelity, source attribution and original bibliographic priority require independent review."
+    ],
+    "status_recommendation": "unknown",
+    "statement_sha256": "b7312e3fc1d2f9bb3af751214057b31c7484215a22a5fcb62c0f0389315184d7"
+  },
+  {
+    "id": "review-cm-000106-v1",
+    "problem_id": "cm-000106",
+    "version": 1,
+    "supersedes": null,
+    "reviewer": "Codex source-scope audit; not an independent human expert",
+    "method": "agent_source_review",
+    "human_approval": "pending",
+    "approval_receipt": null,
+    "reviewed_at": "2026-10-15",
+    "dimensions": {
+      "SOURCE_IMPORTED": "established",
+      "STATEMENT_CHECKED": "pending",
+      "LITERATURE_REVIEWED": "pending",
+      "MATHEMATICAL_RELATION_VERIFIED": "not_run",
+      "FORMAL_STATEMENT_CHECKED": "not_run",
+      "PROOF_KERNEL_VERIFIED": "not_run",
+      "HUMAN_REVIEW_PENDING": "pending"
+    },
+    "source_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/SidorenkoConjecture.lean#L141-L158",
+      "https://arxiv.org/abs/2605.14138",
+      "https://arxiv.org/abs/2512.11222",
+      "https://arxiv.org/abs/2609.14655"
+    ],
+    "scope": "For each finite undirected tree, exists one orientation whose homomorphism density in every finite nonempty tournament is at most 2^(-edge count). Not the undirected Sidorenko conjecture.",
+    "limitations": [
+      "2025/2026 papers establish particular orientations, paths and spiders and describe progress toward the universal statement. Quantifier order exists-orientation then all-tournaments is essential. No general solution is inferred from the title Sidorenko.",
+      "Current primary literature and all competing proof claims need full-method review.",
+      "Formalization fidelity, source attribution and original bibliographic priority require independent review."
+    ],
+    "status_recommendation": "unknown",
+    "statement_sha256": "6ef97f4d2eb6f239dbfccde689dfabf645e3673099d7d239ebfd67ecefb35af8"
+  },
+  {
+    "id": "review-cm-000109-v1",
+    "problem_id": "cm-000109",
+    "version": 1,
+    "supersedes": null,
+    "reviewer": "Codex source-scope audit; not an independent human expert",
+    "method": "agent_source_review",
+    "human_approval": "pending",
+    "approval_receipt": null,
+    "reviewed_at": "2026-10-15",
+    "dimensions": {
+      "SOURCE_IMPORTED": "established",
+      "STATEMENT_CHECKED": "pending",
+      "LITERATURE_REVIEWED": "pending",
+      "MATHEMATICAL_RELATION_VERIFIED": "not_run",
+      "FORMAL_STATEMENT_CHECKED": "not_run",
+      "PROOF_KERNEL_VERIFIED": "not_run",
+      "HUMAN_REVIEW_PENDING": "pending"
+    },
+    "source_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/TarskiExponentialFunctionProblem.lean#L70-L76"
+    ],
+    "scope": "Decidability of the complete first-order theory of the ordered real exponential field, not just elementary arithmetic or quantifier-free polynomial formulas.",
+    "limitations": [
+      "Conditional decidability under transcendence assumptions must remain conditional. The source's IsDecidable type requires semantic and algorithmic interpretation review; classical choice is not an algorithm.",
+      "Current primary literature and all competing proof claims need full-method review.",
+      "Formalization fidelity, source attribution and original bibliographic priority require independent review."
+    ],
+    "status_recommendation": "unknown",
+    "statement_sha256": "a3f7065c38371a94f085e94f6d7de14dc600c69f78be7fbe26a257ea4f7cc628"
+  },
+  {
+    "id": "review-cm-000110-v1",
+    "problem_id": "cm-000110",
+    "version": 1,
+    "supersedes": null,
+    "reviewer": "Codex source-scope audit; not an independent human expert",
+    "method": "agent_source_review",
+    "human_approval": "pending",
+    "approval_receipt": null,
+    "reviewed_at": "2026-10-15",
+    "dimensions": {
+      "SOURCE_IMPORTED": "established",
+      "STATEMENT_CHECKED": "pending",
+      "LITERATURE_REVIEWED": "pending",
+      "MATHEMATICAL_RELATION_VERIFIED": "not_run",
+      "FORMAL_STATEMENT_CHECKED": "not_run",
+      "PROOF_KERNEL_VERIFIED": "not_run",
+      "HUMAN_REVIEW_PENDING": "pending"
+    },
+    "source_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/conjecture_1_3_to_2_3.lean#L30-L43",
+      "https://arxiv.org/abs/2609.30888",
+      "https://arxiv.org/abs/1706.04985"
+    ],
+    "scope": "Finite non-total partial order; uniform distribution on actual linear extensions; existence of a pair with probability in [1/3,2/3]. Source OrderHom encoding and bijectivity need correspondence checking.",
+    "limitations": [
+      "A September 2026 preprint announces improvement of a general lower balance bound, not a solution at 1/3. A 2017 paper gives particular poset families. Neither clears all finite nonchains.",
+      "Current primary literature and all competing proof claims need full-method review.",
+      "Formalization fidelity, source attribution and original bibliographic priority require independent review."
+    ],
+    "status_recommendation": "unknown",
+    "statement_sha256": "7879d7b74016aa05fe7bb41e6b84159aefe1668c97a666c7d3c5168817e37aed"
+  },
+  {
+    "id": "review-cm-000111-v1",
+    "problem_id": "cm-000111",
+    "version": 1,
+    "supersedes": null,
+    "reviewer": "Codex source-scope audit; not an independent human expert",
+    "method": "agent_source_review",
+    "human_approval": "pending",
+    "approval_receipt": null,
+    "reviewed_at": "2026-10-15",
+    "dimensions": {
+      "SOURCE_IMPORTED": "established",
+      "STATEMENT_CHECKED": "pending",
+      "LITERATURE_REVIEWED": "pending",
+      "MATHEMATICAL_RELATION_VERIFIED": "not_run",
+      "FORMAL_STATEMENT_CHECKED": "not_run",
+      "PROOF_KERNEL_VERIFIED": "not_run",
+      "HUMAN_REVIEW_PENDING": "pending"
+    },
+    "source_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/BingBorsuk.lean#L44-L52",
+      "https://arxiv.org/abs/0811.0886"
+    ],
+    "scope": "Metrizable homogeneous ANR of covering dimension n is a topological n-manifold, with the exact ChartedSpace/manifold separation and dimension conventions.",
+    "limitations": [
+      "Historical survey distinguishes Bing-Borsuk from Busemann and from weaker generalized-manifold assertions. A 2008 survey cannot alone certify current 2026 status. Source imports and ANR definitions have not been typechecked here.",
+      "Current primary literature and all competing proof claims need full-method review.",
+      "Formalization fidelity, source attribution and original bibliographic priority require independent review."
+    ],
+    "status_recommendation": "unknown",
+    "statement_sha256": "04daa9b2785738404d7b37f1227889d37371c1634f09d9d56dc13aabef5604ae"
+  },
+  {
+    "id": "review-cm-000118-v1",
+    "problem_id": "cm-000118",
+    "version": 1,
+    "supersedes": null,
+    "reviewer": "Codex source-scope audit; not an independent human expert",
+    "method": "agent_source_review",
+    "human_approval": "pending",
+    "approval_receipt": null,
+    "reviewed_at": "2026-10-15",
+    "dimensions": {
+      "SOURCE_IMPORTED": "established",
+      "STATEMENT_CHECKED": "pending",
+      "LITERATURE_REVIEWED": "pending",
+      "MATHEMATICAL_RELATION_VERIFIED": "not_run",
+      "FORMAL_STATEMENT_CHECKED": "not_run",
+      "PROOF_KERNEL_VERIFIED": "not_run",
+      "HUMAN_REVIEW_PENDING": "pending"
+    },
+    "source_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/UnionClosed.lean#L54-L63",
+      "https://arxiv.org/abs/2610.02295",
+      "https://arxiv.org/abs/2211.11504"
+    ],
+    "scope": "Finite union-closed family, excluding the singleton family containing only the empty set, on a nonempty ground type; one element occurs in at least half of members. Empty-family case is vacuous under nonempty ground type.",
+    "limitations": [
+      "October 2026 work reports an improved lower frequency strictly below 1/2. This is progress toward, not a proof of, Frankl's half bound. Source's old 0.38234 comment is not a current best-bound claim.",
+      "Current primary literature and all competing proof claims need full-method review.",
+      "Formalization fidelity, source attribution and original bibliographic priority require independent review."
+    ],
+    "status_recommendation": "unknown",
+    "statement_sha256": "3c513ed8135e191b1ad4239f218368be09df8899b05596c7322be05ce7ccb47c"
+  },
+  {
+    "id": "review-cm-000119-v1",
+    "problem_id": "cm-000119",
+    "version": 1,
+    "supersedes": null,
+    "reviewer": "Codex source-scope audit; not an independent human expert",
+    "method": "agent_source_review",
+    "human_approval": "pending",
+    "approval_receipt": null,
+    "reviewed_at": "2026-10-15",
+    "dimensions": {
+      "SOURCE_IMPORTED": "established",
+      "STATEMENT_CHECKED": "pending",
+      "LITERATURE_REVIEWED": "pending",
+      "MATHEMATICAL_RELATION_VERIFIED": "not_run",
+      "FORMAL_STATEMENT_CHECKED": "not_run",
+      "PROOF_KERNEL_VERIFIED": "not_run",
+      "HUMAN_REVIEW_PENDING": "pending"
+    },
+    "source_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/VizingConjecture.lean#L42-L52",
+      "https://arxiv.org/abs/1109.0707",
+      "https://arxiv.org/abs/1502.00708"
+    ],
+    "scope": "All finite simple graphs G,H: domination number of Cartesian product at least the product of domination numbers. Not Vizing's edge-coloring theorem or other graph products.",
+    "limitations": [
+      "An old claimed full proof and a later almost-all-pairs result were both found. A proof-title claim is not sufficient acceptance evidence. Exact hypotheses of each paper must be inspected before changing universal status.",
+      "Current primary literature and all competing proof claims need full-method review.",
+      "Formalization fidelity, source attribution and original bibliographic priority require independent review."
+    ],
+    "status_recommendation": "unknown",
+    "statement_sha256": "f187a25ff6199341cd4c438afae2fb995576f223ba3a6cc1f347021806ea0537"
+  },
+  {
+    "id": "review-cm-000120-v1",
+    "problem_id": "cm-000120",
+    "version": 1,
+    "supersedes": null,
+    "reviewer": "Codex source-scope audit; not an independent human expert",
+    "method": "agent_source_review",
+    "human_approval": "pending",
+    "approval_receipt": null,
+    "reviewed_at": "2026-10-15",
+    "dimensions": {
+      "SOURCE_IMPORTED": "established",
+      "STATEMENT_CHECKED": "pending",
+      "LITERATURE_REVIEWED": "pending",
+      "MATHEMATICAL_RELATION_VERIFIED": "not_run",
+      "FORMAL_STATEMENT_CHECKED": "not_run",
+      "PROOF_KERNEL_VERIFIED": "not_run",
+      "HUMAN_REVIEW_PENDING": "pending"
+    },
+    "source_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/CernyConjecture.lean#L56-L62"
+    ],
+    "scope": "Every synchronizing finite-state DFA with n states has a reset word of length at most (n-1)^2. Existence of a longer bound or examples attaining the lower bound do not prove the conjecture.",
+    "limitations": [
+      "State count, alphabet finiteness and synchronization definitions must match. Current sharp general upper bounds and recent proof claims were not established by this pass; source remains unverified.",
+      "Current primary literature and all competing proof claims need full-method review.",
+      "Formalization fidelity, source attribution and original bibliographic priority require independent review."
+    ],
+    "status_recommendation": "unknown",
+    "statement_sha256": "6a658226966480134a2fd0f4b866d4d8d5f86be6a98b95b36e4b5418c53ef4d7"
+  },
+  {
+    "id": "review-cm-000078-v1",
+    "problem_id": "cm-000078",
+    "version": 1,
+    "supersedes": null,
+    "reviewer": "Codex source-scope audit; not an independent human expert",
+    "method": "agent_source_review",
+    "human_approval": "pending",
+    "approval_receipt": null,
+    "reviewed_at": "2026-10-15",
+    "dimensions": {
+      "SOURCE_IMPORTED": "established",
+      "STATEMENT_CHECKED": "pending",
+      "LITERATURE_REVIEWED": "pending",
+      "MATHEMATICAL_RELATION_VERIFIED": "not_run",
+      "FORMAL_STATEMENT_CHECKED": "not_run",
+      "PROOF_KERNEL_VERIFIED": "not_run",
+      "HUMAN_REVIEW_PENDING": "pending"
+    },
+    "source_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/GaussCircleProblem.lean#L81-L93"
+    ],
+    "scope": "Error term for lattice points in a disk as radius tends to infinity; requested O(r^(1/2+o(1))). Radius and squared-radius conventions change exponents.",
+    "limitations": [
+      "No current best exponent is asserted. Big-O constants, radius normalization and equivalence between o(1)-exponent and all-epsilon formulations need an explicit analytic comparison.",
+      "Current primary literature and all competing proof claims need full-method review.",
+      "Formalization fidelity, source attribution and original bibliographic priority require independent review."
+    ],
+    "status_recommendation": "unknown",
+    "statement_sha256": "29876d6f51e3e5a862bb23995b1264817c318fa4eafa2ef24e1241950e82d412"
+  },
+  {
+    "id": "review-cm-000079-v1",
+    "problem_id": "cm-000079",
+    "version": 1,
+    "supersedes": null,
+    "reviewer": "Codex source-scope audit; not an independent human expert",
+    "method": "agent_source_review",
+    "human_approval": "pending",
+    "approval_receipt": null,
+    "reviewed_at": "2026-10-15",
+    "dimensions": {
+      "SOURCE_IMPORTED": "established",
+      "STATEMENT_CHECKED": "pending",
+      "LITERATURE_REVIEWED": "pending",
+      "MATHEMATICAL_RELATION_VERIFIED": "not_run",
+      "FORMAL_STATEMENT_CHECKED": "not_run",
+      "PROOF_KERNEL_VERIFIED": "not_run",
+      "HUMAN_REVIEW_PENDING": "pending"
+    },
+    "source_urls": [
+      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/GracefulLabeling.lean#L69-L87",
+      "https://arxiv.org/abs/1003.3045",
+      "https://arxiv.org/abs/1608.01577",
+      "https://arxiv.org/abs/1403.1564"
+    ],
+    "scope": "Every finite simple tree with m edges has an injective labeling in0..m whose absolute edge differences are exactly1..m. Not approximate label ranges or a bounded-order computation.",
+    "limitations": [
+      "A paper reports checking trees up to35 vertices and another proves an approximate asymptotic relaxation. Neither proves the exact all-tree statement. An old full-proof title is not accepted without checking its argument and status.",
+      "Current primary literature and all competing proof claims need full-method review.",
+      "Formalization fidelity, source attribution and original bibliographic priority require independent review."
+    ],
+    "status_recommendation": "unknown",
+    "statement_sha256": "4ee83be1ba5684037c9675b42d4e17763e1e5a5e54608a918f9a1932d8889e97"
+  }
+]

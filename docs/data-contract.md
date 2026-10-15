@@ -1,4 +1,34 @@
-# Data contract · 0.1.0
+# Data contract · 0.2.0 (immutable 0.1 source snapshot retained)
+
+## V0.2 identity and source overlays
+
+`data/problems.json`, original navigation edges and manifest remain byte-preserved source artifacts. `data/v02/id-registry.json` is the authoritative persisted mapping to neutral `cm-NNNNNN` identities; allocation is append-only, never reassigned after removal. `catalog.ts` overlays canonical identities, appends legacy `fc-*` aliases, remaps edges and adds 32 source mappings. Old problem URLs resolve. Existing mock journals normalize old IDs at read time. No original statement is silently rewritten.
+
+The second-source adapter retains original external number, URL, original website link, immutable revision, retrieval date, source SHA-256, canonicalized raw-record SHA-256 and attribution. Its strict runtime schema separates `rights.metadata`, `rights.statement_text` and `rights.linked_material`. A source observation is not a new problem or an independently checked status. Original numbered Erdős problems can differ from selected variants. The original metadata is retained for comparison rather than silently overriding source text.
+
+## V0.2 evidence, variants and review history
+
+`evidence.ts` validates seven independent dimensions, each `established|pending|not_run|revoked`. Events bind problem ID and statement SHA, date, reviewer/method, source URLs, scope, limitations and proposed status. `replayReviews` requires sequential versions, exact predecessor and unique event IDs. Revocation appends a new version; history remains in Git. `authorizeStatusChange` rejects research-result origins unconditionally. Expert approval and reviewed statement/literature are policy prerequisites, not proof that an arbitrary supplied receipt is authentic. No status update API exists.
+
+Thirty dossier artifacts have exact statements/signatures and scoped notes, all `completion:PARTIAL`, status unknown, human review pending. SOURCE_IMPORTED is established, STATEMENT_CHECKED/LITERATURE_REVIEWED pending, formal/kernel checks not run. `docs/literature-access-v0.2.json` records bounded page observations; unversioned paper links are dated leads, not immutable full-proof review.
+
+`relations-v02.ts` adds `open_case_of` and `counterexample_to` alongside the original six types. Mathematical edges require layer, direction, precise hypotheses, scope, source revision/locator, review date/reviewer and approval/proof fields. A verified edge requires an approved human receipt, proof receipt and `is_candidate:false`. That validator is an integrity/policy check; independent inspection is still necessary. Twelve preserved-source declaration nodes have `is_problem_count:false`, parent ID and exact hashed source span. All 12 actual substantive edges are source-reviewed candidates, not verified results. The research-evidence layer currently has 0 entries.
+
+## V0.2 duplicate screening and reversible decisions
+
+`dedup.ts` screens all unordered catalog pairs using NFKC/case/whitespace normalization, shared source identity, token/title Jaccard, citations and a small mathematical-symbol signature. Exact matches are classified first; text >=0.6 or title >=0.7 gives near duplicates; shared citation plus matching >=3-symbol signature and text >=0.25 yields `candidate_equivalence`. These are lexical proxies, not a semantic theorem prover or embedding model. Every proposal is unverified with `auto_merge:false`. Actual run: 0 exact, 55 near, 0 equivalence candidates; **0 merges**. Short/common statements can produce false positives.
+
+Rebuild via `npx tsx scripts/build-dedup-report.ts`; offline validation rejects stale output. `dedup-decisions.json` is an initially empty append-only decision ledger, with source IDs, formulation differences, reviewer, reason and predecessor required by the contract. A retraction must bind its original candidate. No candidate has been reviewed into a merge; preserve all raw observations when adding future decisions.
+
+```sh
+python -m pip install -r requirements-adapters.txt
+python adapters/erdos_metadata.py --source data/upstream/erdos-community/problems.yaml --license data/upstream/erdos-community/LICENSE
+python scripts/build-v02-evidence.py
+npx tsx scripts/build-dedup-report.ts
+npm run validate:v02
+```
+
+The following field descriptions document the retained 0.1 source snapshot. Runtime canonical IDs and multisource/evidence extensions above take precedence.
 
 The executable authority is `src/lib/schema.ts`. JSON imports are parsed at runtime/build; strict schemas reject unknown fields. `data/manifest.json` records schema version, pinned upstream revision, dates, counts, field statistics and source hashes.
 

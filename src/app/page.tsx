@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { ArrowRight, ArrowUpRight, BookOpen, GitBranch, Network, ShieldCheck } from 'lucide-react';
 import { Atlas } from '@/components/atlas';
 import { Badge, EvidenceNote } from '@/components/status';
-import { fields, fieldColors, manifest, problems, relationships } from '@/lib/catalog';
+import { fields, fieldColors, manifest, problems, relationships, getProblem } from '@/lib/catalog';
 
 export default function Home() {
   const featured = [
@@ -10,7 +10,7 @@ export default function Home() {
     'fc-wikipedia-abc',
     'fc-wikipedia-beckfialaconjecture',
   ]
-    .map((id) => problems.find((p) => p.id === id))
+    .map((id) => getProblem(id))
     .filter((p) => !!p);
   return (
     <div className="page-wrap home-page">
@@ -39,7 +39,7 @@ export default function Home() {
           </div>
           <div className="hero-footnote">
             <GitBranch size={14} /> Open infrastructure for mathematical discovery{' '}
-            <span>V0.1 · LOCAL EDITION</span>
+            <span>V0.2 · {process.env.CONJMAP_STATIC_EXPORT === '1' ? 'PUBLIC READ-ONLY' : 'LOCAL EDITION'}</span>
           </div>
         </div>
         <div className="hero-marginalia">
@@ -164,8 +164,8 @@ export default function Home() {
           <BookOpen size={22} />
           <h3>Connected to what comes next.</h3>
           <p>
-            A versioned task interface prepares for MathForge. This edition runs an explicitly
-            labeled local mock adapter.
+            Separate mock and authenticated real adapters preserve research provenance. The real
+            MathForge connection remains blocked pending a compatible engine API.
           </p>
         </div>
       </section>

@@ -95,16 +95,25 @@ export default function About() {
           <section>
             <h2>What this first map can establish.</h2>
             <p>
-              V0.1 indexes 120 actual source statements from six broad fields. Every record links to
-              a pinned upstream theorem and preserves its original file. All automatic extractions
-              remain unverified, and all independent mathematical statuses are unknown. Difficulty
-              and historical attribution are left unknown where the adapter does not establish them.
+              V0.2 preserves 120 actual source statements from six broad fields, with 32
+              independently curated metadata observations linked from a second source. Every record
+              links to a pinned upstream theorem and preserves its original file. All automatic
+              extractions remain unverified, and all independent mathematical statuses are unknown.
+              Difficulty and historical attribution are left unknown where the adapter does not
+              establish them.
             </p>
             <p>
               The 82 graph links represent shared subject tags. They are navigation aids awaiting
               review. No implication or equivalence is established. There are no real MathForge
               runs, no independent Lean checks, and no claim that this catalog is complete or
               current literature.
+            </p>
+            <p>
+              Thirty scoped V0.2 dossiers and twelve substantive relationship candidates are
+              available for review. They remain partial and unverified. The real adapter has
+              authenticated transport, signed callbacks, quota and idempotency contracts; actual
+              MathForge execution is blocked because a compatible source-bound task API is not
+              configured.
             </p>
             <p>
               See the <Link href="/sources">source audit and permissions</Link> for the exact scope
@@ -118,7 +127,7 @@ export default function About() {
             <dl>
               <div>
                 <dt>Version</dt>
-                <dd>0.1.0 · Local edition</dd>
+                <dd>0.2.0 · Local edition</dd>
               </div>
               <div>
                 <dt>License decision</dt>

@@ -1,4 +1,4 @@
-ConjMap V0.1
+ConjMap V0.2
 Copyright 2026 ConjMap contributors
 
 This product includes a selected, transformed catalog and source files from:
@@ -22,3 +22,15 @@ No rights over linked third-party material are granted by this repository.
 Formal Conjectures requested citation:
 The Formal Conjectures Authors. The Formal Conjectures Repository (2025).
 https://github.com/google-deepmind/formal-conjectures
+
+V0.2 also includes community metadata from teorth/erdosproblems contributors:
+https://github.com/teorth/erdosproblems
+Revision: 86c3dc3e47dbdfb933c57df46705f3fe78e65cc3
+Licensed under Apache License, Version 2.0; license retained in
+data/upstream/erdos-community/LICENSE. Original YAML retained unchanged with LF.
+Changes: selection of 32 numbered metadata observations; original IDs, source and
+record hashes, rights and source mappings added. Website statements, discussions
+and linked papers are not imported or relicensed. Original problem metadata may
+describe a different scope from the selected Formal Conjectures variant.
+V0.2 canonical-ID overlays, review notes, dedup heuristics and relationship
+candidates are ConjMap additions; none is an independent mathematical certificate.

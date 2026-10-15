@@ -16,7 +16,11 @@ export default defineConfig({
     url: 'http://127.0.0.1:3100',
     reuseExistingServer: false,
     timeout: 120000,
-    env: { CONJMAP_TASK_DIR: `.local/e2e-tasks/${randomUUID()}` },
+    env: {
+      CONJMAP_TASK_DIR: `.local/e2e-tasks/${randomUUID()}`,
+      CONJMAP_REAL_TASK_DIR: `.local/e2e-real/${randomUUID()}`,
+      CONJMAP_ENABLE_BENCHMARK: '1',
+    },
   },
   projects: [{ name: 'chromium', use: { ...devices['Desktop Chrome'] } }],
 });

@@ -23,8 +23,8 @@ export default function SourcesPage() {
           <small>Resources audited</small>
         </div>
         <div>
-          <strong>01</strong>
-          <small>Licensed source imported</small>
+          <strong>02</strong>
+          <small>Licensed sources integrated</small>
         </div>
         <div>
           <strong>{manifest.problem_count}</strong>

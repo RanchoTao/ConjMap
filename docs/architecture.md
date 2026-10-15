@@ -1,6 +1,28 @@
-# ConjMap V0.1 architecture
+# ConjMap V0.2 architecture
 
-ConjMap catalogs problems and their evidence. It does not reproduce MathForge's research execution logic. All runtime functionality is available locally without external keys.
+ConjMap catalogs problems and their evidence. It does not reproduce MathForge's research execution logic. Catalog browsing, mock tasks and blocked real-request journaling run locally without keys. Real research requires an engine-owned compatible API, which the inspected controller does not expose.
+
+## ADR-005: source-neutral overlays and evidence dimensions
+
+The original 120 source records, 82 navigation edges and SHA manifest stay immutable. A persisted registry maps `fc-*` to `cm-000001` through `cm-000120`; runtime overlays retain legacy URLs as aliases. A separate Python/PyYAML adapter imports licensed Erdős community metadata. Its 32 observations enrich mappings but add no problems and never replace selected statements or independent status. Metadata, statement text and linked-material rights are separate fields.
+
+Evidence events supersede the previous version for the same problem; revocation appends a new version. Seven dimensions remain independent. Status authorization rejects every research-result origin; separate expert review, explicit approval receipt and statement/literature clearance are required. This is a policy validator, not cryptographic authentication of an expert or receipt. No catalog status mutation route exists. Thirty scoped dossiers remain PARTIAL, with no kernel or independent human verification.
+
+Substantive relations have typed direction, hypotheses, scope, versioned source locator, review date and proof/approval fields. Twelve declaration nodes represent variants, never extra independent problems. Twelve source-reviewed candidates are excluded unless enabled. Navigation, logic, special-case and research-evidence layers are independent; research-evidence currently has no eligible edges. Verified styles exist, but there are zero verified edges. Lexical/symbol/citation dedup proposes candidates only; all 55 actual catalog candidates remain unmerged.
+
+## ADR-006: real transport without duplicating the research engine
+
+V1 retains its strict mock-only schema. V2 has separate routes and `.local/real-tasks` storage. It packages original source context, bounds budget to one task/60 seconds/network disabled, and requires three configured bearer/signing secrets of at least 32 characters plus a loopback endpoint. Submission is write-before-network, with a global idempotency key and three active-task quota. Uncertain submissions consume quota and are not retried automatically. Transport timeout is 5 seconds; the external engine must enforce research budgets itself.
+
+Every V2 state change writes an exclusive event-count snapshot under `history/<uuid>/` and atomically replaces current JSON under one exclusive writer lock. This is filesystem audit history, not tamperproof storage or a distributed transaction. A crash between snapshot/current writes requires explicit reconciliation; never remove history or generate a new key to hide uncertainty. Lists scan the directory. Polling never resubmits. HMAC callbacks bind a fresh timestamp/raw body, engine task ID, monotonic state and result digest; replay/terminal overwrite are rejected. Attempts/links are always unverified; artifacts are neither fetched nor executed. The UI keeps an optional token in page memory and displays persistent requests, event timelines and separate mock/real records.
+
+The actual MathForge controller was inspected read-only. Source-bound admission and replay gates do not accept arbitrary generic ConjMap requests. No engine source, private result or credentials are copied. Real execution is BLOCKED. See `mathforge-discovery-v0.2.md` and `research-api.md`.
+
+## ADR-007: bounded graph measurement
+
+`/bench` returns 404 unless explicitly enabled. It generates synthetic nodes in memory, using actual Atlas/Cytoscape rendering. Catalog JSON never receives synthetic data. Tests measure 100/1,000/5,000 nodes, construction/two-frame duration, 20 programmatic pan frames and Chromium JS heap; one sample per size is not a performance guarantee, total RSS/GPU memory is unmeasured. Batched graph mutations and renderer-generation tracking avoid losing reinitialized graphs. Capture-phase bounds refresh aligns hit testing after page scroll. See `performance/v02-graph-benchmark.json`.
+
+The following ADRs preserve the V0.1 baseline. V0.2 additions above supersede their path-derived canonical-ID, unmeasured larger-graph and future-real-adapter descriptions.
 
 ```mermaid
 flowchart TD

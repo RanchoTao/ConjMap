@@ -2,7 +2,15 @@
 
 This audit distinguishes **access**, **maintenance evidence**, **reuse permission**, and **mathematical correctness**. None implies the others. Inspection used bounded requests to the exact pages linked below, official repository metadata and a licensed source checkout. No restricted-site bypass, whole-site crawler, subscription, API key or paid resource was used. `source-access.json` preserves UTC access times, HTTP results, response hashes and GitHub maintenance metadata; response bodies from the audit are not redistributed. The eight structured entries used by the Sources page are in `data/sources.json`.
 
-## Audit matrix
+## V0.2 import decision (same-day extension)
+
+Two source integrations now ship: 120 Formal Conjectures statements and **32 metadata observations** from the independent [teorth/erdosproblems repository](https://github.com/teorth/erdosproblems). The latter add **0** canonical problems. Its [pinned license](https://github.com/teorth/erdosproblems/blob/86c3dc3e47dbdfb933c57df46705f3fe78e65cc3/LICENSE) explicitly grants Apache-2.0; [pinned YAML](https://github.com/teorth/erdosproblems/blob/86c3dc3e47dbdfb933c57df46705f3fe78e65cc3/data/problems.yaml) provides numeric identities, status metadata, tags and optional reference metadata. The licensed YAML snapshot and license are retained; website statements/discussions are not fetched for import. All observations retain source/record hashes, original ID/URL, revision, retrieval date and attribution in `data/v02/source-records.json`. Independent adapter tests reproduce all 32.
+
+Permission is field-specific: `metadata:Apache-2.0`, `statement_text:not_imported`, `linked_material:original_terms`. A numeric source match establishes documentary identity, not equivalence of a stronger/weaker selected theorem. Upstream informal/formal status and the original numbered problem's status remain observations; none updates ConjMap's unknown status. Source record count must not be summed with problem count.
+
+The matrix below is retained as a **V0.1 audit snapshot**, including its then-current import decisions; this V0.2 section supersedes the Erdős metadata decision. Remaining sources still have no new content imports. Access receipts are date- and client-specific, not perpetual availability or blanket rights assurances. No unauthorised whole-site crawling occurred. The second-source snapshot is pinned rather than claiming real-time synchronization; future update cadence remains community-driven/unknown.
+
+## Initial eight-source audit matrix (V0.1 historical decisions)
 
 | Resource / actual URL | Access observed | Maintenance / cadence | Format | License and import decision | Field quality / risks |
 | --- | --- | --- | --- | --- | --- |
@@ -15,7 +23,7 @@ This audit distinguishes **access**, **maintenance evidence**, **reuse permissio
 | [OpenProblem.ai ledger](https://openproblem.ai/mathematical-discovery-ledger/) / [data](https://openproblem.ai/mathematical-discovery-ledger/data) / [legal](https://openproblem.ai/mathematical-discovery-ledger/legal) | Ledger/data/legal readable; legal local HTTP 200; root web fetch failed | Gate B invited staging, public change records. Export schedule not established | Export page advertises JSON/JSONL/CSV/BibTeX/CSL-JSON; endpoints not exercised | Legal/licensing surfaces explicitly draft/provisional. **No import** | Separates reported claims and verified core; inspected fixtures must not become mathematical progress. Export availability does not establish reuse rights. |
 | [Cairn Commons research site](https://cairn-commons.com/) / [about](https://cairn-commons.com/about) | Home HTTP 200; about readable; llms.txt read once, later timeout | Tasks and checks advertised; daily export claimed by operator, not independently measured | HTML; MCP and daily public export advertised, not exercised | Homepage declares CC BY 4.0 content, MIT verification runners. **No import in V0.1**; require record-level lineage first | Distinct [cairncommons.dev](https://cairncommons.dev/about) also calls itself Cairn Commons but describes general agent discussion. Operators, scopes and licenses must not be conflated. No tasks/claims were posted to either site. |
 
-## What was imported and why
+## Original V0.1 import and rationale (preserved baseline)
 
 Only the explicitly licensed Formal Conjectures repository was used for content. A single pinned Git checkout supplied 120 documented research-open theorem statements across six fields; the complete selected files, headers and upstream license are retained under `data/upstream/formal-conjectures`. The adapter performs no network requests. The selection is bounded and deterministic, and all records retain immutable source URLs, theorem names, line spans and content hashes.
 

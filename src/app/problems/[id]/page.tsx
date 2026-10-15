@@ -5,6 +5,18 @@ import { getProblem, problems, relationships } from '@/lib/catalog';
 import { Badge } from '@/components/status';
 import { MathText } from '@/components/math-text';
 import { ResearchPanel } from '@/components/research-panel';
+import { EvidencePassport } from '@/components/evidence-passport';
+import { RealResearchPanel } from '@/components/real-research-panel';
+// Pre-render every canonical problem page for GitHub Pages without a Node server.
+export function generateStaticParams() {
+  const ids = new Set(problems.flatMap((problem) => [
+    problem.id,
+    ...problem.aliases.filter((alias) => alias.startsWith('fc-')),
+  ]));
+  return [...ids].map((id) => ({ id }));
+}
+export const dynamicParams = false;
+
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   return { title: getProblem(id)?.title ?? 'Problem not found' };
@@ -34,6 +46,7 @@ export default async function ProblemPage({ params }: { params: Promise<{ id: st
       </div>
       <div className="detail-grid">
         <div className="detail-main">
+          <EvidencePassport problem={problem} />
           <section className="paper-panel">
             <div className="panel-heading">
               <span className="eyebrow">01 / MATHEMATICAL STATEMENT</span>
@@ -102,8 +115,15 @@ export default async function ProblemPage({ params }: { params: Promise<{ id: st
               No real research attempts are included in this snapshot. Exercise the integration
               contract below using local, clearly labeled mock records.
             </p>
-            <ResearchPanel problemId={problem.id} />
+            {process.env.CONJMAP_STATIC_EXPORT === '1' ? (
+              <p className="muted">Research execution is only available in the local ConjMap edition. The public atlas is read-only.</p>
+            ) : (
+              <ResearchPanel problemId={problem.id} />
+            )}
           </section>
+          {process.env.CONJMAP_STATIC_EXPORT !== '1' ? (
+            <RealResearchPanel key={problem.id} problemId={problem.id} />
+          ) : null}
         </div>
         <aside className="detail-aside">
           <section className="aside-panel">

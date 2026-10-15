@@ -1,0 +1,1479 @@
+[
+  {
+    "id": "erdos-metadata-10",
+    "legacy_problem_id": "fc-erdosproblems-10",
+    "external_id": "10",
+    "source_id": "erdos-community",
+    "revision": "86c3dc3e47dbdfb933c57df46705f3fe78e65cc3",
+    "url": "https://github.com/teorth/erdosproblems/blob/86c3dc3e47dbdfb933c57df46705f3fe78e65cc3/data/problems.yaml",
+    "original_url": "https://www.erdosproblems.com/10",
+    "retrieved_at": "2026-10-15",
+    "source_sha256": "f19b2f712cc7a64ebdbdd01ec8e2af32dc5b7ab67bf02c30002af9bb8067b15c",
+    "record_sha256": "bd00cca7a3aaddbba35399e8827252bf336d4b07e9e417dc608ec2f9b6313620",
+    "rights": {
+      "metadata": "Apache-2.0",
+      "statement_text": "not_imported",
+      "linked_material": "original_terms"
+    },
+    "attribution": "teorth/erdosproblems community contributors",
+    "raw_metadata": {
+      "number": "10",
+      "prize": "no",
+      "informal_status": {
+        "state": "open",
+        "last_update": "2025-08-31"
+      },
+      "formal_status": {
+        "state": "unformalized"
+      },
+      "status": {
+        "state": "open",
+        "last_update": "2025-08-31"
+      },
+      "oeis": [
+        "A387053"
+      ],
+      "formalized": {
+        "state": "yes",
+        "last_update": "2025-08-31"
+      },
+      "tags": [
+        "number theory",
+        "additive basis",
+        "primes"
+      ]
+    },
+    "review_status": "unverified",
+    "status_scope": "Numbered original problem; may not match selected variant."
+  },
+  {
+    "id": "erdos-metadata-102",
+    "legacy_problem_id": "fc-erdosproblems-102",
+    "external_id": "102",
+    "source_id": "erdos-community",
+    "revision": "86c3dc3e47dbdfb933c57df46705f3fe78e65cc3",
+    "url": "https://github.com/teorth/erdosproblems/blob/86c3dc3e47dbdfb933c57df46705f3fe78e65cc3/data/problems.yaml",
+    "original_url": "https://www.erdosproblems.com/102",
+    "retrieved_at": "2026-10-15",
+    "source_sha256": "f19b2f712cc7a64ebdbdd01ec8e2af32dc5b7ab67bf02c30002af9bb8067b15c",
+    "record_sha256": "e22c262bf1372f82221630adc4acfa633b4c7f895d1981dbe0933365e0cf99a0",
+    "rights": {
+      "metadata": "Apache-2.0",
+      "statement_text": "not_imported",
+      "linked_material": "original_terms"
+    },
+    "attribution": "teorth/erdosproblems community contributors",
+    "raw_metadata": {
+      "number": "102",
+      "prize": "no",
+      "informal_status": {
+        "state": "open",
+        "last_update": "2025-08-31"
+      },
+      "formal_status": {
+        "state": "unformalized"
+      },
+      "status": {
+        "state": "open",
+        "last_update": "2025-08-31"
+      },
+      "oeis": [
+        "N/A"
+      ],
+      "formalized": {
+        "state": "yes",
+        "last_update": "2026-09-27"
+      },
+      "tags": [
+        "geometry"
+      ]
+    },
+    "review_status": "unverified",
+    "status_scope": "Numbered original problem; may not match selected variant."
+  },
+  {
+    "id": "erdos-metadata-1029",
+    "legacy_problem_id": "fc-erdosproblems-1029",
+    "external_id": "1029",
+    "source_id": "erdos-community",
+    "revision": "86c3dc3e47dbdfb933c57df46705f3fe78e65cc3",
+    "url": "https://github.com/teorth/erdosproblems/blob/86c3dc3e47dbdfb933c57df46705f3fe78e65cc3/data/problems.yaml",
+    "original_url": "https://www.erdosproblems.com/1029",
+    "retrieved_at": "2026-10-15",
+    "source_sha256": "f19b2f712cc7a64ebdbdd01ec8e2af32dc5b7ab67bf02c30002af9bb8067b15c",
+    "record_sha256": "24b7905a3a6620c5fae974c3fbbc90416ea6234635e24f1026667076f33517a2",
+    "rights": {
+      "metadata": "Apache-2.0",
+      "statement_text": "not_imported",
+      "linked_material": "original_terms"
+    },
+    "attribution": "teorth/erdosproblems community contributors",
+    "raw_metadata": {
+      "number": "1029",
+      "prize": "$100",
+      "informal_status": {
+        "state": "open",
+        "last_update": "2025-09-13"
+      },
+      "formal_status": {
+        "state": "unformalized"
+      },
+      "status": {
+        "state": "open",
+        "last_update": "2025-09-13"
+      },
+      "formalized": {
+        "state": "yes",
+        "last_update": "2026-09-09"
+      },
+      "oeis": [
+        "A059442"
+      ],
+      "tags": [
+        "graph theory",
+        "ramsey theory"
+      ]
+    },
+    "review_status": "unverified",
+    "status_scope": "Numbered original problem; may not match selected variant."
+  },
+  {
+    "id": "erdos-metadata-1038",
+    "legacy_problem_id": "fc-erdosproblems-1038",
+    "external_id": "1038",
+    "source_id": "erdos-community",
+    "revision": "86c3dc3e47dbdfb933c57df46705f3fe78e65cc3",
+    "url": "https://github.com/teorth/erdosproblems/blob/86c3dc3e47dbdfb933c57df46705f3fe78e65cc3/data/problems.yaml",
+    "original_url": "https://www.erdosproblems.com/1038",
+    "retrieved_at": "2026-10-15",
+    "source_sha256": "f19b2f712cc7a64ebdbdd01ec8e2af32dc5b7ab67bf02c30002af9bb8067b15c",
+    "record_sha256": "580ddd6c2809c3bdc8c71a50087f4478b3feeef4035d067e341bb01481ea322b",
+    "rights": {
+      "metadata": "Apache-2.0",
+      "statement_text": "not_imported",
+      "linked_material": "original_terms"
+    },
+    "attribution": "teorth/erdosproblems community contributors",
+    "raw_metadata": {
+      "number": "1038",
+      "prize": "no",
+      "informal_status": {
+        "state": "open",
+        "last_update": "2025-09-15"
+      },
+      "formal_status": {
+        "state": "unformalized"
+      },
+      "status": {
+        "state": "open",
+        "last_update": "2025-09-15"
+      },
+      "formalized": {
+        "state": "yes",
+        "last_update": "2025-12-31"
+      },
+      "oeis": [
+        "N/A"
+      ],
+      "tags": [
+        "analysis"
+      ]
+    },
+    "review_status": "unverified",
+    "status_scope": "Numbered original problem; may not match selected variant."
+  },
+  {
+    "id": "erdos-metadata-1044",
+    "legacy_problem_id": "fc-erdosproblems-1044",
+    "external_id": "1044",
+    "source_id": "erdos-community",
+    "revision": "86c3dc3e47dbdfb933c57df46705f3fe78e65cc3",
+    "url": "https://github.com/teorth/erdosproblems/blob/86c3dc3e47dbdfb933c57df46705f3fe78e65cc3/data/problems.yaml",
+    "original_url": "https://www.erdosproblems.com/1044",
+    "retrieved_at": "2026-10-15",
+    "source_sha256": "f19b2f712cc7a64ebdbdd01ec8e2af32dc5b7ab67bf02c30002af9bb8067b15c",
+    "record_sha256": "34859c7ad276964d08b17f7e5b875bddb9ee74830a23a4de3ad4cfca6a67fc0a",
+    "rights": {
+      "metadata": "Apache-2.0",
+      "statement_text": "not_imported",
+      "linked_material": "original_terms"
+    },
+    "attribution": "teorth/erdosproblems community contributors",
+    "raw_metadata": {
+      "number": "1044",
+      "prize": "no",
+      "informal_status": {
+        "state": "solved",
+        "last_update": "2026-04-28"
+      },
+      "formal_status": {
+        "state": "Lean",
+        "last_update": "2026-04-28"
+      },
+      "status": {
+        "state": "solved (Lean)",
+        "last_update": "2026-04-28"
+      },
+      "formalized": {
+        "state": "yes",
+        "last_update": "2026-08-04"
+      },
+      "oeis": [
+        "N/A"
+      ],
+      "tags": [
+        "analysis"
+      ]
+    },
+    "review_status": "unverified",
+    "status_scope": "Numbered original problem; may not match selected variant."
+  },
+  {
+    "id": "erdos-metadata-1082",
+    "legacy_problem_id": "fc-erdosproblems-1082",
+    "external_id": "1082",
+    "source_id": "erdos-community",
+    "revision": "86c3dc3e47dbdfb933c57df46705f3fe78e65cc3",
+    "url": "https://github.com/teorth/erdosproblems/blob/86c3dc3e47dbdfb933c57df46705f3fe78e65cc3/data/problems.yaml",
+    "original_url": "https://www.erdosproblems.com/1082",
+    "retrieved_at": "2026-10-15",
+    "source_sha256": "f19b2f712cc7a64ebdbdd01ec8e2af32dc5b7ab67bf02c30002af9bb8067b15c",
+    "record_sha256": "1284e11f1a5e4de5f564141eb00ebce086df0ef9ca65ca4d8e8a50a57d5988b4",
+    "rights": {
+      "metadata": "Apache-2.0",
+      "statement_text": "not_imported",
+      "linked_material": "original_terms"
+    },
+    "attribution": "teorth/erdosproblems community contributors",
+    "raw_metadata": {
+      "number": "1082",
+      "prize": "no",
+      "informal_status": {
+        "state": "falsifiable",
+        "last_update": "2025-10-17"
+      },
+      "formal_status": {
+        "state": "unformalized"
+      },
+      "status": {
+        "state": "falsifiable",
+        "last_update": "2025-10-17"
+      },
+      "formalized": {
+        "state": "yes",
+        "last_update": "2026-02-25"
+      },
+      "oeis": [
+        "possible"
+      ],
+      "tags": [
+        "geometry",
+        "distances"
+      ]
+    },
+    "review_status": "unverified",
+    "status_scope": "Numbered original problem; may not match selected variant."
+  },
+  {
+    "id": "erdos-metadata-1083",
+    "legacy_problem_id": "fc-erdosproblems-1083",
+    "external_id": "1083",
+    "source_id": "erdos-community",
+    "revision": "86c3dc3e47dbdfb933c57df46705f3fe78e65cc3",
+    "url": "https://github.com/teorth/erdosproblems/blob/86c3dc3e47dbdfb933c57df46705f3fe78e65cc3/data/problems.yaml",
+    "original_url": "https://www.erdosproblems.com/1083",
+    "retrieved_at": "2026-10-15",
+    "source_sha256": "f19b2f712cc7a64ebdbdd01ec8e2af32dc5b7ab67bf02c30002af9bb8067b15c",
+    "record_sha256": "8b46bb498c36d35d2fbfb6feff8541fe8130b5c80a09dc63c4f7ac8c144e7df0",
+    "rights": {
+      "metadata": "Apache-2.0",
+      "statement_text": "not_imported",
+      "linked_material": "original_terms"
+    },
+    "attribution": "teorth/erdosproblems community contributors",
+    "raw_metadata": {
+      "number": "1083",
+      "prize": "no",
+      "informal_status": {
+        "state": "open",
+        "last_update": "2025-10-17"
+      },
+      "formal_status": {
+        "state": "unformalized"
+      },
+      "status": {
+        "state": "open",
+        "last_update": "2025-10-17"
+      },
+      "formalized": {
+        "state": "yes",
+        "last_update": "2026-09-07"
+      },
+      "oeis": [
+        "A186704",
+        "possible"
+      ],
+      "tags": [
+        "geometry",
+        "distances"
+      ]
+    },
+    "review_status": "unverified",
+    "status_scope": "Numbered original problem; may not match selected variant."
+  },
+  {
+    "id": "erdos-metadata-1088",
+    "legacy_problem_id": "fc-erdosproblems-1088",
+    "external_id": "1088",
+    "source_id": "erdos-community",
+    "revision": "86c3dc3e47dbdfb933c57df46705f3fe78e65cc3",
+    "url": "https://github.com/teorth/erdosproblems/blob/86c3dc3e47dbdfb933c57df46705f3fe78e65cc3/data/problems.yaml",
+    "original_url": "https://www.erdosproblems.com/1088",
+    "retrieved_at": "2026-10-15",
+    "source_sha256": "f19b2f712cc7a64ebdbdd01ec8e2af32dc5b7ab67bf02c30002af9bb8067b15c",
+    "record_sha256": "3801aba9dce4b817370961318b9e54163143fe2f34845fa52267aca2c055bf67",
+    "rights": {
+      "metadata": "Apache-2.0",
+      "statement_text": "not_imported",
+      "linked_material": "original_terms"
+    },
+    "attribution": "teorth/erdosproblems community contributors",
+    "raw_metadata": {
+      "number": "1088",
+      "prize": "no",
+      "informal_status": {
+        "state": "open",
+        "last_update": "2025-10-17"
+      },
+      "formal_status": {
+        "state": "unformalized"
+      },
+      "status": {
+        "state": "open",
+        "last_update": "2025-10-17"
+      },
+      "formalized": {
+        "state": "yes",
+        "last_update": "2026-09-01"
+      },
+      "oeis": [
+        "possible"
+      ],
+      "tags": [
+        "geometry"
+      ]
+    },
+    "review_status": "unverified",
+    "status_scope": "Numbered original problem; may not match selected variant."
+  },
+  {
+    "id": "erdos-metadata-1154",
+    "legacy_problem_id": "fc-erdosproblems-1154",
+    "external_id": "1154",
+    "source_id": "erdos-community",
+    "revision": "86c3dc3e47dbdfb933c57df46705f3fe78e65cc3",
+    "url": "https://github.com/teorth/erdosproblems/blob/86c3dc3e47dbdfb933c57df46705f3fe78e65cc3/data/problems.yaml",
+    "original_url": "https://www.erdosproblems.com/1154",
+    "retrieved_at": "2026-10-15",
+    "source_sha256": "f19b2f712cc7a64ebdbdd01ec8e2af32dc5b7ab67bf02c30002af9bb8067b15c",
+    "record_sha256": "02a562577ecf94bb0a938229bcdef9a9d219efe4c2796042aeaa6270f9fc55a2",
+    "rights": {
+      "metadata": "Apache-2.0",
+      "statement_text": "not_imported",
+      "linked_material": "original_terms"
+    },
+    "attribution": "teorth/erdosproblems community contributors",
+    "raw_metadata": {
+      "number": "1154",
+      "prize": "no",
+      "informal_status": {
+        "state": "not disprovable",
+        "last_update": "2026-01-24"
+      },
+      "formal_status": {
+        "state": "unformalized"
+      },
+      "status": {
+        "state": "not disprovable",
+        "last_update": "2026-01-24"
+      },
+      "formalized": {
+        "state": "yes",
+        "last_update": "2026-10-11"
+      },
+      "oeis": [
+        "N/A"
+      ],
+      "tags": [
+        "analysis"
+      ]
+    },
+    "review_status": "unverified",
+    "status_scope": "Numbered original problem; may not match selected variant."
+  },
+  {
+    "id": "erdos-metadata-1176",
+    "legacy_problem_id": "fc-erdosproblems-1176",
+    "external_id": "1176",
+    "source_id": "erdos-community",
+    "revision": "86c3dc3e47dbdfb933c57df46705f3fe78e65cc3",
+    "url": "https://github.com/teorth/erdosproblems/blob/86c3dc3e47dbdfb933c57df46705f3fe78e65cc3/data/problems.yaml",
+    "original_url": "https://www.erdosproblems.com/1176",
+    "retrieved_at": "2026-10-15",
+    "source_sha256": "f19b2f712cc7a64ebdbdd01ec8e2af32dc5b7ab67bf02c30002af9bb8067b15c",
+    "record_sha256": "0b743c17d3a37d561e5b943f67805c54f405f08ba0a8e36ab8372dabb06469de",
+    "rights": {
+      "metadata": "Apache-2.0",
+      "statement_text": "not_imported",
+      "linked_material": "original_terms"
+    },
+    "attribution": "teorth/erdosproblems community contributors",
+    "raw_metadata": {
+      "number": "1176",
+      "prize": "no",
+      "informal_status": {
+        "state": "not disprovable",
+        "last_update": "2026-03-18"
+      },
+      "formal_status": {
+        "state": "unformalized"
+      },
+      "status": {
+        "state": "not disprovable",
+        "last_update": "2026-03-18"
+      },
+      "formalized": {
+        "state": "yes",
+        "last_update": "2026-02-03"
+      },
+      "oeis": [
+        "N/A"
+      ],
+      "tags": [
+        "set theory",
+        "ramsey theory"
+      ]
+    },
+    "review_status": "unverified",
+    "status_scope": "Numbered original problem; may not match selected variant."
+  },
+  {
+    "id": "erdos-metadata-1177",
+    "legacy_problem_id": "fc-erdosproblems-1177",
+    "external_id": "1177",
+    "source_id": "erdos-community",
+    "revision": "86c3dc3e47dbdfb933c57df46705f3fe78e65cc3",
+    "url": "https://github.com/teorth/erdosproblems/blob/86c3dc3e47dbdfb933c57df46705f3fe78e65cc3/data/problems.yaml",
+    "original_url": "https://www.erdosproblems.com/1177",
+    "retrieved_at": "2026-10-15",
+    "source_sha256": "f19b2f712cc7a64ebdbdd01ec8e2af32dc5b7ab67bf02c30002af9bb8067b15c",
+    "record_sha256": "37a9ccd4787b00856766731c2466189dccc8c22192139f669e912a707b6a3fdc",
+    "rights": {
+      "metadata": "Apache-2.0",
+      "statement_text": "not_imported",
+      "linked_material": "original_terms"
+    },
+    "attribution": "teorth/erdosproblems community contributors",
+    "raw_metadata": {
+      "number": "1177",
+      "prize": "no",
+      "informal_status": {
+        "state": "open",
+        "last_update": "2026-01-23"
+      },
+      "formal_status": {
+        "state": "unformalized"
+      },
+      "status": {
+        "state": "open",
+        "last_update": "2026-01-23"
+      },
+      "formalized": {
+        "state": "yes",
+        "last_update": "2026-10-07"
+      },
+      "oeis": [
+        "N/A"
+      ],
+      "tags": [
+        "set theory",
+        "chromatic number",
+        "hypergraphs"
+      ]
+    },
+    "review_status": "unverified",
+    "status_scope": "Numbered original problem; may not match selected variant."
+  },
+  {
+    "id": "erdos-metadata-243",
+    "legacy_problem_id": "fc-erdosproblems-243",
+    "external_id": "243",
+    "source_id": "erdos-community",
+    "revision": "86c3dc3e47dbdfb933c57df46705f3fe78e65cc3",
+    "url": "https://github.com/teorth/erdosproblems/blob/86c3dc3e47dbdfb933c57df46705f3fe78e65cc3/data/problems.yaml",
+    "original_url": "https://www.erdosproblems.com/243",
+    "retrieved_at": "2026-10-15",
+    "source_sha256": "f19b2f712cc7a64ebdbdd01ec8e2af32dc5b7ab67bf02c30002af9bb8067b15c",
+    "record_sha256": "86429eb3af9473fed835c6a05c2560c1f3e02a4c33457a64bf4623a9f14e174a",
+    "rights": {
+      "metadata": "Apache-2.0",
+      "statement_text": "not_imported",
+      "linked_material": "original_terms"
+    },
+    "attribution": "teorth/erdosproblems community contributors",
+    "raw_metadata": {
+      "number": "243",
+      "prize": "no",
+      "informal_status": {
+        "state": "open",
+        "last_update": "2025-08-31"
+      },
+      "formal_status": {
+        "state": "unformalized"
+      },
+      "status": {
+        "state": "open",
+        "last_update": "2025-08-31"
+      },
+      "oeis": [
+        "A000058"
+      ],
+      "formalized": {
+        "state": "yes",
+        "last_update": "2025-08-31"
+      },
+      "tags": [
+        "number theory",
+        "irrationality"
+      ]
+    },
+    "review_status": "unverified",
+    "status_scope": "Numbered original problem; may not match selected variant."
+  },
+  {
+    "id": "erdos-metadata-274",
+    "legacy_problem_id": "fc-erdosproblems-274",
+    "external_id": "274",
+    "source_id": "erdos-community",
+    "revision": "86c3dc3e47dbdfb933c57df46705f3fe78e65cc3",
+    "url": "https://github.com/teorth/erdosproblems/blob/86c3dc3e47dbdfb933c57df46705f3fe78e65cc3/data/problems.yaml",
+    "original_url": "https://www.erdosproblems.com/274",
+    "retrieved_at": "2026-10-15",
+    "source_sha256": "f19b2f712cc7a64ebdbdd01ec8e2af32dc5b7ab67bf02c30002af9bb8067b15c",
+    "record_sha256": "e535de7ccb5707f1e953286e92d1336694177eb3bf304c4c158eb94b2e842627",
+    "rights": {
+      "metadata": "Apache-2.0",
+      "statement_text": "not_imported",
+      "linked_material": "original_terms"
+    },
+    "attribution": "teorth/erdosproblems community contributors",
+    "raw_metadata": {
+      "number": "274",
+      "prize": "no",
+      "informal_status": {
+        "state": "open",
+        "last_update": "2025-08-31"
+      },
+      "formal_status": {
+        "state": "unformalized"
+      },
+      "status": {
+        "state": "open",
+        "last_update": "2025-08-31"
+      },
+      "oeis": [
+        "N/A"
+      ],
+      "formalized": {
+        "state": "yes",
+        "last_update": "2025-08-31"
+      },
+      "comments": "Herzog-Schönheim conjecture",
+      "tags": [
+        "group theory",
+        "covering systems"
+      ]
+    },
+    "review_status": "unverified",
+    "status_scope": "Numbered original problem; may not match selected variant."
+  },
+  {
+    "id": "erdos-metadata-352",
+    "legacy_problem_id": "fc-erdosproblems-352",
+    "external_id": "352",
+    "source_id": "erdos-community",
+    "revision": "86c3dc3e47dbdfb933c57df46705f3fe78e65cc3",
+    "url": "https://github.com/teorth/erdosproblems/blob/86c3dc3e47dbdfb933c57df46705f3fe78e65cc3/data/problems.yaml",
+    "original_url": "https://www.erdosproblems.com/352",
+    "retrieved_at": "2026-10-15",
+    "source_sha256": "f19b2f712cc7a64ebdbdd01ec8e2af32dc5b7ab67bf02c30002af9bb8067b15c",
+    "record_sha256": "c4cef6c79b06c4d213221b9677f2af75b5714055697a98f3e19060f8794a5c8e",
+    "rights": {
+      "metadata": "Apache-2.0",
+      "statement_text": "not_imported",
+      "linked_material": "original_terms"
+    },
+    "attribution": "teorth/erdosproblems community contributors",
+    "raw_metadata": {
+      "number": "352",
+      "prize": "no",
+      "informal_status": {
+        "state": "open",
+        "last_update": "2025-08-31"
+      },
+      "formal_status": {
+        "state": "unformalized"
+      },
+      "status": {
+        "state": "open",
+        "last_update": "2025-08-31"
+      },
+      "oeis": [
+        "N/A"
+      ],
+      "formalized": {
+        "state": "yes",
+        "last_update": "2025-08-31"
+      },
+      "tags": [
+        "geometry"
+      ]
+    },
+    "review_status": "unverified",
+    "status_scope": "Numbered original problem; may not match selected variant."
+  },
+  {
+    "id": "erdos-metadata-503",
+    "legacy_problem_id": "fc-erdosproblems-503",
+    "external_id": "503",
+    "source_id": "erdos-community",
+    "revision": "86c3dc3e47dbdfb933c57df46705f3fe78e65cc3",
+    "url": "https://github.com/teorth/erdosproblems/blob/86c3dc3e47dbdfb933c57df46705f3fe78e65cc3/data/problems.yaml",
+    "original_url": "https://www.erdosproblems.com/503",
+    "retrieved_at": "2026-10-15",
+    "source_sha256": "f19b2f712cc7a64ebdbdd01ec8e2af32dc5b7ab67bf02c30002af9bb8067b15c",
+    "record_sha256": "f4a373f3ccd7d8bc5833e91baccaf2a6e2a925776d71a0dee227fbad55b56979",
+    "rights": {
+      "metadata": "Apache-2.0",
+      "statement_text": "not_imported",
+      "linked_material": "original_terms"
+    },
+    "attribution": "teorth/erdosproblems community contributors",
+    "raw_metadata": {
+      "number": "503",
+      "prize": "no",
+      "informal_status": {
+        "state": "open",
+        "last_update": "2025-08-31"
+      },
+      "formal_status": {
+        "state": "unformalized"
+      },
+      "status": {
+        "state": "open",
+        "last_update": "2025-08-31"
+      },
+      "oeis": [
+        "A175769"
+      ],
+      "formalized": {
+        "state": "yes",
+        "last_update": "2025-10-21"
+      },
+      "tags": [
+        "geometry",
+        "distances"
+      ]
+    },
+    "review_status": "unverified",
+    "status_scope": "Numbered original problem; may not match selected variant."
+  },
+  {
+    "id": "erdos-metadata-506",
+    "legacy_problem_id": "fc-erdosproblems-506",
+    "external_id": "506",
+    "source_id": "erdos-community",
+    "revision": "86c3dc3e47dbdfb933c57df46705f3fe78e65cc3",
+    "url": "https://github.com/teorth/erdosproblems/blob/86c3dc3e47dbdfb933c57df46705f3fe78e65cc3/data/problems.yaml",
+    "original_url": "https://www.erdosproblems.com/506",
+    "retrieved_at": "2026-10-15",
+    "source_sha256": "f19b2f712cc7a64ebdbdd01ec8e2af32dc5b7ab67bf02c30002af9bb8067b15c",
+    "record_sha256": "bbfec655622f7d8eda42d3699ba4ef7bf7d859bb7fa5779e90864926d2ca1561",
+    "rights": {
+      "metadata": "Apache-2.0",
+      "statement_text": "not_imported",
+      "linked_material": "original_terms"
+    },
+    "attribution": "teorth/erdosproblems community contributors",
+    "raw_metadata": {
+      "number": "506",
+      "prize": "no",
+      "informal_status": {
+        "state": "decidable",
+        "last_update": "2025-08-31"
+      },
+      "formal_status": {
+        "state": "unformalized"
+      },
+      "status": {
+        "state": "decidable",
+        "last_update": "2025-08-31"
+      },
+      "oeis": [
+        "possible"
+      ],
+      "formalized": {
+        "state": "yes",
+        "last_update": "2026-08-14"
+      },
+      "tags": [
+        "geometry"
+      ]
+    },
+    "review_status": "unverified",
+    "status_scope": "Numbered original problem; may not match selected variant."
+  },
+  {
+    "id": "erdos-metadata-508",
+    "legacy_problem_id": "fc-erdosproblems-508",
+    "external_id": "508",
+    "source_id": "erdos-community",
+    "revision": "86c3dc3e47dbdfb933c57df46705f3fe78e65cc3",
+    "url": "https://github.com/teorth/erdosproblems/blob/86c3dc3e47dbdfb933c57df46705f3fe78e65cc3/data/problems.yaml",
+    "original_url": "https://www.erdosproblems.com/508",
+    "retrieved_at": "2026-10-15",
+    "source_sha256": "f19b2f712cc7a64ebdbdd01ec8e2af32dc5b7ab67bf02c30002af9bb8067b15c",
+    "record_sha256": "81149c7b7601d7bfa68a11fd28c507248ba143e18a272180e2380a9bb052c2ef",
+    "rights": {
+      "metadata": "Apache-2.0",
+      "statement_text": "not_imported",
+      "linked_material": "original_terms"
+    },
+    "attribution": "teorth/erdosproblems community contributors",
+    "raw_metadata": {
+      "number": "508",
+      "prize": "no",
+      "informal_status": {
+        "state": "open",
+        "last_update": "2025-08-31"
+      },
+      "formal_status": {
+        "state": "unformalized"
+      },
+      "status": {
+        "state": "open",
+        "last_update": "2025-08-31"
+      },
+      "oeis": [
+        "N/A"
+      ],
+      "formalized": {
+        "state": "yes",
+        "last_update": "2025-12-09"
+      },
+      "comments": "Hadwiger-Nelson problem",
+      "tags": [
+        "geometry",
+        "ramsey theory"
+      ]
+    },
+    "review_status": "unverified",
+    "status_scope": "Numbered original problem; may not match selected variant."
+  },
+  {
+    "id": "erdos-metadata-513",
+    "legacy_problem_id": "fc-erdosproblems-513",
+    "external_id": "513",
+    "source_id": "erdos-community",
+    "revision": "86c3dc3e47dbdfb933c57df46705f3fe78e65cc3",
+    "url": "https://github.com/teorth/erdosproblems/blob/86c3dc3e47dbdfb933c57df46705f3fe78e65cc3/data/problems.yaml",
+    "original_url": "https://www.erdosproblems.com/513",
+    "retrieved_at": "2026-10-15",
+    "source_sha256": "f19b2f712cc7a64ebdbdd01ec8e2af32dc5b7ab67bf02c30002af9bb8067b15c",
+    "record_sha256": "f7f57b894043e523fdab411949777bccb98c2cee33659192783180b27d095071",
+    "rights": {
+      "metadata": "Apache-2.0",
+      "statement_text": "not_imported",
+      "linked_material": "original_terms"
+    },
+    "attribution": "teorth/erdosproblems community contributors",
+    "raw_metadata": {
+      "number": "513",
+      "prize": "no",
+      "informal_status": {
+        "state": "open",
+        "last_update": "2025-08-31"
+      },
+      "formal_status": {
+        "state": "unformalized"
+      },
+      "status": {
+        "state": "open",
+        "last_update": "2025-08-31"
+      },
+      "oeis": [
+        "N/A"
+      ],
+      "formalized": {
+        "state": "yes",
+        "last_update": "2026-01-01"
+      },
+      "tags": [
+        "analysis"
+      ]
+    },
+    "review_status": "unverified",
+    "status_scope": "Numbered original problem; may not match selected variant."
+  },
+  {
+    "id": "erdos-metadata-517",
+    "legacy_problem_id": "fc-erdosproblems-517",
+    "external_id": "517",
+    "source_id": "erdos-community",
+    "revision": "86c3dc3e47dbdfb933c57df46705f3fe78e65cc3",
+    "url": "https://github.com/teorth/erdosproblems/blob/86c3dc3e47dbdfb933c57df46705f3fe78e65cc3/data/problems.yaml",
+    "original_url": "https://www.erdosproblems.com/517",
+    "retrieved_at": "2026-10-15",
+    "source_sha256": "f19b2f712cc7a64ebdbdd01ec8e2af32dc5b7ab67bf02c30002af9bb8067b15c",
+    "record_sha256": "ef74b8571e55a6ac85857ef96b53ec6b812d0c401948b9d223b255a2e6ba06ae",
+    "rights": {
+      "metadata": "Apache-2.0",
+      "statement_text": "not_imported",
+      "linked_material": "original_terms"
+    },
+    "attribution": "teorth/erdosproblems community contributors",
+    "raw_metadata": {
+      "number": "517",
+      "prize": "no",
+      "informal_status": {
+        "state": "open",
+        "last_update": "2025-08-31"
+      },
+      "formal_status": {
+        "state": "unformalized"
+      },
+      "status": {
+        "state": "open",
+        "last_update": "2025-08-31"
+      },
+      "oeis": [
+        "N/A"
+      ],
+      "formalized": {
+        "state": "yes",
+        "last_update": "2025-12-29"
+      },
+      "tags": [
+        "analysis"
+      ]
+    },
+    "review_status": "unverified",
+    "status_scope": "Numbered original problem; may not match selected variant."
+  },
+  {
+    "id": "erdos-metadata-592",
+    "legacy_problem_id": "fc-erdosproblems-592",
+    "external_id": "592",
+    "source_id": "erdos-community",
+    "revision": "86c3dc3e47dbdfb933c57df46705f3fe78e65cc3",
+    "url": "https://github.com/teorth/erdosproblems/blob/86c3dc3e47dbdfb933c57df46705f3fe78e65cc3/data/problems.yaml",
+    "original_url": "https://www.erdosproblems.com/592",
+    "retrieved_at": "2026-10-15",
+    "source_sha256": "f19b2f712cc7a64ebdbdd01ec8e2af32dc5b7ab67bf02c30002af9bb8067b15c",
+    "record_sha256": "c272c968fc9e61022ad83751c4ca22a50e71581418a8e761ac45f3879d5d9891",
+    "rights": {
+      "metadata": "Apache-2.0",
+      "statement_text": "not_imported",
+      "linked_material": "original_terms"
+    },
+    "attribution": "teorth/erdosproblems community contributors",
+    "raw_metadata": {
+      "number": "592",
+      "prize": "$1000",
+      "informal_status": {
+        "state": "open",
+        "last_update": "2025-08-31"
+      },
+      "formal_status": {
+        "state": "unformalized"
+      },
+      "status": {
+        "state": "open",
+        "last_update": "2025-08-31"
+      },
+      "oeis": [
+        "N/A"
+      ],
+      "formalized": {
+        "state": "yes",
+        "last_update": "2025-08-31"
+      },
+      "tags": [
+        "set theory",
+        "ramsey theory"
+      ]
+    },
+    "review_status": "unverified",
+    "status_scope": "Numbered original problem; may not match selected variant."
+  },
+  {
+    "id": "erdos-metadata-604",
+    "legacy_problem_id": "fc-erdosproblems-604",
+    "external_id": "604",
+    "source_id": "erdos-community",
+    "revision": "86c3dc3e47dbdfb933c57df46705f3fe78e65cc3",
+    "url": "https://github.com/teorth/erdosproblems/blob/86c3dc3e47dbdfb933c57df46705f3fe78e65cc3/data/problems.yaml",
+    "original_url": "https://www.erdosproblems.com/604",
+    "retrieved_at": "2026-10-15",
+    "source_sha256": "f19b2f712cc7a64ebdbdd01ec8e2af32dc5b7ab67bf02c30002af9bb8067b15c",
+    "record_sha256": "065a485e921633c3eeafc0d73e8a39a89458d7d812dc0a3abbf5db4c8baace37",
+    "rights": {
+      "metadata": "Apache-2.0",
+      "statement_text": "not_imported",
+      "linked_material": "original_terms"
+    },
+    "attribution": "teorth/erdosproblems community contributors",
+    "raw_metadata": {
+      "number": "604",
+      "prize": "$500",
+      "informal_status": {
+        "state": "open",
+        "last_update": "2025-08-31"
+      },
+      "formal_status": {
+        "state": "unformalized"
+      },
+      "status": {
+        "state": "open",
+        "last_update": "2025-08-31"
+      },
+      "oeis": [
+        "possible"
+      ],
+      "formalized": {
+        "state": "yes",
+        "last_update": "2026-10-08"
+      },
+      "comments": "pinned distance problem",
+      "tags": [
+        "geometry",
+        "distances"
+      ]
+    },
+    "review_status": "unverified",
+    "status_scope": "Numbered original problem; may not match selected variant."
+  },
+  {
+    "id": "erdos-metadata-623",
+    "legacy_problem_id": "fc-erdosproblems-623",
+    "external_id": "623",
+    "source_id": "erdos-community",
+    "revision": "86c3dc3e47dbdfb933c57df46705f3fe78e65cc3",
+    "url": "https://github.com/teorth/erdosproblems/blob/86c3dc3e47dbdfb933c57df46705f3fe78e65cc3/data/problems.yaml",
+    "original_url": "https://www.erdosproblems.com/623",
+    "retrieved_at": "2026-10-15",
+    "source_sha256": "f19b2f712cc7a64ebdbdd01ec8e2af32dc5b7ab67bf02c30002af9bb8067b15c",
+    "record_sha256": "34e4560b54d8d19e915bc3be08516631c59f91a4f828ffb1cb510bf469783833",
+    "rights": {
+      "metadata": "Apache-2.0",
+      "statement_text": "not_imported",
+      "linked_material": "original_terms"
+    },
+    "attribution": "teorth/erdosproblems community contributors",
+    "raw_metadata": {
+      "number": "623",
+      "prize": "no",
+      "informal_status": {
+        "state": "open",
+        "last_update": "2025-08-31"
+      },
+      "formal_status": {
+        "state": "unformalized"
+      },
+      "status": {
+        "state": "open",
+        "last_update": "2025-08-31"
+      },
+      "oeis": [
+        "N/A"
+      ],
+      "formalized": {
+        "state": "yes",
+        "last_update": "2025-11-12"
+      },
+      "tags": [
+        "set theory"
+      ]
+    },
+    "review_status": "unverified",
+    "status_scope": "Numbered original problem; may not match selected variant."
+  },
+  {
+    "id": "erdos-metadata-660",
+    "legacy_problem_id": "fc-erdosproblems-660",
+    "external_id": "660",
+    "source_id": "erdos-community",
+    "revision": "86c3dc3e47dbdfb933c57df46705f3fe78e65cc3",
+    "url": "https://github.com/teorth/erdosproblems/blob/86c3dc3e47dbdfb933c57df46705f3fe78e65cc3/data/problems.yaml",
+    "original_url": "https://www.erdosproblems.com/660",
+    "retrieved_at": "2026-10-15",
+    "source_sha256": "f19b2f712cc7a64ebdbdd01ec8e2af32dc5b7ab67bf02c30002af9bb8067b15c",
+    "record_sha256": "3579c536bc7c3509082ec88b18e86f862ee3f66eff927cf5f9d941695c53716f",
+    "rights": {
+      "metadata": "Apache-2.0",
+      "statement_text": "not_imported",
+      "linked_material": "original_terms"
+    },
+    "attribution": "teorth/erdosproblems community contributors",
+    "raw_metadata": {
+      "number": "660",
+      "prize": "no",
+      "informal_status": {
+        "state": "open",
+        "last_update": "2025-08-31"
+      },
+      "formal_status": {
+        "state": "unformalized"
+      },
+      "status": {
+        "state": "open",
+        "last_update": "2025-08-31"
+      },
+      "oeis": [
+        "possible"
+      ],
+      "formalized": {
+        "state": "yes",
+        "last_update": "2026-08-09"
+      },
+      "comments": "ambiguous statement",
+      "tags": [
+        "geometry",
+        "distances",
+        "convex"
+      ]
+    },
+    "review_status": "unverified",
+    "status_scope": "Numbered original problem; may not match selected variant."
+  },
+  {
+    "id": "erdos-metadata-661",
+    "legacy_problem_id": "fc-erdosproblems-661",
+    "external_id": "661",
+    "source_id": "erdos-community",
+    "revision": "86c3dc3e47dbdfb933c57df46705f3fe78e65cc3",
+    "url": "https://github.com/teorth/erdosproblems/blob/86c3dc3e47dbdfb933c57df46705f3fe78e65cc3/data/problems.yaml",
+    "original_url": "https://www.erdosproblems.com/661",
+    "retrieved_at": "2026-10-15",
+    "source_sha256": "f19b2f712cc7a64ebdbdd01ec8e2af32dc5b7ab67bf02c30002af9bb8067b15c",
+    "record_sha256": "d5a8a58218f3b3a80bac880f27dd8cb07690651aeea90edbccf3612cd101c705",
+    "rights": {
+      "metadata": "Apache-2.0",
+      "statement_text": "not_imported",
+      "linked_material": "original_terms"
+    },
+    "attribution": "teorth/erdosproblems community contributors",
+    "raw_metadata": {
+      "number": "661",
+      "prize": "$50",
+      "informal_status": {
+        "state": "open",
+        "last_update": "2025-08-31"
+      },
+      "formal_status": {
+        "state": "unformalized"
+      },
+      "status": {
+        "state": "open",
+        "last_update": "2025-08-31"
+      },
+      "oeis": [
+        "A186704",
+        "possible"
+      ],
+      "formalized": {
+        "state": "yes",
+        "last_update": "2026-10-08"
+      },
+      "tags": [
+        "geometry",
+        "distances"
+      ]
+    },
+    "review_status": "unverified",
+    "status_scope": "Numbered original problem; may not match selected variant."
+  },
+  {
+    "id": "erdos-metadata-668",
+    "legacy_problem_id": "fc-erdosproblems-668",
+    "external_id": "668",
+    "source_id": "erdos-community",
+    "revision": "86c3dc3e47dbdfb933c57df46705f3fe78e65cc3",
+    "url": "https://github.com/teorth/erdosproblems/blob/86c3dc3e47dbdfb933c57df46705f3fe78e65cc3/data/problems.yaml",
+    "original_url": "https://www.erdosproblems.com/668",
+    "retrieved_at": "2026-10-15",
+    "source_sha256": "f19b2f712cc7a64ebdbdd01ec8e2af32dc5b7ab67bf02c30002af9bb8067b15c",
+    "record_sha256": "c1bf78317d69d37ea13c0f2e7341bebee3a6b4c2071e2b9e00ac4dd955fcc309",
+    "rights": {
+      "metadata": "Apache-2.0",
+      "statement_text": "not_imported",
+      "linked_material": "original_terms"
+    },
+    "attribution": "teorth/erdosproblems community contributors",
+    "raw_metadata": {
+      "number": "668",
+      "prize": "no",
+      "informal_status": {
+        "state": "open",
+        "last_update": "2025-08-31"
+      },
+      "formal_status": {
+        "state": "unformalized"
+      },
+      "status": {
+        "state": "open",
+        "last_update": "2025-08-31"
+      },
+      "oeis": [
+        "A385657"
+      ],
+      "formalized": {
+        "state": "yes",
+        "last_update": "2026-10-12"
+      },
+      "tags": [
+        "geometry",
+        "distances"
+      ]
+    },
+    "review_status": "unverified",
+    "status_scope": "Numbered original problem; may not match selected variant."
+  },
+  {
+    "id": "erdos-metadata-70",
+    "legacy_problem_id": "fc-erdosproblems-70",
+    "external_id": "70",
+    "source_id": "erdos-community",
+    "revision": "86c3dc3e47dbdfb933c57df46705f3fe78e65cc3",
+    "url": "https://github.com/teorth/erdosproblems/blob/86c3dc3e47dbdfb933c57df46705f3fe78e65cc3/data/problems.yaml",
+    "original_url": "https://www.erdosproblems.com/70",
+    "retrieved_at": "2026-10-15",
+    "source_sha256": "f19b2f712cc7a64ebdbdd01ec8e2af32dc5b7ab67bf02c30002af9bb8067b15c",
+    "record_sha256": "72101e2ffa6d8450549a0b2b44f8a6794a93bcd7558c1a4d583f6176d8d2a979",
+    "rights": {
+      "metadata": "Apache-2.0",
+      "statement_text": "not_imported",
+      "linked_material": "original_terms"
+    },
+    "attribution": "teorth/erdosproblems community contributors",
+    "raw_metadata": {
+      "number": "70",
+      "prize": "no",
+      "informal_status": {
+        "state": "open",
+        "last_update": "2025-08-31"
+      },
+      "formal_status": {
+        "state": "unformalized"
+      },
+      "status": {
+        "state": "open",
+        "last_update": "2025-08-31"
+      },
+      "oeis": [
+        "N/A"
+      ],
+      "formalized": {
+        "state": "yes",
+        "last_update": "2026-06-08"
+      },
+      "tags": [
+        "graph theory",
+        "ramsey theory",
+        "set theory"
+      ]
+    },
+    "review_status": "unverified",
+    "status_scope": "Numbered original problem; may not match selected variant."
+  },
+  {
+    "id": "erdos-metadata-769",
+    "legacy_problem_id": "fc-erdosproblems-769",
+    "external_id": "769",
+    "source_id": "erdos-community",
+    "revision": "86c3dc3e47dbdfb933c57df46705f3fe78e65cc3",
+    "url": "https://github.com/teorth/erdosproblems/blob/86c3dc3e47dbdfb933c57df46705f3fe78e65cc3/data/problems.yaml",
+    "original_url": "https://www.erdosproblems.com/769",
+    "retrieved_at": "2026-10-15",
+    "source_sha256": "f19b2f712cc7a64ebdbdd01ec8e2af32dc5b7ab67bf02c30002af9bb8067b15c",
+    "record_sha256": "142af03112c7b9081e546bf98f4583c39d3a2e6406fa4d7d325804ba0c70bce0",
+    "rights": {
+      "metadata": "Apache-2.0",
+      "statement_text": "not_imported",
+      "linked_material": "original_terms"
+    },
+    "attribution": "teorth/erdosproblems community contributors",
+    "raw_metadata": {
+      "number": "769",
+      "prize": "no",
+      "informal_status": {
+        "state": "open",
+        "last_update": "2025-08-31"
+      },
+      "formal_status": {
+        "state": "unformalized"
+      },
+      "status": {
+        "state": "open",
+        "last_update": "2025-08-31"
+      },
+      "oeis": [
+        "A014544",
+        "possible"
+      ],
+      "formalized": {
+        "state": "yes",
+        "last_update": "2026-08-07"
+      },
+      "tags": [
+        "number theory",
+        "geometry"
+      ]
+    },
+    "review_status": "unverified",
+    "status_scope": "Numbered original problem; may not match selected variant."
+  },
+  {
+    "id": "erdos-metadata-89",
+    "legacy_problem_id": "fc-erdosproblems-89",
+    "external_id": "89",
+    "source_id": "erdos-community",
+    "revision": "86c3dc3e47dbdfb933c57df46705f3fe78e65cc3",
+    "url": "https://github.com/teorth/erdosproblems/blob/86c3dc3e47dbdfb933c57df46705f3fe78e65cc3/data/problems.yaml",
+    "original_url": "https://www.erdosproblems.com/89",
+    "retrieved_at": "2026-10-15",
+    "source_sha256": "f19b2f712cc7a64ebdbdd01ec8e2af32dc5b7ab67bf02c30002af9bb8067b15c",
+    "record_sha256": "f341bbbf0a7524c920e7993dec59addb1e318265d6c04186d9e2ed54a86c5f6f",
+    "rights": {
+      "metadata": "Apache-2.0",
+      "statement_text": "not_imported",
+      "linked_material": "original_terms"
+    },
+    "attribution": "teorth/erdosproblems community contributors",
+    "raw_metadata": {
+      "number": "89",
+      "prize": "$500",
+      "informal_status": {
+        "state": "open",
+        "last_update": "2025-08-31"
+      },
+      "formal_status": {
+        "state": "unformalized"
+      },
+      "status": {
+        "state": "open",
+        "last_update": "2025-08-31"
+      },
+      "oeis": [
+        "A186704",
+        "A131628"
+      ],
+      "formalized": {
+        "state": "yes",
+        "last_update": "2025-10-24"
+      },
+      "comments": "Erdős distance problem",
+      "tags": [
+        "geometry",
+        "distances"
+      ]
+    },
+    "review_status": "unverified",
+    "status_scope": "Numbered original problem; may not match selected variant."
+  },
+  {
+    "id": "erdos-metadata-906",
+    "legacy_problem_id": "fc-erdosproblems-906",
+    "external_id": "906",
+    "source_id": "erdos-community",
+    "revision": "86c3dc3e47dbdfb933c57df46705f3fe78e65cc3",
+    "url": "https://github.com/teorth/erdosproblems/blob/86c3dc3e47dbdfb933c57df46705f3fe78e65cc3/data/problems.yaml",
+    "original_url": "https://www.erdosproblems.com/906",
+    "retrieved_at": "2026-10-15",
+    "source_sha256": "f19b2f712cc7a64ebdbdd01ec8e2af32dc5b7ab67bf02c30002af9bb8067b15c",
+    "record_sha256": "3a685804991a829e30bda6b0ab73532628dbac6e62f26375d6982d7a10e5ad2d",
+    "rights": {
+      "metadata": "Apache-2.0",
+      "statement_text": "not_imported",
+      "linked_material": "original_terms"
+    },
+    "attribution": "teorth/erdosproblems community contributors",
+    "raw_metadata": {
+      "number": "906",
+      "prize": "no",
+      "informal_status": {
+        "state": "open",
+        "last_update": "2025-08-31"
+      },
+      "formal_status": {
+        "state": "unformalized"
+      },
+      "status": {
+        "state": "open",
+        "last_update": "2025-08-31"
+      },
+      "oeis": [
+        "N/A"
+      ],
+      "formalized": {
+        "state": "yes",
+        "last_update": "2026-01-02"
+      },
+      "tags": [
+        "analysis",
+        "iterated functions"
+      ]
+    },
+    "review_status": "unverified",
+    "status_scope": "Numbered original problem; may not match selected variant."
+  },
+  {
+    "id": "erdos-metadata-97",
+    "legacy_problem_id": "fc-erdosproblems-97",
+    "external_id": "97",
+    "source_id": "erdos-community",
+    "revision": "86c3dc3e47dbdfb933c57df46705f3fe78e65cc3",
+    "url": "https://github.com/teorth/erdosproblems/blob/86c3dc3e47dbdfb933c57df46705f3fe78e65cc3/data/problems.yaml",
+    "original_url": "https://www.erdosproblems.com/97",
+    "retrieved_at": "2026-10-15",
+    "source_sha256": "f19b2f712cc7a64ebdbdd01ec8e2af32dc5b7ab67bf02c30002af9bb8067b15c",
+    "record_sha256": "fc4976b53a80a96aa83c9a8234943e39362492d7800d625743d08d69a190efce",
+    "rights": {
+      "metadata": "Apache-2.0",
+      "statement_text": "not_imported",
+      "linked_material": "original_terms"
+    },
+    "attribution": "teorth/erdosproblems community contributors",
+    "raw_metadata": {
+      "number": "97",
+      "prize": "$100",
+      "informal_status": {
+        "state": "falsifiable",
+        "last_update": "2025-08-31"
+      },
+      "formal_status": {
+        "state": "unformalized"
+      },
+      "status": {
+        "state": "falsifiable",
+        "last_update": "2025-08-31"
+      },
+      "oeis": [
+        "N/A"
+      ],
+      "formalized": {
+        "state": "yes",
+        "last_update": "2025-11-11"
+      },
+      "tags": [
+        "geometry",
+        "distances",
+        "convex"
+      ]
+    },
+    "review_status": "unverified",
+    "status_scope": "Numbered original problem; may not match selected variant."
+  },
+  {
+    "id": "erdos-metadata-982",
+    "legacy_problem_id": "fc-erdosproblems-982",
+    "external_id": "982",
+    "source_id": "erdos-community",
+    "revision": "86c3dc3e47dbdfb933c57df46705f3fe78e65cc3",
+    "url": "https://github.com/teorth/erdosproblems/blob/86c3dc3e47dbdfb933c57df46705f3fe78e65cc3/data/problems.yaml",
+    "original_url": "https://www.erdosproblems.com/982",
+    "retrieved_at": "2026-10-15",
+    "source_sha256": "f19b2f712cc7a64ebdbdd01ec8e2af32dc5b7ab67bf02c30002af9bb8067b15c",
+    "record_sha256": "d48e5cb606bb431ce8ad946fb744fde43e9a1a8b1315edb78c965480889bb6c2",
+    "rights": {
+      "metadata": "Apache-2.0",
+      "statement_text": "not_imported",
+      "linked_material": "original_terms"
+    },
+    "attribution": "teorth/erdosproblems community contributors",
+    "raw_metadata": {
+      "number": "982",
+      "prize": "no",
+      "informal_status": {
+        "state": "falsifiable",
+        "last_update": "2025-08-31"
+      },
+      "formal_status": {
+        "state": "unformalized"
+      },
+      "status": {
+        "state": "falsifiable",
+        "last_update": "2025-08-31"
+      },
+      "oeis": [
+        "A004526"
+      ],
+      "formalized": {
+        "state": "yes",
+        "last_update": "2025-11-13"
+      },
+      "tags": [
+        "geometry",
+        "convex",
+        "distances"
+      ]
+    },
+    "review_status": "unverified",
+    "status_scope": "Numbered original problem; may not match selected variant."
+  },
+  {
+    "id": "erdos-metadata-996",
+    "legacy_problem_id": "fc-erdosproblems-996",
+    "external_id": "996",
+    "source_id": "erdos-community",
+    "revision": "86c3dc3e47dbdfb933c57df46705f3fe78e65cc3",
+    "url": "https://github.com/teorth/erdosproblems/blob/86c3dc3e47dbdfb933c57df46705f3fe78e65cc3/data/problems.yaml",
+    "original_url": "https://www.erdosproblems.com/996",
+    "retrieved_at": "2026-10-15",
+    "source_sha256": "f19b2f712cc7a64ebdbdd01ec8e2af32dc5b7ab67bf02c30002af9bb8067b15c",
+    "record_sha256": "7e2f54f4e8d5c6bda78303891f320621bc1346e5ca6b4f20cd838fe2de9caf5d",
+    "rights": {
+      "metadata": "Apache-2.0",
+      "statement_text": "not_imported",
+      "linked_material": "original_terms"
+    },
+    "attribution": "teorth/erdosproblems community contributors",
+    "raw_metadata": {
+      "number": "996",
+      "prize": "no",
+      "informal_status": {
+        "state": "open",
+        "last_update": "2025-09-07"
+      },
+      "formal_status": {
+        "state": "unformalized"
+      },
+      "status": {
+        "state": "open",
+        "last_update": "2025-09-07"
+      },
+      "formalized": {
+        "state": "yes",
+        "last_update": "2025-12-22"
+      },
+      "oeis": [
+        "N/A"
+      ],
+      "tags": [
+        "analysis"
+      ]
+    },
+    "review_status": "unverified",
+    "status_scope": "Numbered original problem; may not match selected variant."
+  }
+]

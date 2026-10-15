@@ -1,0 +1,11 @@
+{
+  "prior_pr": "https://github.com/RanchoTao/ConjMap/pull/1",
+  "review_fix_commit": "ac2acb4c6261c3d518e98f9a6fdec1f3c3c1fdf1",
+  "resolved_thread": "PRRT_kwDOVKUGSs6srAh7",
+  "ci_success_runs": [38733705816, 38733699069],
+  "merge_commit": "d57542a0e5981bdc12b9bdd75e3927095b80c575",
+  "merged_at_utc": "2026-10-15T12:20:27Z",
+  "v02_branch": "feature/conjmap-v0.2",
+  "local_checks_before_merge": {"data_records":120,"navigation_edges":82,"lint":"PASS","typecheck":"PASS","unit_tests_passed":25,"python_tests_passed":3,"build":"PASS","chromium_e2e_passed":6},
+  "authorization_scope": "User explicitly authorized V0.1 merge only after review fix and latest-head green CI. V0.2 must remain an open PR."
+}
