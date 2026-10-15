@@ -9,7 +9,11 @@ import { EvidencePassport } from '@/components/evidence-passport';
 import { RealResearchPanel } from '@/components/real-research-panel';
 // Pre-render every canonical problem page for GitHub Pages without a Node server.
 export function generateStaticParams() {
-  return problems.map((problem) => ({ id: problem.id }));
+  const ids = new Set(problems.flatMap((problem) => [
+    problem.id,
+    ...problem.aliases.filter((alias) => alias.startsWith('fc-')),
+  ]));
+  return [...ids].map((id) => ({ id }));
 }
 export const dynamicParams = false;
 
