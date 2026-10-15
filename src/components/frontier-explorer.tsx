@@ -30,7 +30,7 @@ export function FrontierExplorer({ records }: { records: FrontierRecord[] }) {
       )
     );
     if (exact.length) return exact;
-    return candidates.filter((r) => [r.title, title(r, 'zh'), r.external_id, ...r.tags]
+    return candidates.filter((r) => [r.title, title(r, 'zh'), r.external_id, r.field, ...r.tags]
       .join(' ').toLocaleLowerCase().includes(q));
   }, [records, query, field, linkage]);
   const maxPage = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
