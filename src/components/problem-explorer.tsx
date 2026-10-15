@@ -77,7 +77,7 @@ export function ProblemExplorer({
           >
             <option value=""><T en="All fields" /></option>
             {fields.map((f) => (
-              <option key={f}><T en={f} /></option>
+              <option key={f} value={f}><T en={f} /></option>
             ))}
           </select>
         </label>
