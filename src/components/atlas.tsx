@@ -410,7 +410,7 @@ export function Atlas({
             </button>
             <span className="eyebrow">{selectedVisible.field}</span>
             <h3>{selectedVisible.title}</h3>
-            {selectedStatement ? (
+            {selectedStatement && selectedStatement.parent_id === selectedVisible.id ? (
               <p>
                 Source statement node: {selectedStatement.title}. Unverified; not counted as a
                 separate problem.{' '}
