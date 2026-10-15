@@ -1,0 +1,74 @@
+name: Deploy public ConjMap atlas (GitHub Pages)
+
+on:
+  push:
+    branches:
+      - main
+      - feature/conjmap-v0.2
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: conjmap-pages
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - name: Install pinned dependencies
+        run: npm ci
+      - name: Verify source and tests
+        run: npm run check
+      - name: Generate read-only static site
+        env:
+          CONJMAP_STATIC_EXPORT: '1'
+          NEXT_TELEMETRY_DISABLED: '1'
+        run: |
+          # GitHub Pages has no Node runtime: remove server-only routes
+          # from this temporary Actions checkout (never from Git history).
+          rm -rf src/app/api src/app/bench
+          npm run build
+          test -f out/index.html
+          test -f out/atlas/index.html
+          test -f out/problems/index.html
+          test -f out/problems/cm-000104/index.html
+          test -f out/problems/fc-millennium-riemannhypothesis/index.html
+          test ! -d out/api
+          touch out/.nojekyll
+      - name: Smoke-test GitHub Pages subpath assets and routes
+        run: |
+          set -eu
+          ln -s out ConjMap
+          python3 -m http.server 4173 --bind 127.0.0.1 >/tmp/conjmap-pages-http.log 2>&1 &
+          server=$!
+          trap 'kill "$server" || true' EXIT
+          for i in $(seq 1 20); do
+            if curl -fsS http://127.0.0.1:4173/ConjMap/ >/dev/null; then break; fi
+            sleep 1
+          done
+          for route in / /atlas/ /problems/ /problems/cm-000104/ /problems/fc-millennium-riemannhypothesis/ /sources/ /about/; do
+            curl -fsS "http://127.0.0.1:4173/ConjMap${route}" >/dev/null
+          done
+          asset=$(find out/_next/static -type f -name '*.js' | head -n 1 | sed 's|^out||')
+          test -n "$asset"
+          curl -fsS "http://127.0.0.1:4173/ConjMap${asset}" >/dev/null
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: out
+      - id: deployment
+        uses: actions/deploy-pages@v4
