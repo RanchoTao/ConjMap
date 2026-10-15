@@ -10,7 +10,7 @@ export default function ProblemsPage() {
       <div className="page-heading">
         <div className="eyebrow"><T en="THE PROBLEM INDEX" /></div>
         <h1>
-          Questions worth asking<span className="title-period">.</span>
+          <T en="Questions worth asking" /><span className="title-period">.</span>
         </h1>
         <p>
           {problems.length} <T en="traceable statements across" zh="条可追溯陈述，覆盖" /> {fields.length} <T en="fields." zh="个领域。" /> <T en="A starting point for exploration." />
