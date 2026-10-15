@@ -6,6 +6,7 @@ import type { Core } from 'cytoscape';
 import type { Problem, Relationship } from '@/lib/schema';
 import { queryProblems } from '@/lib/query';
 import { Badge } from './status';
+import { T, ProblemName, problemTitle, translate, useLanguage } from './i18n';
 import { selectRelations, type SubstantiveRelation } from '@/lib/relations-v02';
 
 export type StatementNode = {
@@ -42,6 +43,7 @@ export function Atlas({
   statements = noStatements,
   onMeasurement,
 }: Props) {
+  const { language } = useLanguage();
   const host = useRef<HTMLDivElement>(null),
     cy = useRef<Core | null>(null);
   const [q, setQ] = useState(''),
@@ -55,10 +57,15 @@ export function Atlas({
     [ready, setReady] = useState(0),
     [error, setError] = useState('');
   const fields = useMemo(() => [...new Set(problems.map((p) => p.field))].sort(), [problems]);
-  const filtered = useMemo(
-    () => queryProblems(problems, { q, field, status }),
-    [problems, q, field, status],
-  );
+  const filtered = useMemo(() => {
+    const english = queryProblems(problems, { q, field, status });
+    if (language !== 'zh' || !q.trim()) return english;
+    const matched = new Set(english.map((p) => p.id));
+    const query = q.toLocaleLowerCase();
+    return queryProblems(problems, { field, status }).filter((p) =>
+      matched.has(p.id) || problemTitle(p.title, 'zh').toLocaleLowerCase().includes(query),
+    );
+  }, [problems, q, field, status, language]);
   const selectedVisible = selected && filtered.some((p) => p.id === selected.id) ? selected : null;
   const visibleStatements = useMemo(() => {
     if (layer === 'navigation') return [];
@@ -199,7 +206,7 @@ export function Atlas({
       const localAngle = index * 2.39996;
       const radius = 26 + Math.sqrt(index) * 29;
       return {
-        data: { id: p.id, label: p.title, color: colors[p.field] ?? '#6fc8c0' },
+        data: { id: p.id, label: problemTitle(p.title, language), color: colors[p.field] ?? '#6fc8c0' },
         position: {
           x: Math.cos(angle) * 255 + Math.cos(localAngle) * radius,
           y: Math.sin(angle) * 225 + Math.sin(localAngle) * radius,
@@ -276,6 +283,7 @@ export function Atlas({
     visibleStatements,
     onMeasurement,
     layer,
+    language,
   ]);
   return (
     <div className={`atlas ${preview ? 'atlas-preview' : ''}`}>
@@ -288,10 +296,10 @@ export function Atlas({
               value={layer}
               onChange={(e) => setLayer(e.target.value)}
             >
-              <option value="navigation">Subject navigation</option>
-              <option value="logic">Mathematical logic</option>
-              <option value="special_cases">Conjectures & special cases</option>
-              <option value="research_evidence">Research evidence</option>
+              <option value="navigation"><T en="Subject navigation" zh="学科导航" /></option>
+              <option value="logic"><T en="Mathematical logic" zh="数学逻辑" /></option>
+              <option value="special_cases"><T en="Conjectures & special cases" zh="猜想与特例" /></option>
+              <option value="research_evidence"><T en="Research evidence" zh="研究证据" /></option>
             </select>
           </label>
           <label className="edge-toggle">
@@ -315,7 +323,7 @@ export function Atlas({
               aria-label="Search atlas"
               value={q}
               onChange={(e) => setQ(e.target.value)}
-              placeholder="Find a problem or an idea…"
+              placeholder={translate("Find a problem or an idea…", language)}
             />
             {q ? (
               <button aria-label="Clear atlas search" onClick={() => setQ('')}>
@@ -324,9 +332,9 @@ export function Atlas({
             ) : null}
           </label>
           <select aria-label="Atlas field" value={field} onChange={(e) => setField(e.target.value)}>
-            <option value="">All fields</option>
+            <option value=""><T en="All fields" zh="全部领域" /></option>
             {fields.map((f) => (
-              <option key={f}>{f}</option>
+              <option key={f}><T en={f} /></option>
             ))}
           </select>
           <select
@@ -334,10 +342,10 @@ export function Atlas({
             value={status}
             onChange={(e) => setStatus(e.target.value)}
           >
-            <option value="">All statuses</option>
+            <option value=""><T en="All statuses" zh="全部状态" /></option>
             {['open', 'partially_resolved', 'solved', 'disputed', 'unknown'].map((s) => (
               <option key={s} value={s}>
-                {s.replaceAll('_', ' ')}
+                <T en={s} />
               </option>
             ))}
           </select>
@@ -352,23 +360,23 @@ export function Atlas({
           ref={host}
           className="graph-canvas"
           role="img"
-          aria-label={`Interactive mathematics atlas with ${filtered.length} problem nodes`}
+          aria-label={`${translate('Interactive mathematics atlas with', language)} ${filtered.length} ${translate('problem nodes', language)}`}
           data-testid="atlas-canvas"
           data-ready={Boolean(ready)}
         />
         {!ready || error ? (
-          <div className="graph-loading">{error || 'Drawing the frontier…'}</div>
+          <div className="graph-loading">{error || translate('Drawing the frontier…', language)}</div>
         ) : null}
         {!filtered.length && ready ? (
-          <div className="graph-loading">No problems match these filters.</div>
+          <div className="graph-loading"><T en="No problems match these filters." zh="当前筛选条件下没有匹配问题。" /></div>
         ) : null}
         <div className="graph-caption">
           <span className="live-dot" />
-          {preview ? 'A landscape of mathematical questions' : 'RESEARCH LANDSCAPE'}
+          {preview ? translate('A landscape of mathematical questions', language) : translate('RESEARCH LANDSCAPE', language)}
           <small>
             {preview
-              ? 'Pan, zoom, and select a node to begin.'
-              : 'Scroll to zoom · Drag to pan · Select a node'}
+              ? translate('Pan, zoom, and select a node to begin.', language)
+              : translate('Scroll to zoom · Drag to pan · Select a node', language)}
           </small>
         </div>
         <div className="graph-controls">
@@ -408,20 +416,19 @@ export function Atlas({
             >
               <X size={15} />
             </button>
-            <span className="eyebrow">{selectedVisible.field}</span>
-            <h3>{selectedVisible.title}</h3>
+            <span className="eyebrow"><T en={selectedVisible.field} /></span>
+            <h3><ProblemName title={selectedVisible.title} /></h3>
             {selectedStatement && selectedStatement.parent_id === selectedVisible.id ? (
               <p>
-                Source statement node: {selectedStatement.title}. Unverified; not counted as a
-                separate problem.{' '}
+                <T en="Source statement node:" zh="来源命题节点：" /> {selectedStatement.title}。<T en="Unverified; not counted as a separate problem." zh="尚未核验，不计入独立问题总数。" />{' '}
                 <a href={selectedStatement.url} target="_blank" rel="noreferrer">
                   Inspect source ↗
                 </a>
               </p>
             ) : null}
             <div className="badge-row">
-              <Badge>{selectedVisible.status}</Badge>
-              <Badge tone="amber">unverified</Badge>
+              <Badge><T en={selectedVisible.status} /></Badge>
+              <Badge tone="amber"><T en="unverified" /></Badge>
             </div>
             <p>{selectedVisible.statement.replace(/\$|\*|`/g, '').slice(0, 180)}…</p>
             <Link className="text-link" href={`/problems/${selectedVisible.id}`}>
@@ -444,23 +451,21 @@ export function Atlas({
               aria-pressed={field === f}
             >
               <i style={{ background: colors[f] }} />
-              {f}
+              <T en={f} />
             </button>
           ))}
         </div>
         <span className="graph-count" aria-live="polite" data-testid="graph-count">
-          {filtered.length + visibleStatements.length} nodes · {liveEdges.length} links
+          {filtered.length + visibleStatements.length} <T en="nodes" zh="个节点" /> · {liveEdges.length} <T en="links" zh="条关联" />
         </span>
       </div>
       {!preview ? (
         <>
           <p className="graph-disclaimer">
-            Gray dashed links are <strong>unverified subject associations</strong>. Amber dashed
-            links are mathematical candidates; green solid links require verification receipts.
-            Source declaration diamonds are variants, not additional catalog problems.
+            <T en="Gray dashed links are unverified subject associations. Amber dashed links are mathematical candidates; green solid links require verification receipts. Source declaration diamonds are variants, not additional catalog problems." zh="灰色虚线是未经核验的学科关联；琥珀色虚线表示数学关系候选，绿色实线要求核验证据。菱形是来源陈述变体，不计入独立问题总数。" />
           </p>
           <details className="accessible-index">
-            <summary>Accessible node index · {filtered.length} problems</summary>
+            <summary><T en="Accessible node index" zh="无障碍节点索引" /> · {filtered.length} <T en="Problems" zh="个问题" /></summary>
             <div>
               {filtered.map((p) => (
                 <button
@@ -475,7 +480,7 @@ export function Atlas({
                     }
                   }}
                 >
-                  {p.title}
+                  <ProblemName title={p.title} />
                 </button>
               ))}
             </div>
