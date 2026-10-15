@@ -2,8 +2,28 @@ import rawProblems from '../../data/problems.json';
 import rawRelationships from '../../data/relationships.json';
 import manifest from '../../data/manifest.json';
 import { validateCatalog } from './schema';
+import registry from '../../data/v02/id-registry.json';
+import sourceRecords from '../../data/v02/source-records.json';
 
-export const { problems, relationships } = validateCatalog(rawProblems, rawRelationships);
+const ids: Record<string, string> = registry;
+const migrated = rawProblems.map((p) => ({
+  ...p,
+  id: ids[p.id],
+  aliases: [...p.aliases, p.id],
+  source_mappings: [
+    ...p.source_mappings,
+    ...sourceRecords
+      .filter((r) => r.legacy_problem_id === p.id)
+      .map((r) => ({ source_id: r.source_id, external_id: r.external_id, url: r.url })),
+  ],
+}));
+const migratedEdges = rawRelationships.map((r) => ({
+  ...r,
+  source_id: ids[r.source_id],
+  target_id: ids[r.target_id],
+}));
+
+export const { problems, relationships } = validateCatalog(migrated, migratedEdges);
 export { manifest };
 export const fields = [...new Set(problems.map((p) => p.field))].sort();
 export const getProblem = (id: string) =>

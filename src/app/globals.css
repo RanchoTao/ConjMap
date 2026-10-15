@@ -2043,6 +2043,42 @@ summary {
     font-size: 11px;
   }
 }
+.evidence-dimensions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
+  gap: 10px;
+  margin: 22px 0;
+}
+.evidence-dimensions > div {
+  border: 1px solid var(--line);
+  padding: 12px;
+  min-width: 0;
+}
+.evidence-dimensions dt {
+  font: 10px monospace;
+  overflow-wrap: anywhere;
+}
+.evidence-dimensions dd {
+  margin: 6px 0 0;
+  font-size: 12px;
+}
+.paper-panel details p,
+.task-record code,
+.task-record small {
+  overflow-wrap: anywhere;
+}
+.research-access {
+  display: grid;
+  gap: 8px;
+  margin: 16px 0;
+  font-size: 12px;
+}
+.research-access input {
+  padding: 10px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  color: inherit;
+}
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

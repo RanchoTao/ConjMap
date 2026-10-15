@@ -1,5 +1,6 @@
 import { z } from 'zod';
 import { ConflictError } from './mock-research';
+import { RealBoundaryError } from './real-research';
 export class HttpError extends Error {
   constructor(
     public status: number,
@@ -69,6 +70,7 @@ export async function api(fn: () => Promise<Response>) {
     return await fn();
   } catch (error) {
     if (error instanceof HttpError) return json({ error: error.message }, error.status);
+    if (error instanceof RealBoundaryError) return json({ error: error.message }, error.status);
     if (error instanceof z.ZodError)
       return json(
         {

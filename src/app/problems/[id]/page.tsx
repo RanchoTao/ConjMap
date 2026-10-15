@@ -5,6 +5,8 @@ import { getProblem, problems, relationships } from '@/lib/catalog';
 import { Badge } from '@/components/status';
 import { MathText } from '@/components/math-text';
 import { ResearchPanel } from '@/components/research-panel';
+import { EvidencePassport } from '@/components/evidence-passport';
+import { RealResearchPanel } from '@/components/real-research-panel';
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   return { title: getProblem(id)?.title ?? 'Problem not found' };
@@ -34,6 +36,7 @@ export default async function ProblemPage({ params }: { params: Promise<{ id: st
       </div>
       <div className="detail-grid">
         <div className="detail-main">
+          <EvidencePassport problem={problem} />
           <section className="paper-panel">
             <div className="panel-heading">
               <span className="eyebrow">01 / MATHEMATICAL STATEMENT</span>
@@ -104,6 +107,7 @@ export default async function ProblemPage({ params }: { params: Promise<{ id: st
             </p>
             <ResearchPanel problemId={problem.id} />
           </section>
+          <RealResearchPanel key={problem.id} problemId={problem.id} />
         </div>
         <aside className="detail-aside">
           <section className="aside-panel">

@@ -39,7 +39,7 @@ export default function Home() {
           </div>
           <div className="hero-footnote">
             <GitBranch size={14} /> Open infrastructure for mathematical discovery{' '}
-            <span>V0.1 · LOCAL EDITION</span>
+            <span>V0.2 · LOCAL EDITION</span>
           </div>
         </div>
         <div className="hero-marginalia">
@@ -164,8 +164,8 @@ export default function Home() {
           <BookOpen size={22} />
           <h3>Connected to what comes next.</h3>
           <p>
-            A versioned task interface prepares for MathForge. This edition runs an explicitly
-            labeled local mock adapter.
+            Separate mock and authenticated real adapters preserve research provenance. The real
+            MathForge connection remains blocked pending a compatible engine API.
           </p>
         </div>
       </section>

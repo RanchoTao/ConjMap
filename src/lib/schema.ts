@@ -23,10 +23,12 @@ export const relationshipTypes = [
   'special_case_of',
   'depends_on',
   'related_to',
+  'open_case_of',
+  'counterexample_to',
 ] as const;
 export const ProblemSchema = z
   .object({
-    id: z.string().regex(/^fc-[a-z0-9-]+$/),
+    id: z.string().regex(/^(?:fc-[a-z0-9-]+|cm-\d{6})$/),
     title: z.string().min(3),
     source_title: z.string(),
     statement: z.string().min(30),

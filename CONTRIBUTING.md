@@ -16,6 +16,8 @@ ConjMap welcomes precise corrections, licensed datasets, and reviewable engineer
 
 Run `npm run dev`. Before a PR run `npm run check`, the Python adapter tests, and `npm run test:e2e` after installing Chromium. Update docs and screenshots when behavior changes. Keep credentials, local research journals, dependency caches and private artifacts out of Git.
 
+V0.2: allocate neutral IDs in the persisted registry; retain old aliases and all source observations. Keep metadata/text/linked rights separate. Install Python parser requirements with `python -m pip install -r requirements-adapters.txt`. Append review/retraction versions and preserve exact hypothesis differences in dedup decisions. Do not promote a dossier merely because a source declares a proof or an automated process finishes. Source declaration variants are not additional independent problems. Never place synthetic benchmark fixtures in the real catalog. Actual MathForge admission belongs to the engine; do not replay protected campaigns or implement a replacement engine here.
+
 The PR should state what changed, what was actually executed, dataset counts/license decisions, scientific limits, and any skipped checks. A build does not certify mathematics. A mock run is never real progress.
 
 ## Licensing

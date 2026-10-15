@@ -1,0 +1,722 @@
+{
+  "policy": "Explicit retained primary leads only; one GET, 12s timeout, 256KiB cap, no automatic retry, no response bodies retained. Unversioned leads are dated observations; SHA identifies observed page, not immutable paper version.",
+  "probes": [
+    {
+      "url": "https://arxiv.org/abs/0811.0886",
+      "checked_at_utc": "2026-10-15T13:19:24.659352+00:00",
+      "scope": "HTML metadata/abstract page only; not full-method or proof review",
+      "status": 200,
+      "final_url": "https://arxiv.org/abs/0811.0886",
+      "bytes_read": 39746,
+      "truncated": false,
+      "sha256": "3174298603b00cdd2d8dff553ca6509d77ae9879c967bc6658475ad48a6fd3ca",
+      "bibliographic_metadata": {
+        "citation_title": [
+          "The Bing-Borsuk and the Busemann Conjectures"
+        ],
+        "citation_author": [
+          "Halverson, Denise M.",
+          "Repovš, Dušan"
+        ],
+        "citation_date": [
+          "2008/11/06"
+        ],
+        "citation_arxiv_id": [
+          "0811.0886"
+        ]
+      }
+    },
+    {
+      "url": "https://arxiv.org/abs/0906.5177",
+      "checked_at_utc": "2026-10-15T13:19:24.659827+00:00",
+      "scope": "HTML metadata/abstract page only; not full-method or proof review",
+      "status": 200,
+      "final_url": "https://arxiv.org/abs/0906.5177",
+      "bytes_read": 44858,
+      "truncated": false,
+      "sha256": "31c053278de70f86adf02eb3044c2d694fe3c3acc027a8427a1a786e6c7dffc8",
+      "bibliographic_metadata": {
+        "citation_title": [
+          "Man and machine thinking about the smooth 4-dimensional Poincar\\'e conjecture"
+        ],
+        "citation_author": [
+          "Freedman, Michael",
+          "Gompf, Robert",
+          "Morrison, Scott",
+          "Walker, Kevin"
+        ],
+        "citation_doi": [
+          "10.4171/QT/5"
+        ],
+        "citation_date": [
+          "2009/06/28"
+        ],
+        "citation_arxiv_id": [
+          "0906.5177"
+        ]
+      }
+    },
+    {
+      "url": "https://arxiv.org/abs/1003.3045",
+      "checked_at_utc": "2026-10-15T13:19:24.660134+00:00",
+      "scope": "HTML metadata/abstract page only; not full-method or proof review",
+      "status": 200,
+      "final_url": "https://arxiv.org/abs/1003.3045",
+      "bytes_read": 39038,
+      "truncated": false,
+      "sha256": "697484c118e953ac222ca523bc7bea32045bf3dfd3bc9b668c23af8da6030744",
+      "bibliographic_metadata": {
+        "citation_title": [
+          "A Computational Approach to the Graceful Tree Conjecture"
+        ],
+        "citation_author": [
+          "Fang, Wenjie"
+        ],
+        "citation_date": [
+          "2010/03/15"
+        ],
+        "citation_arxiv_id": [
+          "1003.3045"
+        ]
+      }
+    },
+    {
+      "url": "https://arxiv.org/abs/1010.3945",
+      "checked_at_utc": "2026-10-15T13:19:25.521848+00:00",
+      "scope": "HTML metadata/abstract page only; not full-method or proof review",
+      "status": 200,
+      "final_url": "https://arxiv.org/abs/1010.3945",
+      "bytes_read": 37371,
+      "truncated": false,
+      "sha256": "c82cbcbcac34322a6b13710647be4758659e08a1431d1eeb269a9ffd593332f0",
+      "bibliographic_metadata": {
+        "citation_title": [
+          "A Note on the Andrica Conjecture"
+        ],
+        "citation_author": [
+          "Wolf, Marek"
+        ],
+        "citation_date": [
+          "2010/10/19"
+        ],
+        "citation_arxiv_id": [
+          "1010.3945"
+        ]
+      }
+    },
+    {
+      "url": "https://arxiv.org/abs/1109.0707",
+      "checked_at_utc": "2026-10-15T13:19:25.975778+00:00",
+      "scope": "HTML metadata/abstract page only; not full-method or proof review",
+      "status": 200,
+      "final_url": "https://arxiv.org/abs/1109.0707",
+      "bytes_read": 38143,
+      "truncated": false,
+      "sha256": "80963bfb7398ed7bf52563d7426550730b34ed4b8f19cfe0d4319731f45db972",
+      "bibliographic_metadata": {
+        "citation_title": [
+          "A brief, simple proof of Vizing's conjecture"
+        ],
+        "citation_author": [
+          "Krop, Elliot"
+        ],
+        "citation_date": [
+          "2011/09/04"
+        ],
+        "citation_arxiv_id": [
+          "1109.0707"
+        ]
+      }
+    },
+    {
+      "url": "https://arxiv.org/abs/1112.4816",
+      "checked_at_utc": "2026-10-15T13:19:26.222285+00:00",
+      "scope": "HTML metadata/abstract page only; not full-method or proof review",
+      "status": 200,
+      "final_url": "https://arxiv.org/abs/1112.4816",
+      "bytes_read": 43244,
+      "truncated": false,
+      "sha256": "275642d2ea11ab9faeb702fc04d5776ed5df144985dac8e9b8801ccde425b122",
+      "bibliographic_metadata": {
+        "citation_title": [
+          "Character sums for primitive root densities"
+        ],
+        "citation_author": [
+          "Lenstra Jr, H. W.",
+          "Moree, P.",
+          "Stevenhagen, P."
+        ],
+        "citation_doi": [
+          "10.1017/S0305004114000450"
+        ],
+        "citation_date": [
+          "2011/12/20"
+        ],
+        "citation_arxiv_id": [
+          "1112.4816"
+        ]
+      }
+    },
+    {
+      "url": "https://arxiv.org/abs/1403.1564",
+      "checked_at_utc": "2026-10-15T13:19:26.570846+00:00",
+      "scope": "HTML metadata/abstract page only; not full-method or proof review",
+      "status": 200,
+      "final_url": "https://arxiv.org/abs/1403.1564",
+      "bytes_read": 40672,
+      "truncated": false,
+      "sha256": "a87e92724eb990e905693dc2b99e1e186a6606394df38364f99bf2474dd81b40",
+      "bibliographic_metadata": {
+        "citation_title": [
+          "The Graceful Tree Conjecture: a class of graceful diameter-6 trees"
+        ],
+        "citation_author": [
+          "Superdock, Matthew C."
+        ],
+        "citation_date": [
+          "2014/03/06"
+        ],
+        "citation_arxiv_id": [
+          "1403.1564"
+        ]
+      }
+    },
+    {
+      "url": "https://arxiv.org/abs/1502.00708",
+      "checked_at_utc": "2026-10-15T13:19:26.884092+00:00",
+      "scope": "HTML metadata/abstract page only; not full-method or proof review",
+      "status": 200,
+      "final_url": "https://arxiv.org/abs/1502.00708",
+      "bytes_read": 39556,
+      "truncated": false,
+      "sha256": "251c4e8507c96fa6a8b66b7da8a9a6ad312ced6c3866a6e69060b5cfa4019548",
+      "bibliographic_metadata": {
+        "citation_title": [
+          "Vizing's Conjecture for Almost All Pairs of Graphs"
+        ],
+        "citation_author": [
+          "Contractor, Aziz",
+          "Krop, Elliot"
+        ],
+        "citation_date": [
+          "2015/02/03"
+        ],
+        "citation_arxiv_id": [
+          "1502.00708"
+        ]
+      }
+    },
+    {
+      "url": "https://arxiv.org/abs/1608.01577",
+      "checked_at_utc": "2026-10-15T13:19:27.484834+00:00",
+      "scope": "HTML metadata/abstract page only; not full-method or proof review",
+      "status": 200,
+      "final_url": "https://arxiv.org/abs/1608.01577",
+      "bytes_read": 43465,
+      "truncated": false,
+      "sha256": "909364fbc243629b17b1c9b5bfecea870bc8a7a033baac3d4df2e6d5eaf215cb",
+      "bibliographic_metadata": {
+        "citation_title": [
+          "Almost all trees are almost graceful"
+        ],
+        "citation_author": [
+          "Adamaszek, Anna",
+          "Allen, Peter",
+          "Grosu, Codrut",
+          "Hladky, Jan"
+        ],
+        "citation_doi": [
+          "10.1002/rsa.20906"
+        ],
+        "citation_date": [
+          "2016/08/04"
+        ],
+        "citation_arxiv_id": [
+          "1608.01577"
+        ]
+      }
+    },
+    {
+      "url": "https://arxiv.org/abs/1706.04985",
+      "checked_at_utc": "2026-10-15T13:19:27.994673+00:00",
+      "scope": "HTML metadata/abstract page only; not full-method or proof review",
+      "status": 200,
+      "final_url": "https://arxiv.org/abs/1706.04985",
+      "bytes_read": 40609,
+      "truncated": false,
+      "sha256": "9c90c768207e49af0c05225f134b56337fb052f534c3fbf1a56964eddbdf43c5",
+      "bibliographic_metadata": {
+        "citation_title": [
+          "On the $1/3-2/3$ Conjecture"
+        ],
+        "citation_author": [
+          "Olson, Emily J.",
+          "Sagan, Bruce E."
+        ],
+        "citation_date": [
+          "2017/06/15"
+        ],
+        "citation_arxiv_id": [
+          "1706.04985"
+        ]
+      }
+    },
+    {
+      "url": "https://arxiv.org/abs/2105.03955",
+      "checked_at_utc": "2026-10-15T13:19:28.001143+00:00",
+      "scope": "HTML metadata/abstract page only; not full-method or proof review",
+      "status": 200,
+      "final_url": "https://arxiv.org/abs/2105.03955",
+      "bytes_read": 42913,
+      "truncated": false,
+      "sha256": "f679ca222ba1f2219d950348180c5218b2aa22d7dcbaf7fa56bebcedfac15dc5",
+      "bibliographic_metadata": {
+        "citation_title": [
+          "On the logarithmic coarse structures of Lie groups and hyperbolic spaces"
+        ],
+        "citation_author": [
+          "Pallier, Gabriel"
+        ],
+        "citation_doi": [
+          "10.1007/s10711-022-00714-6"
+        ],
+        "citation_date": [
+          "2021/05/09"
+        ],
+        "citation_arxiv_id": [
+          "2105.03955"
+        ]
+      }
+    },
+    {
+      "url": "https://arxiv.org/abs/2211.11504",
+      "checked_at_utc": "2026-10-15T13:19:28.303181+00:00",
+      "scope": "HTML metadata/abstract page only; not full-method or proof review",
+      "status": 200,
+      "final_url": "https://arxiv.org/abs/2211.11504",
+      "bytes_read": 39698,
+      "truncated": false,
+      "sha256": "72a7419fc8153751960e4a013dfaa1ab04312f7034c1febefdc283121af65666",
+      "bibliographic_metadata": {
+        "citation_title": [
+          "An improved lower bound for the union-closed set conjecture"
+        ],
+        "citation_author": [
+          "Sawin, Will"
+        ],
+        "citation_date": [
+          "2022/11/21"
+        ],
+        "citation_arxiv_id": [
+          "2211.11504"
+        ]
+      }
+    },
+    {
+      "url": "https://arxiv.org/abs/2403.10430",
+      "checked_at_utc": "2026-10-15T13:19:28.488757+00:00",
+      "scope": "HTML metadata/abstract page only; not full-method or proof review",
+      "status": 200,
+      "final_url": "https://arxiv.org/abs/2403.10430",
+      "bytes_read": 38824,
+      "truncated": false,
+      "sha256": "94a5706b9a9eb977a1e87f7bc637c17448f4f9626920399587a0e042ed29d450",
+      "bibliographic_metadata": {
+        "citation_title": [
+          "Construction of Arithmetic Teichmuller Spaces IV: Proof of the abc-conjecture"
+        ],
+        "citation_author": [
+          "Joshi, Kirti"
+        ],
+        "citation_date": [
+          "2024/03/15"
+        ],
+        "citation_arxiv_id": [
+          "2403.10430"
+        ]
+      }
+    },
+    {
+      "url": "https://arxiv.org/abs/2409.03758",
+      "checked_at_utc": "2026-10-15T13:19:28.646261+00:00",
+      "scope": "HTML metadata/abstract page only; not full-method or proof review",
+      "status": 200,
+      "final_url": "https://arxiv.org/abs/2409.03758",
+      "bytes_read": 41745,
+      "truncated": false,
+      "sha256": "510fb595ce38594c6d827582c332fb667cca89bc57558f24e9efb1dd4cb3059e",
+      "bibliographic_metadata": {
+        "citation_title": [
+          "Post-quantum encryption algorithms of high-degree 3-variable polynomial congruences: BS cryptosystems and BS key generation"
+        ],
+        "citation_author": [
+          "Daras, Nicholas J."
+        ],
+        "citation_date": [
+          "2024/08/14"
+        ],
+        "citation_arxiv_id": [
+          "2409.03758"
+        ]
+      }
+    },
+    {
+      "url": "https://arxiv.org/abs/2412.16740",
+      "checked_at_utc": "2026-10-15T13:19:29.253819+00:00",
+      "scope": "HTML metadata/abstract page only; not full-method or proof review",
+      "status": 200,
+      "final_url": "https://arxiv.org/abs/2412.16740",
+      "bytes_read": 39373,
+      "truncated": false,
+      "sha256": "1cd161693cd986b0c5595c3e7258af131e04caf8bd4bd27bdab480a4ae132835",
+      "bibliographic_metadata": {
+        "citation_title": [
+          "Hilbert's tenth problem for systems of diagonal quadratic forms, and B\\\"{u}chi's problem"
+        ],
+        "citation_author": [
+          "Xiao, Stanley Yao"
+        ],
+        "citation_date": [
+          "2024/12/21"
+        ],
+        "citation_arxiv_id": [
+          "2412.16740"
+        ]
+      }
+    },
+    {
+      "url": "https://arxiv.org/abs/2508.16699",
+      "checked_at_utc": "2026-10-15T13:19:30.061821+00:00",
+      "scope": "HTML metadata/abstract page only; not full-method or proof review",
+      "status": 200,
+      "final_url": "https://arxiv.org/abs/2508.16699",
+      "bytes_read": 41830,
+      "truncated": false,
+      "sha256": "ff2fa1bdbce3b7907487365c09c276ecbb0dabe7b822dff0c26b8d9c39f3fbe6",
+      "bibliographic_metadata": {
+        "citation_title": [
+          "Random-projector quantum diagnostics of Ramsey numbers and a prime-factor heuristic for $R(5,5)=45$"
+        ],
+        "citation_author": [
+          "Tamburini, Fabrizio"
+        ],
+        "citation_date": [
+          "2025/08/22"
+        ],
+        "citation_arxiv_id": [
+          "2508.16699"
+        ]
+      }
+    },
+    {
+      "url": "https://arxiv.org/abs/2510.05448",
+      "checked_at_utc": "2026-10-15T13:19:30.463225+00:00",
+      "scope": "HTML metadata/abstract page only; not full-method or proof review",
+      "status": 200,
+      "final_url": "https://arxiv.org/abs/2510.05448",
+      "bytes_read": 42210,
+      "truncated": false,
+      "sha256": "fe0cc2136682dd011d010fc54435de237c6a000749c089e9b9362e93abb0dde6",
+      "bibliographic_metadata": {
+        "citation_title": [
+          "The inter-universal Teichm\\\"uller theory and new Diophantine results over rational numbers. II"
+        ],
+        "citation_author": [
+          "Zhou, Zhong-Peng"
+        ],
+        "citation_date": [
+          "2025/10/06"
+        ],
+        "citation_arxiv_id": [
+          "2510.05448"
+        ]
+      }
+    },
+    {
+      "url": "https://arxiv.org/abs/2512.11222",
+      "checked_at_utc": "2026-10-15T13:19:30.652398+00:00",
+      "scope": "HTML metadata/abstract page only; not full-method or proof review",
+      "status": 200,
+      "final_url": "https://arxiv.org/abs/2512.11222",
+      "bytes_read": 40207,
+      "truncated": false,
+      "sha256": "c3ca0a5b3795ad0659ad16a203db8d154336326a296fbac0935914e14917fc18",
+      "bibliographic_metadata": {
+        "citation_title": [
+          "New Sidorenko-type inequalities in tournaments"
+        ],
+        "citation_author": [
+          "He, Xiaoyu",
+          "Mani, Nitya",
+          "Nie, Jiaxi",
+          "Tung, Nathan",
+          "Wei, Fan"
+        ],
+        "citation_date": [
+          "2025/12/12"
+        ],
+        "citation_arxiv_id": [
+          "2512.11222"
+        ]
+      }
+    },
+    {
+      "url": "https://arxiv.org/abs/2605.14138",
+      "checked_at_utc": "2026-10-15T13:19:31.168597+00:00",
+      "scope": "HTML metadata/abstract page only; not full-method or proof review",
+      "status": 200,
+      "final_url": "https://arxiv.org/abs/2605.14138",
+      "bytes_read": 40982,
+      "truncated": false,
+      "sha256": "1394d11146ac06548c26e6517a567eec6cb0cb98c9d5a2d139ed8c2ce6f032db",
+      "bibliographic_metadata": {
+        "citation_title": [
+          "On Tournament Anti-Sidorenko Orientations of Trees"
+        ],
+        "citation_author": [
+          "Chen, Hao",
+          "Clemen, Felix Christian",
+          "Noel, Jonathan A."
+        ],
+        "citation_date": [
+          "2026/05/13"
+        ],
+        "citation_arxiv_id": [
+          "2605.14138"
+        ]
+      }
+    },
+    {
+      "url": "https://arxiv.org/abs/2607.15632",
+      "checked_at_utc": "2026-10-15T13:19:31.291715+00:00",
+      "scope": "HTML metadata/abstract page only; not full-method or proof review",
+      "status": 200,
+      "final_url": "https://arxiv.org/abs/2607.15632",
+      "bytes_read": 39585,
+      "truncated": false,
+      "sha256": "046a3c76282a1645ce52d7de5cefb0b112112145ed076e160a5d070dd8c9cb03",
+      "bibliographic_metadata": {
+        "citation_title": [
+          "Both directions of Fuglede's conjecture fail in dimension two"
+        ],
+        "citation_author": [
+          "Zhang, Tao"
+        ],
+        "citation_date": [
+          "2026/07/17"
+        ],
+        "citation_arxiv_id": [
+          "2607.15632"
+        ]
+      }
+    },
+    {
+      "url": "https://arxiv.org/abs/2609.14655",
+      "checked_at_utc": "2026-10-15T13:19:31.777120+00:00",
+      "scope": "HTML metadata/abstract page only; not full-method or proof review",
+      "status": 200,
+      "final_url": "https://arxiv.org/abs/2609.14655",
+      "bytes_read": 39503,
+      "truncated": false,
+      "sha256": "f68dc26ef7fb514f892567df272ff6d3b07d0ea4a15d776efdccd7b6f0bb7d92",
+      "bibliographic_metadata": {
+        "citation_title": [
+          "Oriented Paths with Few Direction Flips Are Tournament Anti-Sidorenko"
+        ],
+        "citation_author": [
+          "Chen, Hao",
+          "Lin, Yupeng"
+        ],
+        "citation_date": [
+          "2026/09/13"
+        ],
+        "citation_arxiv_id": [
+          "2609.14655"
+        ]
+      }
+    },
+    {
+      "url": "https://arxiv.org/abs/2609.15080",
+      "checked_at_utc": "2026-10-15T13:19:31.967367+00:00",
+      "scope": "HTML metadata/abstract page only; not full-method or proof review",
+      "status": 200,
+      "final_url": "https://arxiv.org/abs/2609.15080",
+      "bytes_read": 37820,
+      "truncated": false,
+      "sha256": "e80808793e8cd6a8bd4f699385321bb775ee581568f7c030f25d63315a681d44",
+      "bibliographic_metadata": {
+        "citation_title": [
+          "The K\\\"othe conjecture via point modules"
+        ],
+        "citation_author": [
+          "Greenfeld, B.",
+          "King, B.",
+          "Vendramin, L."
+        ],
+        "citation_date": [
+          "2026/09/14"
+        ],
+        "citation_arxiv_id": [
+          "2609.15080"
+        ]
+      }
+    },
+    {
+      "url": "https://arxiv.org/abs/2609.26909",
+      "checked_at_utc": "2026-10-15T13:19:32.373944+00:00",
+      "scope": "HTML metadata/abstract page only; not full-method or proof review",
+      "status": 200,
+      "final_url": "https://arxiv.org/abs/2609.26909",
+      "bytes_read": 39345,
+      "truncated": false,
+      "sha256": "1a1b786919bef8118a0bb255d92ba7385878abb3c9f10b98ad701e3f2ef58c3d",
+      "bibliographic_metadata": {
+        "citation_title": [
+          "Integral Dependence over One-Sided Ideals, Part II: G-Left Ideals and the K\\\"othe Problem"
+        ],
+        "citation_author": [
+          "Aryapoor, Masood"
+        ],
+        "citation_date": [
+          "2026/09/22"
+        ],
+        "citation_arxiv_id": [
+          "2609.26909"
+        ]
+      }
+    },
+    {
+      "url": "https://arxiv.org/abs/2609.30888",
+      "checked_at_utc": "2026-10-15T13:19:32.547712+00:00",
+      "scope": "HTML metadata/abstract page only; not full-method or proof review",
+      "status": 200,
+      "final_url": "https://arxiv.org/abs/2609.30888",
+      "bytes_read": 39368,
+      "truncated": false,
+      "sha256": "29bc0ac185a13840c63d0273624f7e45ebcc74c1d4c0d6564eb5b6ef59f50b60",
+      "bibliographic_metadata": {
+        "citation_title": [
+          "Breaking the Infinite Barrier in the $\\frac{1}{3}$--$\\frac{2}{3}$ Conjecture"
+        ],
+        "citation_author": [
+          "Aires, Max",
+          "Chan, Swee Hong",
+          "Pak, Igor",
+          "Panova, Greta"
+        ],
+        "citation_date": [
+          "2026/09/25"
+        ],
+        "citation_arxiv_id": [
+          "2609.30888"
+        ]
+      }
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.02295",
+      "checked_at_utc": "2026-10-15T13:19:32.631571+00:00",
+      "scope": "HTML metadata/abstract page only; not full-method or proof review",
+      "status": 200,
+      "final_url": "https://arxiv.org/abs/2610.02295",
+      "bytes_read": 40640,
+      "truncated": false,
+      "sha256": "85725041b9c1a735866f3ca7bf201e46a9b7c24a5420c55e4fdcdacaca0d8c16",
+      "bibliographic_metadata": {
+        "citation_title": [
+          "Beyond Liu's 0.382709 threshold for the union-closed sets conjecture"
+        ],
+        "citation_author": [
+          "Costa, Simone",
+          "Sadhu, Ankan"
+        ],
+        "citation_date": [
+          "2026/10/01"
+        ],
+        "citation_arxiv_id": [
+          "2610.02295"
+        ]
+      }
+    },
+    {
+      "url": "https://arxiv.org/abs/math/0606530",
+      "checked_at_utc": "2026-10-15T13:19:33.041121+00:00",
+      "scope": "HTML metadata/abstract page only; not full-method or proof review",
+      "status": 200,
+      "final_url": "https://arxiv.org/abs/math/0606530",
+      "bytes_read": 38809,
+      "truncated": false,
+      "sha256": "b9a3bc5de9e5b2e8d54031d0785643a9725fdbd5978d64b946e4dc79502eda82",
+      "bibliographic_metadata": {
+        "citation_title": [
+          "Resolution of Singularities for 3-folds in positive characteristic"
+        ],
+        "citation_author": [
+          "Cutkosky, Steven Dale"
+        ],
+        "citation_date": [
+          "2006/06/21"
+        ],
+        "citation_arxiv_id": [
+          "math/0606530"
+        ]
+      }
+    },
+    {
+      "url": "https://arxiv.org/abs/math/0607009",
+      "checked_at_utc": "2026-10-15T13:19:33.278946+00:00",
+      "scope": "HTML metadata/abstract page only; not full-method or proof review",
+      "status": 200,
+      "final_url": "https://arxiv.org/abs/math/0607009",
+      "bytes_read": 40651,
+      "truncated": false,
+      "sha256": "115483b147180f5900d1d4ae4e01cee497622356a1311a090c05376a496d3375",
+      "bibliographic_metadata": {
+        "citation_title": [
+          "Toward resolution of singularities over a field of positive characteristic Part I. Foundation of the program: the language of the idealistic filtration"
+        ],
+        "citation_author": [
+          "Kawanoue, Hiraku"
+        ],
+        "citation_date": [
+          "2006/07/01"
+        ],
+        "citation_arxiv_id": [
+          "math/0607009"
+        ]
+      }
+    },
+    {
+      "url": "https://www.claymath.org/Millennium%20Problems/",
+      "checked_at_utc": "2026-10-15T13:19:33.697100+00:00",
+      "scope": "HTML metadata/abstract page only; not full-method or proof review",
+      "status": 200,
+      "final_url": "https://www.claymath.org/Millennium%20Problems/",
+      "bytes_read": 90145,
+      "truncated": false,
+      "sha256": "80dc1cbfbad29199cc868a394ef430df1775b0e254b62945e995696d3eabc76f",
+      "bibliographic_metadata": {}
+    },
+    {
+      "url": "https://www.claymath.org/millennium/riemann-hypothesis/",
+      "checked_at_utc": "2026-10-15T13:19:33.931762+00:00",
+      "scope": "HTML metadata/abstract page only; not full-method or proof review",
+      "status": 200,
+      "final_url": "https://www.claymath.org/millennium/riemann-hypothesis/",
+      "bytes_read": 107200,
+      "truncated": false,
+      "sha256": "cb2924b4e366ef507a43d303f23be31de370293c639fef8a5d6dcaa1eda50954",
+      "bibliographic_metadata": {}
+    },
+    {
+      "url": "https://www.claymath.org/wp-content/uploads/2022/02/MPPc.pdf",
+      "checked_at_utc": "2026-10-15T13:19:34.193041+00:00",
+      "scope": "Bounded PDF response prefix only; truncated at 256KiB+1, no text extraction or full-method review",
+      "status": 200,
+      "final_url": "https://www.claymath.org/wp-content/uploads/2022/02/MPPc.pdf",
+      "bytes_read": 262145,
+      "truncated": true,
+      "sha256": "903fae1a549c8df346e134f6ca57fb7cf3a5a3806a277277d9a4f8e56ff27bfc",
+      "bibliographic_metadata": {}
+    }
+  ]
+}

@@ -6,22 +6,53 @@ import type { Core } from 'cytoscape';
 import type { Problem, Relationship } from '@/lib/schema';
 import { queryProblems } from '@/lib/query';
 import { Badge } from './status';
+import { selectRelations, type SubstantiveRelation } from '@/lib/relations-v02';
+
+export type StatementNode = {
+  id: string;
+  parent_id: string;
+  title: string;
+  field: string;
+  formal_statement: string;
+  url: string;
+};
+const noRelations: SubstantiveRelation[] = [];
+const noStatements: StatementNode[] = [];
 
 type Props = {
   problems: Problem[];
   relationships: Relationship[];
   colors: Record<string, string>;
   preview?: boolean;
+  mathematical?: SubstantiveRelation[];
+  statements?: StatementNode[];
+  onMeasurement?: (value: {
+    nodes: number;
+    initial_render_ms: number;
+    pan_frame_ms: number[];
+    js_heap_bytes: number | null;
+  }) => void;
 };
-export function Atlas({ problems, relationships, colors, preview = false }: Props) {
+export function Atlas({
+  problems,
+  relationships,
+  colors,
+  preview = false,
+  mathematical = noRelations,
+  statements = noStatements,
+  onMeasurement,
+}: Props) {
   const host = useRef<HTMLDivElement>(null),
     cy = useRef<Core | null>(null);
   const [q, setQ] = useState(''),
     [field, setField] = useState(''),
     [status, setStatus] = useState(''),
     [edges, setEdges] = useState(true);
+  const [layer, setLayer] = useState('navigation'),
+    [candidates, setCandidates] = useState(false),
+    [selectedStatement, setSelectedStatement] = useState<StatementNode | null>(null);
   const [selected, setSelected] = useState<Problem | null>(null),
-    [ready, setReady] = useState(false),
+    [ready, setReady] = useState(0),
     [error, setError] = useState('');
   const fields = useMemo(() => [...new Set(problems.map((p) => p.field))].sort(), [problems]);
   const filtered = useMemo(
@@ -29,14 +60,25 @@ export function Atlas({ problems, relationships, colors, preview = false }: Prop
     [problems, q, field, status],
   );
   const selectedVisible = selected && filtered.some((p) => p.id === selected.id) ? selected : null;
+  const visibleStatements = useMemo(() => {
+    if (layer === 'navigation') return [];
+    const active = new Set(
+      selectRelations(mathematical, layer, candidates).flatMap((r) => [r.source_id, r.target_id]),
+    );
+    return statements.filter((s) => active.has(s.id) && filtered.some((p) => p.id === s.parent_id));
+  }, [layer, statements, filtered, mathematical, candidates]);
   const liveEdges = useMemo(() => {
-    const ids = new Set(filtered.map((p) => p.id));
-    return edges ? relationships.filter((r) => ids.has(r.source_id) && ids.has(r.target_id)) : [];
-  }, [filtered, relationships, edges]);
+    const ids = new Set([...filtered.map((p) => p.id), ...visibleStatements.map((s) => s.id)]);
+    const rows =
+      layer === 'navigation' ? relationships : selectRelations(mathematical, layer, candidates);
+    return edges ? rows.filter((r) => ids.has(r.source_id) && ids.has(r.target_id)) : [];
+  }, [filtered, relationships, edges, layer, mathematical, candidates, visibleStatements]);
   useEffect(() => {
     let cancelled = false;
     let observer: ResizeObserver | undefined;
     let graph: Core | undefined;
+    const container = host.current;
+    const refreshBounds = () => graph?.resize();
     import('cytoscape')
       .then(({ default: cytoscape }) => {
         if (cancelled || !host.current) return;
@@ -89,28 +131,63 @@ export function Atlas({ problems, relationships, colors, preview = false }: Prop
               },
             },
             { selector: '.muted', style: { opacity: 0.15 } },
+            {
+              selector: 'node[kind="statement"]',
+              style: { shape: 'diamond', 'border-color': '#efb268', 'border-width': 2 },
+            },
+            {
+              selector: 'edge[trust="candidate"]',
+              style: {
+                'line-color': '#efb268',
+                'target-arrow-color': '#efb268',
+                'target-arrow-shape': 'triangle',
+                'line-style': 'dashed',
+                opacity: 0.65,
+              },
+            },
+            {
+              selector: 'edge[trust="verified"]',
+              style: {
+                'line-color': '#81d9b2',
+                'target-arrow-color': '#81d9b2',
+                'target-arrow-shape': 'triangle',
+                'line-style': 'solid',
+                opacity: 0.9,
+              },
+            },
           ],
         });
         cy.current = graph;
         graph.on('tap', 'node', (event) => {
           const id = event.target.id();
-          setSelected(problems.find((p) => p.id === id) ?? null);
+          const statement = statements.find((s) => s.id === id);
+          setSelectedStatement(statement ?? null);
+          setSelected(problems.find((p) => p.id === (statement?.parent_id ?? id)) ?? null);
         });
-        observer = new ResizeObserver(() => graph?.resize());
+        observer = new ResizeObserver(refreshBounds);
         observer.observe(host.current);
-        setReady(true);
+        // Canvas hit testing caches offsets; scrolling the surrounding page changes them.
+        window.addEventListener('scroll', refreshBounds, true);
+        container?.addEventListener('mousedown', refreshBounds, true);
+        container?.addEventListener('touchstart', refreshBounds, true);
+        setReady((generation) => generation + 1);
       })
       .catch(() => setError('The graph could not load. Use the accessible problem index below.'));
     return () => {
       cancelled = true;
       observer?.disconnect();
+      window.removeEventListener('scroll', refreshBounds, true);
+      container?.removeEventListener('mousedown', refreshBounds, true);
+      container?.removeEventListener('touchstart', refreshBounds, true);
       graph?.destroy();
       cy.current = null;
     };
-  }, [problems]);
+  }, [problems, statements]);
   useEffect(() => {
     const graph = cy.current;
     if (!ready || !graph) return;
+    const measureStart = performance.now();
+    graph.startBatch();
     graph.elements().remove();
     const groups = new Map(fields.map((f, i) => [f, i]));
     const counts: Record<string, number> = {};
@@ -131,10 +208,27 @@ export function Atlas({ problems, relationships, colors, preview = false }: Prop
     });
     graph.add(elements);
     graph.add(
-      liveEdges.map((r, i) => ({
-        data: { id: `edge-${i}`, source: r.source_id, target: r.target_id },
+      visibleStatements.map((s, i) => ({
+        data: { id: s.id, label: s.title, color: colors[s.field] ?? '#efb268', kind: 'statement' },
+        position: { x: Math.cos(i) * 360, y: Math.sin(i) * 330 },
       })),
     );
+    graph.add(
+      liveEdges.map((r, i) => ({
+        data: {
+          id: `edge-${i}`,
+          source: r.source_id,
+          target: r.target_id,
+          trust:
+            r.review_status === 'reviewed' || r.review_status === 'verified'
+              ? 'verified'
+              : layer === 'navigation'
+                ? 'navigation'
+                : 'candidate',
+        },
+      })),
+    );
+    graph.endBatch();
     graph.layout({ name: 'preset', fit: true, padding: preview ? 35 : 55 }).run();
     if (filtered.length === 1) {
       // Keep a single search result readable and center the node itself, not its label box.
@@ -145,9 +239,74 @@ export function Atlas({ problems, relationships, colors, preview = false }: Prop
         y: graph.height() / 2 - position.y * 1.5,
       });
     }
-  }, [filtered, liveEdges, fields, ready, colors, preview]);
+    let cancelled = false;
+    if (onMeasurement)
+      void (async () => {
+        const frame = () => new Promise<void>((resolve) => requestAnimationFrame(() => resolve()));
+        await frame();
+        await frame();
+        const initial = performance.now() - measureStart,
+          latencies: number[] = [];
+        for (let i = 0; i < 20 && !cancelled; i++) {
+          const start = performance.now();
+          graph.panBy({ x: i % 2 ? 2 : -2, y: 0 });
+          await frame();
+          latencies.push(performance.now() - start);
+        }
+        if (!cancelled)
+          onMeasurement({
+            nodes: graph.nodes().length,
+            initial_render_ms: initial,
+            pan_frame_ms: latencies,
+            js_heap_bytes:
+              (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory
+                ?.usedJSHeapSize ?? null,
+          });
+      })();
+    return () => {
+      cancelled = true;
+    };
+  }, [
+    filtered,
+    liveEdges,
+    fields,
+    ready,
+    colors,
+    preview,
+    visibleStatements,
+    onMeasurement,
+    layer,
+  ]);
   return (
     <div className={`atlas ${preview ? 'atlas-preview' : ''}`}>
+      {!preview && mathematical.length ? (
+        <div className="atlas-toolbar">
+          <label>
+            Graph layer{' '}
+            <select
+              aria-label="Graph layer"
+              value={layer}
+              onChange={(e) => setLayer(e.target.value)}
+            >
+              <option value="navigation">Subject navigation</option>
+              <option value="logic">Mathematical logic</option>
+              <option value="special_cases">Conjectures & special cases</option>
+              <option value="research_evidence">Research evidence</option>
+            </select>
+          </label>
+          <label className="edge-toggle">
+            <input
+              type="checkbox"
+              checked={candidates}
+              onChange={(e) => setCandidates(e.target.checked)}
+            />
+            Show unverified candidates
+          </label>
+          <span className="small muted">
+            Solid green: verified · Dashed amber: candidate · Diamond: source statement
+          </span>
+        </div>
+      ) : null}
       {!preview ? (
         <div className="atlas-toolbar">
           <label className="search-input">
@@ -195,7 +354,7 @@ export function Atlas({ problems, relationships, colors, preview = false }: Prop
           role="img"
           aria-label={`Interactive mathematics atlas with ${filtered.length} problem nodes`}
           data-testid="atlas-canvas"
-          data-ready={ready}
+          data-ready={Boolean(ready)}
         />
         {!ready || error ? (
           <div className="graph-loading">{error || 'Drawing the frontier…'}</div>
@@ -251,6 +410,15 @@ export function Atlas({ problems, relationships, colors, preview = false }: Prop
             </button>
             <span className="eyebrow">{selectedVisible.field}</span>
             <h3>{selectedVisible.title}</h3>
+            {selectedStatement ? (
+              <p>
+                Source statement node: {selectedStatement.title}. Unverified; not counted as a
+                separate problem.{' '}
+                <a href={selectedStatement.url} target="_blank" rel="noreferrer">
+                  Inspect source ↗
+                </a>
+              </p>
+            ) : null}
             <div className="badge-row">
               <Badge>{selectedVisible.status}</Badge>
               <Badge tone="amber">unverified</Badge>
@@ -281,14 +449,15 @@ export function Atlas({ problems, relationships, colors, preview = false }: Prop
           ))}
         </div>
         <span className="graph-count" aria-live="polite" data-testid="graph-count">
-          {filtered.length} nodes · {liveEdges.length} links
+          {filtered.length + visibleStatements.length} nodes · {liveEdges.length} links
         </span>
       </div>
       {!preview ? (
         <>
           <p className="graph-disclaimer">
-            Dashed links are <strong>unverified subject associations</strong> based on shared source
-            tags. They do not establish implications, equivalences, or dependencies.
+            Gray dashed links are <strong>unverified subject associations</strong>. Amber dashed
+            links are mathematical candidates; green solid links require verification receipts.
+            Source declaration diamonds are variants, not additional catalog problems.
           </p>
           <details className="accessible-index">
             <summary>Accessible node index · {filtered.length} problems</summary>
