@@ -82,11 +82,11 @@ export default function About() {
             </ul>
             <p>
               Read{' '}
-              <a href="https://github.com/RanchoTao/ConjMap/blob/feature/conjmap-v0.1/CONTRIBUTING.md">
+              <a href="https://github.com/RanchoTao/ConjMap/blob/main/CONTRIBUTING.md">
                 CONTRIBUTING
               </a>{' '}
               and the{' '}
-              <a href="https://github.com/RanchoTao/ConjMap/blob/feature/conjmap-v0.1/docs/data-contract.md">
+              <a href="https://github.com/RanchoTao/ConjMap/blob/main/docs/data-contract.md">
                 data contract
               </a>{' '}
               before submitting a change.
