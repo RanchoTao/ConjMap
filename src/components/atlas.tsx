@@ -290,7 +290,7 @@ export function Atlas({
       {!preview && mathematical.length ? (
         <div className="atlas-toolbar">
           <label>
-            Graph layer{' '}
+            <T en="Graph layer" zh="图谱图层" />{' '}
             <select
               aria-label="Graph layer"
               value={layer}
@@ -308,10 +308,10 @@ export function Atlas({
               checked={candidates}
               onChange={(e) => setCandidates(e.target.checked)}
             />
-            Show unverified candidates
+            <T en="Show unverified candidates" zh="显示未经核验的候选关系" />
           </label>
           <span className="small muted">
-            Solid green: verified · Dashed amber: candidate · Diamond: source statement
+            <T en="Solid green: verified · Dashed amber: candidate · Diamond: source statement" zh="绿色实线：已核验 · 琥珀色虚线：候选 · 菱形：来源陈述" />
           </span>
         </div>
       ) : null}
@@ -351,7 +351,7 @@ export function Atlas({
           </select>
           <label className="edge-toggle">
             <input type="checkbox" checked={edges} onChange={(e) => setEdges(e.target.checked)} />
-            Discovery links
+            <T en="Discovery links" zh="探索关联" />
           </label>
         </div>
       ) : null}
