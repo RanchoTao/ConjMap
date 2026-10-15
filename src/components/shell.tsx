@@ -57,6 +57,7 @@ export function Header() {
         <nav aria-label="Main navigation">
           {[
             ['/atlas', 'Atlas'],
+            ['/frontier', 'Frontier'],
             ['/problems', 'Problems'],
             ['/sources', 'Sources'],
             ['/about', 'About'],
