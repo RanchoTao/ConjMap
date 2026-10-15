@@ -74,6 +74,7 @@ export type DedupDecision = {
 };
 export function validateDecisions(events: DedupDecision[]) {
   const seen = new Map<string, DedupDecision>();
+  const latestByCandidate = new Map<string, DedupDecision>();
   for (const e of events) {
     if (
       seen.has(e.id) ||
@@ -81,10 +82,11 @@ export function validateDecisions(events: DedupDecision[]) {
       !e.source_ids.length ||
       !e.differences.length ||
       (e.action === 'revoke' && !e.supersedes) ||
-      (e.supersedes && seen.get(e.supersedes)?.candidate_id !== e.candidate_id)
+      e.supersedes !== (latestByCandidate.get(e.candidate_id)?.id ?? null)
     )
       throw new Error('Invalid append-only dedup decision');
     seen.set(e.id, e);
+    latestByCandidate.set(e.candidate_id, e);
   }
   return events;
 }
