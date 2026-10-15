@@ -10,10 +10,14 @@ test('Chinese / English switch persists across public routes and reload', async 
   await page.goto('/atlas');
   await expect(page.locator('html')).toHaveAttribute('lang', 'zh-CN');
   await expect(page.getByRole('heading', { name: '数学图谱' })).toBeVisible();
+  await page.getByLabel('Atlas field').selectOption('Number theory');
+  await expect(page.getByLabel('Atlas field')).toHaveValue('Number theory');
   await page.getByLabel('Search atlas').fill('黎曼猜想');
   await expect(page.getByTestId('graph-count')).toContainText('1 个节点');
 
   await page.goto('/problems');
+  await page.getByLabel('Filter by field').selectOption('Number theory');
+  await expect(page.getByLabel('Filter by field')).toHaveValue('Number theory');
   await page.getByLabel('Search problems').fill('黎曼猜想');
   await expect(page.getByText('黎曼猜想', { exact: true })).toBeVisible();
 
