@@ -20,6 +20,14 @@ npm run check
 npm start
 ```
 
+## Languages · 语言
+
+The public atlas and local UI support English and 简体中文. Use the **中 / EN** control in the upper-right corner to switch without navigating away; the preference persists across pages and reloads, with the browser's language used on first visit.
+
+公开网页和本地界面支持英语与简体中文。点击右上角 **中 / EN** 即时切换，语言偏好保存到浏览器。
+
+Problem names, navigation, browsing, graph labels and evidence UI have Chinese labels. The **original mathematical source statements, Lean declarations, original-source audit notes and references remain unchanged in their original language**. This prevents an unreviewed translation from being mistaken for the precise original conjecture or a verified proof. Search accepts original English terms and mapped Chinese problem titles; canonical IDs, source hashes and evidence status never depend on the UI language.
+
 ## What ships
 
 - Home, interactive Cytoscape atlas, searchable/sortable/paginated problem index, evidence-rich problem detail, sources, and about pages.
