@@ -1,3 +1,4 @@
+import { T } from './i18n';
 import { dossiers, reviews, sourceRecords, claims, substantiveRelations } from '@/lib/v02-data';
 import type { Problem } from '@/lib/schema';
 export function EvidencePassport({ problem }: { problem: Problem }) {
@@ -9,8 +10,8 @@ export function EvidencePassport({ problem }: { problem: Problem }) {
   );
   return (
     <section className="paper-panel">
-      <div className="eyebrow">V0.2 / EVIDENCE DIMENSIONS & SOURCE HISTORY</div>
-      <h2>Review scope, without collapsed certainty.</h2>
+      <div className="eyebrow"><T en="V0.2 / EVIDENCE DIMENSIONS & SOURCE HISTORY" /></div>
+      <h2><T en="Review scope, without collapsed certainty." /></h2>
       {review ? (
         <>
           <p className="muted small">
@@ -19,15 +20,16 @@ export function EvidencePassport({ problem }: { problem: Problem }) {
           <dl className="evidence-dimensions">
             {Object.entries(review.dimensions).map(([key, value]) => (
               <div key={key}>
-                <dt>{key}</dt>
-                <dd>{value}</dd>
+                <dt><T en={key} /></dt>
+                <dd><T en={value} /></dd>
               </div>
             ))}
           </dl>
+          <p className="muted small"><T en="Source dossier notes (English original)" zh="以下为英文原始研究审查记录，尚未独立核验或翻译。" /></p>
           <p>{dossier?.scope_review}</p>
           <div className="prose-banner">{dossier?.findings}</div>
           <details>
-            <summary>Search scope, limitations & literature leads</summary>
+            <summary><T en="Search scope, limitations & literature leads" /></summary>
             <p>{dossier?.search_query}</p>
             <p>{dossier?.literature_access}</p>
             <p>{dossier?.original_reference_status}</p>
@@ -45,17 +47,16 @@ export function EvidencePassport({ problem }: { problem: Problem }) {
         </>
       ) : (
         <p className="muted small">
-          No scoped V0.2 dossier for this problem yet. Source imported; all other evidence
-          dimensions remain pending/not run.
+          <T en="No scoped V0.2 dossier for this problem yet. Source imported; all other evidence dimensions remain pending/not run." zh="目前尚无该问题的 V0.2 详细审查记录。来源已导入，其他核验尚待执行。" />
         </p>
       )}
-      <h3 style={{ marginTop: 22 }}>Cross-source observations</h3>
+      <h3 style={{ marginTop: 22 }}><T en="Cross-source observations" /></h3>
       {records.length ? (
         records.map((r) => (
           <article className="task-record" key={r.id}>
-            <strong>Erdős community metadata #{r.external_id}</strong>
+            <strong><T en="Erdős community metadata" zh="厄尔多斯社区元数据" /> #{r.external_id}</strong>
             <p className="muted small">
-              {r.status_scope} This observation does not change ConjMap status.
+              {r.status_scope} <T en="This observation does not change ConjMap status." zh="该观察不改变 ConjMap 中问题的核验状态。" />
             </p>
             <pre>
               {JSON.stringify(
@@ -70,7 +71,7 @@ export function EvidencePassport({ problem }: { problem: Problem }) {
             </pre>
             <p>
               <a className="text-link" href={r.url} target="_blank" rel="noreferrer">
-                Pinned metadata revision ↗
+                <T en="Pinned metadata revision ↗" zh="查看固定版本元数据 ↗" />
               </a>
             </p>
             <small>
@@ -79,14 +80,14 @@ export function EvidencePassport({ problem }: { problem: Problem }) {
           </article>
         ))
       ) : (
-        <p className="muted small">No second-source observation linked to this record.</p>
+        <p className="muted small"><T en="No second-source observation linked to this record." /></p>
       )}
       {nearby.length ? (
         <>
-          <h3 style={{ marginTop: 22 }}>Substantive relationship candidates</h3>
+          <h3 style={{ marginTop: 22 }}><T en="Substantive relationship candidates" /></h3>
           {nearby.map((r) => (
             <details key={r.id}>
-              <summary>{r.type} · source-reviewed candidate · UNVERIFIED</summary>
+              <summary>{r.type} · <T en="source-reviewed candidate · UNVERIFIED" zh="来源已审查的候选关系 · 未核验" /></summary>
               <p>{r.hypotheses.join(' ')}</p>
               <p>{r.scope}</p>
               <a className="text-link" href={r.evidence_url} target="_blank" rel="noreferrer">
@@ -96,8 +97,7 @@ export function EvidencePassport({ problem }: { problem: Problem }) {
                 {claims.find((c) => c.id === r.source_id || c.id === r.target_id)?.formal_statement}
               </pre>
               <p>
-                Source version {r.source_revision} · {r.review_date} · Human approval pending; no
-                accepted proof receipt.
+                <T en="Source version" zh="来源版本" /> {r.source_revision} · {r.review_date} · <T en="Human approval pending; no accepted proof receipt." zh="待人工审核；尚无通过的证明凭据。" />
               </p>
             </details>
           ))}
