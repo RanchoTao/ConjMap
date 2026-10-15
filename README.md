@@ -28,6 +28,27 @@ The public atlas and local UI support English and 简体中文. Use the **中 / 
 
 Problem names, navigation, browsing, graph labels and evidence UI have Chinese labels. The **original mathematical source statements, Lean declarations, original-source audit notes and references remain unchanged in their original language**. This prevents an unreviewed translation from being mistaken for the precise original conjecture or a verified proof. Search accepts original English terms and mapped Chinese problem titles; canonical IDs, source hashes and evidence status never depend on the UI language.
 
+## Open-problem discovery expansion · V0.3
+
+The original 120 full-source dossiers remain unchanged. A separate, auditable
+[open-problem source index](/frontier) (live at [/ConjMap/frontier/](https://ranchotao.com/ConjMap/frontier/))
+now includes **589 exact `open`-label Erdős records** from an Apache-2.0 pinned repository snapshot.
+Of these, **25** are linked by matching Erdős problem numbers to the 120 existing dossiers,
+and **564** do not yet have a numbered identity match. These 564 may still overlap under
+other names or variants; they are **not** certified unique conjectures.
+
+**Important:** source metadata only — statements and proof/solved status have not been
+independently reviewed; mathematical state remains `unknown`. Open the original problem
+on its source website for the full statement. This expansion does not claim new
+independent mathematical verification. See [V0.3 ingestion and licensing boundaries](docs/frontier-index-v0.3.md).
+
+To check the reproducible, offline index against its fixed source:
+
+```sh
+python -m pip install -r requirements-adapters.txt
+python adapters/erdos_open_index.py
+```
+
 ## What ships
 
 - Home, interactive Cytoscape atlas, searchable/sortable/paginated problem index, evidence-rich problem detail, sources, and about pages.
