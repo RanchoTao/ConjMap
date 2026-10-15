@@ -17,10 +17,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
       <body>
-        <a href="#main" className="skip-link">
-          <T en="Skip to content" />
-        </a>
         <LanguageProvider>
+          <a href="#main" className="skip-link">
+            <T en="Skip to content" />
+          </a>
           <Header />
           <main id="main">{children}</main>
           <Footer />
