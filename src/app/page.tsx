@@ -18,7 +18,7 @@ export default function Home() {
       <section className="hero">
         <div className="hero-copy">
           <div className="eyebrow">
-            <span className="live-dot" /> AN OPEN MAP OF MATHEMATICAL POSSIBILITY
+            <span className="live-dot" /> <T en="AN OPEN MAP OF MATHEMATICAL POSSIBILITY" />
           </div>
           <h1>
             <T en="Every answer begins" />
@@ -104,7 +104,7 @@ export default function Home() {
               </div>
               <h3><T en={f} /></h3>
               <p>
-                {problems.filter((p) => p.field === f).length} problems{' '}
+                {problems.filter((p) => p.field === f).length} <T en="problems" zh="个问题" />{' '}
                 <span>
                   MSC{' '}
                   {[...new Set(problems.filter((p) => p.field === f).flatMap((p) => p.MSC))]
