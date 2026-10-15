@@ -86,7 +86,7 @@ export default function About() {
             </p>
           </section>
           <section>
-            <h2><T en="<T en="What this first map can establish." />" /></h2>
+            <h2><T en="What this first map can establish." /></h2>
             <p>
               <T en="V0.2 preserves 120 actual source statements from six broad fields, with 32 independently curated metadata observations linked from a second source. Every record links to a pinned upstream theorem and preserves its original file. All automatic extractions remain unverified, and all independent mathematical statuses are unknown. Difficulty and historical attribution are left unknown where the adapter does not establish them." zh="V0.2 保留六大领域的 120 条来源陈述，并关联来自第二来源的 32 条元数据观察。所有记录都链接到固定版本的上游定理，并保存原始文件。自动导入内容均未独立核验，数学状态全部标记为未知；难度与历史归属缺乏证据时不作推断。" />
             </p>
