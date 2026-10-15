@@ -18,13 +18,17 @@ export function ProblemExplorer({
   const [filters, setFilters] = useState<Filters>(initial);
   const [page, setPage] = useState(1);
   useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    const fromUrl: Filters = {};
-    for (const k of ['q', 'field', 'status', 'sort'] as const) {
-      const value = params.get(k);
-      if (value) fromUrl[k] = value;
-    }
-    setFilters(fromUrl);
+    // Read client-only URL parameters after hydration; GitHub Pages has no request server.
+    const frame = window.requestAnimationFrame(() => {
+      const params = new URLSearchParams(window.location.search);
+      const fromUrl: Filters = {};
+      for (const k of ['q', 'field', 'status', 'sort'] as const) {
+        const value = params.get(k);
+        if (value) fromUrl[k] = value;
+      }
+      setFilters(fromUrl);
+    });
+    return () => window.cancelAnimationFrame(frame);
   }, []);
   const results = useMemo(() => queryProblems(problems, filters), [problems, filters]);
   function update(key: keyof Filters, value: string) {
