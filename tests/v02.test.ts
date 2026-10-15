@@ -132,6 +132,24 @@ describe('V0.2 catalog and evidence', () => {
       review_status: 'unverified',
     });
   });
+  it('rejects forked dedup approval chains and permits linear supersession', () => {
+    const first = {
+      id: 'decision-a',
+      candidate_id: 'candidate-1',
+      action: 'keep_separate' as const,
+      supersedes: null,
+      reviewer: 'reviewer',
+      reason: 'Hypotheses differ',
+      source_ids: ['source-1', 'source-2'],
+      differences: ['Different quantifiers'],
+    };
+    const second = { ...first, id: 'decision-b', supersedes: first.id };
+    expect(validateDecisions([first, second])).toHaveLength(2);
+    expect(() => validateDecisions([first, { ...second, supersedes: null }])).toThrow();
+    expect(() =>
+      validateDecisions([first, second, { ...second, id: 'decision-c', supersedes: first.id }]),
+    ).toThrow();
+  });
   it('requires reversible dedup decisions to preserve source identities and differences', () => {
     expect(() =>
       validateDecisions([
@@ -224,6 +242,25 @@ describe('authenticated real-adapter boundary (all transport responses are test 
         transport,
       ),
     ).rejects.toThrow('conflict');
+  });
+  it('does not exhaust active quota on definitive engine rejections', async () => {
+    configured();
+    let count = 0;
+    const rejected: typeof fetch = async () => {
+      count++;
+      return Response.json({ error: 'Invalid source admission' }, { status: 400 });
+    };
+    for (let i = 0; i < 4; i++) {
+      const task = await submitRealTask(input, `rejected-source-000${i}`, rejected);
+      expect(task.status).toBe('blocked');
+      expect(task.events.some((e) => e.kind === 'engine_rejected')).toBe(true);
+      expect(task.events.some((e) => e.kind === 'submission_uncertain')).toBe(false);
+    }
+    const accepted = await submitRealTask(input, 'admitted-source-0001', async () =>
+      Response.json(result),
+    );
+    expect(accepted.status).toBe('queued');
+    expect(count).toBe(4);
   });
   it('retains uncertain outcomes and never silently retries a possibly accepted task', async () => {
     configured();
