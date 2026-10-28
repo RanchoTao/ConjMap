@@ -1,6 +1,6 @@
 {
   "name": "conjmap",
-  "version": "0.2.0",
+  "version": "0.4.0",
   "private": true,
   "license": "Apache-2.0",
   "scripts": {
@@ -13,8 +13,9 @@
     "test": "vitest run",
     "test:e2e": "playwright test",
     "validate:data": "tsx scripts/validate-data.ts",
-    "check": "npm run validate:data && npm run validate:v02 && npm run lint && npm run typecheck && npm test && npm run build",
-    "validate:v02": "tsx scripts/validate-v02.ts"
+    "check": "npm run validate:data && npm run validate:v02 && npm run validate:v04 && npm run lint && npm run typecheck && npm test && npm run build",
+    "validate:v02": "tsx scripts/validate-v02.ts",
+    "validate:v04": "tsx scripts/validate-v04.ts"
   },
   "dependencies": {
     "cytoscape": "^3.33.1",
@@ -42,7 +43,7 @@
     "tsx": "^4.20.0",
     "typescript": "^5.9.0",
     "typescript-eslint": "^8.71.2",
-    "vitest": "^4.1.11"
+    "vitest": "^4.1.12"
   },
   "type": "module"
 }

@@ -24,11 +24,14 @@ export default function Home() {
           <h1>
             <T en="Every answer begins" />
             <br />
-            <em><T en="at the frontier." /></em>
+            <em>
+              <T en="at the frontier." />
+            </em>
           </h1>
           <p>
             <T en="Explore the questions mathematics has yet to settle." />
-            <br className="desktop-break" /> <T en="Follow the connections. Trace the evidence. Find your next problem." />
+            <br className="desktop-break" />{' '}
+            <T en="Follow the connections. Trace the evidence. Find your next problem." />
           </p>
           <div className="hero-actions">
             <Link className="button primary" href="/atlas">
@@ -40,11 +43,20 @@ export default function Home() {
           </div>
           <div className="hero-footnote">
             <GitBranch size={14} /> <T en="Open infrastructure for mathematical discovery" />{' '}
-            <span>V0.2 · {process.env.CONJMAP_STATIC_EXPORT === '1' ? <T en="PUBLIC READ-ONLY" /> : <T en="LOCAL EDITION" />}</span>
+            <span>
+              V0.4 ·{' '}
+              {process.env.CONJMAP_STATIC_EXPORT === '1' ? (
+                <T en="PUBLIC READ-ONLY" />
+              ) : (
+                <T en="LOCAL EDITION" />
+              )}
+            </span>
           </div>
         </div>
         <div className="hero-marginalia">
-          <span><T en="THE KNOWN" /></span>
+          <span>
+            <T en="THE KNOWN" />
+          </span>
           <svg viewBox="0 0 210 130" fill="none" aria-hidden="true">
             <path
               d="M5 97C35 90 31 25 76 40s38 77 79 37 21-45 49-52"
@@ -55,7 +67,9 @@ export default function Home() {
             <circle cx="76" cy="40" r="4" fill="currentColor" />
             <circle cx="155" cy="77" r="4" fill="currentColor" />
           </svg>
-          <span><T en="THE STILL POSSIBLE ↗" /></span>
+          <span>
+            <T en="THE STILL POSSIBLE ↗" />
+          </span>
           <small>∂ knowledge</small>
         </div>
       </section>
@@ -72,15 +86,21 @@ export default function Home() {
               {value.padStart(2, '0')}
               <span>{label === 'SOURCE-BACKED PROBLEMS' ? '↗' : ''}</span>
             </strong>
-            <small><T en={label} /></small>
+            <small>
+              <T en={label} />
+            </small>
           </div>
         ))}
       </section>
       <section className="landscape-section">
         <div className="section-heading">
           <div>
-            <div className="eyebrow"><T en="01 / THE LANDSCAPE" /></div>
-            <h2><T en="Ideas don’t live in isolation." /></h2>
+            <div className="eyebrow">
+              <T en="01 / THE LANDSCAPE" />
+            </div>
+            <h2>
+              <T en="Ideas don’t live in isolation." />
+            </h2>
           </div>
           <Link href="/atlas" className="text-link">
             Explore all connections <ArrowUpRight size={16} />
@@ -92,10 +112,16 @@ export default function Home() {
       <section className="fields-section">
         <div className="section-heading">
           <div>
-            <div className="eyebrow"><T en="02 / FIND YOUR FIELD" /></div>
-            <h2><T en="Many disciplines. One frontier." /></h2>
+            <div className="eyebrow">
+              <T en="02 / FIND YOUR FIELD" />
+            </div>
+            <h2>
+              <T en="Many disciplines. One frontier." />
+            </h2>
           </div>
-          <span className="muted"><T en="Choose a direction to explore." /></span>
+          <span className="muted">
+            <T en="Choose a direction to explore." />
+          </span>
         </div>
         <div className="field-grid">
           {fields.map((f, i) => (
@@ -104,7 +130,9 @@ export default function Home() {
               <div className="field-glyph" style={{ color: fieldColors[f] }}>
                 {['⊗', '∫', 'Σ', '△', '∀', 'ℙ'][i]}
               </div>
-              <h3><T en={f} /></h3>
+              <h3>
+                <T en={f} />
+              </h3>
               <p>
                 {problems.filter((p) => p.field === f).length} <T en="problems" zh="个问题" />{' '}
                 <span>
@@ -122,8 +150,12 @@ export default function Home() {
       <section>
         <div className="section-heading">
           <div>
-            <div className="eyebrow"><T en="03 / A PLACE TO START" /></div>
-            <h2><T en="Questions with a long horizon." /></h2>
+            <div className="eyebrow">
+              <T en="03 / A PLACE TO START" />
+            </div>
+            <h2>
+              <T en="Questions with a long horizon." />
+            </h2>
           </div>
           <Link href="/problems" className="text-link">
             View the problem index <ArrowUpRight size={16} />
@@ -135,10 +167,14 @@ export default function Home() {
               <div className="eyebrow" style={{ color: fieldColors[p.field] }}>
                 <T en={p.field} />
               </div>
-              <h3><ProblemName title={p.title} /></h3>
+              <h3>
+                <ProblemName title={p.title} />
+              </h3>
               <p>{p.statement.replace(/[$*`]/g, '').slice(0, 165)}…</p>
               <div>
-                <Badge><T en="status unknown" /></Badge>
+                <Badge>
+                  <T en="status unknown" />
+                </Badge>
                 <ArrowUpRight size={18} />
               </div>
             </Link>
@@ -148,23 +184,32 @@ export default function Home() {
       <section className="principles">
         <div>
           <ShieldCheck size={22} />
-          <h3><T en="Evidence is part of the map." /></h3>
+          <h3>
+            <T en="Evidence is part of the map." />
+          </h3>
           <p>
             <T en="Every statement links to a pinned source. Retrieval, review, and mathematical verification remain distinct." />
           </p>
         </div>
         <div>
           <Network size={22} />
-          <h3><T en="A map built in the open." /></h3>
+          <h3>
+            <T en="A map built in the open." />
+          </h3>
           <p>
             <T en="Source code, data contracts, and import provenance are inspectable. Better references and corrections are welcome." />
           </p>
         </div>
         <div>
           <BookOpen size={22} />
-          <h3><T en="Connected to what comes next." /></h3>
+          <h3>
+            <T en="Connected to what comes next." />
+          </h3>
           <p>
-            <T en="Separate mock and authenticated real adapters preserve research provenance. The real MathForge connection remains blocked pending a compatible engine API." />
+            <T
+              en="One source-bound MathForge calibration is archived with actual logs. Unconfigured local requests remain blocked; mathematical claims remain unverified."
+              zh="已归档一次绑定来源的 MathForge 真实校准及日志。本地未配置的请求仍受阻，数学结论仍未核验。"
+            />
           </p>
         </div>
       </section>

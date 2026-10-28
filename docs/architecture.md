@@ -1,4 +1,29 @@
-# ConjMap V0.2 architecture
+# ConjMap V0.4 architecture
+
+## V0.4: actual scoped execution and appended review history
+
+One engine-owned source-bound Fin2 calibration completed through the real V2 path,
+with authenticated engine identity, signed result/attempts/index, actual resource
+accounting and six byte-preserved artifacts. Its immutable snapshot is public/read-only;
+the live authenticated journal and secrets remain owner-local. Default no-key browsing
+does not connect to an engine. See `mathforge-real-integration-v0.4.md`.
+
+V2 now supports engine admission IDs, source binding, rejected/interrupted/cancelled
+states, lookup-only uncertain submission recovery, signed narrative verification and
+allowlisted named artifact fetches with byte hashes. No result writes catalog status.
+MathForge owns scientific admission, the root-wide one-task reservation and fixed
+offline computation. ConjMap owns context transport, identity checks, presentation
+and persistent evidence. The original Phase0 proof/novelty workflow is unchanged.
+
+Three appended dossier reviews close scoped source/statement obligations while keeping
+literature/formal correspondence PARTIAL and kernel/human/mathematical verification
+NOT_RUN. All12 original relations remain archived;9 candidates are active and3 challenged
+relations are withheld through a reviewed overlay. Original120 statements,82 navigation
+edges and589 metadata records remain unchanged. Public static export can show archived
+evidence and reviews but excludes live API routes.
+
+The following V0.2 ADRs are retained as a historical baseline; V0.4 supersedes their
+real-integration blocker and adds `mathematical-review-v0.4.md`/`relation-verification-v0.4.md`.
 
 ConjMap catalogs problems and their evidence. It does not reproduce MathForge's research execution logic. Catalog browsing, mock tasks and blocked real-request journaling run locally without keys. Real research requires an engine-owned compatible API, which the inspected controller does not expose.
 

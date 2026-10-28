@@ -79,3 +79,9 @@ Only a few primary pages were retrieved. Full HTML was accessed for the two iden
 5. For further formal work, use a separately admitted, version-pinned task and preserve compiler, axioms, logs and resource receipts. That work is **NOT_RUN by this dossier review**.
 
 No new problem, solved status, verified relationship, proof-kernel receipt, human signature or scientific execution is created by these review files. The acceptance result is three deeper scoped reviews with concrete closed obligations, three remaining PARTIAL dossiers, and zero fully cleared dossiers.
+
+## Freshness addendum — 2026-10-28
+
+Four bounded primary landing-page checks succeeded with HTTP 200. The current submission histories still show [Büchi v3](https://arxiv.org/abs/2412.16740), revised 2025-06-07; [Zhou's Beal-related paper v1](https://arxiv.org/abs/2510.05448), submitted 2025-10-06; and [Costa–Sadhu v1](https://arxiv.org/abs/2610.02295), submitted 2026-10-01. No newer version was listed for these three IDs. [Mauldin's institutional statement](https://sites.math.unt.edu/~mauldin/beal.html) remained accessible with the same response hash as the earlier acquisition.
+
+The [dated metadata receipt](../data/v04/freshness-2026-10-28.json) records exact histories, access scope and actual response hashes. The October 24 review JSON is unchanged. This refresh read metadata and abstracts, with no new full-paper audit, experiment or kernel run. All three dossiers remain PARTIAL; the mathematical, human-review and indexing obligations above remain open. The separate real integration run supplies operational evidence within its finite domain and does not clear these conjecture-level obligations.

@@ -42,7 +42,7 @@ export function V04ReviewPanel({ dossier, scopedProblems, relations, totals }: R
         </ul>
       </details>
       {dossier ? (
-        <article data-testid="v04-dossier-review" className="task-record">
+        <article data-testid="v04-dossier-review" className="review-record">
           <p className="muted small">
             {dossier.id} · v{dossier.version} · PARTIAL
           </p>
@@ -98,7 +98,7 @@ export function V04ReviewPanel({ dossier, scopedProblems, relations, totals }: R
               : 'Related relationship review history (English records)'}
           </summary>
           {relations.map((row) => (
-            <article className="task-record" key={row.id} data-relation-review={row.relation_id}>
+            <article className="review-record" key={row.id} data-relation-review={row.relation_id}>
               <strong>
                 {row.relation_id} ·{' '}
                 {row.disposition === 'CORRECTION_REQUIRED'
