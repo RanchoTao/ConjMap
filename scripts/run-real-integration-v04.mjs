@@ -1,11 +1,14 @@
 // Opt-in owner-authorized single REAL_RUN driver. Never used by tests or CI.
 import { spawn, execFileSync } from 'node:child_process';
+import { Buffer } from 'node:buffer';
+import { setTimeout } from 'node:timers';
 import { createHash, createHmac, randomBytes, randomUUID } from 'node:crypto';
 import { createWriteStream } from 'node:fs';
 import { access, mkdir, readFile, writeFile } from 'node:fs/promises';
 import net from 'node:net';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
+const { fetch, AbortSignal } = globalThis;
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const sha = (raw) => createHash('sha256').update(raw).digest('hex');
