@@ -41,7 +41,7 @@ and no production deployment is performed.
 | Catalog preservation and bilingual/legacy UI | DONE | Original 120 statements, 82 navigation edges, 589 source-index records and old aliases preserved; browser tests cover EN/ZH reload and mobile overflow. |
 | Renderer performance | PARTIAL | All 18 measurements passed; reduced-detail 5,000-node pan p50/p95 24.6/142.8ms. Tail latency remains high; no general smoothness clearance. |
 | Local engineering regression | DONE | 90 unit, 10 Python, 14 Chromium tests; validators, lint, types, audit and production build pass. |
-| Remote CI and PR delivery | NOT_RUN (ConjMap pending push) | MathForge exact-head CI passed; ConjMap branch/PR status will be recorded after push. |
+| Remote CI and PR delivery | DONE | Both feature branches pushed and PRs open; ConjMap implementation and MathForge engine CI passed. Pinned receipts below; no merge/deployment. |
 | General research admissions | BLOCKED by design | This one-time admission does not authorize other scientific tasks, network access or replay. A new reviewed engine admission is required. |
 | Lean proof execution / human expert review | NOT_RUN | No Lean kernel proof or human approval receipt is claimed. |
 
@@ -76,7 +76,7 @@ inspection do not issue another research submission.
 | `npm audit --audit-level=high` | PASS: 0 vulnerabilities after Vitest 4.1.12 patch update |
 | MathForge Core suite | PASS: 44 tests, 43 passed / 1 optional real-Lean test skipped; contract workers are CONTRACT_TEST, not additional real research |
 | MathForge exact-head remote CI | PASS: [run 40675099710](https://github.com/RanchoTao/MathForge/actions/runs/40675099710), commit `c43ee228c6b7a9e913537b3b19800a7d722c4c03` |
-| ConjMap exact-head remote CI | PENDING final branch push and PR |
+| ConjMap implementation remote CI | PASS: [run 40678396021](https://github.com/RanchoTao/ConjMap/actions/runs/40678396021), commit `157c883b9b64ed15594ff8f44fd0530ecb3f1676`, all configured checks including Chromium |
 | Lean/Coq proof kernel | NOT_RUN; the existing optional Core Lean test was skipped |
 
 The unchanged `validate:v02` prints its historical baseline of zero real runs and
@@ -93,9 +93,12 @@ and [40677931140](https://github.com/RanchoTao/ConjMap/actions/runs/40677931140)
 at `npm ci`, before application tests. The Windows dependency update omitted three
 cross-platform optional `@emnapi` entries. Their exact registry-resolved versions,
 dependency metadata and integrity digests were added without changing other locked
-versions; `npm ci --dry-run --ignore-scripts` and the zero-vulnerability audit pass.
+versions; `npm ci --dry-run --ignore-scripts`, a real clean `npm ci`, the full local
+`npm run check` and the zero-vulnerability audit pass.
 Full regenerated-lock exploration was isolated and discarded; no installation or
-test gate was skipped in CI. The final remote result is recorded separately below.
+test gate was skipped in CI. The repaired implementation passed the pinned remote
+run above. This final report is a documentation-only follow-up; the PR checks bind
+subsequent report commits to their own exact-head results.
 
 Delivery: [ConjMap PR6](https://github.com/RanchoTao/ConjMap/pull/6) and
 [MathForge PR10](https://github.com/RanchoTao/MathForge/pull/10), both open for review.
