@@ -26,6 +26,15 @@ export function assertPublicEvidence(raw) {
       'Potential private path/credential in evidence; retain locally, do not publish',
     );
 }
+export function assertPreSubmissionRecovery(failure, requestFileExists) {
+  if (
+    requestFileExists ||
+    failure.task_id !== null ||
+    !Array.isArray(failure.transcript) ||
+    failure.transcript.length
+  )
+    throw new Error('Submission may have started; lookup-only reconciliation is required');
+}
 async function port() {
   const socket = net.createServer();
   await new Promise((resolve, reject) => {
@@ -104,15 +113,32 @@ export async function main(args = process.argv.slice(2)) {
   }
   const local = path.join(root, '.local/v04');
   await mkdir(local, { recursive: true });
-  const uid = randomUUID(),
-    key = `conjmap-v04-${uid}`;
-  const folder = path.join(local, uid);
-  // Exclusive owner slot. Even an uncertain/failed attempt may not silently get another key.
-  await writeFile(
-    path.join(local, 'OWNER_REAL_TASK.json'),
-    JSON.stringify({ ...plan, uid, key, created_at: new Date().toISOString() }, null, 2),
-    { flag: 'wx' },
-  );
+  let uid = randomUUID(),
+    key = `conjmap-v04-${uid}`,
+    priorFailure = null;
+  let folder = path.join(local, uid);
+  if (args.includes('--resume-pre-submission')) {
+    const owner = json(await readFile(path.join(local, 'OWNER_REAL_TASK.json')));
+    uid = owner.uid;
+    key = owner.key;
+    const original = path.join(local, uid);
+    priorFailure = json(await readFile(path.join(original, 'FAILURE.json')));
+    const requestExists = await access(path.join(original, 'REQUEST.json')).then(
+      () => true,
+      () => false,
+    );
+    assertPreSubmissionRecovery(priorFailure, requestExists);
+    if (owner.engine_commit !== plan.engine_commit || owner.admission_id !== plan.admission_id)
+      throw new Error('Original admission/code changed; explicit recovery audit required');
+    folder = path.join(original, 'pre-submission-' + randomUUID());
+  } else {
+    // Exclusive owner slot. Never change the key after an uncertain research submission.
+    await writeFile(
+      path.join(local, 'OWNER_REAL_TASK.json'),
+      JSON.stringify({ ...plan, uid, key, created_at: new Date().toISOString() }, null, 2),
+      { flag: 'wx' },
+    );
+  }
   await mkdir(folder, { recursive: false });
   const enginePort = await port(),
     appPort = await port();
@@ -221,14 +247,21 @@ export async function main(args = process.argv.slice(2)) {
       if (i === 99) throw new Error('ConjMap startup timeout; no research resubmission');
     }
     // Check the actual authenticated gateway is ready before the one allowed submission.
-    const readiness = await fetch(
-      `http://127.0.0.1:${enginePort}/v2/research-tasks/by-key/${key}`,
-      {
-        headers: { Authorization: `Bearer ${secrets.gateway}` },
-        signal: AbortSignal.timeout(5000),
-      },
-    );
-    if (readiness.status !== 404)
+    let readiness;
+    for (let i = 0; i < 100; i++) {
+      if (gateway.exitCode !== null)
+        throw new Error('Gateway exited before submission; inspect preserved logs');
+      try {
+        readiness = await fetch(`http://127.0.0.1:${enginePort}/v2/research-tasks/by-key/${key}`, {
+          headers: { Authorization: `Bearer ${secrets.gateway}` },
+          signal: AbortSignal.timeout(1000),
+        });
+        break;
+      } catch {
+        await delay(100);
+      }
+    }
+    if (readiness?.status !== 404)
       throw new Error('Unexpected engine/key state; manual reconciliation required');
     const input = {
       problem_id: plan.problem_id,
@@ -313,6 +346,12 @@ export async function main(args = process.argv.slice(2)) {
       JSON.stringify(transcript, null, 2),
       { flag: 'wx' },
     );
+    if (priorFailure)
+      await writeFile(
+        path.join(publicFolder, 'PRE_SUBMISSION_FAILURE.json'),
+        JSON.stringify(priorFailure, null, 2),
+        { flag: 'wx' },
+      );
     await writeFile(path.join(publicFolder, 'SUMMARY.json'), JSON.stringify(summary, null, 2), {
       flag: 'wx',
     });
