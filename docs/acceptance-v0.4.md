@@ -88,6 +88,18 @@ The Core suite uses its source package (`PYTHONPATH=src`), as required by its bu
 layout. A bare global-Python discovery attempt initially failed imports before any
 test executed; the correctly configured full suite then passed43 and skipped1.
 
+Initial ConjMap remote runs [40677857831](https://github.com/RanchoTao/ConjMap/actions/runs/40677857831)
+and [40677931140](https://github.com/RanchoTao/ConjMap/actions/runs/40677931140) failed
+at `npm ci`, before application tests. The Windows dependency update omitted three
+cross-platform optional `@emnapi` entries. Their exact registry-resolved versions,
+dependency metadata and integrity digests were added without changing other locked
+versions; `npm ci --dry-run --ignore-scripts` and the zero-vulnerability audit pass.
+Full regenerated-lock exploration was isolated and discarded; no installation or
+test gate was skipped in CI. The final remote result is recorded separately below.
+
+Delivery: [ConjMap PR6](https://github.com/RanchoTao/ConjMap/pull/6) and
+[MathForge PR10](https://github.com/RanchoTao/MathForge/pull/10), both open for review.
+
 Failures were retained and fixed rather than removed from the record: pre-submission
 gateway startup race (no research POST), post-run locale-specific inspector timeout,
 Windows pinned-source line endings, a mock/review CSS-selector collision and benchmark
