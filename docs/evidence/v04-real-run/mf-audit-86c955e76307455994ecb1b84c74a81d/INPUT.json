@@ -1,0 +1,14 @@
+{
+  "source_sha256": "2eed6f767e60e2103c3edb55d74416ab58961129cf89edcb0f9861b47698a265",
+  "statement_sha256": "3c513ed8135e191b1ad4239f218368be09df8899b05596c7322be05ce7ccb47c",
+  "formal_statement": "union_closed\n    [Nonempty n]\n    (h_ne_singleton_empty : A ≠ {∅})\n    (h_union_closed : IsUnionClosed A) :\n    ∃ i : n, (1 / 2 : ℚ) * #A ≤ #{x ∈ A | i ∈ x}",
+  "variant_signature": "theorem union_closed.variants.univ_card_two (A : Finset (Finset (Fin 2)))\n    (h_ne_singleton_empty : A ≠ {∅})\n    (h_union_closed : IsUnionClosed A) :\n    ∃ i, (1 / 2 : ℚ) * #A ≤ #{x ∈ A | i ∈ x}",
+  "required_source_fragments": [
+    "abbrev IsUnionClosed (A : Finset (Finset n)) : Prop :=",
+    "∀ᵉ (X ∈ A) (Y ∈ A), X ∪ Y ∈ A",
+    "(h_ne_singleton_empty : A ≠ {∅})",
+    "(A : Finset (Finset (Fin 2)))",
+    "∃ i, (1 / 2 : ℚ) * #A ≤ #{x ∈ A | i ∈ x}"
+  ],
+  "execution_mode": "REAL_RUN"
+}

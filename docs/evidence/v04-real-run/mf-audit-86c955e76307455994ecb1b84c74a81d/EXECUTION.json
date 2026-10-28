@@ -1,0 +1,23 @@
+{
+  "engine_commit": "c43ee228c6b7a9e913537b3b19800a7d722c4c03",
+  "code_sha256": {
+    "source_audit.py": "e84a7df3b78235dfbf3ba88460c2225dd6ab7c2e32b08ea4553ed3f6e39571ab",
+    "source_audit_worker.py": "8b54c710e492a0965944bd81fbd152483a37cd782b26b8dbf854f31014b771c4",
+    "windows_budget.py": "968bb15ebee9a2e2b097878cc6d5695356cc0572eec17cad7f512d99fb81d4eb",
+    "gateway.py": "50590aa1b4d105133bb43936de999ccc2b14a93dc3094f6bc9dbf1dbfd8407f5"
+  },
+  "python": "3.13.9",
+  "pid": 57772,
+  "exit_code": 0,
+  "resources": {
+    "wall_seconds": 0.16381720002391376,
+    "cpu_seconds": 0.109375,
+    "peak_job_bytes": 9572352,
+    "controller_elapsed_seconds": 0.17957110001589172
+  },
+  "memory_cap_bytes": 268435456,
+  "network": "trusted-worker audit hook denies socket and child execution",
+  "mode": "REAL_RUN",
+  "proof_acceptance_enabled": false,
+  "novelty": "KNOWN_CALIBRATION_NOT_A_DISCOVERY"
+}

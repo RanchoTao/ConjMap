@@ -51,7 +51,7 @@ export function Header() {
         <Link className="brand" href="/" aria-label="ConjMap home">
           <Mark />
           <span>
-            ConjMap<span className="version">V0.2</span>
+            ConjMap<span className="version">V0.4</span>
           </span>
         </Link>
         <nav aria-label="Main navigation">

@@ -1,6 +1,44 @@
 # Research Task API · v1 mock and v2 real transport
 
-## V2 real-adapter contract and actual availability
+## V0.4 additive execution protocol
+
+The historical V0.2 availability notes below are preserved; one real calibration has
+now completed. The normal unconfigured runtime still returns BLOCKED. A compatible
+engine is not a generic authorization: MathForge owns a reviewed admission allowlist.
+`admission_id` is optional in the local request schema and mandatory for the admitted
+gateway task. Outbound context adds original source ID/revision/path/SHA and UTF8
+statement SHA. Engine admissions reject any source, variant, budget or history drift.
+
+V2 operational result states additionally include `rejected`, `interrupted`, `cancelled`.
+`execution_mode` distinguishes REAL_RUN from CONTRACT_TEST; legacy unsigned fixtures
+cannot become real evidence. Every claimed REAL_RUN response requires an HMAC envelope
+whose raw canonical payload binds protocol, both task identities, problem/admission,
+source/statement/admission/worker hashes, engine commit, status, exact attempt narrative,
+artifact names/sizes/hashes and measured resources. Shared owner-local HMAC trust is not
+public-key or mathematical verification. Persisted receipts are rechecked when loaded.
+
+Authenticated local operations:
+
+- `POST /<uuid>/reconcile`: lookup `<engine-base>/research-tasks/by-key/<original-key>`;
+  never POSTs another research submission or changes its original context.
+- `POST /<uuid>/cancel`: persists intent, forwards cancellation and waits for authenticated
+  state; timeout stays uncertain and a concurrent terminal result cannot be overwritten.
+- `GET /<uuid>/artifacts/<name>`: only names in the signed index; bounds1MiB, refuses
+  redirect/arbitrary URLs, checks SHA/size, writes immutable local evidence and serves
+  escaped browser text. Existing cached evidence can be inspected without a live engine.
+
+An authentic failed/interrupted receipt may record up to5s termination/accounting
+overhead beyond its requested worker budget (receipt absolute cap65s). The exact value
+and warning are preserved; this does not extend worker execution or claim an in-budget
+success. Completed receipts must stay within the requested budget. The engine's actual
+watchdog is independent of journal contention. The captured real run took0.164s against
+30s and remains unverified mathematically.
+
+See `mathforge-real-integration-v0.4.md` for the real engine ID, actual artifact index,
+startup/UI failure preservation and explicit no-replay recovery rules. No production
+service or credentials are provisioned by normal `npm run dev`.
+
+## V0.2 historical availability and inherited V2 contract
 
 Base `/api/v2/research-tasks`. The default runtime is **BLOCKED**, engine task ID null, actual runs 0. A compatible MathForge HTTP API was not found; source-bound controller admission cannot be bypassed. Contract-fixture tests are not real MathForge execution. See `mathforge-discovery-v0.2.md`.
 

@@ -1,0 +1,1494 @@
+{
+  "schema_version": "conjmap-relation-reviews/0.4",
+  "review_date": "2026-10-24",
+  "scope": "All 12 immutable V0.2 candidate edges; append-only desk review, no Lean/solver execution and no graph status mutation.",
+  "summary": {
+    "reviewed": 12,
+    "keep_candidate": 9,
+    "correction_required": 3,
+    "verified": 0,
+    "proof_kernel_runs": 0,
+    "human_reviewed": 0
+  },
+  "boundary": "An ANALYZED_NOT_CERTIFIED obligation is a named automated desk claim, not a discharged proof obligation. NOT_APPLICABLE explains an unused analytic category. No proof or human approval is asserted.",
+  "source_set": {
+    "revision": "2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6",
+    "license": "Apache-2.0",
+    "original_data_unchanged": true
+  },
+  "external_access": [
+    {
+      "url": "https://www.mdpi.com/1099-4300/25/5/767",
+      "accessed_at": "2026-10-24",
+      "access": "publisher HTML search excerpt",
+      "use": "Bibliographic confirmation of upstream Yu2023 citation only; the conditional weakening does not depend on the article proof.",
+      "independent_proof_review": false
+    },
+    {
+      "url": "https://arxiv.org/abs/1412.0868",
+      "accessed_at": "2026-10-24",
+      "access": "abstract/search metadata",
+      "use": "Bibliographic lead for Cossart-Piltant; not full paper verification or proof of regular-to-smooth bridge.",
+      "independent_proof_review": false
+    },
+    {
+      "url": "https://doi.org/10.1016/j.jalgebra.2019.02.017",
+      "accessed_at": "2026-10-24",
+      "access": "FAILED via web open",
+      "use": "Failed acquisition retained as infrastructure evidence; no mathematical inference.",
+      "independent_proof_review": false
+    },
+    {
+      "url": "https://arxiv.org/abs/2212.00627",
+      "accessed_at": "2026-10-24",
+      "access": "metadata title inspected",
+      "use": "Rejected incorrect recalled identifier: fluid-dynamics paper, not Yu. Not used as relation evidence.",
+      "independent_proof_review": false
+    }
+  ],
+  "reviews": [
+    {
+      "id": "relation-review-v04-01",
+      "relation_id": "relation-v02-01",
+      "version": 1,
+      "supersedes": null,
+      "review_date": "2026-10-24",
+      "reviewer": "Codex / relation_review automated desk reviewer",
+      "reviewer_kind": "automated_source_and_logic_review",
+      "human_approval": "pending",
+      "status": "PARTIAL",
+      "verified": false,
+      "disposition": "CORRECTION_REQUIRED",
+      "candidate_layer": true,
+      "summary": "Target endpoint is the conditional theorem Beal -> FLT, not the bare FLT proposition.",
+      "original_relation": {
+        "source_id": "cm-000008",
+        "target_id": "claim-v02-01",
+        "type": "implies",
+        "layer": "logic"
+      },
+      "endpoint_variants": {
+        "problem_id": "cm-000008",
+        "problem_statement": "The **Beal Conjecture**: if we are given positive integers $A, B, C, x, y, z$ such that\n$x, y, z > 2$ and $A^x + B^y = C^z$ then $A, B, C$ have a common divisor.",
+        "problem_formal_statement": "beal_conjecture : bealConjecture",
+        "claim_id": "claim-v02-01",
+        "claim_formal_statement": "theorem flt_of_beal_conjecture (H : bealConjecture) :\n    FermatLastTheorem"
+      },
+      "direction": "Intended: Beal conjecture implies FermatLastTheorem. Current claim-v02-01 denotes that conditional implication itself.",
+      "hypotheses": [
+        "A,B,C and x,y,z are natural numbers; bases nonzero and exponents >2.",
+        "Normalize a hypothetical FLT counterexample by the common gcd before applying Beal."
+      ],
+      "evidence": [
+        {
+          "id": "ev-v04-r01",
+          "source_path": "FormalConjectures/Wikipedia/BealConjecture.lean",
+          "source_sha256": "eb7bd938b23049783832bc95c239115960d05e4a5d3f0e4c3d13547af9b6b614",
+          "source_revision": "2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6",
+          "start_line": 46,
+          "end_line": 69,
+          "url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/BealConjecture.lean#L46-L69",
+          "quote": "theorem flt_of_beal_conjecture (H : bealConjecture) :\n    FermatLastTheorem := by\n  intro n hn x y z hx hy hz\n  by_contra h\n  apply mul_ne_zero (mul_ne_zero hx hy) hz\n  by_contra H''\n  obtain ⟨hx, hy, hz⟩ : x ≠ 0 ∧ y ≠ 0 ∧ z ≠ 0 := by aesop\n  set G := Finset.gcd {x, y, z} id\n  set x' := (x / G : ℕ)\n  set y' := (y / G : ℕ)\n  set z' := (z / G : ℕ)\n  obtain ⟨hGx, hGy, hGz⟩ : G ∣ x ∧ G ∣ y ∧ G ∣ z := by\n    refine ⟨?_, ?_, ?_⟩ <;> apply Finset.gcd_dvd (by aesop)\n  obtain ⟨hx', hy', hz'⟩ : x' ≠ 0 ∧ y' ≠ 0 ∧ z' ≠ 0 := by\n    refine ⟨?_, ?_, ?_⟩ <;>\n      apply Nat.div_ne_zero_iff_of_dvd (by assumption) |>.mpr ⟨(by assumption), _⟩ <;> aesop\n  have Hxyz' : x'^n + y'^n = z'^n := by\n    rwa [Nat.div_pow hGx, Nat.div_pow hGy, Nat.div_pow hGz,\n      ←Nat.add_div_of_dvd_right, Nat.div_left_inj (dvd_add _ _)]\n    all_goals apply pow_dvd_pow_of_dvd ; assumption\n  apply ne_of_lt <| H hx' hy' hz' hn hn hn Hxyz'\n  rw [←Finset.gcd_div_id_eq_one (Finset.mem_insert_self x {y, z}) (by trivial),\n    Finset.gcd_eq_gcd_image, Finset.image_insert, Finset.image_insert,\n    Finset.image_singleton]"
+        }
+      ],
+      "obligations": {
+        "model": {
+          "status": "ANALYZED_NOT_CERTIFIED",
+          "explanation": "Natural-number power equation and FermatLastTheorem; endpoint granularity needs correction.",
+          "evidence_ids": [
+            "ev-v04-r01"
+          ]
+        },
+        "parameters": {
+          "status": "ANALYZED_NOT_CERTIFIED",
+          "explanation": "The same exponent n>2 is substituted for x,y,z.",
+          "evidence_ids": [
+            "ev-v04-r01"
+          ]
+        },
+        "assumptions": {
+          "status": "ANALYZED_NOT_CERTIFIED",
+          "explanation": "Base nonzero and gcd-normalization obligations are explicit in the source proof.",
+          "evidence_ids": [
+            "ev-v04-r01"
+          ]
+        },
+        "quantifiers": {
+          "status": "ANALYZED_NOT_CERTIFIED",
+          "explanation": "The universal Beal statement is specialized to a normalized hypothetical FLT counterexample.",
+          "evidence_ids": [
+            "ev-v04-r01"
+          ]
+        },
+        "topology": {
+          "status": "NOT_APPLICABLE",
+          "explanation": "No topological convergence is used by this relation; domain topology, when mathematical schemes/complex numbers are involved, remains part of the explicit model.",
+          "evidence_ids": [
+            "ev-v04-r01"
+          ]
+        },
+        "rate": {
+          "status": "NOT_APPLICABLE",
+          "explanation": "No convergence or asymptotic rate is asserted by this relation.",
+          "evidence_ids": [
+            "ev-v04-r01"
+          ]
+        },
+        "constants": {
+          "status": "ANALYZED_NOT_CERTIFIED",
+          "explanation": "No analytic constants. The gcd must equal 1 after normalization.",
+          "evidence_ids": [
+            "ev-v04-r01"
+          ]
+        },
+        "limit_exchange": {
+          "status": "NOT_APPLICABLE",
+          "explanation": "No exchange of limits, integration or infinite sums is invoked by this relation.",
+          "evidence_ids": [
+            "ev-v04-r01"
+          ]
+        }
+      },
+      "desk_derivation": [
+        "Given a nonzero equal-exponent FLT counterexample, divide all three bases by their common gcd.",
+        "The divided bases are positive, still satisfy the equal-exponent equation, and have joint gcd 1.",
+        "Beal yields joint gcd >1, contradicting normalization."
+      ],
+      "proof_basis": "source proof body present; local kernel execution NOT_RUN",
+      "proof_kernel_status": "NOT_RUN",
+      "proof_receipt": null,
+      "mathematically_verified": false,
+      "counterexample_or_variant_risk": "The claim node must separate theorem statement (Beal -> FLT) from conclusion (FLT). Source location L46-L47 alone hides the proof L48 onward.",
+      "proposed_correction": {
+        "source_id": "cm-000008",
+        "target_id": "NEW conclusion-only FermatLastTheorem claim; do not reuse conditional claim-v02-01",
+        "type": "implies",
+        "restriction": null
+      },
+      "remaining_obligations": [
+        "Independent qualified human review of the exact relation and all domain/quantifier bridges.",
+        "A trusted checker receipt or accepted scoped proof artifact; source proof text alone is not execution evidence.",
+        "No automatic promotion of source theorem tags, desk derivations, or this review to a solved/verified status."
+      ]
+    },
+    {
+      "id": "relation-review-v04-02",
+      "relation_id": "relation-v02-02",
+      "version": 1,
+      "supersedes": null,
+      "review_date": "2026-10-24",
+      "reviewer": "Codex / relation_review automated desk reviewer",
+      "reviewer_kind": "automated_source_and_logic_review",
+      "human_approval": "pending",
+      "status": "PARTIAL",
+      "verified": false,
+      "disposition": "KEEP_CANDIDATE",
+      "candidate_layer": true,
+      "summary": "Equivalence is between the full epsilon schemes, not a pointwise equivalence at one fixed epsilon.",
+      "original_relation": {
+        "source_id": "cm-000001",
+        "target_id": "claim-v02-02",
+        "type": "equivalent",
+        "layer": "logic"
+      },
+      "endpoint_variants": {
+        "problem_id": "cm-000001",
+        "problem_statement": "For every positive real number ε, there exists a constant `K_ε` such that for all triples (a, b, c) of coprime positive integers, with a + b = c we have `c < K_ε rad(abc)^(1+ε)`.",
+        "problem_formal_statement": "abc.variants.lt_constant_mul (ε : ℝ) (hε : 0 < ε) : ∃ K,\n    ∀ (a b c : ℕ), 0 < a → 0 < b → 0 < c → ({a, b, c} : Set ℕ).Pairwise Nat.Coprime → a + b = c →\n    c < K * (radical <| a * b * c : ℝ)^(1 + ε)",
+        "claim_id": "claim-v02-02",
+        "claim_formal_statement": "theorem abc (ε : ℝ) (hε : 0 < ε) :\n    {(a, b, c) : ℕ × ℕ × ℕ | 0 < a ∧ 0 < b ∧ 0 < c ∧ ({a, b, c} : Set ℕ).Pairwise Nat.Coprime ∧\n    a + b = c ∧ (radical <| a * b * c : ℝ)^(1 + ε) < c}.Finite"
+      },
+      "direction": "Constant-bound abc for every epsilon>0 iff finitely many strict exceptions for every epsilon>0.",
+      "hypotheses": [
+        "Positive pairwise-coprime natural triple a+b=c; r=rad(abc)>=2.",
+        "epsilon is universally quantified; K_epsilon may depend on epsilon and not on the triple."
+      ],
+      "evidence": [
+        {
+          "id": "ev-v04-r02",
+          "source_path": "FormalConjectures/Wikipedia/ABC.lean",
+          "source_sha256": "e05d9ee80f0e05233958028176323b94341eececc0defd9449b8ddeb11dbca88",
+          "source_revision": "2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6",
+          "start_line": 63,
+          "end_line": 75,
+          "url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/ABC.lean#L63-L75",
+          "quote": "theorem abc (ε : ℝ) (hε : 0 < ε) :\n    {(a, b, c) : ℕ × ℕ × ℕ | 0 < a ∧ 0 < b ∧ 0 < c ∧ ({a, b, c} : Set ℕ).Pairwise Nat.Coprime ∧\n    a + b = c ∧ (radical <| a * b * c : ℝ)^(1 + ε) < c}.Finite := by\n  sorry\n\n/--\nFor every positive real number ε, there exists a constant `K_ε` such that for all triples (a, b, c) of coprime positive integers, with a + b = c we have `c < K_ε rad(abc)^(1+ε)`.\n-/\n@[category research open, AMS 11]\ntheorem abc.variants.lt_constant_mul (ε : ℝ) (hε : 0 < ε) : ∃ K,\n    ∀ (a b c : ℕ), 0 < a → 0 < b → 0 < c → ({a, b, c} : Set ℕ).Pairwise Nat.Coprime → a + b = c →\n    c < K * (radical <| a * b * c : ℝ)^(1 + ε) := by\n  sorry"
+        }
+      ],
+      "obligations": {
+        "model": {
+          "status": "ANALYZED_NOT_CERTIFIED",
+          "explanation": "Exactly the selected constant-bound abc and finite-exception declarations.",
+          "evidence_ids": [
+            "ev-v04-r02"
+          ]
+        },
+        "parameters": {
+          "status": "ANALYZED_NOT_CERTIFIED",
+          "explanation": "epsilon>0, delta=epsilon/2; a,b,c natural, r=rad(abc).",
+          "evidence_ids": [
+            "ev-v04-r02"
+          ]
+        },
+        "assumptions": {
+          "status": "ANALYZED_NOT_CERTIFIED",
+          "explanation": "Positivity, pairwise coprimality and a+b=c are preserved; r>=2 and K_delta>0 require explicit lemmas.",
+          "evidence_ids": [
+            "ev-v04-r02"
+          ]
+        },
+        "quantifiers": {
+          "status": "MISSING",
+          "explanation": "MISSING formal proof of full universal closures; fixed-epsilon equivalence is not established.",
+          "evidence_ids": [
+            "ev-v04-r02"
+          ]
+        },
+        "topology": {
+          "status": "NOT_APPLICABLE",
+          "explanation": "No topological convergence is used by this relation; domain topology, when mathematical schemes/complex numbers are involved, remains part of the explicit model.",
+          "evidence_ids": [
+            "ev-v04-r02"
+          ]
+        },
+        "rate": {
+          "status": "NOT_APPLICABLE",
+          "explanation": "No convergence or asymptotic rate is asserted by this relation.",
+          "evidence_ids": [
+            "ev-v04-r02"
+          ]
+        },
+        "constants": {
+          "status": "ANALYZED_NOT_CERTIFIED",
+          "explanation": "K may depend on epsilon; no uniform K asserted.",
+          "evidence_ids": [
+            "ev-v04-r02"
+          ]
+        },
+        "limit_exchange": {
+          "status": "NOT_APPLICABLE",
+          "explanation": "No exchange of limits, integration or infinite sums is invoked by this relation.",
+          "evidence_ids": [
+            "ev-v04-r02"
+          ]
+        }
+      },
+      "desk_derivation": [
+        "Finite exceptions at epsilon imply a strict constant bound by choosing K larger than 1 and every exceptional ratio c/r^(1+epsilon).",
+        "For the converse at target epsilon, use the constant-bound assertion at delta=epsilon/2.",
+        "An epsilon-exception and the delta-bound give r^(epsilon/2)<K_delta; hence r and then c are bounded, giving finitely many natural triples."
+      ],
+      "proof_basis": "Both declarations end in sorry; only a desk derivation, no accepted proof receipt",
+      "proof_kernel_status": "NOT_RUN",
+      "proof_receipt": null,
+      "mathematically_verified": false,
+      "counterexample_or_variant_risk": "Using only the bound at the SAME fixed epsilon gives no finite-exception proof. Stored theorem parameters must be universally closed, and strict '<' requires the extra margin in K.",
+      "proposed_correction": null,
+      "remaining_obligations": [
+        "Independent qualified human review of the exact relation and all domain/quantifier bridges.",
+        "A trusted checker receipt or accepted scoped proof artifact; source proof text alone is not execution evidence.",
+        "No automatic promotion of source theorem tags, desk derivations, or this review to a solved/verified status."
+      ]
+    },
+    {
+      "id": "relation-review-v04-03",
+      "relation_id": "relation-v02-03",
+      "version": 1,
+      "supersedes": null,
+      "review_date": "2026-10-24",
+      "reviewer": "Codex / relation_review automated desk reviewer",
+      "reviewer_kind": "automated_source_and_logic_review",
+      "human_approval": "pending",
+      "status": "PARTIAL",
+      "verified": false,
+      "disposition": "KEEP_CANDIDATE",
+      "candidate_layer": true,
+      "summary": "Quality finite-exception formulation matches radical finite exceptions after log-domain checks, then needs relation 02 to reach constant-bound abc.",
+      "original_relation": {
+        "source_id": "cm-000001",
+        "target_id": "claim-v02-03",
+        "type": "equivalent",
+        "layer": "logic"
+      },
+      "endpoint_variants": {
+        "problem_id": "cm-000001",
+        "problem_statement": "For every positive real number ε, there exists a constant `K_ε` such that for all triples (a, b, c) of coprime positive integers, with a + b = c we have `c < K_ε rad(abc)^(1+ε)`.",
+        "problem_formal_statement": "abc.variants.lt_constant_mul (ε : ℝ) (hε : 0 < ε) : ∃ K,\n    ∀ (a b c : ℕ), 0 < a → 0 < b → 0 < c → ({a, b, c} : Set ℕ).Pairwise Nat.Coprime → a + b = c →\n    c < K * (radical <| a * b * c : ℝ)^(1 + ε)",
+        "claim_id": "claim-v02-03",
+        "claim_formal_statement": "theorem abc.variants.quality (ε : ℝ) (hε : 0 < ε) :\n    {(a, b, c) : ℕ × ℕ × ℕ | 0 < a ∧ 0 < b ∧ 0 < c ∧ ({a, b, c} : Set ℕ).Pairwise Nat.Coprime ∧\n    a + b = c ∧ quality a b c > (1 + ε)}.Finite"
+      },
+      "direction": "Full epsilon constant-bound abc iff full epsilon finite quality exceptions; not an unproved identification by file co-location.",
+      "hypotheses": [
+        "Same positive coprime triples a+b=c.",
+        "rad(abc)>=2, so log(rad(abc))>0; c>=2.",
+        "quality is log(c)/log(rad(abc)), epsilon>0."
+      ],
+      "evidence": [
+        {
+          "id": "ev-v04-r03",
+          "source_path": "FormalConjectures/Wikipedia/ABC.lean",
+          "source_sha256": "e05d9ee80f0e05233958028176323b94341eececc0defd9449b8ddeb11dbca88",
+          "source_revision": "2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6",
+          "start_line": 81,
+          "end_line": 84,
+          "url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/ABC.lean#L81-L84",
+          "quote": "theorem abc.variants.quality (ε : ℝ) (hε : 0 < ε) :\n    {(a, b, c) : ℕ × ℕ × ℕ | 0 < a ∧ 0 < b ∧ 0 < c ∧ ({a, b, c} : Set ℕ).Pairwise Nat.Coprime ∧\n    a + b = c ∧ quality a b c > (1 + ε)}.Finite := by\n  sorry"
+        }
+      ],
+      "obligations": {
+        "model": {
+          "status": "ANALYZED_NOT_CERTIFIED",
+          "explanation": "Natural abc triples mapped to real logarithms.",
+          "evidence_ids": [
+            "ev-v04-r03"
+          ]
+        },
+        "parameters": {
+          "status": "ANALYZED_NOT_CERTIFIED",
+          "explanation": "Same epsilon>0; r=rad(abc) and c>=2.",
+          "evidence_ids": [
+            "ev-v04-r03"
+          ]
+        },
+        "assumptions": {
+          "status": "ANALYZED_NOT_CERTIFIED",
+          "explanation": "Need proofs r>=2, log r>0 and real-power/log identities.",
+          "evidence_ids": [
+            "ev-v04-r03"
+          ]
+        },
+        "quantifiers": {
+          "status": "ANALYZED_NOT_CERTIFIED",
+          "explanation": "Pointwise equality of exceptional predicates followed by the full epsilon-scheme equivalence.",
+          "evidence_ids": [
+            "ev-v04-r03"
+          ]
+        },
+        "topology": {
+          "status": "NOT_APPLICABLE",
+          "explanation": "No topological convergence is used by this relation; domain topology, when mathematical schemes/complex numbers are involved, remains part of the explicit model.",
+          "evidence_ids": [
+            "ev-v04-r03"
+          ]
+        },
+        "rate": {
+          "status": "NOT_APPLICABLE",
+          "explanation": "No convergence or asymptotic rate is asserted by this relation.",
+          "evidence_ids": [
+            "ev-v04-r03"
+          ]
+        },
+        "constants": {
+          "status": "ANALYZED_NOT_CERTIFIED",
+          "explanation": "No triple-dependent K; use exactly relation 02's epsilon-dependent constant.",
+          "evidence_ids": [
+            "ev-v04-r03"
+          ]
+        },
+        "limit_exchange": {
+          "status": "NOT_APPLICABLE",
+          "explanation": "No exchange of limits, integration or infinite sums is invoked by this relation.",
+          "evidence_ids": [
+            "ev-v04-r03"
+          ]
+        }
+      },
+      "desk_derivation": [
+        "For each admissible triple, multiply the quality inequality by the strictly positive denominator log r.",
+        "Use log(r^(1+epsilon))=(1+epsilon)log r and strict monotonicity to identify the exceptional sets.",
+        "Apply the full-scheme equivalence described for relation 02; no new constant-uniformity claim."
+      ],
+      "proof_basis": "Definitions and sorry declarations only; logarithm lemmas and relation 02 proof are missing",
+      "proof_kernel_status": "NOT_RUN",
+      "proof_receipt": null,
+      "mathematically_verified": false,
+      "counterexample_or_variant_risk": "Division by a nonpositive/zero logarithm invalidates the inequality manipulation. Current declaration bodies are sorry and do not prove the equivalence.",
+      "proposed_correction": null,
+      "remaining_obligations": [
+        "Independent qualified human review of the exact relation and all domain/quantifier bridges.",
+        "A trusted checker receipt or accepted scoped proof artifact; source proof text alone is not execution evidence.",
+        "No automatic promotion of source theorem tags, desk derivations, or this review to a solved/verified status."
+      ]
+    },
+    {
+      "id": "relation-review-v04-04",
+      "relation_id": "relation-v02-04",
+      "version": 1,
+      "supersedes": null,
+      "review_date": "2026-10-24",
+      "reviewer": "Codex / relation_review automated desk reviewer",
+      "reviewer_kind": "automated_source_and_logic_review",
+      "human_approval": "pending",
+      "status": "PARTIAL",
+      "verified": false,
+      "disposition": "KEEP_CANDIDATE",
+      "candidate_layer": true,
+      "summary": "A standard substitution gives the intended implication; the upstream consequence has no assumption parameter linking it to four exponentials.",
+      "original_relation": {
+        "source_id": "cm-000072",
+        "target_id": "claim-v02-04",
+        "type": "implies",
+        "layer": "logic"
+      },
+      "endpoint_variants": {
+        "problem_id": "cm-000072",
+        "problem_statement": "**Four exponentials conjecture**\nLet $x_0, x_1$ and $y_0, y_1$ be $\\mathbb Q$-linearly independent pairs of complex numbers,\nthen some $e^{x_i y_j}$ is transcendental.",
+        "problem_formal_statement": "four_exponentials_conjecture (x : Fin 2 → ℂ) (y : Fin 2 → ℂ)\n    (h1 : LinearIndependent ℚ x) (h2 : LinearIndependent ℚ y) :\n    ∃ i j : Fin 2, Transcendental ℚ (exp (x i * y j))",
+        "claim_id": "claim-v02-04",
+        "claim_formal_statement": "theorem two_pow_three_pow_transcendental (t : ℝ) (h : Irrational t) :\n    Transcendental ℚ (2 ^ t : ℝ) ∨ Transcendental ℚ (3 ^ t : ℝ)"
+      },
+      "direction": "Four-exponentials proposition implies: for every irrational real t, 2^t or 3^t is transcendental over Q.",
+      "hypotheses": [
+        "t is real irrational; take x=(1,t) and y=(log 2,log 3) in C.",
+        "Pairs must be Q-linearly independent; real-to-complex transcendence must correspond."
+      ],
+      "evidence": [
+        {
+          "id": "ev-v04-r04",
+          "source_path": "FormalConjectures/Wikipedia/Exponentials.lean",
+          "source_sha256": "d66a164acaff7b58e97836fa7cb6d02870098f2484bf035907aaf163c98e8e50",
+          "source_revision": "2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6",
+          "start_line": 48,
+          "end_line": 50,
+          "url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/Exponentials.lean#L48-L50",
+          "quote": "theorem two_pow_three_pow_transcendental (t : ℝ) (h : Irrational t) :\n    Transcendental ℚ (2 ^ t : ℝ) ∨ Transcendental ℚ (3 ^ t : ℝ) := by\n  sorry"
+        }
+      ],
+      "obligations": {
+        "model": {
+          "status": "ANALYZED_NOT_CERTIFIED",
+          "explanation": "Complex four-exponential array versus positive real powers.",
+          "evidence_ids": [
+            "ev-v04-r04"
+          ]
+        },
+        "parameters": {
+          "status": "ANALYZED_NOT_CERTIFIED",
+          "explanation": "x0=1,x1=t,y0=log2,y1=log3.",
+          "evidence_ids": [
+            "ev-v04-r04"
+          ]
+        },
+        "assumptions": {
+          "status": "ANALYZED_NOT_CERTIFIED",
+          "explanation": "Both Q-linear independence obligations and coercion/transcendence correspondence missing mechanically.",
+          "evidence_ids": [
+            "ev-v04-r04"
+          ]
+        },
+        "quantifiers": {
+          "status": "ANALYZED_NOT_CERTIFIED",
+          "explanation": "Universal four-exponential statement specialized separately for each irrational t.",
+          "evidence_ids": [
+            "ev-v04-r04"
+          ]
+        },
+        "topology": {
+          "status": "NOT_APPLICABLE",
+          "explanation": "No topological convergence is used by this relation; domain topology, when mathematical schemes/complex numbers are involved, remains part of the explicit model.",
+          "evidence_ids": [
+            "ev-v04-r04"
+          ]
+        },
+        "rate": {
+          "status": "NOT_APPLICABLE",
+          "explanation": "No convergence or asymptotic rate is asserted by this relation.",
+          "evidence_ids": [
+            "ev-v04-r04"
+          ]
+        },
+        "constants": {
+          "status": "ANALYZED_NOT_CERTIFIED",
+          "explanation": "Bases 2 and 3 use multiplicative independence and are fixed.",
+          "evidence_ids": [
+            "ev-v04-r04"
+          ]
+        },
+        "limit_exchange": {
+          "status": "NOT_APPLICABLE",
+          "explanation": "No exchange of limits, integration or infinite sums is invoked by this relation.",
+          "evidence_ids": [
+            "ev-v04-r04"
+          ]
+        }
+      },
+      "desk_derivation": [
+        "Irrationality makes (1,t) Q-linearly independent.",
+        "A rational dependence between log 2 and log 3 would, after clearing denominators and exponentiating, give 2^m*3^n=1; prime factorization forces m=n=0.",
+        "The four exponentials are 2,3,2^t,3^t. Since 2 and 3 are algebraic, the transcendental one is among the last two."
+      ],
+      "proof_basis": "Source comment states implication; both declarations use sorry",
+      "proof_kernel_status": "NOT_RUN",
+      "proof_receipt": null,
+      "mathematically_verified": false,
+      "counterexample_or_variant_risk": "The source consequence is a separate theorem ending in sorry, not a conditional proof. Complex exponential/real rpow correspondence and algebraic coercion need proof.",
+      "proposed_correction": null,
+      "remaining_obligations": [
+        "Independent qualified human review of the exact relation and all domain/quantifier bridges.",
+        "A trusted checker receipt or accepted scoped proof artifact; source proof text alone is not execution evidence.",
+        "No automatic promotion of source theorem tags, desk derivations, or this review to a solved/verified status."
+      ]
+    },
+    {
+      "id": "relation-review-v04-05",
+      "relation_id": "relation-v02-05",
+      "version": 1,
+      "supersedes": null,
+      "review_date": "2026-10-24",
+      "reviewer": "Codex / relation_review automated desk reviewer",
+      "reviewer_kind": "automated_source_and_logic_review",
+      "human_approval": "pending",
+      "status": "PARTIAL",
+      "verified": false,
+      "disposition": "KEEP_CANDIDATE",
+      "candidate_layer": true,
+      "summary": "Half-frequency conclusion directly implies the weaker exact rational 38234/100000 frequency bound.",
+      "original_relation": {
+        "source_id": "cm-000118",
+        "target_id": "claim-v02-05",
+        "type": "implies",
+        "layer": "logic"
+      },
+      "endpoint_variants": {
+        "problem_id": "cm-000118",
+        "problem_statement": "For every finite union-closed family of sets, other than the family containing only the empty set,\nthere exists an element that belongs to at least half of the sets in the family.",
+        "problem_formal_statement": "union_closed\n    [Nonempty n]\n    (h_ne_singleton_empty : A ≠ {∅})\n    (h_union_closed : IsUnionClosed A) :\n    ∃ i : n, (1 / 2 : ℚ) * #A ≤ #{x ∈ A | i ∈ x}",
+        "claim_id": "claim-v02-05",
+        "claim_formal_statement": "theorem union_closed.variants.yu\n    [Nonempty n]\n    (h_ne_singleton_empty : A ≠ {∅})\n    (h_union_closed : IsUnionClosed A) :\n    ∃ i : n, (0.38234 : ℚ) * #A ≤ #{x ∈ A | i ∈ x}"
+      },
+      "direction": "General union-closed half bound implies the stored Yu-bound statement.",
+      "hypotheses": [
+        "Same decidable ground type n, Nonempty n, finite family A != {empty}, union closure.",
+        "Family cardinality is nonnegative and 38234/100000 <= 1/2."
+      ],
+      "evidence": [
+        {
+          "id": "ev-v04-r05",
+          "source_path": "FormalConjectures/Wikipedia/UnionClosed.lean",
+          "source_sha256": "2eed6f767e60e2103c3edb55d74416ab58961129cf89edcb0f9861b47698a265",
+          "source_revision": "2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6",
+          "start_line": 72,
+          "end_line": 77,
+          "url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/UnionClosed.lean#L72-L77",
+          "quote": "theorem union_closed.variants.yu\n    [Nonempty n]\n    (h_ne_singleton_empty : A ≠ {∅})\n    (h_union_closed : IsUnionClosed A) :\n    ∃ i : n, (0.38234 : ℚ) * #A ≤ #{x ∈ A | i ∈ x} := by\n  sorry"
+        }
+      ],
+      "obligations": {
+        "model": {
+          "status": "ANALYZED_NOT_CERTIFIED",
+          "explanation": "Exactly the same finite families and counting function on both endpoints.",
+          "evidence_ids": [
+            "ev-v04-r05"
+          ]
+        },
+        "parameters": {
+          "status": "ANALYZED_NOT_CERTIFIED",
+          "explanation": "Witness i and A unchanged.",
+          "evidence_ids": [
+            "ev-v04-r05"
+          ]
+        },
+        "assumptions": {
+          "status": "ANALYZED_NOT_CERTIFIED",
+          "explanation": "All source premises match; empty A is allowed and has zero counts.",
+          "evidence_ids": [
+            "ev-v04-r05"
+          ]
+        },
+        "quantifiers": {
+          "status": "ANALYZED_NOT_CERTIFIED",
+          "explanation": "Reuse each existential witness under identical universal parameters.",
+          "evidence_ids": [
+            "ev-v04-r05"
+          ]
+        },
+        "topology": {
+          "status": "NOT_APPLICABLE",
+          "explanation": "No topological convergence is used by this relation; domain topology, when mathematical schemes/complex numbers are involved, remains part of the explicit model.",
+          "evidence_ids": [
+            "ev-v04-r05"
+          ]
+        },
+        "rate": {
+          "status": "NOT_APPLICABLE",
+          "explanation": "No convergence or asymptotic rate is asserted by this relation.",
+          "evidence_ids": [
+            "ev-v04-r05"
+          ]
+        },
+        "constants": {
+          "status": "ANALYZED_NOT_CERTIFIED",
+          "explanation": "Exact rationals: 1/2 - 38234/100000 = 5883/50000 >0.",
+          "evidence_ids": [
+            "ev-v04-r05"
+          ]
+        },
+        "limit_exchange": {
+          "status": "NOT_APPLICABLE",
+          "explanation": "No exchange of limits, integration or infinite sums is invoked by this relation.",
+          "evidence_ids": [
+            "ev-v04-r05"
+          ]
+        }
+      },
+      "desk_derivation": [
+        "Use the same witness i furnished by the half bound.",
+        "Multiply the rational constant inequality by the nonnegative family cardinality.",
+        "Conclude weaker_bound*|A| <= (1/2)*|A| <= frequency(i)."
+      ],
+      "proof_basis": "Conditional arithmetic derivation is not kernel-checked; both source theorem bodies are sorry",
+      "proof_kernel_status": "NOT_RUN",
+      "proof_receipt": null,
+      "mathematically_verified": false,
+      "counterexample_or_variant_risk": "This proves only a conditional weakening; it neither proves the general half bound nor independently verifies Yu's published sharper-than-older-bounds argument.",
+      "proposed_correction": null,
+      "remaining_obligations": [
+        "Independent qualified human review of the exact relation and all domain/quantifier bridges.",
+        "A trusted checker receipt or accepted scoped proof artifact; source proof text alone is not execution evidence.",
+        "No automatic promotion of source theorem tags, desk derivations, or this review to a solved/verified status."
+      ]
+    },
+    {
+      "id": "relation-review-v04-06",
+      "relation_id": "relation-v02-06",
+      "version": 1,
+      "supersedes": null,
+      "review_date": "2026-10-24",
+      "reviewer": "Codex / relation_review automated desk reviewer",
+      "reviewer_kind": "automated_source_and_logic_review",
+      "human_approval": "pending",
+      "status": "PARTIAL",
+      "verified": false,
+      "disposition": "KEEP_CANDIDATE",
+      "candidate_layer": true,
+      "summary": "Ground cardinality <=12 is a genuine restriction of the universal conjecture.",
+      "original_relation": {
+        "source_id": "claim-v02-06",
+        "target_id": "cm-000118",
+        "type": "special_case_of",
+        "layer": "special_cases"
+      },
+      "endpoint_variants": {
+        "problem_id": "cm-000118",
+        "problem_statement": "For every finite union-closed family of sets, other than the family containing only the empty set,\nthere exists an element that belongs to at least half of the sets in the family.",
+        "problem_formal_statement": "union_closed\n    [Nonempty n]\n    (h_ne_singleton_empty : A ≠ {∅})\n    (h_union_closed : IsUnionClosed A) :\n    ∃ i : n, (1 / 2 : ℚ) * #A ≤ #{x ∈ A | i ∈ x}",
+        "claim_id": "claim-v02-06",
+        "claim_formal_statement": "theorem union_closed.variants.univ_card\n    [Fintype n] [Nonempty n]\n    (h_ne_singleton_empty : A ≠ {∅})\n    (h_union_closed : IsUnionClosed A)\n    (h_card : Fintype.card n ≤ 12) :\n    ∃ i : n, (1 / 2 : ℚ) * #A ≤ #{x ∈ A | i ∈ x}"
+      },
+      "direction": "Special-case arrow restricted -> general is taxonomic; logical implication is general -> restricted.",
+      "hypotheses": [
+        "Ground type is Fintype and Nonempty with Fintype.card n <=12.",
+        "Same finite family, exclusion A!={empty}, union closure and half bound."
+      ],
+      "evidence": [
+        {
+          "id": "ev-v04-r06",
+          "source_path": "FormalConjectures/Wikipedia/UnionClosed.lean",
+          "source_sha256": "2eed6f767e60e2103c3edb55d74416ab58961129cf89edcb0f9861b47698a265",
+          "source_revision": "2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6",
+          "start_line": 85,
+          "end_line": 91,
+          "url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/UnionClosed.lean#L85-L91",
+          "quote": "theorem union_closed.variants.univ_card\n    [Fintype n] [Nonempty n]\n    (h_ne_singleton_empty : A ≠ {∅})\n    (h_union_closed : IsUnionClosed A)\n    (h_card : Fintype.card n ≤ 12) :\n    ∃ i : n, (1 / 2 : ℚ) * #A ≤ #{x ∈ A | i ∈ x} := by\n  sorry"
+        }
+      ],
+      "obligations": {
+        "model": {
+          "status": "ANALYZED_NOT_CERTIFIED",
+          "explanation": "Finite ground-type restricted instance of union_closed.",
+          "evidence_ids": [
+            "ev-v04-r06"
+          ]
+        },
+        "parameters": {
+          "status": "ANALYZED_NOT_CERTIFIED",
+          "explanation": "Ground n, family A and witness i unchanged.",
+          "evidence_ids": [
+            "ev-v04-r06"
+          ]
+        },
+        "assumptions": {
+          "status": "ANALYZED_NOT_CERTIFIED",
+          "explanation": "Fintype n and card n<=12 are extra premises; Nonempty retained.",
+          "evidence_ids": [
+            "ev-v04-r06"
+          ]
+        },
+        "quantifiers": {
+          "status": "ANALYZED_NOT_CERTIFIED",
+          "explanation": "Universal theorem specialized to Fintype ground types of bounded cardinality.",
+          "evidence_ids": [
+            "ev-v04-r06"
+          ]
+        },
+        "topology": {
+          "status": "NOT_APPLICABLE",
+          "explanation": "No topological convergence is used by this relation; domain topology, when mathematical schemes/complex numbers are involved, remains part of the explicit model.",
+          "evidence_ids": [
+            "ev-v04-r06"
+          ]
+        },
+        "rate": {
+          "status": "NOT_APPLICABLE",
+          "explanation": "No convergence or asymptotic rate is asserted by this relation.",
+          "evidence_ids": [
+            "ev-v04-r06"
+          ]
+        },
+        "constants": {
+          "status": "ANALYZED_NOT_CERTIFIED",
+          "explanation": "12 bounds Fintype.card n, not #A.",
+          "evidence_ids": [
+            "ev-v04-r06"
+          ]
+        },
+        "limit_exchange": {
+          "status": "NOT_APPLICABLE",
+          "explanation": "No exchange of limits, integration or infinite sums is invoked by this relation.",
+          "evidence_ids": [
+            "ev-v04-r06"
+          ]
+        }
+      },
+      "desk_derivation": [
+        "Instantiate the universal half-bound assertion for any finite ground type satisfying the extra size bound.",
+        "The extra cardinality premise is unused by that conditional specialization."
+      ],
+      "proof_basis": "Source known-result declaration uses sorry; specialization derivation not kernel-checked",
+      "proof_kernel_status": "NOT_RUN",
+      "proof_receipt": null,
+      "mathematically_verified": false,
+      "counterexample_or_variant_risk": "This relation does not verify the published 12-element result. Bound is on the entire ground type, not number of sets; active-universe encoding must not be silently substituted.",
+      "proposed_correction": null,
+      "remaining_obligations": [
+        "Independent qualified human review of the exact relation and all domain/quantifier bridges.",
+        "A trusted checker receipt or accepted scoped proof artifact; source proof text alone is not execution evidence.",
+        "No automatic promotion of source theorem tags, desk derivations, or this review to a solved/verified status."
+      ]
+    },
+    {
+      "id": "relation-review-v04-07",
+      "relation_id": "relation-v02-07",
+      "version": 1,
+      "supersedes": null,
+      "review_date": "2026-10-24",
+      "reviewer": "Codex / relation_review automated desk reviewer",
+      "reviewer_kind": "automated_source_and_logic_review",
+      "human_approval": "pending",
+      "status": "PARTIAL",
+      "verified": false,
+      "disposition": "KEEP_CANDIDATE",
+      "candidate_layer": true,
+      "summary": "Family cardinality <=50 is a genuine restriction; the source attributes extension from 46 to combined work.",
+      "original_relation": {
+        "source_id": "claim-v02-07",
+        "target_id": "cm-000118",
+        "type": "special_case_of",
+        "layer": "special_cases"
+      },
+      "endpoint_variants": {
+        "problem_id": "cm-000118",
+        "problem_statement": "For every finite union-closed family of sets, other than the family containing only the empty set,\nthere exists an element that belongs to at least half of the sets in the family.",
+        "problem_formal_statement": "union_closed\n    [Nonempty n]\n    (h_ne_singleton_empty : A ≠ {∅})\n    (h_union_closed : IsUnionClosed A) :\n    ∃ i : n, (1 / 2 : ℚ) * #A ≤ #{x ∈ A | i ∈ x}",
+        "claim_id": "claim-v02-07",
+        "claim_formal_statement": "theorem union_closed.variants.family_card\n    [Nonempty n]\n    (h_ne_singleton_empty : A ≠ {∅})\n    (h_union_closed : IsUnionClosed A)\n    (hA : #A ≤ 50) :\n    ∃ i : n, (1 / 2 : ℚ) * #A ≤ #{x ∈ A | i ∈ x}"
+      },
+      "direction": "Special-case arrow restricted -> general; logical implication general -> family-cardinality restriction.",
+      "hypotheses": [
+        "Nonempty decidable ground type; A finite, union-closed, A!={empty}.",
+        "The exact extra bound is #A<=50."
+      ],
+      "evidence": [
+        {
+          "id": "ev-v04-r07",
+          "source_path": "FormalConjectures/Wikipedia/UnionClosed.lean",
+          "source_sha256": "2eed6f767e60e2103c3edb55d74416ab58961129cf89edcb0f9861b47698a265",
+          "source_revision": "2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6",
+          "start_line": 102,
+          "end_line": 108,
+          "url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/UnionClosed.lean#L102-L108",
+          "quote": "theorem union_closed.variants.family_card\n    [Nonempty n]\n    (h_ne_singleton_empty : A ≠ {∅})\n    (h_union_closed : IsUnionClosed A)\n    (hA : #A ≤ 50) :\n    ∃ i : n, (1 / 2 : ℚ) * #A ≤ #{x ∈ A | i ∈ x} := by\n  sorry"
+        }
+      ],
+      "obligations": {
+        "model": {
+          "status": "ANALYZED_NOT_CERTIFIED",
+          "explanation": "Same family model; family size restricted.",
+          "evidence_ids": [
+            "ev-v04-r07"
+          ]
+        },
+        "parameters": {
+          "status": "ANALYZED_NOT_CERTIFIED",
+          "explanation": "A,n,i unchanged; cardinality #A<=50.",
+          "evidence_ids": [
+            "ev-v04-r07"
+          ]
+        },
+        "assumptions": {
+          "status": "ANALYZED_NOT_CERTIFIED",
+          "explanation": "All general hypotheses retained, extra family-size premise.",
+          "evidence_ids": [
+            "ev-v04-r07"
+          ]
+        },
+        "quantifiers": {
+          "status": "ANALYZED_NOT_CERTIFIED",
+          "explanation": "Logical specialization from general to every bounded-cardinality family.",
+          "evidence_ids": [
+            "ev-v04-r07"
+          ]
+        },
+        "topology": {
+          "status": "NOT_APPLICABLE",
+          "explanation": "No topological convergence is used by this relation; domain topology, when mathematical schemes/complex numbers are involved, remains part of the explicit model.",
+          "evidence_ids": [
+            "ev-v04-r07"
+          ]
+        },
+        "rate": {
+          "status": "NOT_APPLICABLE",
+          "explanation": "No convergence or asymptotic rate is asserted by this relation.",
+          "evidence_ids": [
+            "ev-v04-r07"
+          ]
+        },
+        "constants": {
+          "status": "ANALYZED_NOT_CERTIFIED",
+          "explanation": "50 is the source formal bound; 46 is the first historical paper bound, not the same claim.",
+          "evidence_ids": [
+            "ev-v04-r07"
+          ]
+        },
+        "limit_exchange": {
+          "status": "NOT_APPLICABLE",
+          "explanation": "No exchange of limits, integration or infinite sums is invoked by this relation.",
+          "evidence_ids": [
+            "ev-v04-r07"
+          ]
+        }
+      },
+      "desk_derivation": [
+        "Instantiate the general assertion for each family with #A<=50; the conclusion is identical.",
+        "Keep the two literature inputs separate when independently auditing why the restricted proposition is true."
+      ],
+      "proof_basis": "Source known-result declaration uses sorry; no proof from either cited paper accepted",
+      "proof_kernel_status": "NOT_RUN",
+      "proof_receipt": null,
+      "mathematically_verified": false,
+      "counterexample_or_variant_risk": "Do not confuse family cardinality50 with ground cardinality12 or attribute the whole50 bound solely to the 2010 paper; upstream says 46 plus the 12-element result.",
+      "proposed_correction": null,
+      "remaining_obligations": [
+        "Independent qualified human review of the exact relation and all domain/quantifier bridges.",
+        "A trusted checker receipt or accepted scoped proof artifact; source proof text alone is not execution evidence.",
+        "No automatic promotion of source theorem tags, desk derivations, or this review to a solved/verified status."
+      ]
+    },
+    {
+      "id": "relation-review-v04-08",
+      "relation_id": "relation-v02-08",
+      "version": 1,
+      "supersedes": null,
+      "review_date": "2026-10-24",
+      "reviewer": "Codex / relation_review automated desk reviewer",
+      "reviewer_kind": "automated_source_and_logic_review",
+      "human_approval": "pending",
+      "status": "PARTIAL",
+      "verified": false,
+      "disposition": "KEEP_CANDIDATE",
+      "candidate_layer": true,
+      "summary": "Fin 2 is an exact finite-ground specialization with an upstream executable proof body.",
+      "original_relation": {
+        "source_id": "claim-v02-08",
+        "target_id": "cm-000118",
+        "type": "special_case_of",
+        "layer": "special_cases"
+      },
+      "endpoint_variants": {
+        "problem_id": "cm-000118",
+        "problem_statement": "For every finite union-closed family of sets, other than the family containing only the empty set,\nthere exists an element that belongs to at least half of the sets in the family.",
+        "problem_formal_statement": "union_closed\n    [Nonempty n]\n    (h_ne_singleton_empty : A ≠ {∅})\n    (h_union_closed : IsUnionClosed A) :\n    ∃ i : n, (1 / 2 : ℚ) * #A ≤ #{x ∈ A | i ∈ x}",
+        "claim_id": "claim-v02-08",
+        "claim_formal_statement": "theorem union_closed.variants.univ_card_two (A : Finset (Finset (Fin 2)))\n    (h_ne_singleton_empty : A ≠ {∅})\n    (h_union_closed : IsUnionClosed A) :\n    ∃ i, (1 / 2 : ℚ) * #A ≤ #{x ∈ A | i ∈ x}"
+      },
+      "direction": "Special-case arrow Fin2 -> general; logical implication general -> Fin2.",
+      "hypotheses": [
+        "A : Finset (Finset (Fin 2)), A!={empty}, union-closed.",
+        "Fin2 supplies DecidableEq and Nonempty."
+      ],
+      "evidence": [
+        {
+          "id": "ev-v04-r08",
+          "source_path": "FormalConjectures/Wikipedia/UnionClosed.lean",
+          "source_sha256": "2eed6f767e60e2103c3edb55d74416ab58961129cf89edcb0f9861b47698a265",
+          "source_revision": "2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6",
+          "start_line": 115,
+          "end_line": 119,
+          "url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/UnionClosed.lean#L115-L119",
+          "quote": "theorem union_closed.variants.univ_card_two (A : Finset (Finset (Fin 2)))\n    (h_ne_singleton_empty : A ≠ {∅})\n    (h_union_closed : IsUnionClosed A) :\n    ∃ i, (1 / 2 : ℚ) * #A ≤ #{x ∈ A | i ∈ x} := by\n  decide +revert +kernel"
+        }
+      ],
+      "obligations": {
+        "model": {
+          "status": "ANALYZED_NOT_CERTIFIED",
+          "explanation": "Exactly two ground elements Fin2; all its finite families.",
+          "evidence_ids": [
+            "ev-v04-r08"
+          ]
+        },
+        "parameters": {
+          "status": "ANALYZED_NOT_CERTIFIED",
+          "explanation": "A arbitrary over Fin2; existential i in Fin2.",
+          "evidence_ids": [
+            "ev-v04-r08"
+          ]
+        },
+        "assumptions": {
+          "status": "ANALYZED_NOT_CERTIFIED",
+          "explanation": "Finite-ground instances discharge nonempty/decidable premises; exclusion and closure retained.",
+          "evidence_ids": [
+            "ev-v04-r08"
+          ]
+        },
+        "quantifiers": {
+          "status": "ANALYZED_NOT_CERTIFIED",
+          "explanation": "All Fin2 families, not merely a sampled finite subset.",
+          "evidence_ids": [
+            "ev-v04-r08"
+          ]
+        },
+        "topology": {
+          "status": "NOT_APPLICABLE",
+          "explanation": "No topological convergence is used by this relation; domain topology, when mathematical schemes/complex numbers are involved, remains part of the explicit model.",
+          "evidence_ids": [
+            "ev-v04-r08"
+          ]
+        },
+        "rate": {
+          "status": "NOT_APPLICABLE",
+          "explanation": "No convergence or asymptotic rate is asserted by this relation.",
+          "evidence_ids": [
+            "ev-v04-r08"
+          ]
+        },
+        "constants": {
+          "status": "ANALYZED_NOT_CERTIFIED",
+          "explanation": "Ground cardinality2; exact half threshold.",
+          "evidence_ids": [
+            "ev-v04-r08"
+          ]
+        },
+        "limit_exchange": {
+          "status": "NOT_APPLICABLE",
+          "explanation": "No exchange of limits, integration or infinite sums is invoked by this relation.",
+          "evidence_ids": [
+            "ev-v04-r08"
+          ]
+        }
+      },
+      "desk_derivation": [
+        "Instantiate the general half-frequency proposition at n=Fin2.",
+        "Source independently proves this finite proposition with decide +revert +kernel; this review inspects text only."
+      ],
+      "proof_basis": "Actual source proof decide +revert +kernel exists; local execution NOT_RUN",
+      "proof_kernel_status": "NOT_RUN",
+      "proof_receipt": null,
+      "mathematically_verified": false,
+      "counterexample_or_variant_risk": "Source syntax '+kernel' is not evidence this checkout has been executed in the declared toolchain. The finite result cannot certify arbitrary ground sizes.",
+      "proposed_correction": null,
+      "remaining_obligations": [
+        "Independent qualified human review of the exact relation and all domain/quantifier bridges.",
+        "A trusted checker receipt or accepted scoped proof artifact; source proof text alone is not execution evidence.",
+        "No automatic promotion of source theorem tags, desk derivations, or this review to a solved/verified status."
+      ]
+    },
+    {
+      "id": "relation-review-v04-09",
+      "relation_id": "relation-v02-09",
+      "version": 1,
+      "supersedes": null,
+      "review_date": "2026-10-24",
+      "reviewer": "Codex / relation_review automated desk reviewer",
+      "reviewer_kind": "automated_source_and_logic_review",
+      "human_approval": "pending",
+      "status": "PARTIAL",
+      "verified": false,
+      "disposition": "KEEP_CANDIDATE",
+      "candidate_layer": true,
+      "summary": "A singleton in the family supplies nonemptiness and the excluded-family premise; source contains an injection proof.",
+      "original_relation": {
+        "source_id": "claim-v02-09",
+        "target_id": "cm-000118",
+        "type": "special_case_of",
+        "layer": "special_cases"
+      },
+      "endpoint_variants": {
+        "problem_id": "cm-000118",
+        "problem_statement": "For every finite union-closed family of sets, other than the family containing only the empty set,\nthere exists an element that belongs to at least half of the sets in the family.",
+        "problem_formal_statement": "union_closed\n    [Nonempty n]\n    (h_ne_singleton_empty : A ≠ {∅})\n    (h_union_closed : IsUnionClosed A) :\n    ∃ i : n, (1 / 2 : ℚ) * #A ≤ #{x ∈ A | i ∈ x}",
+        "claim_id": "claim-v02-09",
+        "claim_formal_statement": "theorem union_closed.variants.singleton_mem\n    (h_union_closed : IsUnionClosed A)\n    (i : n) (hi : {i} ∈ A) :\n    ∃ i, (1 / 2 : ℚ) * #A ≤ #{x ∈ A | i ∈ x}"
+      },
+      "direction": "Singleton-containing families are a special case; general conjecture implies this case, while the case alone does not prove general conjecture.",
+      "hypotheses": [
+        "Union-closed finite family A and i:n with {i} in A.",
+        "No explicit Nonempty n premise is needed because the parameter i is a witness.",
+        "{i} != empty implies A!={empty}."
+      ],
+      "evidence": [
+        {
+          "id": "ev-v04-r09",
+          "source_path": "FormalConjectures/Wikipedia/UnionClosed.lean",
+          "source_sha256": "2eed6f767e60e2103c3edb55d74416ab58961129cf89edcb0f9861b47698a265",
+          "source_revision": "2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6",
+          "start_line": 126,
+          "end_line": 148,
+          "url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/UnionClosed.lean#L126-L148",
+          "quote": "theorem union_closed.variants.singleton_mem\n    (h_union_closed : IsUnionClosed A)\n    (i : n) (hi : {i} ∈ A) :\n    ∃ i, (1 / 2 : ℚ) * #A ≤ #{x ∈ A | i ∈ x} := by\n  use i\n  set B : Finset (Finset n) := {x ∈ A | i ∉ x}\n  set C : Finset (Finset n) := {x ∈ A | i ∈ x}\n  have h₁ : (B : Set <| Finset n).InjOn (insert i) := by\n    simp only [Set.InjOn, coe_filter, Set.mem_ofPred_eq, and_imp, B]\n    rintro x - hx y - hy hxy\n    have := congr(($hxy).erase i)\n    rwa [erase_insert hx, erase_insert hy] at this\n  have h₂ : (B : Set <| Finset n).MapsTo (insert i) C := by\n    simp only [Set.MapsTo, coe_filter, Set.mem_ofPred_eq, mem_insert, true_or, and_true,\n      and_imp, B, C]\n    intro x hx hix\n    rw [Finset.insert_eq]\n    exact h_union_closed _ hi _ hx\n  have h₃ : #B ≤ #C := Finset.card_le_card_of_injOn _ h₂ h₁\n  have h₄ : #C + #B = #A := by rw [card_filter_add_card_filter_not]\n  have : #A ≤ 2 * #C := by omega\n  cancel_denoms\n  norm_cast"
+        }
+      ],
+      "obligations": {
+        "model": {
+          "status": "ANALYZED_NOT_CERTIFIED",
+          "explanation": "Same finite union-closed family, restricted by a singleton member.",
+          "evidence_ids": [
+            "ev-v04-r09"
+          ]
+        },
+        "parameters": {
+          "status": "ANALYZED_NOT_CERTIFIED",
+          "explanation": "The supplied element i is also the conclusion witness.",
+          "evidence_ids": [
+            "ev-v04-r09"
+          ]
+        },
+        "assumptions": {
+          "status": "ANALYZED_NOT_CERTIFIED",
+          "explanation": "i supplies Nonempty; singleton membership supplies A!={empty}; DecidableEq preserved.",
+          "evidence_ids": [
+            "ev-v04-r09"
+          ]
+        },
+        "quantifiers": {
+          "status": "ANALYZED_NOT_CERTIFIED",
+          "explanation": "Universal over every A and every chosen singleton member; witness i retained.",
+          "evidence_ids": [
+            "ev-v04-r09"
+          ]
+        },
+        "topology": {
+          "status": "NOT_APPLICABLE",
+          "explanation": "No topological convergence is used by this relation; domain topology, when mathematical schemes/complex numbers are involved, remains part of the explicit model.",
+          "evidence_ids": [
+            "ev-v04-r09"
+          ]
+        },
+        "rate": {
+          "status": "NOT_APPLICABLE",
+          "explanation": "No convergence or asymptotic rate is asserted by this relation.",
+          "evidence_ids": [
+            "ev-v04-r09"
+          ]
+        },
+        "constants": {
+          "status": "ANALYZED_NOT_CERTIFIED",
+          "explanation": "Exact coefficient1/2 from injective counting, no approximation.",
+          "evidence_ids": [
+            "ev-v04-r09"
+          ]
+        },
+        "limit_exchange": {
+          "status": "NOT_APPLICABLE",
+          "explanation": "No exchange of limits, integration or infinite sums is invoked by this relation.",
+          "evidence_ids": [
+            "ev-v04-r09"
+          ]
+        }
+      },
+      "desk_derivation": [
+        "Partition A into B (sets avoiding i) and C (sets containing i).",
+        "Map X in B to X union {i}; union closure and {i} in A place the image in C.",
+        "Deleting i proves injection. Thus |B|<=|C| and |A|=|B|+|C|<=2|C|."
+      ],
+      "proof_basis": "Actual injection/counting proof L130-L148 exists; kernel execution NOT_RUN",
+      "proof_kernel_status": "NOT_RUN",
+      "proof_receipt": null,
+      "mathematically_verified": false,
+      "counterexample_or_variant_risk": "Adding only 'a singleton exists somewhere in the ground set' would be insufficient; it must belong to A. Source proof is present but not rerun.",
+      "proposed_correction": null,
+      "remaining_obligations": [
+        "Independent qualified human review of the exact relation and all domain/quantifier bridges.",
+        "A trusted checker receipt or accepted scoped proof artifact; source proof text alone is not execution evidence.",
+        "No automatic promotion of source theorem tags, desk derivations, or this review to a solved/verified status."
+      ]
+    },
+    {
+      "id": "relation-review-v04-10",
+      "relation_id": "relation-v02-10",
+      "version": 1,
+      "supersedes": null,
+      "review_date": "2026-10-24",
+      "reviewer": "Codex / relation_review automated desk reviewer",
+      "reviewer_kind": "automated_source_and_logic_review",
+      "human_approval": "pending",
+      "status": "PARTIAL",
+      "verified": false,
+      "disposition": "CORRECTION_REQUIRED",
+      "candidate_layer": true,
+      "summary": "The child declaration includes characteristic zero; it is not literally a restricted instance of the stored positive-characteristic parent.",
+      "original_relation": {
+        "source_id": "claim-v02-10",
+        "target_id": "cm-000103",
+        "type": "special_case_of",
+        "layer": "special_cases"
+      },
+      "endpoint_variants": {
+        "problem_id": "cm-000103",
+        "problem_statement": "**Resolution of singularities in positive characteristic.**\nLet $k$ be a perfect field of characteristic $p > 0$ and let $X$ be an integral scheme that is\nseparated and of finite type over $k$. Then there is an integral scheme $Y$ that is smooth over\n$k$ together with a proper birational morphism $Y \\to X$.\n\nThis is open from dimension four on; see [Hau2010]. Perfectness of $k$ is needed for the\nconclusion as stated; see `exists_not_hasResolution_of_not_perfectField`.",
+        "problem_formal_statement": "resolution_of_singularities (k : Type u) [Field k] [PerfectField k] (p : ℕ)\n    [Fact p.Prime] [CharP k p] {X : Scheme.{u}} (sX : X ⟶ Spec (.of k)) [IsIntegral X]\n    [LocallyOfFiniteType sX] [QuasiCompact sX] [IsSeparated sX] :\n    Scheme.HasResolution sX",
+        "claim_id": "claim-v02-10",
+        "claim_formal_statement": "theorem resolution_of_singularities_of_topologicalKrullDim_le_three (k : Type u) [Field k]\n    [PerfectField k] {X : Scheme.{u}} (sX : X ⟶ Spec (.of k)) [IsIntegral X]\n    [LocallyOfFiniteType sX] [QuasiCompact sX] [IsSeparated sX]\n    (hX : topologicalKrullDim X ≤ 3) :\n    Scheme.HasResolution sX"
+      },
+      "direction": "Parent (positive characteristic, arbitrary dimension) implies only the positive-characteristic restriction of the <=3 declaration.",
+      "hypotheses": [
+        "Perfect field; X integral, separated, locally finite type and quasi-compact over k.",
+        "Child has topologicalKrullDim X<=3, but NO CharP k p or prime p premise.",
+        "Add positive-characteristic premises to make a genuine specialization."
+      ],
+      "evidence": [
+        {
+          "id": "ev-v04-r10",
+          "source_path": "FormalConjectures/Wikipedia/ResolutionOfSingularities.lean",
+          "source_sha256": "424fe7fcf689b208a6e96fbaeaa2dde74b70ccae372fbe164d24c85044db7795",
+          "source_revision": "2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6",
+          "start_line": 134,
+          "end_line": 139,
+          "url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/ResolutionOfSingularities.lean#L134-L139",
+          "quote": "theorem resolution_of_singularities_of_topologicalKrullDim_le_three (k : Type u) [Field k]\n    [PerfectField k] {X : Scheme.{u}} (sX : X ⟶ Spec (.of k)) [IsIntegral X]\n    [LocallyOfFiniteType sX] [QuasiCompact sX] [IsSeparated sX]\n    (hX : topologicalKrullDim X ≤ 3) :\n    Scheme.HasResolution sX := by\n  sorry"
+        }
+      ],
+      "obligations": {
+        "model": {
+          "status": "CONTRADICTED",
+          "explanation": "MISMATCH: parent positive-characteristic schemes vs child all perfect-field schemes.",
+          "evidence_ids": [
+            "ev-v04-r10"
+          ]
+        },
+        "parameters": {
+          "status": "ANALYZED_NOT_CERTIFIED",
+          "explanation": "Child dimension<=3, parent arbitrary dimension; same universe and structure morphism.",
+          "evidence_ids": [
+            "ev-v04-r10"
+          ]
+        },
+        "assumptions": {
+          "status": "CONTRADICTED",
+          "explanation": "MISMATCH: missing child CharP and prime p premises for literal specialization.",
+          "evidence_ids": [
+            "ev-v04-r10"
+          ]
+        },
+        "quantifiers": {
+          "status": "ANALYZED_NOT_CERTIFIED",
+          "explanation": "All perfect fields in child cannot be obtained by specializing only positive-characteristic parent.",
+          "evidence_ids": [
+            "ev-v04-r10"
+          ]
+        },
+        "topology": {
+          "status": "NOT_APPLICABLE",
+          "explanation": "No topological convergence is used by this relation; domain topology, when mathematical schemes/complex numbers are involved, remains part of the explicit model.",
+          "evidence_ids": [
+            "ev-v04-r10"
+          ]
+        },
+        "rate": {
+          "status": "NOT_APPLICABLE",
+          "explanation": "No convergence or asymptotic rate is asserted by this relation.",
+          "evidence_ids": [
+            "ev-v04-r10"
+          ]
+        },
+        "constants": {
+          "status": "ANALYZED_NOT_CERTIFIED",
+          "explanation": "Dimension cutoff3 exact; positive characteristic p prime.",
+          "evidence_ids": [
+            "ev-v04-r10"
+          ]
+        },
+        "limit_exchange": {
+          "status": "NOT_APPLICABLE",
+          "explanation": "No exchange of limits, integration or infinite sums is invoked by this relation.",
+          "evidence_ids": [
+            "ev-v04-r10"
+          ]
+        }
+      },
+      "desk_derivation": [
+        "Under an additional prime p and CharP k p, the parent directly supplies HasResolution for each <=3 instance.",
+        "The unmodified child also covers characteristic zero, which needs Hironaka's theorem or a separate case split and proof; the parent alone supplies no char-zero instance."
+      ],
+      "proof_basis": "Both relevant theorem bodies sorry; literal source domain mismatch requires correction",
+      "proof_kernel_status": "NOT_RUN",
+      "proof_receipt": null,
+      "mathematically_verified": false,
+      "counterexample_or_variant_risk": "Silent characteristic-domain expansion. Perfectness cannot be removed: source states an imperfect-field counterexample even in dimension0. Source paper gives regular source; smoothness over perfect k is an additional semantic bridge.",
+      "proposed_correction": {
+        "source_id": "NEW positive-characteristic restriction of claim-v02-10",
+        "target_id": "cm-000103",
+        "type": "special_case_of",
+        "restriction": "Field k, PerfectField k, prime p, CharP k p; exact same scheme assumptions and dimension<=3."
+      },
+      "remaining_obligations": [
+        "Independent qualified human review of the exact relation and all domain/quantifier bridges.",
+        "A trusted checker receipt or accepted scoped proof artifact; source proof text alone is not execution evidence.",
+        "No automatic promotion of source theorem tags, desk derivations, or this review to a solved/verified status."
+      ]
+    },
+    {
+      "id": "relation-review-v04-11",
+      "relation_id": "relation-v02-11",
+      "version": 1,
+      "supersedes": null,
+      "review_date": "2026-10-24",
+      "reviewer": "Codex / relation_review automated desk reviewer",
+      "reviewer_kind": "automated_source_and_logic_review",
+      "human_approval": "pending",
+      "status": "PARTIAL",
+      "verified": false,
+      "disposition": "CORRECTION_REQUIRED",
+      "candidate_layer": true,
+      "summary": "Use an explicit M5 -> exists M implication; 'generalizes' from an existential weakening obscures the strength direction.",
+      "original_relation": {
+        "source_id": "claim-v02-11",
+        "target_id": "cm-000028",
+        "type": "generalizes",
+        "layer": "special_cases"
+      },
+      "endpoint_variants": {
+        "problem_id": "cm-000028",
+        "problem_statement": "**Büchi's problem (first open case, $M = 5$)**:\nFor all integers $x$ and $a$, if $(x+n)^2 + a$ is a perfect square for $n = 0, 1, 2, 3, 4$,\nthen $a = 0$.\n\nNon-trivial sequences of length 3 and 4 are known to exist, so $M = 5$ is the first open case.",
+        "problem_formal_statement": "buchi_problem_M5 : IsBuchi 5",
+        "claim_id": "claim-v02-11",
+        "claim_formal_statement": "theorem buchi_problem :\n    ∃ M : ℕ, 1 ≤ M ∧ IsBuchi M"
+      },
+      "direction": "cm-000028 (IsBuchi5) implies claim-v02-11 (exists M>=1,IsBuchiM) by witness5. No converse has been established.",
+      "hypotheses": [
+        "Integers x,a; IsBuchi M quantifies n in Finset.range M and IsSquare of (x+n)^2+a.",
+        "The existential witness5 is positive."
+      ],
+      "evidence": [
+        {
+          "id": "ev-v04-r11",
+          "source_path": "FormalConjectures/Wikipedia/Buchi.lean",
+          "source_sha256": "71716cb13181d43db271bdcab062a3844cea3fda157438b452b897d5d865b2ce",
+          "source_revision": "2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6",
+          "start_line": 42,
+          "end_line": 56,
+          "url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/Buchi.lean#L42-L56",
+          "quote": "theorem buchi_problem :\n    ∃ M : ℕ, 1 ≤ M ∧ IsBuchi M := by\n  sorry\n\n\n/--\n**Büchi's problem (first open case, $M = 5$)**:\nFor all integers $x$ and $a$, if $(x+n)^2 + a$ is a perfect square for $n = 0, 1, 2, 3, 4$,\nthen $a = 0$.\n\nNon-trivial sequences of length 3 and 4 are known to exist, so $M = 5$ is the first open case.\n-/\n@[category research open, AMS 11]\ntheorem buchi_problem_M5 : IsBuchi 5 := by\n  sorry"
+        }
+      ],
+      "obligations": {
+        "model": {
+          "status": "ANALYZED_NOT_CERTIFIED",
+          "explanation": "Same integer-offset definition IsBuchi for both endpoints.",
+          "evidence_ids": [
+            "ev-v04-r11"
+          ]
+        },
+        "parameters": {
+          "status": "ANALYZED_NOT_CERTIFIED",
+          "explanation": "M fixed5 at source, existentialM at target.",
+          "evidence_ids": [
+            "ev-v04-r11"
+          ]
+        },
+        "assumptions": {
+          "status": "ANALYZED_NOT_CERTIFIED",
+          "explanation": "No additional arithmetic assumptions beyond1<=5.",
+          "evidence_ids": [
+            "ev-v04-r11"
+          ]
+        },
+        "quantifiers": {
+          "status": "ANALYZED_NOT_CERTIFIED",
+          "explanation": "M5 universally quantified x,a implies existentialM with same x,a universal scope; reverse not justified.",
+          "evidence_ids": [
+            "ev-v04-r11"
+          ]
+        },
+        "topology": {
+          "status": "NOT_APPLICABLE",
+          "explanation": "No topological convergence is used by this relation; domain topology, when mathematical schemes/complex numbers are involved, remains part of the explicit model.",
+          "evidence_ids": [
+            "ev-v04-r11"
+          ]
+        },
+        "rate": {
+          "status": "NOT_APPLICABLE",
+          "explanation": "No convergence or asymptotic rate is asserted by this relation.",
+          "evidence_ids": [
+            "ev-v04-r11"
+          ]
+        },
+        "constants": {
+          "status": "ANALYZED_NOT_CERTIFIED",
+          "explanation": "Witness5 is fixed and >=1.",
+          "evidence_ids": [
+            "ev-v04-r11"
+          ]
+        },
+        "limit_exchange": {
+          "status": "NOT_APPLICABLE",
+          "explanation": "No exchange of limits, integration or infinite sums is invoked by this relation.",
+          "evidence_ids": [
+            "ev-v04-r11"
+          ]
+        }
+      },
+      "desk_derivation": [
+        "Given IsBuchi5, choose M=5 in the existential statement.",
+        "Discharge 1<=5. The remaining predicate is the supplied IsBuchi5.",
+        "An unspecified existential M need not equal5 and supplies no reverse proof."
+      ],
+      "proof_basis": "Existential introduction desk proof; source statements both sorry; no accepted proof receipt",
+      "proof_kernel_status": "NOT_RUN",
+      "proof_receipt": null,
+      "mathematically_verified": false,
+      "counterexample_or_variant_risk": "Never display existential M -> M5 as an implication; 'generalizes' has multiple incompatible meanings here. General square sequences must also have the exact integer-offset representation before use.",
+      "proposed_correction": {
+        "source_id": "cm-000028",
+        "target_id": "claim-v02-11",
+        "type": "implies",
+        "restriction": "Same source definition IsBuchi; witness M=5, proof of1<=5."
+      },
+      "remaining_obligations": [
+        "Independent qualified human review of the exact relation and all domain/quantifier bridges.",
+        "A trusted checker receipt or accepted scoped proof artifact; source proof text alone is not execution evidence.",
+        "No automatic promotion of source theorem tags, desk derivations, or this review to a solved/verified status."
+      ]
+    },
+    {
+      "id": "relation-review-v04-12",
+      "relation_id": "relation-v02-12",
+      "version": 1,
+      "supersedes": null,
+      "review_date": "2026-10-24",
+      "reviewer": "Codex / relation_review automated desk reviewer",
+      "reviewer_kind": "automated_source_and_logic_review",
+      "human_approval": "pending",
+      "status": "PARTIAL",
+      "verified": false,
+      "disposition": "KEEP_CANDIDATE",
+      "candidate_layer": true,
+      "summary": "Dirichlet GRH genuinely generalizes RH through q=1 and the trivial primitive character; retain precise zero exclusions.",
+      "original_relation": {
+        "source_id": "claim-v02-12",
+        "target_id": "cm-000104",
+        "type": "generalizes",
+        "layer": "logic"
+      },
+      "endpoint_variants": {
+        "problem_id": "cm-000104",
+        "problem_statement": "The **Riemann Hypothesis**: all non-trivial zeros of the Riemann zeta function have real\npart $\\frac{1}{2}$. That is, if $\\zeta(s) = 0$, $s \\neq 1$, and $s$ is not a trivial zero\n$-2(n+1)$ for some $n \\in \\mathbb{N}$, then $\\operatorname{Re}(s) = \\frac{1}{2}$.\n\nThis is the official Millennium Prize Problem as posed by the\n[Clay Mathematics Institute](https://www.claymath.org/wp-content/uploads/2022/05/riemann.pdf).\n\nThis uses the `RiemannHypothesis` type from Mathlib, which is defined as\n`∀ (s : ℂ), riemannZeta s = 0 → (¬∃ n : ℕ, s = -2 * (n + 1)) → s ≠ 1 → s.re = 1 / 2`.",
+        "problem_formal_statement": "riemannHypothesis : RiemannHypothesis",
+        "claim_id": "claim-v02-12",
+        "claim_formal_statement": "theorem generalized_riemann_hypothesis (q : ℕ) [NeZero q] (χ : DirichletCharacter ℂ q)\n    (hχ : χ.IsPrimitive) (s : ℂ) (hs : χ.LFunction s = 0)\n    (hs_nontrivial : s ∉ Int.cast '' trivialZeros χ) :\n    s.re = 1 / 2"
+      },
+      "direction": "Full Dirichlet GRH implies RH; generalizes arrow GRH -> RH agrees with this implication.",
+      "hypotheses": [
+        "q nonzero; primitive Dirichlet character over C; zeros outside the specified integer image of trivialZeros.",
+        "At q=1 use character1, known primitive; identify its L-function with zeta.",
+        "RH excludes s=1, and the source test uses riemannZeta_one_ne_zero."
+      ],
+      "evidence": [
+        {
+          "id": "ev-v04-r12",
+          "source_path": "FormalConjectures/Millennium/RiemannHypothesis.lean",
+          "source_sha256": "db04f2f25a73fb0fc473843227fb3a28bca6ef1808e222e2d365f97120c46f67",
+          "source_revision": "2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6",
+          "start_line": 83,
+          "end_line": 94,
+          "url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Millennium/RiemannHypothesis.lean#L83-L94",
+          "quote": "theorem generalized_riemann_hypothesis (q : ℕ) [NeZero q] (χ : DirichletCharacter ℂ q)\n    (hχ : χ.IsPrimitive) (s : ℂ) (hs : χ.LFunction s = 0)\n    (hs_nontrivial : s ∉ Int.cast '' trivialZeros χ) :\n    s.re = 1 / 2 := by\n  sorry\n\n/-- GRH for $\\chi = 1$ is `RiemannHypothesis`. -/\n@[category test, AMS 11]\ntheorem implies_riemannHypothesis :\n    type_of% (generalized_riemann_hypothesis 1 1) ↔ RiemannHypothesis := by\n  aesop (add simp [DirichletCharacter.isPrimitive_one_level_one, trivialZeros,\n    RiemannHypothesis, riemannZeta_one_ne_zero])"
+        }
+      ],
+      "obligations": {
+        "model": {
+          "status": "ANALYZED_NOT_CERTIFIED",
+          "explanation": "Primitive Dirichlet L-function at modulus1 identified with Riemann zeta.",
+          "evidence_ids": [
+            "ev-v04-r12"
+          ]
+        },
+        "parameters": {
+          "status": "ANALYZED_NOT_CERTIFIED",
+          "explanation": "q=1,chi=1, arbitrary complexs.",
+          "evidence_ids": [
+            "ev-v04-r12"
+          ]
+        },
+        "assumptions": {
+          "status": "ANALYZED_NOT_CERTIFIED",
+          "explanation": "Primitive character instance, L-function identity, zero exclusions and s=1 reconciliation required.",
+          "evidence_ids": [
+            "ev-v04-r12"
+          ]
+        },
+        "quantifiers": {
+          "status": "ANALYZED_NOT_CERTIFIED",
+          "explanation": "Full GRH specializes universal q,chi to one case while keeping universal complexs.",
+          "evidence_ids": [
+            "ev-v04-r12"
+          ]
+        },
+        "topology": {
+          "status": "NOT_APPLICABLE",
+          "explanation": "No topological convergence is used by this relation; domain topology, when mathematical schemes/complex numbers are involved, remains part of the explicit model.",
+          "evidence_ids": [
+            "ev-v04-r12"
+          ]
+        },
+        "rate": {
+          "status": "NOT_APPLICABLE",
+          "explanation": "No convergence or asymptotic rate is asserted by this relation.",
+          "evidence_ids": [
+            "ev-v04-r12"
+          ]
+        },
+        "constants": {
+          "status": "ANALYZED_NOT_CERTIFIED",
+          "explanation": "Critical-line real part1/2 unchanged.",
+          "evidence_ids": [
+            "ev-v04-r12"
+          ]
+        },
+        "limit_exchange": {
+          "status": "NOT_APPLICABLE",
+          "explanation": "No exchange of limits, integration or infinite sums is invoked by this relation.",
+          "evidence_ids": [
+            "ev-v04-r12"
+          ]
+        }
+      },
+      "desk_derivation": [
+        "Specialize universal GRH at q=1 and the unique character1.",
+        "The definition of trivialZeros at q=1 yields the negative even integers.",
+        "Use the source's type-level equivalence test and the nonzero-at1 fact to reconcile the pole exclusion."
+      ],
+      "proof_basis": "Actual source equivalence proof L90-L94 exists; kernel execution NOT_RUN",
+      "proof_kernel_status": "NOT_RUN",
+      "proof_receipt": null,
+      "mathematically_verified": false,
+      "counterexample_or_variant_risk": "This concerns Dirichlet L-functions only, not Dedekind zeta ERH or Artin conditional hypotheses. A proved implication does not prove either endpoint conjecture.",
+      "proposed_correction": null,
+      "remaining_obligations": [
+        "Independent qualified human review of the exact relation and all domain/quantifier bridges.",
+        "A trusted checker receipt or accepted scoped proof artifact; source proof text alone is not execution evidence.",
+        "No automatic promotion of source theorem tags, desk derivations, or this review to a solved/verified status."
+      ]
+    }
+  ]
+}

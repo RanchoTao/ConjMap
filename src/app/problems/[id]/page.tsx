@@ -8,6 +8,7 @@ import { MathText } from '@/components/math-text';
 import { ResearchPanel } from '@/components/research-panel';
 import { EvidencePassport } from '@/components/evidence-passport';
 import { RealResearchPanel } from '@/components/real-research-panel';
+import {ArchivedRunPanel} from '@/components/archived-run-panel';
 // Pre-render every canonical problem page for GitHub Pages without a Node server.
 export function generateStaticParams() {
   const ids = new Set(problems.flatMap((problem) => [
@@ -47,6 +48,7 @@ export default async function ProblemPage({ params }: { params: Promise<{ id: st
       </div>
       <div className="detail-grid">
         <div className="detail-main">
+          <ArchivedRunPanel problemId={problem.id}/>
           <EvidencePassport problem={problem} />
           <section className="paper-panel">
             <div className="panel-heading">

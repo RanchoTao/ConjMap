@@ -92,3 +92,28 @@ python -m unittest discover -s adapters -p "test_*.py"
 ```
 
 The adapter refuses an unpinned checkout or missing license. It performs no web crawling. Offline tests re-extract every shipped record from the preserved files and compare the entire record. `validate:data` independently checks source hashes and exact statement spans. Updating upstream requires a new dated audit and PR; no scheduled refresh runs.
+
+## V0.4 append-only review and execution overlays
+
+The original catalog, V0.2 dossiers/relations and V0.3 source index are unchanged.
+`data/v04/dossier-reviews.json` records three scoped automated reviews, with separate
+source, statement, literature, formal correspondence, kernel, human and mathematical
+dimensions. Source/statement inspection does not promote the catalog's `unknown`
+status. All three reviews remain PARTIAL. The dated freshness receipt is a separate
+acquisition record, not a claim of exhaustive literature coverage.
+
+`data/v04/relation-reviews.json` binds all twelve original edge signatures to exact
+variants, premises, direction, proof evidence and unresolved obligations. Nine remain
+candidates and three require correction; the validated runtime projection withholds
+the challenged three while retaining every original edge in review history. Zero are
+verified. `src/lib/v04-reviews.ts` validates counts, signatures and projection invariants.
+
+The single `docs/evidence/v04-real-run/` archive contains an actual engine receipt and
+six indexed artifacts. Its hashes cover the original bytes, including CRLF where
+emitted by the Windows engine. Scoped Git `-text` attributes preserve those bytes;
+this differs deliberately from the original LF-normalized source catalog. Offline
+validation checks source/task/statement bindings and the recorded finite table, but
+cannot authenticate an HMAC without the intentionally unpublished owner secret.
+The owner-local transport authenticated capture and reload. Execution provenance,
+CONTRACT_TEST, MOCK, and mathematical verification remain separate dimensions;
+research output has no catalog-status write authority.

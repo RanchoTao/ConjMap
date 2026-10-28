@@ -1,0 +1,246 @@
+{
+  "schema_version": "1.0",
+  "reviewed_at": "2026-10-24",
+  "date_precision": "day",
+  "reviewer": {
+    "id": "codex-v04-dossier-review",
+    "kind": "agent",
+    "independence": "Separate review agent with shared tools and context; not independent human or expert approval"
+  },
+  "historical_input": {
+    "path": "data/v02/dossiers.json",
+    "sha256": "fdb5a53ad6c897fe8b008e323bed8c21ded6ed9c490f8ffc7b866a494c581d78",
+    "modified": false
+  },
+  "scope": {
+    "catalog_status_mutations": 0,
+    "research_runs": 0,
+    "kernel_runs": 0,
+    "human_approval_receipts": 0,
+    "fully_cleared": 0,
+    "mathematically_verified": 0,
+    "external_response_bodies_redistributed": false,
+    "response_hash_semantics": "Acquisition hashes of HTTP response bytes, not guaranteed stable page rendering or proof correctness"
+  },
+  "reviews": [
+    {
+      "id": "v04-review-cm-000008-v2",
+      "problem_id": "cm-000008",
+      "title": "Beal conjecture",
+      "version": 2,
+      "supersedes": "audit-cm-000008",
+      "completion": "PARTIAL",
+      "catalog_status_recommendation": "unknown",
+      "original_statement_sha256": "c1510418cb5cd93553a8a605e5589dc2ebf6fa7218ce15a90a2d02fb6d3bb637",
+      "source": {
+        "repository": "https://github.com/google-deepmind/formal-conjectures",
+        "revision": "2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6",
+        "path": "data/upstream/formal-conjectures/FormalConjectures/Wikipedia/BealConjecture.lean",
+        "raw_url": "https://raw.githubusercontent.com/google-deepmind/formal-conjectures/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/BealConjecture.lean",
+        "sha256": "eb7bd938b23049783832bc95c239115960d05e4a5d3f0e4c3d13547af9b6b614",
+        "license": "Apache-2.0",
+        "http_status": 200,
+        "retrieved_byte_count": 2468,
+        "exact_local_match": true,
+        "spans": [[30, 40], [42, 69]]
+      },
+      "statement_card": {
+        "domain": "A,B,C,x,y,z are natural numbers",
+        "quantifiers": "For all A,B,C,x,y,z, each guarded antecedent implies the gcd conclusion",
+        "assumptions": ["A,B,C are nonzero", "x,y,z > 2", "A^x+B^y=C^z"],
+        "conclusion": "1 < gcd(A,B,C), equivalently all three bases share a prime factor",
+        "parameters": "Exponents vary independently; not restricted to prime exponents or equal exponents",
+        "failure_conditions": ["Allowing zero or negative bases changes the statement", "A merely pairwise common factor is weaker than a factor shared by all three", "FLT does not imply Beal"],
+        "formal_correspondence": "Source definition lines 30-32 explicitly matches the six-variable target; repeated values in Finset do not alter gcd",
+        "proof_body": "sorry at line 40"
+      },
+      "dimensions": {
+        "SOURCE_VERIFIED": {"status": "DONE", "scope": "Pinned licensed Lean bytes re-fetched and matched byte-for-byte"},
+        "STATEMENT_VERIFIED": {"status": "DONE", "scope": "Agent checked domains, guards, gcd/common-prime meaning and institutional statement correspondence"},
+        "LITERATURE_REVIEWED": {"status": "PARTIAL", "scope": "Institutional statement and two identified preprint abstracts; no complete accepted-literature or competing-proof audit"},
+        "FORMAL_STATEMENT_CHECKED": {"status": "PARTIAL", "scope": "Local definition/signature inspected; transitive imports, elaboration and axioms not executed"},
+        "PROOF_KERNEL_VERIFIED": {"status": "NOT_RUN", "scope": "No kernel invocation; selected conjecture contains sorry"},
+        "HUMAN_REVIEWED": {"status": "NOT_RUN", "scope": "No human or expert receipt"},
+        "MATHEMATICALLY_VERIFIED": {"status": "NOT_RUN", "scope": "No independently verified proof of this conjecture"}
+      },
+      "primary_literature": [
+        {
+          "url": "https://sites.math.unt.edu/~mauldin/beal.html",
+          "version": "Unversioned institutional page; accessed 2026-10-24",
+          "access": "WEB_PAGE",
+          "locator": "First conjecture paragraph and historical-announcement paragraph",
+          "sha256": "bc8f62a438d11af09b770cd6c550a3469e71b0f8eebc42fe873e8c7678f38b18",
+          "http_status": 200,
+          "finding": "Institutional statement agrees with the imported natural-positive domains and common-prime conclusion; original announcement still requires direct access"
+        },
+        {
+          "url": "https://arxiv.org/abs/2510.05448v1",
+          "version": "v1, 2025-10-06",
+          "access": "ABSTRACT",
+          "locator": "Abstract: IUT-related generalized Fermat signatures and exceptional-signature lists",
+          "sha256": "b8121911b82816bf5569b84ccfbdcf1ae9d26977b8ceaa7f40fad204926c9dc6",
+          "http_status": 200,
+          "finding": "Conditional/method-dependent and incomplete signature coverage; not a full Beal proof receipt"
+        },
+        {
+          "url": "https://arxiv.org/abs/2409.03758v1",
+          "version": "v1, 2024-08-14",
+          "access": "ABSTRACT",
+          "locator": "Abstract: integer proof claim and distinct finite-field congruence applications",
+          "sha256": "5f7c1f57f571e7630396c7eed8d1732e4e4b40cc3e63ef6ee02c691751f43e72",
+          "http_status": 200,
+          "finding": "Author proof claim located; proof and finite-field scope not independently validated"
+        }
+      ],
+      "failed_acquisitions": [
+        {"url": "https://www.ams.org/notices/199711/beal.pdf", "http_status": 403, "consequence": "Original-announcement full-text review remains open"},
+        {"url": "https://www.ams.org/profession/prizes-awards/ams-supported/beal-prize", "http_status": 403, "consequence": "Current AMS prize status not certified by this review"}
+      ],
+      "searches": ["site.arxiv.org Beal 2026 conjecture", "site.ams.org/notices 1997 Beal Mauldin conjecture"],
+      "closed_obligations": ["Versioned source bytes and declaration locator", "Six-variable domain and quantifier order", "Positive/nonzero natural equivalence", "Shared gcd greater than one versus common prime", "Conditional Beal-to-FLT direction"],
+      "open_obligations": ["Lawful full-text original announcement access and historical priority", "Full accepted-literature and competing-proof audit", "Exact dependency elaboration and axiom inspection", "Qualified independent expert review"]
+    },
+    {
+      "id": "v04-review-cm-000028-v2",
+      "problem_id": "cm-000028",
+      "title": "Büchi's problem, M5 formulation",
+      "version": 2,
+      "supersedes": "audit-cm-000028",
+      "completion": "PARTIAL",
+      "catalog_status_recommendation": "unknown",
+      "original_statement_sha256": "b0b36fef43a92dc1b1a03917bed51eb23cdf43ff19e360f729522cd9b98ac6aa",
+      "source": {
+        "repository": "https://github.com/google-deepmind/formal-conjectures",
+        "revision": "2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6",
+        "path": "data/upstream/formal-conjectures/FormalConjectures/Wikipedia/Buchi.lean",
+        "raw_url": "https://raw.githubusercontent.com/google-deepmind/formal-conjectures/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/Buchi.lean",
+        "sha256": "71716cb13181d43db271bdcab062a3844cea3fda157438b452b897d5d865b2ce",
+        "license": "Apache-2.0",
+        "http_status": 200,
+        "retrieved_byte_count": 3730,
+        "exact_local_match": true,
+        "spans": [[30, 56], [58, 111]]
+      },
+      "statement_card": {
+        "domain": "x,a are arbitrary integers; n is natural and belongs to Finset.range 5",
+        "quantifiers": "For every x,a, square witnesses for all five n imply a=0",
+        "assumptions": ["For each n=0,1,2,3,4, (x+n)^2+a is an integer square"],
+        "conclusion": "a=0",
+        "parameters": "Five-index universal case; distinct from existence of some sufficient M",
+        "failure_conditions": ["Do not impose positivity on x or a", "Square values, not the signed roots, must be consecutive-square values", "The source's first-open-case label is not a current status certificate"],
+        "formal_correspondence": "Definition IsBuchi at lines 33-34 and theorem at 55-56 inspected; integer cast of natural indices is explicit",
+        "proof_body": "sorry at line 56"
+      },
+      "dimensions": {
+        "SOURCE_VERIFIED": {"status": "DONE", "scope": "Pinned licensed Lean bytes re-fetched and matched byte-for-byte"},
+        "STATEMENT_VERIFIED": {"status": "DONE", "scope": "Agent checked integer domains, exact index range and an explicit informal parity/offset conversion"},
+        "LITERATURE_REVIEWED": {"status": "PARTIAL", "scope": "Versioned full HTML accessed; Theorem 1.3, proof outline and recurrence setup read; full proof, corrections and expert acceptance not established"},
+        "FORMAL_STATEMENT_CHECKED": {"status": "PARTIAL", "scope": "Local source definition and signature inspected; conversion not kernel formalized and import closure not executed"},
+        "PROOF_KERNEL_VERIFIED": {"status": "NOT_RUN", "scope": "No kernel invocation; selected conjecture contains sorry"},
+        "HUMAN_REVIEWED": {"status": "NOT_RUN", "scope": "No human or expert receipt"},
+        "MATHEMATICALLY_VERIFIED": {"status": "NOT_RUN", "scope": "Preprint claim is not independently certified"}
+      },
+      "primary_literature": [
+        {
+          "url": "https://arxiv.org/html/2412.16740v3",
+          "version": "v3, 2025-06-07",
+          "access": "SELECTED_FULL_TEXT_PASSAGES",
+          "locator": "Theorem 1.3; proof outline; section 2, Lemma 2.2 and equation (2.3)",
+          "sha256": "d6ed7754f1b2df9a1c8ea53a47d6a35f09f3b9421e125e8541b87e471969da13",
+          "http_status": 200,
+          "license": "CC-BY-4.0 as indicated by arXiv HTML",
+          "finding": "Relevant full-result claim identified; an apparent index discrepancy in displayed equation (2.3) remains to check against PDF/TeX and downstream conventions"
+        }
+      ],
+      "agent_reasoning": {
+        "kind": "INFORMAL_FORMULATION_COMPARISON",
+        "not_a_kernel_receipt": true,
+        "steps": [
+          "For five square values q_n with second difference two, put D=q_1-q_0.",
+          "If D is even then q_0,q_1 have the same parity and D is divisible by four; q_2=q_0+2D+2 is then 2 or 3 modulo four, impossible for a square.",
+          "Thus D is odd and the recurrence gives q_n=q_0+nD+n(n-1).",
+          "Set x=(D-1)/2 and a=q_0-x^2, both integers, obtaining q_n=(x+n)^2+a.",
+          "Conversely an integer-offset sequence has second difference two; comparison with consecutive square values (t+n)^2 yields x=t and a=0."
+        ]
+      },
+      "source_risks": [
+        {
+          "locator": "arXiv:2412.16740v3 section 2, equation (2.3)",
+          "issue": "The expression displayed as u_k^2 returns u_2^2 at k=1 under the nearby a_1=u_1^2 convention",
+          "classification": "Apparent indexing or rendering discrepancy; unresolved, not a refutation of the full proof",
+          "required_action": "Check versioned PDF/TeX and later index conventions before relying on this proof step"
+        }
+      ],
+      "searches": ["site.arxiv.org 2412.16740 Buchi five squares", "site.arxiv.org Büchi Xiao 2026"],
+      "closed_obligations": ["Versioned source bytes and declaration locator", "All-integer domains and exact five-index range", "Universal M5 versus existential M", "Explicit informal parity and polynomial-offset comparison", "Proof claim separated from independent verification"],
+      "open_obligations": ["Resolve equation (2.3) index convention against PDF/TeX", "Audit entire parametrization and determinant proof, corrections and independent assessments", "Formalize or independently review formulation conversion", "Exact Lean dependencies and axiom inspection", "Qualified independent expert review"]
+    },
+    {
+      "id": "v04-review-cm-000118-v2",
+      "problem_id": "cm-000118",
+      "title": "Union-closed sets conjecture",
+      "version": 2,
+      "supersedes": "audit-cm-000118",
+      "completion": "PARTIAL",
+      "catalog_status_recommendation": "unknown",
+      "original_statement_sha256": "3c513ed8135e191b1ad4239f218368be09df8899b05596c7322be05ce7ccb47c",
+      "source": {
+        "repository": "https://github.com/google-deepmind/formal-conjectures",
+        "revision": "2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6",
+        "path": "data/upstream/formal-conjectures/FormalConjectures/Wikipedia/UnionClosed.lean",
+        "raw_url": "https://raw.githubusercontent.com/google-deepmind/formal-conjectures/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/UnionClosed.lean",
+        "sha256": "2eed6f767e60e2103c3edb55d74416ab58961129cf89edcb0f9861b47698a265",
+        "license": "Apache-2.0",
+        "http_status": 200,
+        "retrieved_byte_count": 8748,
+        "exact_local_match": true,
+        "spans": [[36, 41], [54, 64], [66, 149]]
+      },
+      "statement_card": {
+        "domain": "n is a nonempty type with decidable equality; A is a Finset of Finsets of n",
+        "quantifiers": "For every such n and A satisfying the guards, there exists i:n with the rational frequency bound",
+        "assumptions": ["A is not the singleton family containing the empty set", "For every X,Y in A, X union Y is in A"],
+        "conclusion": "(1/2 : rational) times card A is at most card {X in A | i in X} for some i",
+        "parameters": "Ground type need not be finite; family and every member are finite; no multiplicities",
+        "failure_conditions": ["Empty family and singleton-empty family are distinct", "Finite special cases or lower constants below one half do not prove the universal target", "Upstream research-solved annotations do not supply kernel receipts"],
+        "formal_correspondence": "Local closure definition lines 40-41 and rational target lines 59-64 inspected; empty-family extension is vacuous using a nonempty ground type",
+        "proof_body": "sorry at line 64"
+      },
+      "dimensions": {
+        "SOURCE_VERIFIED": {"status": "DONE", "scope": "Pinned licensed Lean bytes re-fetched and matched byte-for-byte"},
+        "STATEMENT_VERIFIED": {"status": "DONE", "scope": "Agent checked finiteness, closure, ground type, rational inequality and empty-family boundary correspondence"},
+        "LITERATURE_REVIEWED": {"status": "PARTIAL", "scope": "Versioned HTML formulation, Theorem 1.2, dependency criterion and computational-appendix pointer read; no full analytic or numerical certificate audit"},
+        "FORMAL_STATEMENT_CHECKED": {"status": "PARTIAL", "scope": "Local signature and variant proof bodies inspected; dependencies, elaboration and axiom closure not executed"},
+        "PROOF_KERNEL_VERIFIED": {"status": "NOT_RUN", "scope": "No kernel invocation; conjecture and several research-solved variants contain sorry"},
+        "HUMAN_REVIEWED": {"status": "NOT_RUN", "scope": "No human or expert receipt"},
+        "MATHEMATICALLY_VERIFIED": {"status": "NOT_RUN", "scope": "No proof of the universal one-half bound certified"}
+      },
+      "primary_literature": [
+        {
+          "url": "https://arxiv.org/html/2610.02295v1",
+          "version": "v1, 2026-10-01",
+          "access": "SELECTED_FULL_TEXT_PASSAGES",
+          "locator": "Section 1, Theorem 1.2; Proposition 2.2; computational-appendix pointer",
+          "sha256": "779d7ab36088adabfad57972f80594e971bc345add161d349247d7dbd29abf38",
+          "http_status": 200,
+          "license": "CC-BY-4.0 as indicated by arXiv HTML",
+          "finding": "Claimed universal lower fraction 0.3828852549667978 is strictly below one half; not a proof of the imported target"
+        }
+      ],
+      "agent_reasoning": {
+        "kind": "INFORMAL_BOUNDARY_COMPARISON",
+        "not_a_kernel_receipt": true,
+        "steps": [
+          "If A is empty, any element of the nonempty ground type witnesses 0 <= 0.",
+          "If A is nonempty and A is not {empty}, at least one member is nonempty.",
+          "The union of finitely many finite members is finite even when n is infinite.",
+          "A witness for the half-frequency conclusion in a nonempty family has positive frequency, hence belongs to that finite union.",
+          "Thus the formal target's additional empty-family allowance is harmless and its substantive part matches the finite nonempty-member formulation."
+        ]
+      },
+      "searches": ["site.arxiv.org 2610.02295 union closed sets", "site.arxiv.org union closed conjecture 2026 improved bound"],
+      "closed_obligations": ["Versioned source bytes and declaration locator", "Finite family and finite members without multiplicities", "Pairwise union closure", "Empty-family versus singleton-empty boundary", "Nonempty ground type and rational half inequality", "Finite-support formulation correspondence", "Weaker-bound and special-case separation"],
+      "open_obligations": ["Original attribution and full historical review", "Current proof claims and complete analytic dependencies", "Numerical supplement certificates not executed", "Exact Lean dependency and axiom check", "Qualified independent expert review"]
+    }
+  ]
+}

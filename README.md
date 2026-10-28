@@ -1,6 +1,6 @@
 # ConjMap
 
-**Mapping the Frontiers of Mathematics.** An open, interactive, evidence-traceable research map. V0.2 adds licensed multi-source observations, evidence dimensions and a guarded MathForge transport. **Overall PARTIAL:** 30 scoped dossiers await rigorous clearance; no real MathForge run was possible through the inspected controller.
+**Mapping the Frontiers of Mathematics.** An open, interactive, evidence-traceable research map. **V0.4 records one real source-bound MathForge calibration with authenticated receipts and actual logs.** Mathematical clearance remains PARTIAL: three dossiers were reviewed in depth, but no conjecture, proof or graph relation is promoted to verified.
 
 ## Run locally
 
@@ -53,12 +53,22 @@ python adapters/erdos_open_index.py
 
 - Home, interactive Cytoscape atlas, searchable/sortable/paginated problem index, evidence-rich problem detail, sources, and about pages.
 - Responsive layouts and persisted dark/light themes. An accessible node index provides a keyboard alternative to the canvas.
-- **120 source statements, 6 fields, 82 unverified discovery associations.** All independent mathematical statuses are **unknown**. Source-reported `research open` is displayed separately. **0 independently verified problems, 0 real research runs.**
+- **120 source statements, 6 fields, 82 unverified discovery associations.** All independent mathematical statuses are **unknown**. Source-reported `research open` is displayed separately. **0 independently verified problems;1 actual known finite calibration run**, with no general-conjecture conclusion.
 - Two independent licensed adapters: Formal Conjectures statements and 32 Erdős community metadata observations mapped to existing problems. Neutral `cm-000001` IDs retain all legacy `fc-*` links. Second-source observations add **0** independent problems.
 - 30 scoped PARTIAL dossiers, seven separate evidence dimensions and append-only review versions. **0 fully cleared dossiers.** Primary literature leads and full-method review gaps are explicit.
 - 12 substantive source-reviewed **candidate** relations and 12 declaration nodes (not additional problems); 0 verified relations. Separate navigation, logic, special-case and research-evidence layers; candidates require an explicit toggle.
 - Research API v1 remains **mock-only**. Independent v2 supports authenticated submission, status polling, signed callbacks, quotas, idempotency and immutable event snapshots. Default requests become **BLOCKED**; no real engine result is fabricated.
-- Isolated opt-in `/bench` exercises the actual renderer with 100/1,000/5,000 synthetic nodes. [Measured results](docs/performance/v02-graph-benchmark.json) are engineering evidence only.
+- Isolated opt-in `/bench` exercises the actual renderer with 100/1,000/5,000 synthetic nodes. [V0.4 measurements and limits](docs/performance-v0.4.md) are engineering evidence only; V0.2 receipts remain historical.
+
+V0.4 preserves the 589-record metadata index and every original statement. Of the12
+historical substantive candidates,9 remain active and3 are challenged/withheld while
+their full history remains visible. New review dimensions separate source/statement
+inspection, literature, formal correspondence, kernel verification and human approval.
+An engine-owned gateway admits exactly one known Fin2 task, with durable provenance,
+root-wide quota, recovery/cancellation guards and signed artifact retrieval. Default
+unconfigured startup still makes no engine connection. [Actual integration evidence](docs/mathforge-real-integration-v0.4.md)
+and [V0.4 acceptance](docs/acceptance-v0.4.md) distinguish real execution, contract tests
+and scientific unknowns. The runner is opt-in and must not be used to replay the spent task.
 
 | Field | Statements |
 | --- | ---: |
@@ -84,7 +94,7 @@ npx playwright install chromium
 npm run test:e2e
 ```
 
-Python adapter checks require `python -m pip install -r requirements-adapters.txt` (PyYAML, no research service). `npm run check` runs both data validators, lint, typecheck, unit tests and build. Playwright starts its own production server on port 3100, tests browser interactions and API boundaries, and writes screenshots and benchmark measurements. CI uploads reports. See the PR and [V0.2 acceptance report](docs/acceptance-v0.2.md) for executed results; the [V0.1 report](docs/acceptance-report.md) is historical.
+Python adapter checks require `python -m pip install -r requirements-adapters.txt` (PyYAML, no research service). `npm run check` runs all data/archive validators, lint, typecheck, unit tests and build. Playwright starts its own production server on port3100 and tests browser interactions, API boundaries and isolated synthetic graph measurements. CI never launches a real MathForge task. See [V0.4 acceptance](docs/acceptance-v0.4.md); V0.1/V0.2 reports are preserved historical results.
 
 ## Minimal end-to-end acceptance
 
@@ -96,6 +106,7 @@ Python adapter checks require `python -m pip install -r requirements-adapters.tx
 6. On Atlas select Mathematical logic: verified-only has no links. Enable unverified candidates to inspect amber dashed relations; inspect hypotheses and pinned declarations on problem details.
 7. On a dossier page inspect seven evidence dimensions and literature gaps. On Erdős #10 inspect the second-source metadata separately from the mathematical statement/status.
 8. Request a real MathForge audit with default configuration: the durable local record is BLOCKED, engine task ID not issued, actual runs 0. Reload and load real request history. This is not a successful research run.
+9. Open `/problems/cm-000118` and inspect the archived actual V0.4 run: its engine ID, source, resource measurements and evidence link persist across English/Chinese reloads. Browsing this archive starts no new research. Run `npm run validate:v04` for offline artifact/table checks. The historical `validate:v02` reports its own zero-run baseline separately.
 
 ## Documentation
 

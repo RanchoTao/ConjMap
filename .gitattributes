@@ -1,3 +1,5 @@
 * text=auto eol=lf
 *.png binary
+# Signed engine artifacts retain their original bytes (including Windows log CRLF).
+docs/evidence/v04-real-run/** -text
 data/upstream/** whitespace=-blank-at-eol

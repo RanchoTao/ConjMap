@@ -1,0 +1,153 @@
+{
+  "id": "d5a5b738-1319-475d-bedd-aee114e104f7",
+  "api_version": "v2",
+  "engine": "mathforge",
+  "is_mock": false,
+  "problem_id": "cm-000118",
+  "status": "completed",
+  "created_at": "2026-10-28T10:51:28.629Z",
+  "updated_at": "2026-10-28T10:51:29.203Z",
+  "engine_task_id": "mf-audit-86c955e76307455994ecb1b84c74a81d",
+  "input": {
+    "problem_id": "cm-000118",
+    "objective": "Perform only the admitted source-bound Fin2 frequency calibration; no novelty or general conjecture claim.",
+    "admission_id": "cm-v04-union-closed-fin2-v1",
+    "budget": {
+      "wall_seconds": 30,
+      "max_tasks": 1,
+      "network": false
+    }
+  },
+  "context": {
+    "problem_id": "cm-000118",
+    "statement": "For every finite union-closed family of sets, other than the family containing only the empty set,\nthere exists an element that belongs to at least half of the sets in the family.",
+    "formal_statement": "union_closed\n    [Nonempty n]\n    (h_ne_singleton_empty : A ≠ {∅})\n    (h_union_closed : IsUnionClosed A) :\n    ∃ i : n, (1 / 2 : ℚ) * #A ≤ #{x ∈ A | i ∈ x}",
+    "references": [
+      {
+        "title": "Formal Conjectures: source and surrounding definitions",
+        "url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/UnionClosed.lean#L54-L63"
+      },
+      {
+        "title": "Reference linked by upstream (not independently reviewed)",
+        "url": "https://en.wikipedia.org/wiki/Union-closed_sets_conjecture"
+      }
+    ],
+    "source_mappings": [
+      {
+        "source_id": "formal-conjectures",
+        "external_id": "FormalConjectures/Wikipedia/UnionClosed.lean::union_closed",
+        "url": "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/UnionClosed.lean#L54-L63"
+      }
+    ],
+    "status": "unknown",
+    "review_status": "unverified",
+    "source_binding": {
+      "source_id": "formal-conjectures",
+      "revision": "2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6",
+      "path": "FormalConjectures/Wikipedia/UnionClosed.lean",
+      "sha256": "2eed6f767e60e2103c3edb55d74416ab58961129cf89edcb0f9861b47698a265",
+      "statement_sha256": "3c513ed8135e191b1ad4239f218368be09df8899b05596c7322be05ce7ccb47c"
+    },
+    "known_results": [],
+    "known_results_scope": "No independently established results supplied; inspect linked sources."
+  },
+  "attempts": [
+    {
+      "kind": "partial_result",
+      "result": "Actual MathForge finite calibration: examined 16 families of P(Fin 2); 13 applicable union-closed families each have a half-frequency witness. Source binding checked; no general proof, kernel verification or status promotion.",
+      "verification_status": "unverified",
+      "artifact_urls": []
+    }
+  ],
+  "events": [
+    {
+      "at": "2026-10-28T10:51:28.629Z",
+      "kind": "request_recorded",
+      "digest": "2154eb794b313c446bedbb45f76748a6d49fdce932052e105762701008315b96"
+    },
+    {
+      "at": "2026-10-28T10:51:28.835Z",
+      "kind": "engine_response",
+      "digest": "a8babb29bc91d61af9e7ceae1e476025789bf891812bea76e068622cbb4030a6"
+    },
+    {
+      "at": "2026-10-28T10:51:28.977Z",
+      "kind": "engine_poll",
+      "digest": "8e32c7ff0e71e65f23bac8b321dd7c17648d2a708206086a06a78f36de01f43d"
+    },
+    {
+      "at": "2026-10-28T10:51:29.097Z",
+      "kind": "engine_poll",
+      "digest": "e314fed3d209d56de80a4e73489b5b7ca44557f20ae046c23854bea745f17570"
+    },
+    {
+      "at": "2026-10-28T10:51:29.125Z",
+      "kind": "artifact_hash_verified",
+      "digest": "d9297d7b58436dc9d4fa6e4e922887f5d85dd126f9c9bb7039f5fd4fac92207f"
+    },
+    {
+      "at": "2026-10-28T10:51:29.142Z",
+      "kind": "artifact_hash_verified",
+      "digest": "c432339d8e48534e40e43fea88d0b08325c79fa73f96d0bb05b541437cfd95d5"
+    },
+    {
+      "at": "2026-10-28T10:51:29.158Z",
+      "kind": "artifact_hash_verified",
+      "digest": "dd8d9d2ece0ba7e89403c79ba688af3b09e859a6a73b062bcf97e732999bc27b"
+    },
+    {
+      "at": "2026-10-28T10:51:29.174Z",
+      "kind": "artifact_hash_verified",
+      "digest": "e84109b453b18a5401124a7707c819a6d29205a5afaa4a15d3c1643c58182f80"
+    },
+    {
+      "at": "2026-10-28T10:51:29.188Z",
+      "kind": "artifact_hash_verified",
+      "digest": "6d8f58af1a519ea650ea412c2f4faef17e7bfb2014f0fda58a8e5db4384d76ff"
+    },
+    {
+      "at": "2026-10-28T10:51:29.203Z",
+      "kind": "artifact_hash_verified",
+      "digest": "08bf51af7a5b108a55b8c6287d4ab1238e3568bf88612dd1cd5f294eb4f53464"
+    }
+  ],
+  "blocker": null,
+  "idempotency_key": "conjmap-v04-b1192374-1195-4bcc-b523-99edef8710d1",
+  "execution_mode": "REAL_RUN",
+  "receipt": {
+    "payload": "{\"admission_id\":\"cm-v04-union-closed-fin2-v1\",\"admission_sha256\":\"694dca6283cb5582473c13c52135d2d382d5e6fd15df2be294a167bec13fb1f8\",\"artifact_index\":[{\"bytes\":929,\"name\":\"EXECUTION.json\",\"sha256\":\"fcffa68b4227b8cfac93d251a19b8f911c553129766a15d0c700ed359c440f62\"},{\"bytes\":951,\"name\":\"INPUT.json\",\"sha256\":\"e075c6827db0707e76298b066c07a2113a9c1056471387424b7d0f23fa6fdc50\"},{\"bytes\":5048,\"name\":\"RESULT.json\",\"sha256\":\"df3b5ef58c6391d31921660ce29a31ca53559c260433ffa6ed102a9b113e9fa3\"},{\"bytes\":8748,\"name\":\"SOURCE.lean\",\"sha256\":\"2eed6f767e60e2103c3edb55d74416ab58961129cf89edcb0f9861b47698a265\"},{\"bytes\":0,\"name\":\"stderr.txt\",\"sha256\":\"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\"},{\"bytes\":226,\"name\":\"stdout.txt\",\"sha256\":\"cd87f4f02d2e01afd81e556dae72872f2afdf7baea94db5eb6aa7790c2908942\"}],\"attempts\":[{\"artifact_urls\":[],\"kind\":\"partial_result\",\"result\":\"Actual MathForge finite calibration: examined 16 families of P(Fin 2); 13 applicable union-closed families each have a half-frequency witness. Source binding checked; no general proof, kernel verification or status promotion.\",\"verification_status\":\"unverified\"}],\"conjmap_task_id\":\"d5a5b738-1319-475d-bedd-aee114e104f7\",\"engine_commit\":\"c43ee228c6b7a9e913537b3b19800a7d722c4c03\",\"engine_task_id\":\"mf-audit-86c955e76307455994ecb1b84c74a81d\",\"execution_mode\":\"REAL_RUN\",\"problem_id\":\"cm-000118\",\"protocol\":\"mathforge-conjmap-receipt-v1\",\"recorded_at\":\"2026-10-28T10:51:29.054042+00:00\",\"resources\":{\"controller_elapsed_seconds\":0.17957110001589172,\"cpu_seconds\":0.109375,\"peak_job_bytes\":9572352,\"wall_seconds\":0.16381720002391376},\"scientific_status\":\"unverified\",\"source_sha256\":\"2eed6f767e60e2103c3edb55d74416ab58961129cf89edcb0f9861b47698a265\",\"statement_sha256\":\"3c513ed8135e191b1ad4239f218368be09df8899b05596c7322be05ce7ccb47c\",\"status\":\"completed\",\"worker_sha256\":\"8b54c710e492a0965944bd81fbd152483a37cd782b26b8dbf854f31014b771c4\"}",
+    "signature": "sha256=f81a8096512bb6cd30c2fa495b302be47e0bc30533922145a442a30a3b59d672"
+  },
+  "evidence": [
+    {
+      "name": "EXECUTION.json",
+      "sha256": "fcffa68b4227b8cfac93d251a19b8f911c553129766a15d0c700ed359c440f62",
+      "bytes": 929
+    },
+    {
+      "name": "INPUT.json",
+      "sha256": "e075c6827db0707e76298b066c07a2113a9c1056471387424b7d0f23fa6fdc50",
+      "bytes": 951
+    },
+    {
+      "name": "RESULT.json",
+      "sha256": "df3b5ef58c6391d31921660ce29a31ca53559c260433ffa6ed102a9b113e9fa3",
+      "bytes": 5048
+    },
+    {
+      "name": "SOURCE.lean",
+      "sha256": "2eed6f767e60e2103c3edb55d74416ab58961129cf89edcb0f9861b47698a265",
+      "bytes": 8748
+    },
+    {
+      "name": "stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "name": "stdout.txt",
+      "sha256": "cd87f4f02d2e01afd81e556dae72872f2afdf7baea94db5eb6aa7790c2908942",
+      "bytes": 226
+    }
+  ]
+}
