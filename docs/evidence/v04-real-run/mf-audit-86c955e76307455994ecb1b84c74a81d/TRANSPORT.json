@@ -1,0 +1,72 @@
+[
+  {
+    "method": "POST",
+    "route": "/api/v2/research-tasks",
+    "status": 201,
+    "response_sha256": "6d1eca1b8fcd2214d96cb8be59ce9a56c15d089ca21fb918cb67e82fd6bb95ee",
+    "at": "2026-10-28T10:51:28.850Z"
+  },
+  {
+    "method": "POST",
+    "route": "/api/v2/research-tasks/d5a5b738-1319-475d-bedd-aee114e104f7/poll",
+    "status": 200,
+    "response_sha256": "d2b152b204809a97fb23f1db7f2cfaa5b4b7e1de8cbf424464c90cdda1b9c810",
+    "at": "2026-10-28T10:51:28.983Z"
+  },
+  {
+    "method": "POST",
+    "route": "/api/v2/research-tasks/d5a5b738-1319-475d-bedd-aee114e104f7/poll",
+    "status": 200,
+    "response_sha256": "babee0404beb0ca69ea2f19a75be36df3b2bc04149d3110f2029b20215e91e7d",
+    "at": "2026-10-28T10:51:29.104Z"
+  },
+  {
+    "method": "GET",
+    "route": "/api/v2/research-tasks/d5a5b738-1319-475d-bedd-aee114e104f7/artifacts/EXECUTION.json",
+    "status": 200,
+    "response_sha256": "fcffa68b4227b8cfac93d251a19b8f911c553129766a15d0c700ed359c440f62",
+    "at": "2026-10-28T10:51:29.131Z"
+  },
+  {
+    "method": "GET",
+    "route": "/api/v2/research-tasks/d5a5b738-1319-475d-bedd-aee114e104f7/artifacts/INPUT.json",
+    "status": 200,
+    "response_sha256": "e075c6827db0707e76298b066c07a2113a9c1056471387424b7d0f23fa6fdc50",
+    "at": "2026-10-28T10:51:29.147Z"
+  },
+  {
+    "method": "GET",
+    "route": "/api/v2/research-tasks/d5a5b738-1319-475d-bedd-aee114e104f7/artifacts/RESULT.json",
+    "status": 200,
+    "response_sha256": "df3b5ef58c6391d31921660ce29a31ca53559c260433ffa6ed102a9b113e9fa3",
+    "at": "2026-10-28T10:51:29.162Z"
+  },
+  {
+    "method": "GET",
+    "route": "/api/v2/research-tasks/d5a5b738-1319-475d-bedd-aee114e104f7/artifacts/SOURCE.lean",
+    "status": 200,
+    "response_sha256": "2eed6f767e60e2103c3edb55d74416ab58961129cf89edcb0f9861b47698a265",
+    "at": "2026-10-28T10:51:29.178Z"
+  },
+  {
+    "method": "GET",
+    "route": "/api/v2/research-tasks/d5a5b738-1319-475d-bedd-aee114e104f7/artifacts/stderr.txt",
+    "status": 200,
+    "response_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "at": "2026-10-28T10:51:29.192Z"
+  },
+  {
+    "method": "GET",
+    "route": "/api/v2/research-tasks/d5a5b738-1319-475d-bedd-aee114e104f7/artifacts/stdout.txt",
+    "status": 200,
+    "response_sha256": "cd87f4f02d2e01afd81e556dae72872f2afdf7baea94db5eb6aa7790c2908942",
+    "at": "2026-10-28T10:51:29.208Z"
+  },
+  {
+    "method": "GET",
+    "route": "/api/v2/research-tasks/d5a5b738-1319-475d-bedd-aee114e104f7",
+    "status": 200,
+    "response_sha256": "556e18be4cf4846c801db75846f7e048f3823c9a5949f79a210f5ac21ac72f73",
+    "at": "2026-10-28T10:51:29.217Z"
+  }
+]

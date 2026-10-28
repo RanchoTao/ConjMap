@@ -1,0 +1,293 @@
+{
+  "all_applicable_have_witness": true,
+  "applicable_families": 13,
+  "cpu_seconds": 0.09375,
+  "encodings_agree": true,
+  "execution_mode": "REAL_RUN",
+  "families_examined": 16,
+  "ground_size": 2,
+  "proof_kernel_verified": false,
+  "rows": [
+    {
+      "applicable": true,
+      "excluded_singleton_empty": false,
+      "family_mask": 0,
+      "frequencies": [
+        0,
+        0
+      ],
+      "members": [],
+      "union_closed": true,
+      "witnesses": [
+        0,
+        1
+      ]
+    },
+    {
+      "applicable": false,
+      "excluded_singleton_empty": true,
+      "family_mask": 1,
+      "frequencies": [
+        0,
+        0
+      ],
+      "members": [
+        0
+      ],
+      "union_closed": true,
+      "witnesses": []
+    },
+    {
+      "applicable": true,
+      "excluded_singleton_empty": false,
+      "family_mask": 2,
+      "frequencies": [
+        1,
+        0
+      ],
+      "members": [
+        1
+      ],
+      "union_closed": true,
+      "witnesses": [
+        0
+      ]
+    },
+    {
+      "applicable": true,
+      "excluded_singleton_empty": false,
+      "family_mask": 3,
+      "frequencies": [
+        1,
+        0
+      ],
+      "members": [
+        0,
+        1
+      ],
+      "union_closed": true,
+      "witnesses": [
+        0
+      ]
+    },
+    {
+      "applicable": true,
+      "excluded_singleton_empty": false,
+      "family_mask": 4,
+      "frequencies": [
+        0,
+        1
+      ],
+      "members": [
+        2
+      ],
+      "union_closed": true,
+      "witnesses": [
+        1
+      ]
+    },
+    {
+      "applicable": true,
+      "excluded_singleton_empty": false,
+      "family_mask": 5,
+      "frequencies": [
+        0,
+        1
+      ],
+      "members": [
+        0,
+        2
+      ],
+      "union_closed": true,
+      "witnesses": [
+        1
+      ]
+    },
+    {
+      "applicable": false,
+      "excluded_singleton_empty": false,
+      "family_mask": 6,
+      "frequencies": [
+        1,
+        1
+      ],
+      "members": [
+        1,
+        2
+      ],
+      "union_closed": false,
+      "witnesses": [
+        0,
+        1
+      ]
+    },
+    {
+      "applicable": false,
+      "excluded_singleton_empty": false,
+      "family_mask": 7,
+      "frequencies": [
+        1,
+        1
+      ],
+      "members": [
+        0,
+        1,
+        2
+      ],
+      "union_closed": false,
+      "witnesses": []
+    },
+    {
+      "applicable": true,
+      "excluded_singleton_empty": false,
+      "family_mask": 8,
+      "frequencies": [
+        1,
+        1
+      ],
+      "members": [
+        3
+      ],
+      "union_closed": true,
+      "witnesses": [
+        0,
+        1
+      ]
+    },
+    {
+      "applicable": true,
+      "excluded_singleton_empty": false,
+      "family_mask": 9,
+      "frequencies": [
+        1,
+        1
+      ],
+      "members": [
+        0,
+        3
+      ],
+      "union_closed": true,
+      "witnesses": [
+        0,
+        1
+      ]
+    },
+    {
+      "applicable": true,
+      "excluded_singleton_empty": false,
+      "family_mask": 10,
+      "frequencies": [
+        2,
+        1
+      ],
+      "members": [
+        1,
+        3
+      ],
+      "union_closed": true,
+      "witnesses": [
+        0,
+        1
+      ]
+    },
+    {
+      "applicable": true,
+      "excluded_singleton_empty": false,
+      "family_mask": 11,
+      "frequencies": [
+        2,
+        1
+      ],
+      "members": [
+        0,
+        1,
+        3
+      ],
+      "union_closed": true,
+      "witnesses": [
+        0
+      ]
+    },
+    {
+      "applicable": true,
+      "excluded_singleton_empty": false,
+      "family_mask": 12,
+      "frequencies": [
+        1,
+        2
+      ],
+      "members": [
+        2,
+        3
+      ],
+      "union_closed": true,
+      "witnesses": [
+        0,
+        1
+      ]
+    },
+    {
+      "applicable": true,
+      "excluded_singleton_empty": false,
+      "family_mask": 13,
+      "frequencies": [
+        1,
+        2
+      ],
+      "members": [
+        0,
+        2,
+        3
+      ],
+      "union_closed": true,
+      "witnesses": [
+        1
+      ]
+    },
+    {
+      "applicable": true,
+      "excluded_singleton_empty": false,
+      "family_mask": 14,
+      "frequencies": [
+        2,
+        2
+      ],
+      "members": [
+        1,
+        2,
+        3
+      ],
+      "union_closed": true,
+      "witnesses": [
+        0,
+        1
+      ]
+    },
+    {
+      "applicable": true,
+      "excluded_singleton_empty": false,
+      "family_mask": 15,
+      "frequencies": [
+        2,
+        2
+      ],
+      "members": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "union_closed": true,
+      "witnesses": [
+        0,
+        1
+      ]
+    }
+  ],
+  "scientific_status": "unverified",
+  "scope": "Only families of subsets of Fin 2. No general conjecture conclusion.",
+  "source_context_checked": true,
+  "source_sha256": "2eed6f767e60e2103c3edb55d74416ab58961129cf89edcb0f9861b47698a265",
+  "statement_sha256": "3c513ed8135e191b1ad4239f218368be09df8899b05596c7322be05ce7ccb47c",
+  "wall_seconds": 0.03179410001030192
+}

@@ -377,7 +377,11 @@ export async function main(args = process.argv.slice(2)) {
     const { chromium } = await import('@playwright/test');
     const browser = await chromium.launch();
     try {
-      const page = await browser.newPage({ viewport: { width: 1280, height: 1000 } });
+      const page = await browser.newPage({
+        viewport: { width: 1280, height: 1000 },
+        locale: 'en-US',
+      });
+      await page.addInitScript(() => globalThis.localStorage.setItem('conjmap-language-v1', 'en'));
       const errors = [];
       page.on('pageerror', (e) => errors.push(e.message));
       await page.goto(appUrl + '/problems/cm-000118');

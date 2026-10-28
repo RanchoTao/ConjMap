@@ -1,0 +1,20 @@
+{
+  "checked_at": "2026-10-28T10:53:30.753Z",
+  "persisted_after_reload": true,
+  "english_and_chinese": true,
+  "page_errors": [],
+  "research_api_requests": [
+    {
+      "method": "GET",
+      "path": "/api/v2/research-tasks"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v2/research-tasks"
+    }
+  ],
+  "new_research_runs": 0,
+  "real_task_id": "d5a5b738-1319-475d-bedd-aee114e104f7",
+  "engine_task_id": "mf-audit-86c955e76307455994ecb1b84c74a81d",
+  "recovery_note": "First post-run browser reload check timed out on an English-only locator after language changed. This read-only reinspection fixes the locator and retains the original failure; no research replay."
+}

@@ -1,0 +1,68 @@
+{
+  "protocol": "conjmap-real-integration-v04",
+  "engine_commit": "c43ee228c6b7a9e913537b3b19800a7d722c4c03",
+  "conjmap_commit": "96f500cbe2aa620ad867edc27d35c7ef9568f9a3",
+  "admission_id": "cm-v04-union-closed-fin2-v1",
+  "problem_id": "cm-000118",
+  "max_tasks": 1,
+  "wall_seconds": 30,
+  "network": false,
+  "captured_at": "2026-10-28T10:51:29.218Z",
+  "status": "completed",
+  "real_engine_task_id": "mf-audit-86c955e76307455994ecb1b84c74a81d",
+  "conjmap_task_id": "d5a5b738-1319-475d-bedd-aee114e104f7",
+  "execution_mode": "REAL_RUN",
+  "actual_research_runs": 1,
+  "receipt_verified_at_capture": true,
+  "mathematical_status": "unknown",
+  "proof_kernel_verified": false,
+  "human_reviewed": false,
+  "resources": {
+    "controller_elapsed_seconds": 0.17957110001589172,
+    "cpu_seconds": 0.109375,
+    "peak_job_bytes": 9572352,
+    "wall_seconds": 0.16381720002391376
+  },
+  "evidence": [
+    {
+      "bytes": 929,
+      "name": "EXECUTION.json",
+      "sha256": "fcffa68b4227b8cfac93d251a19b8f911c553129766a15d0c700ed359c440f62"
+    },
+    {
+      "bytes": 951,
+      "name": "INPUT.json",
+      "sha256": "e075c6827db0707e76298b066c07a2113a9c1056471387424b7d0f23fa6fdc50"
+    },
+    {
+      "bytes": 5048,
+      "name": "RESULT.json",
+      "sha256": "df3b5ef58c6391d31921660ce29a31ca53559c260433ffa6ed102a9b113e9fa3"
+    },
+    {
+      "bytes": 8748,
+      "name": "SOURCE.lean",
+      "sha256": "2eed6f767e60e2103c3edb55d74416ab58961129cf89edcb0f9861b47698a265"
+    },
+    {
+      "bytes": 0,
+      "name": "stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 226,
+      "name": "stdout.txt",
+      "sha256": "cd87f4f02d2e01afd81e556dae72872f2afdf7baea94db5eb6aa7790c2908942"
+    }
+  ],
+  "engine_receipt_sha256": "93e8b6c1ae854c84bce31269ca24cd508b90686209f30f7366d5dd8316702955",
+  "client_source_sha256": "979b20cbd0c7b283cb6b2dd078ba584e70e879f0c25d964114c8471645bf7c51",
+  "failure_or_retry": {
+    "submission_count": 1,
+    "automatic_replays": 0
+  },
+  "local_recovery": {
+    "run_id": "b1192374-1195-4bcc-b523-99edef8710d1",
+    "credentials_in_git": false
+  }
+}
