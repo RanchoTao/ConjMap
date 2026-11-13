@@ -1,6 +1,12 @@
 # ConjMap
 
-**Mapping the Frontiers of Mathematics.** An open, interactive, evidence-traceable research map. V0.2 adds licensed multi-source observations, evidence dimensions and a guarded MathForge transport. **Overall PARTIAL:** 30 scoped dossiers await rigorous clearance; no real MathForge run was possible through the inspected controller.
+**Mapping the Frontiers of Mathematics.** An open, interactive, evidence-traceable research map of open problems in mathematics.
+
+**[Open the live atlas](https://ranchotao.com/ConjMap/)** · English / 简体中文
+
+## Status
+
+V0.2 adds licensed multi-source observations, evidence dimensions and a guarded MathForge transport. **Overall PARTIAL:** 30 scoped dossiers await rigorous clearance; no real MathForge run was possible through the inspected controller.
 
 ## Run locally
 
