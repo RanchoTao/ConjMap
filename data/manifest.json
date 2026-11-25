@@ -1,7 +1,7 @@
 {
   "schema_version": "0.1.0",
-  "revision": "2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6",
-  "retrieved_at": "2026-10-15",
+  "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53",
+  "retrieved_at": "2026-11-25",
   "license": "Apache-2.0",
   "problem_count": 120,
   "relationship_count": 82,
@@ -14,487 +14,607 @@
     "Logic & foundations": 10,
     "Number theory": 30
   },
-  "policy": "All imports and discovery edges unverified; mathematical status unknown; no Lean execution performed.",
+  "policy": "All imports and discovery edges unverified; mathematical status unknown; no Lean execution performed. Files listed with an older revision were held back by the upstream sync for review.",
   "files": [
     {
       "path": "FormalConjectures/Wikipedia/ABC.lean",
-      "sha256": "e05d9ee80f0e05233958028176323b94341eececc0defd9449b8ddeb11dbca88"
+      "sha256": "e05d9ee80f0e05233958028176323b94341eececc0defd9449b8ddeb11dbca88",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/Wikipedia/Agrawal.lean",
-      "sha256": "8b18fdc05f72100e31b529621eeb4bffb5832375141fc93090c2e074b8a19b6d"
+      "sha256": "8b18fdc05f72100e31b529621eeb4bffb5832375141fc93090c2e074b8a19b6d",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/Wikipedia/AmicableNumbers.lean",
-      "sha256": "1caf3d3e06d0d606e4ba7e4e0a6e94740cb1aecb5d7ff51490d80baeb006b4c2"
+      "sha256": "1caf3d3e06d0d606e4ba7e4e0a6e94740cb1aecb5d7ff51490d80baeb006b4c2",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/Wikipedia/Andrica.lean",
-      "sha256": "06011bf2450863043e06a42228ff1f897f8f779142e4bc248bda21d7af74fc9e"
+      "sha256": "06011bf2450863043e06a42228ff1f897f8f779142e4bc248bda21d7af74fc9e",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/Wikipedia/ArtinPrimitiveRootsConjecture.lean",
-      "sha256": "91af7725c51d485c59e89e682e5304118e340b55cb7c5d647ee0d964733fd976"
+      "sha256": "1108d9233d3f1679427a92e26b4eb949805d84c48633dfafbfa1018220a81e92",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/Wikipedia/DiameterSimpleFiniteGroups.lean",
-      "sha256": "2bf529ef67837f31d82c11c091462fd043d1c03aa198a6482a0e014353ab7101"
+      "sha256": "2bf529ef67837f31d82c11c091462fd043d1c03aa198a6482a0e014353ab7101",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/Wikipedia/BalancedPrimes.lean",
-      "sha256": "5e8c3cfc3b1f61b670d6117dba71222a8fef215168f11229a080ce97a9dbf927"
+      "sha256": "5e8c3cfc3b1f61b670d6117dba71222a8fef215168f11229a080ce97a9dbf927",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/Wikipedia/BealConjecture.lean",
-      "sha256": "eb7bd938b23049783832bc95c239115960d05e4a5d3f0e4c3d13547af9b6b614"
+      "sha256": "eb7bd938b23049783832bc95c239115960d05e4a5d3f0e4c3d13547af9b6b614",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/Other/BeaverMathOlympiad.lean",
-      "sha256": "c236571e15e76a3eed503c340085e4b3f33e444114dfad9a52311e0960a403ee"
+      "sha256": "4c12191dd0b863b4d9d27abb93559ab390c669434bd12f1bc93035294cc3ee69",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/Wikipedia/BeckFialaConjecture.lean",
-      "sha256": "42a2b6238446a4fef998310aacb57519ff26853573c5a13c41685f755600f06a"
+      "sha256": "64644d13318524df6e69f03b886e91c0f170773f81f571164d6ecec7883da217",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/GreensOpenProblems/14.lean",
-      "sha256": "83a4f9d14f4de9ca40dd049c1959b863a8f2c06226a19cb78dd776540d982d7d"
+      "sha256": "6732198534cb591b152be1e5557285ebac74c36b63fc2749b339f5349adbae49",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/GreensOpenProblems/21.lean",
-      "sha256": "295819be9fab903e1c3b5292590cbbbaf393d8340568e01ff310dba52bf93f26"
+      "sha256": "295819be9fab903e1c3b5292590cbbbaf393d8340568e01ff310dba52bf93f26",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/GreensOpenProblems/31.lean",
-      "sha256": "7d984c7bb8108383c92c98bfef4f18daf8cdcd945a6825475828a4af90b01f54"
+      "sha256": "00e5b772e6ccb6ed9e2861f4f3a203ea00e24fc53792abf40dbcc79594712174",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/GreensOpenProblems/33.lean",
-      "sha256": "1385a827490026648198c515c4cef8f6ec6d8a5d8f58ea86e6ee46aaf0a4ce27"
+      "sha256": "1385a827490026648198c515c4cef8f6ec6d8a5d8f58ea86e6ee46aaf0a4ce27",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/GreensOpenProblems/35.lean",
-      "sha256": "45447e98ff6fdb28298615637091afa3cfe1bbb9453d4dcb7e68f78682e20435"
+      "sha256": "45447e98ff6fdb28298615637091afa3cfe1bbb9453d4dcb7e68f78682e20435",
+      "revision": "2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6"
     },
     {
       "path": "FormalConjectures/GreensOpenProblems/37.lean",
-      "sha256": "e1c00591fae8d2aaf70fa5e18289f9af69a0524d4a9b63a19c68dc8953223e9f"
+      "sha256": "e1c00591fae8d2aaf70fa5e18289f9af69a0524d4a9b63a19c68dc8953223e9f",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/GreensOpenProblems/40.lean",
-      "sha256": "b92724efb033c277ed44863d467ebec9c1c750b4d96ce7299346c5407eef9311"
+      "sha256": "8e9f41a58209e5142e1d45a92108170b2fddec57457f765ffbeda610fa763669",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/GreensOpenProblems/41.lean",
-      "sha256": "b9778957af4444f2b1e6bc3cfdeb89d28969eb077a4db2601dfdd8478e254924"
+      "sha256": "b9778957af4444f2b1e6bc3cfdeb89d28969eb077a4db2601dfdd8478e254924",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/GreensOpenProblems/5.lean",
-      "sha256": "a1475ede5e8a5b19df574ca25ba3d93a38d1fd153ca5e9125a95ba68b666006e"
+      "sha256": "a1475ede5e8a5b19df574ca25ba3d93a38d1fd153ca5e9125a95ba68b666006e",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/GreensOpenProblems/50.lean",
-      "sha256": "ea970bd9f6844436ff976b393f9619232e9309d73feb1552b003be684e690d8a"
+      "sha256": "ea970bd9f6844436ff976b393f9619232e9309d73feb1552b003be684e690d8a",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/GreensOpenProblems/58.lean",
-      "sha256": "3e0b9288fe7589f87f538225a0c1062ad42bc07dcca1022cedd789d7c9013772"
+      "sha256": "3e0b9288fe7589f87f538225a0c1062ad42bc07dcca1022cedd789d7c9013772",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/GreensOpenProblems/72.lean",
-      "sha256": "4962de09b429069cb47c72c43bc698a8fcc485b9bdbda86635f5c568d7a80452"
+      "sha256": "4962de09b429069cb47c72c43bc698a8fcc485b9bdbda86635f5c568d7a80452",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/GreensOpenProblems/77.lean",
-      "sha256": "fd15e13a306460191c2a939d2027f239be62e9204f9e136a1a7bc3e8b5a05c72"
+      "sha256": "fd15e13a306460191c2a939d2027f239be62e9204f9e136a1a7bc3e8b5a05c72",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/Wikipedia/BetrothedNumbers.lean",
-      "sha256": "7a360f41fc2c13289cdca3f3a5c775c2421cc71d042eddb26ab126bd47956f35"
+      "sha256": "7a360f41fc2c13289cdca3f3a5c775c2421cc71d042eddb26ab126bd47956f35",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/Wikipedia/Bloch.lean",
-      "sha256": "c3b28d700501bc11096a69cd53d3261235e9e213cfd1010bb66da093de147cdb"
+      "sha256": "c3b28d700501bc11096a69cd53d3261235e9e213cfd1010bb66da093de147cdb",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/Wikipedia/BrocardConjecture.lean",
-      "sha256": "62d420bffcc2db570512eb93e0dd307035c697f5184348b1a8ac1c7c96c78bac"
+      "sha256": "62d420bffcc2db570512eb93e0dd307035c697f5184348b1a8ac1c7c96c78bac",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/Wikipedia/Bunyakovsky.lean",
-      "sha256": "bd6318fdfbe2edd554ff3a7f6698346e47df912e204a92887a4997481dff9565"
+      "sha256": "bd6318fdfbe2edd554ff3a7f6698346e47df912e204a92887a4997481dff9565",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/Wikipedia/Buchi.lean",
-      "sha256": "71716cb13181d43db271bdcab062a3844cea3fda157438b452b897d5d865b2ce"
+      "sha256": "71716cb13181d43db271bdcab062a3844cea3fda157438b452b897d5d865b2ce",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/Wikipedia/CarmichaelTotient.lean",
-      "sha256": "d821ac4fd6dd735edd31a0d020161b9ab795a843043905c50ff765b6f430160b"
+      "sha256": "d821ac4fd6dd735edd31a0d020161b9ab795a843043905c50ff765b6f430160b",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/Wikipedia/Catalan.lean",
-      "sha256": "fb8db0fec75c52157b0a3da216e8206af895f79de03b7dc9834b6be2db1a2f01"
+      "sha256": "64ffdb7d5d1b7323d356f64fab050cfa9442dbe2243cffc17fb12ca2aa975ca4",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/Wikipedia/ClassNumberProblem.lean",
-      "sha256": "2372ee44f5f7d5d1f54bf2fda33d670afb49ffb93b5c8ff3d2f02ebb95cb82d1"
+      "sha256": "2372ee44f5f7d5d1f54bf2fda33d670afb49ffb93b5c8ff3d2f02ebb95cb82d1",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/Wikipedia/CongruentNumber.lean",
-      "sha256": "276ee0854a91152930f7fbdc862ecb58eec8972af57f3c7f8bc3df8f2e52f5dd"
+      "sha256": "4494ffa18538847ab1db3c50944eacb0848a4c1ad0e9c13550383a83a3a2a596",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/Wikipedia/Mandelbrot.lean",
-      "sha256": "c33284c67745298678511cabba3f5df8cb17366e9558507989939b2749557e40"
+      "sha256": "c33284c67745298678511cabba3f5df8cb17366e9558507989939b2749557e40",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/Wikipedia/FlintCooksonHills.lean",
-      "sha256": "9d04384922bcbb28b91472b3b86ef22966523eee91aba681a1f1a6142d4584a4"
+      "sha256": "9d04384922bcbb28b91472b3b86ef22966523eee91aba681a1f1a6142d4584a4",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/Wikipedia/DedekindNumber.lean",
-      "sha256": "9c992c34f3f08d0790edccc4cf31f3410fcc6e621a1d2b46f685f9fdb0536531"
+      "sha256": "9c992c34f3f08d0790edccc4cf31f3410fcc6e621a1d2b46f685f9fdb0536531",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/Wikipedia/DeterminantalConjecture.lean",
-      "sha256": "f52fbdd0fad472a575090f71c3522c1af898d9f5f136f62c98e10b4980add807"
+      "sha256": "f52fbdd0fad472a575090f71c3522c1af898d9f5f136f62c98e10b4980add807",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/Wikipedia/Dickson.lean",
-      "sha256": "b4b59de67fad53cc7ed46b1e8e850cc5f55181e01ba1e374cb46f797350715d6"
+      "sha256": "b4b59de67fad53cc7ed46b1e8e850cc5f55181e01ba1e374cb46f797350715d6",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/Other/EquationalTheories_677_255.lean",
-      "sha256": "02562980966eed324c96b7a743bb80474526b8837f4d014a7a537d4b5f957e98"
+      "sha256": "02562980966eed324c96b7a743bb80474526b8837f4d014a7a537d4b5f957e98",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/ErdosProblems/10.lean",
-      "sha256": "0975082ee944975b8f170f623caf762e56c80b68b8896dd13fc338094eb59efa"
+      "sha256": "2773c5d6cad2239a161ec65db337984dad2a4356c0c5662dc904a58458ca5dc8",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/ErdosProblems/102.lean",
-      "sha256": "83da1dbf7ec58be876351d2f5ea5567c0bd1cef82c242ccba129283f1c1283ad"
+      "sha256": "943d016647da2bc023772b8c3ee50ba93738e7d500c68b3de89ab5b57af9f1f8",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/ErdosProblems/1029.lean",
-      "sha256": "b78ac3e3cd66c3759b770b50de65f1a3f912b0889b433ec7cec43235d65821d4"
+      "sha256": "b78ac3e3cd66c3759b770b50de65f1a3f912b0889b433ec7cec43235d65821d4",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/ErdosProblems/1038.lean",
-      "sha256": "9f49a550734f63e1d4e012f36d885ed110b0c5e86a491ea49313431c7837d006"
+      "sha256": "9f49a550734f63e1d4e012f36d885ed110b0c5e86a491ea49313431c7837d006",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/ErdosProblems/1044.lean",
-      "sha256": "a7cf8b452af6e349156f8351beacbc5239ee0f92f7c629c71dacec85b727cd4e"
+      "sha256": "db6d25516ad1c78007af52cb02fca8c336b38d01258dabd56dd4cfaab865845a",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/ErdosProblems/1082.lean",
-      "sha256": "227d2f4d04178d4d0e772b6993448e69a7db10f8a0dfdcdaaa8f23dd667ae184"
+      "sha256": "b1a3d516c52c71b190ccb7f99f5a964a52848b71d86d11625dd0b8bac050cec7",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/ErdosProblems/1083.lean",
-      "sha256": "a5897c7c3adfabc8ad88c32573d7ae52504f9d3ea56ea532c5461b9937ad7ffa"
+      "sha256": "a5897c7c3adfabc8ad88c32573d7ae52504f9d3ea56ea532c5461b9937ad7ffa",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/ErdosProblems/1088.lean",
-      "sha256": "835e9c4c6a6e32c008b28b1018c80cb4e38865081fb199315f2a53ce2ec38678"
+      "sha256": "835e9c4c6a6e32c008b28b1018c80cb4e38865081fb199315f2a53ce2ec38678",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/ErdosProblems/1154.lean",
-      "sha256": "aae6f65ad2f0d31cfaa7363481011504be3667bf16daf9d235e05530f4336428"
+      "sha256": "aae6f65ad2f0d31cfaa7363481011504be3667bf16daf9d235e05530f4336428",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/ErdosProblems/1176.lean",
-      "sha256": "8558af209c9eae812ca62df6f21d1889cb0d3cd36f03705696823f6af4d91d2e"
+      "sha256": "8558af209c9eae812ca62df6f21d1889cb0d3cd36f03705696823f6af4d91d2e",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/ErdosProblems/1177.lean",
-      "sha256": "80dc44f143106d44c7ce8297a9f7e6e039e57d666e00fde37123dc079fa8c57a"
+      "sha256": "80dc44f143106d44c7ce8297a9f7e6e039e57d666e00fde37123dc079fa8c57a",
+      "revision": "2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6"
     },
     {
       "path": "FormalConjectures/ErdosProblems/243.lean",
-      "sha256": "d11ba825e8fd77a4b4a12a49079ceaa3dc2ea2d7dbd9fc18394c01e9e54bc902"
+      "sha256": "d11ba825e8fd77a4b4a12a49079ceaa3dc2ea2d7dbd9fc18394c01e9e54bc902",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/ErdosProblems/274.lean",
-      "sha256": "7d34479d3590cb680286b6cc1aa1863cc7fd16f29c879a88196ff6e5c970621c"
+      "sha256": "4e0ee392cab028df862f7da1fc753a0df9787fe28df8cae62dc435df9023006e",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/ErdosProblems/352.lean",
-      "sha256": "2c9f80202530afd9f7850f25af31b024d8b4b75d9fbc2cd1fd96c2ce117fed94"
+      "sha256": "2c9f80202530afd9f7850f25af31b024d8b4b75d9fbc2cd1fd96c2ce117fed94",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/ErdosProblems/503.lean",
-      "sha256": "4dd1f87cbf403868046861652244d47e7c94c30ac32dbdce6620f1ac8f5dc1cb"
+      "sha256": "9937a07a8d2d0038450a7a9be010ba8fcc4899c6edeb39e3cabee31474e3484c",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/ErdosProblems/506.lean",
-      "sha256": "ff9193236549153a4ca5dd1aa164558567ecc15ad4af3ef0157c66f219737f97"
+      "sha256": "f566535b80c28874bdf95e96023e219eacfb91fb6c83b0e8f28b831443f350f5",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/ErdosProblems/508.lean",
-      "sha256": "f6c254aac4b03b74e5840099a011abbedc6c24c30d9a617eb878e113f6684254"
+      "sha256": "fee9fcfdffc1e7430230caf190d5d1d4a3ebb8805c70d40b3b13fb1b3f4a5c03",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/ErdosProblems/513.lean",
-      "sha256": "14756c6b15db7d54e6a6ce3ccc9a4547284f94bf8964808c14e02ffff5064549"
+      "sha256": "1da7d2c888454be4eb444e582ad6832a3068da9d1f4bf02a7e48219cf37395cf",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/ErdosProblems/517.lean",
-      "sha256": "0c56ec2e85e0c2cd30cc2eaddfa1f6c8139598fb58359ae2fc27ec89ab5a8aac"
+      "sha256": "0c56ec2e85e0c2cd30cc2eaddfa1f6c8139598fb58359ae2fc27ec89ab5a8aac",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/ErdosProblems/592.lean",
-      "sha256": "713a5619e213c5550ace29efae790dd64ec5cd72dc0f6484f21397f07d725e1e"
+      "sha256": "713a5619e213c5550ace29efae790dd64ec5cd72dc0f6484f21397f07d725e1e",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/ErdosProblems/604.lean",
-      "sha256": "0f29c3237a8f282af9955bdbb0542866a2c388cd9235e2024c4350c6074722b5"
+      "sha256": "672fba034afaaa3a9af4f66cf5c9f3180f597a805e9fc75654f83f5d769dce8e",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/ErdosProblems/623.lean",
-      "sha256": "bd19bb84701fa2c3d974c5465f8d95702082e3d07dc16e9147e2bf4131d9fe7b"
+      "sha256": "bd19bb84701fa2c3d974c5465f8d95702082e3d07dc16e9147e2bf4131d9fe7b",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/ErdosProblems/660.lean",
-      "sha256": "e49af45802c3a61f0e520c21f321469071514749ec49818d72ec65b8c1c8a7fa"
+      "sha256": "e49af45802c3a61f0e520c21f321469071514749ec49818d72ec65b8c1c8a7fa",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/ErdosProblems/661.lean",
-      "sha256": "824b6ae7e6cbc3b118d91fbdd74d9d4578d10022d83c617a5b90ffccb9b218a8"
+      "sha256": "9a91d129e203ea305ee9f39ba28bdf09ded0427f64983ec4f103446a19405c19",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/ErdosProblems/668.lean",
-      "sha256": "7aeebb35a05cdf882e62f42228608dfc33c7ad439fd533c61d34e705057e905a"
+      "sha256": "7aeebb35a05cdf882e62f42228608dfc33c7ad439fd533c61d34e705057e905a",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/ErdosProblems/70.lean",
-      "sha256": "41d23e2b42612f1888cfd6e124779873559798bc07b1d70fc0dff039e229dec7"
+      "sha256": "3df02e2b9528024c949c65733039fde92dd6555ed46121cd6f582a1be8cde5f4",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/ErdosProblems/769.lean",
-      "sha256": "e042b8549d02dd5da8aa5fdf7679b0875f7615f84c8317139e9819e7b5d6960c"
+      "sha256": "0ba7ba6dd738091685882da61317fdf066c7dc322481e9ba02803da89c9a013d",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/ErdosProblems/89.lean",
-      "sha256": "7df6d6b528cdf6b50b7d57beaa726a9a765ee27d148c0b445d297521e9baad59"
+      "sha256": "7df6d6b528cdf6b50b7d57beaa726a9a765ee27d148c0b445d297521e9baad59",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/ErdosProblems/906.lean",
-      "sha256": "4e642f5b4901a2b52f9f15109a88c18276e1013a709c8eec0b6935eefa83ba66"
+      "sha256": "4e642f5b4901a2b52f9f15109a88c18276e1013a709c8eec0b6935eefa83ba66",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/ErdosProblems/97.lean",
-      "sha256": "9e28424fd7efe00467b9f36a7db6d3ce53c3ea75dd2fa3c0588749dd6e1eb8c7"
+      "sha256": "9e28424fd7efe00467b9f36a7db6d3ce53c3ea75dd2fa3c0588749dd6e1eb8c7",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/ErdosProblems/982.lean",
-      "sha256": "6c0d293e31669945391cbdc59ab8adb932637e05c9857b692731760995460c34"
+      "sha256": "12d0f04e9e02a2ff6a0a89e8cd7a518268e529331922139b14abf2386ad1e5f7",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/ErdosProblems/996.lean",
-      "sha256": "1e2e71d82678e6231d0620e409bf836e431650c312193be4b62bdf457498eeee"
+      "sha256": "1e2e71d82678e6231d0620e409bf836e431650c312193be4b62bdf457498eeee",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/Wikipedia/EulerSumOfPowers.lean",
-      "sha256": "16b818cb980657bca388796e4a6f80aa47681f1c2c0dd81eb5bec127102c30fd"
+      "sha256": "16b818cb980657bca388796e4a6f80aa47681f1c2c0dd81eb5bec127102c30fd",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/Wikipedia/Exponentials.lean",
-      "sha256": "d66a164acaff7b58e97836fa7cb6d02870098f2484bf035907aaf163c98e8e50"
+      "sha256": "d66a164acaff7b58e97836fa7cb6d02870098f2484bf035907aaf163c98e8e50",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/Wikipedia/FeitThompsonPrimeConjecture.lean",
-      "sha256": "97128cff16898f4099e8fd322ddb7915ff6b3a82547617fc9f681b01ad4c5df7"
+      "sha256": "97128cff16898f4099e8fd322ddb7915ff6b3a82547617fc9f681b01ad4c5df7",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/Wikipedia/FibonacciPrimes.lean",
-      "sha256": "39d105958162f0dc4af725e5c0121fa607aeb08148caf7851e9160797c6d5faa"
+      "sha256": "39d105958162f0dc4af725e5c0121fa607aeb08148caf7851e9160797c6d5faa",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/Wikipedia/HardyLittlewood.lean",
-      "sha256": "e97c8b5ca748d6ce8a284fc9586dcce3e743e47e6836ffe7c6633e7b50ecfc87"
+      "sha256": "08817b7b670c3cfb227789f1c63e8df9ae5448ba8e5e43cfa87503f1541088a2",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/Wikipedia/Fuglede.lean",
-      "sha256": "dc6adc0f52c79bba603a383b03b225071cc1999c68c6e6a3ea22e3647d997b52"
+      "sha256": "dc6adc0f52c79bba603a383b03b225071cc1999c68c6e6a3ea22e3647d997b52",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/Wikipedia/GapConjecture.lean",
-      "sha256": "2b86ce5904ff2e0f058de9267736c5b925b8e29441dc7c9b882df087695403fa"
+      "sha256": "2b86ce5904ff2e0f058de9267736c5b925b8e29441dc7c9b882df087695403fa",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/Wikipedia/GaussCircleProblem.lean",
-      "sha256": "bf125c74acec8a505c2a2d270787c454157d7996a3ac22f6e228e18528cf5f2d"
+      "sha256": "bf125c74acec8a505c2a2d270787c454157d7996a3ac22f6e228e18528cf5f2d",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/Wikipedia/GracefulLabeling.lean",
-      "sha256": "d8c05f3bf9e23fd20e2e5a0caba0514e467b95551a270c752a8b69b245e1f896"
+      "sha256": "d8c05f3bf9e23fd20e2e5a0caba0514e467b95551a270c752a8b69b245e1f896",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/GreensOpenProblems/12.lean",
-      "sha256": "5bd3a53b66bced212cd3d53f30b82ab3399bb040239b365542196cce988adb2d"
+      "sha256": "5bd3a53b66bced212cd3d53f30b82ab3399bb040239b365542196cce988adb2d",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/GreensOpenProblems/15.lean",
-      "sha256": "f47018c9e4af6ffd29eef1e656d558b397a055a4b4a3b3544e67b124d07711b9"
+      "sha256": "f47018c9e4af6ffd29eef1e656d558b397a055a4b4a3b3544e67b124d07711b9",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/GreensOpenProblems/38.lean",
-      "sha256": "2794c70a4f21c9b97c4d4cf93cbe4fabea8d70dbe47011fe8c933db6eb4e8047"
+      "sha256": "7837a5a3b717ac3011d8a209c2dd7f38503c415762ad7162f97f4a551dd2b34d",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/GreensOpenProblems/39.lean",
-      "sha256": "26b6ec90cb3ddd301609a254f2c01035416c52e5e021a535096b8ebbf0795caf"
+      "sha256": "26b6ec90cb3ddd301609a254f2c01035416c52e5e021a535096b8ebbf0795caf",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/GreensOpenProblems/51.lean",
-      "sha256": "0031dac87b7e5563b9e26161821b452720290c881f9d0b7d80c6104e0f9bd5e5"
+      "sha256": "0031dac87b7e5563b9e26161821b452720290c881f9d0b7d80c6104e0f9bd5e5",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/GreensOpenProblems/52.lean",
-      "sha256": "df0e5bdc6701cd3ebfeb94734498fff122ca05d7b67dea8d77e9d87c8e8e343e"
+      "sha256": "df8caaa63b2bcbf27b0f1b40e3b2c2e87576bdb8e4faedf1a29eee530f803216",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/GreensOpenProblems/53.lean",
-      "sha256": "46adde028d24d822dc5fedadcb66ba5249ab8f35c07b6d7a3e33a8b34643e6e4"
+      "sha256": "46adde028d24d822dc5fedadcb66ba5249ab8f35c07b6d7a3e33a8b34643e6e4",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/GreensOpenProblems/85.lean",
-      "sha256": "8a71e14bf4c697b07e58e47715e9f43701e0926f7b3ce996aa42ecd3a574dc4c"
+      "sha256": "8a71e14bf4c697b07e58e47715e9f43701e0926f7b3ce996aa42ecd3a574dc4c",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/Wikipedia/Grimm.lean",
-      "sha256": "7d4b18be8c69818828359d958b55414713b508f0c3a881248a7728e9ff54b7f7"
+      "sha256": "7d4b18be8c69818828359d958b55414713b508f0c3a881248a7728e9ff54b7f7",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/Wikipedia/InscribedSquare.lean",
-      "sha256": "c45f516a797c084c955e752168fe2c97ca62091172fbed034b06fdc47ee6eb67"
+      "sha256": "c45f516a797c084c955e752168fe2c97ca62091172fbed034b06fdc47ee6eb67",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/Wikipedia/Kaplansky.lean",
-      "sha256": "1053e7f52d4692d0f63a2de114309901ce49d418016c4c1756a817b27cdd7753"
+      "sha256": "a28c0698abd8738ecdb299039beed4d455740ac73efaf2104d6981fbcc82fb93",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/Wikipedia/KummerVandiver.lean",
-      "sha256": "f37825b4fad8f79854ca06b2974b2ddcf34324ba9dba21375f75ff09ea0bcb05"
+      "sha256": "f37825b4fad8f79854ca06b2974b2ddcf34324ba9dba21375f75ff09ea0bcb05",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/Wikipedia/Koethe.lean",
-      "sha256": "4288dafae4f3792105602cad97b7f067f7cc3213b5e4c0a675b269e53b5dcac3"
+      "sha256": "4288dafae4f3792105602cad97b7f067f7cc3213b5e4c0a675b269e53b5dcac3",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/Wikipedia/LanderParkinAndSelfridgeConjecture.lean",
-      "sha256": "e38e797735e3e72eda0bd28c0433f17ada98bce6fe69f2fe79186b1f2b280ad6"
+      "sha256": "e38e797735e3e72eda0bd28c0433f17ada98bce6fe69f2fe79186b1f2b280ad6",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/Wikipedia/LehmerMahlerMeasureProblem.lean",
-      "sha256": "8afc411d9916a5ec3b582e10f7aade6e6a6706d6bb22fc86cc5b4651ce9be5ac"
+      "sha256": "7d2f495998f9238b0f27eca2786144245b014da62a2feef6d25898770522d721",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/Wikipedia/LocalUniformization.lean",
-      "sha256": "8c26253f4b235c296de1ca73715646908091726f7d1e90f4a0563bc672e62dd8"
+      "sha256": "8c26253f4b235c296de1ca73715646908091726f7d1e90f4a0563bc672e62dd8",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/Wikipedia/MoserWorm.lean",
-      "sha256": "182e88d57ba8c93020f9c5ee1e4d1101a83cebf87411e00639ca46cb6e8892e9"
+      "sha256": "ff90b4af5fc2c50a8600b4143021cd4be0a4dc80a1f19bdc8e8fa1dd228723b2",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/Wikipedia/AlgebraicNormality.lean",
-      "sha256": "a51cba30e950e5b88ff742b3df0d8e51c471d4907924c0d6d16f53f68e325604"
+      "sha256": "a51cba30e950e5b88ff742b3df0d8e51c471d4907924c0d6d16f53f68e325604",
+      "revision": "2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6"
     },
     {
       "path": "FormalConjectures/Wikipedia/SquarePacking.lean",
-      "sha256": "f8fcb1e9a322b116b41e45abdf47cababf58d1c3147e5ea977573fe61663082b"
+      "sha256": "88d0f91f407c9c60d7a398e7a51efe4a7c952e18aa6a8ff46b66da7bd1bbc747",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/Wikipedia/PebblingNumberConjecture.lean",
-      "sha256": "5988946c8f8d40fa3dd2aaf1d3a7578c37ca518bff3c9d2f1072c83e67ea607b"
+      "sha256": "5988946c8f8d40fa3dd2aaf1d3a7578c37ca518bff3c9d2f1072c83e67ea607b",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/Millennium/Poincare.lean",
-      "sha256": "19215b7eb592990765a114d2f5622434dc4a656e379aed31f2b785c57b2e337d"
+      "sha256": "19215b7eb592990765a114d2f5622434dc4a656e379aed31f2b785c57b2e337d",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/Wikipedia/IntegerFactorization.lean",
-      "sha256": "57e74ad861be97b806ab19932b56de0ef942e67dd87bc10e5197a99d604a35b3"
+      "sha256": "57e74ad861be97b806ab19932b56de0ef942e67dd87bc10e5197a99d604a35b3",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/Wikipedia/RamseyNumbers.lean",
-      "sha256": "d968e8602e12428644421f6440d9351d11f267862be24990a5d650d93cc70457"
+      "sha256": "36d0764d496b8a96b5dd9eaa804dfe4fccffbf8cb4744b9de146cfdaa9def43d",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/Wikipedia/ResolutionOfSingularities.lean",
-      "sha256": "424fe7fcf689b208a6e96fbaeaa2dde74b70ccae372fbe164d24c85044db7795"
+      "sha256": "424fe7fcf689b208a6e96fbaeaa2dde74b70ccae372fbe164d24c85044db7795",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/Millennium/RiemannHypothesis.lean",
-      "sha256": "db04f2f25a73fb0fc473843227fb3a28bca6ef1808e222e2d365f97120c46f67"
+      "sha256": "db04f2f25a73fb0fc473843227fb3a28bca6ef1808e222e2d365f97120c46f67",
+      "revision": "2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6"
     },
     {
       "path": "FormalConjectures/Wikipedia/SerreMultiplicityConjectures.lean",
-      "sha256": "821633b00443b85927eeb6223139a294f0b2bf89685c3a9e3cb106e5d418d6b1"
+      "sha256": "821633b00443b85927eeb6223139a294f0b2bf89685c3a9e3cb106e5d418d6b1",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/Wikipedia/SidorenkoConjecture.lean",
-      "sha256": "94e2af445a02e245fd944f569baa276d003fd94adae5d1cf65d04b39f70cc7d3"
+      "sha256": "53f97833a68b309627755d494f95dec3369204ac51b79f4dd363ad47d1ff93e9",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/Wikipedia/SnakeInTheBox.lean",
-      "sha256": "3b9c7cff44f5cddc63e3e01d1219c83c9277cdd3903cc66ae8b93ea0dcdb4d83"
+      "sha256": "3b9c7cff44f5cddc63e3e01d1219c83c9277cdd3903cc66ae8b93ea0dcdb4d83",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/Wikipedia/EllipticCurveRank.lean",
-      "sha256": "18c83bff2b81f289a7c2a23b3be4cf771006d4d4a0abf651cb4092751f7b9f7a"
+      "sha256": "e4067ad88d650009426593f6f0f9ec5e4f5ca4604e57694fef36fc6962d02345",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/Wikipedia/TarskiExponentialFunctionProblem.lean",
-      "sha256": "cee8fb2a2eca8d675d78c2735529904ca56a29f6c8ae0bda374db71a0ae808a3"
+      "sha256": "cee8fb2a2eca8d675d78c2735529904ca56a29f6c8ae0bda374db71a0ae808a3",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/Wikipedia/conjecture_1_3_to_2_3.lean",
-      "sha256": "0e0a1fd15009ef21b5aa399a1e27825212039a04972dd341eb88834a1ef22b1d"
+      "sha256": "0e0a1fd15009ef21b5aa399a1e27825212039a04972dd341eb88834a1ef22b1d",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/Wikipedia/BingBorsuk.lean",
-      "sha256": "558d33f6c2e322d63ab8c0e78a47774c0c083382e2befa46e120fd6f8aa91bd9"
+      "sha256": "558d33f6c2e322d63ab8c0e78a47774c0c083382e2befa46e120fd6f8aa91bd9",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/Millennium/BSD.lean",
-      "sha256": "cb2ceb3f28bd35d8dabb880dfc929ab1986d239602aeddbe34ac23d1dbd5fa87"
+      "sha256": "cb2ceb3f28bd35d8dabb880dfc929ab1986d239602aeddbe34ac23d1dbd5fa87",
+      "revision": "2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6"
     },
     {
       "path": "FormalConjectures/Other/GerstenhaberThreeMatrices.lean",
-      "sha256": "10aecf332c57ecb2083e5fe7b2c2ba2583b5a56ca282a4e259ed9d3c85d0f77f"
+      "sha256": "10aecf332c57ecb2083e5fe7b2c2ba2583b5a56ca282a4e259ed9d3c85d0f77f",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/Wikipedia/HasseWeil.lean",
-      "sha256": "2239555b5f0874b14ee5a287dca6c785f3e97c092b8887457ea2b7bacb41c71a"
+      "sha256": "90d8e027e145ec94fbc48ef29683d077ced22564d838591201344bb69df46f02",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/Other/Rule30.lean",
-      "sha256": "65c660e933cf787aa3a972249209d1be32a182a57d3d399a0df801794fedd205"
+      "sha256": "65c660e933cf787aa3a972249209d1be32a182a57d3d399a0df801794fedd205",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/Wikipedia/SmallCohenMacaulayModules.lean",
-      "sha256": "022a17176f2b344f15ad8e1b1cc498b33023d809ec560aa238827bf22351ca23"
+      "sha256": "022a17176f2b344f15ad8e1b1cc498b33023d809ec560aa238827bf22351ca23",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/Other/SymbolLengthMilnorKTheory.lean",
-      "sha256": "8597d8a57cabc88295b327c757a20b1fcd8e48e162c4f2fe65a892f5da0f7656"
+      "sha256": "c8cf6857403b568c97f038fb03715d3a8d4e4e7dee58ad39a4fc0ec9375e508e",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/Wikipedia/UnionClosed.lean",
-      "sha256": "2eed6f767e60e2103c3edb55d74416ab58961129cf89edcb0f9861b47698a265"
+      "sha256": "2eed6f767e60e2103c3edb55d74416ab58961129cf89edcb0f9861b47698a265",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/Wikipedia/VizingConjecture.lean",
-      "sha256": "f0f1f733408d88b96e1d45aaef318c40b8a563ad55b84755ae01ae4dfd55249e"
+      "sha256": "f0f1f733408d88b96e1d45aaef318c40b8a563ad55b84755ae01ae4dfd55249e",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     },
     {
       "path": "FormalConjectures/Wikipedia/CernyConjecture.lean",
-      "sha256": "089ce262e3b57203de914aa2bf6bf8533c8466e0612e7cd54db198c0e1d76d2d"
+      "sha256": "089ce262e3b57203de914aa2bf6bf8533c8466e0612e7cd54db198c0e1d76d2d",
+      "revision": "9097e2f90e66d2f6244209cb1c07f7120d17ec53"
     }
   ]
 }

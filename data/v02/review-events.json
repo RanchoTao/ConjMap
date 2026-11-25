@@ -84,7 +84,7 @@
       "HUMAN_REVIEW_PENDING": "pending"
     },
     "source_urls": [
-      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Millennium/Poincare.lean#L107-L110",
+      "https://github.com/google-deepmind/formal-conjectures/blob/9097e2f90e66d2f6244209cb1c07f7120d17ec53/FormalConjectures/Millennium/Poincare.lean#L107-L110",
       "https://arxiv.org/abs/0906.5177"
     ],
     "scope": "Smooth dimension four, with the precise manifold/category hypotheses in SmoothConjectureFor 4; not the solved topological dimension-three Poincare problem.",
@@ -116,7 +116,7 @@
       "HUMAN_REVIEW_PENDING": "pending"
     },
     "source_urls": [
-      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/ABC.lean#L68-L74",
+      "https://github.com/google-deepmind/formal-conjectures/blob/9097e2f90e66d2f6244209cb1c07f7120d17ec53/FormalConjectures/Wikipedia/ABC.lean#L68-L74",
       "https://arxiv.org/abs/2403.10430"
     ],
     "scope": "For every epsilon>0, exists K(epsilon), for all coprime positive triples a+b=c, c<K rad(abc)^(1+epsilon). Pairwise coprimality, strict inequalities and exponent quantifiers must match.",
@@ -148,7 +148,7 @@
       "HUMAN_REVIEW_PENDING": "pending"
     },
     "source_urls": [
-      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/Andrica.lean#L33-L39",
+      "https://github.com/google-deepmind/formal-conjectures/blob/9097e2f90e66d2f6244209cb1c07f7120d17ec53/FormalConjectures/Wikipedia/Andrica.lean#L33-L39",
       "https://arxiv.org/abs/1010.3945"
     ],
     "scope": "Every consecutive pair of primes, indexed by Nat.nth; strict difference of square roots below one. Check zero-based versus one-based indexing.",
@@ -180,7 +180,7 @@
       "HUMAN_REVIEW_PENDING": "pending"
     },
     "source_urls": [
-      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/ArtinPrimitiveRootsConjecture.lean#L135-L147",
+      "https://github.com/google-deepmind/formal-conjectures/blob/9097e2f90e66d2f6244209cb1c07f7120d17ec53/FormalConjectures/Wikipedia/ArtinPrimitiveRootsConjecture.lean#L123-L135",
       "https://arxiv.org/abs/1112.4816"
     ],
     "scope": "The selected density statement imposes a=a0*b^2, squarefree a0, no perfect-power representation and a0 not congruent to 1 modulo 4. This is not the unqualified all-integer constant-density claim.",
@@ -212,7 +212,7 @@
       "HUMAN_REVIEW_PENDING": "pending"
     },
     "source_urls": [
-      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/BealConjecture.lean#L34-L39",
+      "https://github.com/google-deepmind/formal-conjectures/blob/9097e2f90e66d2f6244209cb1c07f7120d17ec53/FormalConjectures/Wikipedia/BealConjecture.lean#L34-L39",
       "https://arxiv.org/abs/2510.05448",
       "https://arxiv.org/abs/2409.03758"
     ],
@@ -245,7 +245,7 @@
       "HUMAN_REVIEW_PENDING": "pending"
     },
     "source_urls": [
-      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/BeckFialaConjecture.lean#L78-L91"
+      "https://github.com/google-deepmind/formal-conjectures/blob/9097e2f90e66d2f6244209cb1c07f7120d17ec53/FormalConjectures/Wikipedia/BeckFialaConjecture.lean#L79-L92"
     ],
     "scope": "A single universal C>0 works for all finite set systems with each element in at most t sets, with +/-1 coloring discrepancy <=C*sqrt(t). C cannot depend on n,m,t.",
     "limitations": [
@@ -276,7 +276,7 @@
       "HUMAN_REVIEW_PENDING": "pending"
     },
     "source_urls": [
-      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/Bunyakovsky.lean#L31-L39"
+      "https://github.com/google-deepmind/formal-conjectures/blob/9097e2f90e66d2f6244209cb1c07f7120d17ec53/FormalConjectures/Wikipedia/Bunyakovsky.lean#L31-L39"
     ],
     "scope": "Integer polynomial with both source-defined Bunyakovsky and Schinzel conditions, infinitely many natural inputs yielding prime absolute value. Expand these definitions before equating with the classical formulation.",
     "limitations": [
@@ -307,7 +307,7 @@
       "HUMAN_REVIEW_PENDING": "pending"
     },
     "source_urls": [
-      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/Buchi.lean#L47-L55",
+      "https://github.com/google-deepmind/formal-conjectures/blob/9097e2f90e66d2f6244209cb1c07f7120d17ec53/FormalConjectures/Wikipedia/Buchi.lean#L47-L55",
       "https://arxiv.org/abs/2412.16740"
     ],
     "scope": "Selected IsBuchi 5 concerns integer x,a and five squares (x+n)^2+a. General second-difference-two sequences may require a parity/offset correspondence argument.",
@@ -339,7 +339,7 @@
       "HUMAN_REVIEW_PENDING": "pending"
     },
     "source_urls": [
-      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/CarmichaelTotient.lean#L56-L60"
+      "https://github.com/google-deepmind/formal-conjectures/blob/9097e2f90e66d2f6244209cb1c07f7120d17ec53/FormalConjectures/Wikipedia/CarmichaelTotient.lean#L56-L60"
     ],
     "scope": "For every positive n, exists a different natural m with identical Euler totient. Distinguish existence of a partner from claims about exactly k preimages.",
     "limitations": [
@@ -370,7 +370,7 @@
       "HUMAN_REVIEW_PENDING": "pending"
     },
     "source_urls": [
-      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/CongruentNumber.lean#L116-L119",
+      "https://github.com/google-deepmind/formal-conjectures/blob/9097e2f90e66d2f6244209cb1c07f7120d17ec53/FormalConjectures/Wikipedia/CongruentNumber.lean#L117-L120",
       "https://www.claymath.org/wp-content/uploads/2022/02/MPPc.pdf"
     ],
     "scope": "Odd squarefree natural n satisfying a specific equality of finite integer-solution counts implies n is congruent. The condition is not the unrestricted congruent-number classification.",
@@ -402,7 +402,7 @@
       "HUMAN_REVIEW_PENDING": "pending"
     },
     "source_urls": [
-      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/Exponentials.lean#L32-L40",
+      "https://github.com/google-deepmind/formal-conjectures/blob/9097e2f90e66d2f6244209cb1c07f7120d17ec53/FormalConjectures/Wikipedia/Exponentials.lean#L32-L40",
       "https://arxiv.org/abs/2105.03955"
     ],
     "scope": "Two Q-linearly independent complex pairs x and y imply at least one of four exp(x_i*y_j) is transcendental. Complex versus real inputs and both independence assumptions are essential.",
@@ -434,7 +434,7 @@
       "HUMAN_REVIEW_PENDING": "pending"
     },
     "source_urls": [
-      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/Fuglede.lean#L51-L60",
+      "https://github.com/google-deepmind/formal-conjectures/blob/9097e2f90e66d2f6244209cb1c07f7120d17ec53/FormalConjectures/Wikipedia/Fuglede.lean#L51-L60",
       "https://arxiv.org/abs/2607.15632"
     ],
     "scope": "Bounded positive-measure subsets of R^2: spectral iff translational tiling, with exact conventions for spectra and almost-everywhere tilings.",
@@ -466,7 +466,7 @@
       "HUMAN_REVIEW_PENDING": "pending"
     },
     "source_urls": [
-      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/Kaplansky.lean#L60-L67"
+      "https://github.com/google-deepmind/formal-conjectures/blob/9097e2f90e66d2f6244209cb1c07f7120d17ec53/FormalConjectures/Wikipedia/Kaplansky.lean#L66-L73"
     ],
     "scope": "Torsion-free group algebra K[G] has no nontrivial idempotents, with the source's field/group assumptions. Not the unit conjecture or the zero-divisor conjecture.",
     "limitations": [
@@ -497,7 +497,7 @@
       "HUMAN_REVIEW_PENDING": "pending"
     },
     "source_urls": [
-      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/Koethe.lean#L125-L129",
+      "https://github.com/google-deepmind/formal-conjectures/blob/9097e2f90e66d2f6244209cb1c07f7120d17ec53/FormalConjectures/Wikipedia/Koethe.lean#L125-L129",
       "https://arxiv.org/abs/2609.15080",
       "https://arxiv.org/abs/2609.26909"
     ],
@@ -530,7 +530,7 @@
       "HUMAN_REVIEW_PENDING": "pending"
     },
     "source_urls": [
-      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/LehmerMahlerMeasureProblem.lean#L54-L59"
+      "https://github.com/google-deepmind/formal-conjectures/blob/9097e2f90e66d2f6244209cb1c07f7120d17ec53/FormalConjectures/Wikipedia/LehmerMahlerMeasureProblem.lean#L63-L68"
     ],
     "scope": "Every integer polynomial of Mahler measure >1 has measure at least that of the specified Lehmer polynomial. This sharp-minimum claim is stronger in presentation than merely asking for a gap above one.",
     "limitations": [
@@ -592,7 +592,7 @@
       "HUMAN_REVIEW_PENDING": "pending"
     },
     "source_urls": [
-      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/RamseyNumbers.lean#L92-L99",
+      "https://github.com/google-deepmind/formal-conjectures/blob/9097e2f90e66d2f6244209cb1c07f7120d17ec53/FormalConjectures/Wikipedia/RamseyNumbers.lean#L92-L99",
       "https://arxiv.org/abs/2508.16699"
     ],
     "scope": "Determine the exact integer R(5,5); bounds are historical source assertions, not the requested answer or a proof.",
@@ -624,7 +624,7 @@
       "HUMAN_REVIEW_PENDING": "pending"
     },
     "source_urls": [
-      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/ResolutionOfSingularities.lean#L95-L108",
+      "https://github.com/google-deepmind/formal-conjectures/blob/9097e2f90e66d2f6244209cb1c07f7120d17ec53/FormalConjectures/Wikipedia/ResolutionOfSingularities.lean#L95-L108",
       "https://arxiv.org/abs/math/0607009",
       "https://arxiv.org/abs/math/0606530"
     ],
@@ -657,7 +657,7 @@
       "HUMAN_REVIEW_PENDING": "pending"
     },
     "source_urls": [
-      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/SerreMultiplicityConjectures.lean#L101-L112"
+      "https://github.com/google-deepmind/formal-conjectures/blob/9097e2f90e66d2f6244209cb1c07f7120d17ec53/FormalConjectures/Wikipedia/SerreMultiplicityConjectures.lean#L101-L112"
     ],
     "scope": "Regular local ring, finitely generated modules with finite-length tensor product, and support dimensions summing to the ring dimension; intersection multiplicity strictly positive.",
     "limitations": [
@@ -688,7 +688,7 @@
       "HUMAN_REVIEW_PENDING": "pending"
     },
     "source_urls": [
-      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/SidorenkoConjecture.lean#L141-L158",
+      "https://github.com/google-deepmind/formal-conjectures/blob/9097e2f90e66d2f6244209cb1c07f7120d17ec53/FormalConjectures/Wikipedia/SidorenkoConjecture.lean#L142-L159",
       "https://arxiv.org/abs/2605.14138",
       "https://arxiv.org/abs/2512.11222",
       "https://arxiv.org/abs/2609.14655"
@@ -722,7 +722,7 @@
       "HUMAN_REVIEW_PENDING": "pending"
     },
     "source_urls": [
-      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/TarskiExponentialFunctionProblem.lean#L70-L76"
+      "https://github.com/google-deepmind/formal-conjectures/blob/9097e2f90e66d2f6244209cb1c07f7120d17ec53/FormalConjectures/Wikipedia/TarskiExponentialFunctionProblem.lean#L70-L76"
     ],
     "scope": "Decidability of the complete first-order theory of the ordered real exponential field, not just elementary arithmetic or quantifier-free polynomial formulas.",
     "limitations": [
@@ -753,7 +753,7 @@
       "HUMAN_REVIEW_PENDING": "pending"
     },
     "source_urls": [
-      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/conjecture_1_3_to_2_3.lean#L30-L43",
+      "https://github.com/google-deepmind/formal-conjectures/blob/9097e2f90e66d2f6244209cb1c07f7120d17ec53/FormalConjectures/Wikipedia/conjecture_1_3_to_2_3.lean#L30-L43",
       "https://arxiv.org/abs/2609.30888",
       "https://arxiv.org/abs/1706.04985"
     ],
@@ -786,7 +786,7 @@
       "HUMAN_REVIEW_PENDING": "pending"
     },
     "source_urls": [
-      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/BingBorsuk.lean#L44-L52",
+      "https://github.com/google-deepmind/formal-conjectures/blob/9097e2f90e66d2f6244209cb1c07f7120d17ec53/FormalConjectures/Wikipedia/BingBorsuk.lean#L44-L52",
       "https://arxiv.org/abs/0811.0886"
     ],
     "scope": "Metrizable homogeneous ANR of covering dimension n is a topological n-manifold, with the exact ChartedSpace/manifold separation and dimension conventions.",
@@ -818,7 +818,7 @@
       "HUMAN_REVIEW_PENDING": "pending"
     },
     "source_urls": [
-      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/UnionClosed.lean#L54-L63",
+      "https://github.com/google-deepmind/formal-conjectures/blob/9097e2f90e66d2f6244209cb1c07f7120d17ec53/FormalConjectures/Wikipedia/UnionClosed.lean#L54-L63",
       "https://arxiv.org/abs/2610.02295",
       "https://arxiv.org/abs/2211.11504"
     ],
@@ -851,7 +851,7 @@
       "HUMAN_REVIEW_PENDING": "pending"
     },
     "source_urls": [
-      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/VizingConjecture.lean#L42-L52",
+      "https://github.com/google-deepmind/formal-conjectures/blob/9097e2f90e66d2f6244209cb1c07f7120d17ec53/FormalConjectures/Wikipedia/VizingConjecture.lean#L42-L52",
       "https://arxiv.org/abs/1109.0707",
       "https://arxiv.org/abs/1502.00708"
     ],
@@ -884,7 +884,7 @@
       "HUMAN_REVIEW_PENDING": "pending"
     },
     "source_urls": [
-      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/CernyConjecture.lean#L56-L62"
+      "https://github.com/google-deepmind/formal-conjectures/blob/9097e2f90e66d2f6244209cb1c07f7120d17ec53/FormalConjectures/Wikipedia/CernyConjecture.lean#L56-L62"
     ],
     "scope": "Every synchronizing finite-state DFA with n states has a reset word of length at most (n-1)^2. Existence of a longer bound or examples attaining the lower bound do not prove the conjecture.",
     "limitations": [
@@ -915,7 +915,7 @@
       "HUMAN_REVIEW_PENDING": "pending"
     },
     "source_urls": [
-      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/GaussCircleProblem.lean#L81-L93"
+      "https://github.com/google-deepmind/formal-conjectures/blob/9097e2f90e66d2f6244209cb1c07f7120d17ec53/FormalConjectures/Wikipedia/GaussCircleProblem.lean#L81-L93"
     ],
     "scope": "Error term for lattice points in a disk as radius tends to infinity; requested O(r^(1/2+o(1))). Radius and squared-radius conventions change exponents.",
     "limitations": [
@@ -946,7 +946,7 @@
       "HUMAN_REVIEW_PENDING": "pending"
     },
     "source_urls": [
-      "https://github.com/google-deepmind/formal-conjectures/blob/2c24ebe7eb2a79b47f9ffcab618cd611c2bc1ea6/FormalConjectures/Wikipedia/GracefulLabeling.lean#L69-L87",
+      "https://github.com/google-deepmind/formal-conjectures/blob/9097e2f90e66d2f6244209cb1c07f7120d17ec53/FormalConjectures/Wikipedia/GracefulLabeling.lean#L69-L87",
       "https://arxiv.org/abs/1003.3045",
       "https://arxiv.org/abs/1608.01577",
       "https://arxiv.org/abs/1403.1564"
