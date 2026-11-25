@@ -5,9 +5,7 @@ import { ArrowLeft, ArrowUpRight, ExternalLink } from 'lucide-react';
 import { getProblem, problems, relationships } from '@/lib/catalog';
 import { Badge } from '@/components/status';
 import { MathText } from '@/components/math-text';
-import { ResearchPanel } from '@/components/research-panel';
 import { EvidencePassport } from '@/components/evidence-passport';
-import { RealResearchPanel } from '@/components/real-research-panel';
 // Pre-render every canonical problem page for GitHub Pages without a Node server.
 export function generateStaticParams() {
   const ids = new Set(problems.flatMap((problem) => [
@@ -107,21 +105,6 @@ export default async function ProblemPage({ params }: { params: Promise<{ id: st
               ))}
             </ol>
           </section>
-          <section className="paper-panel">
-            <div className="eyebrow"><T en="04 / RESEARCH RECORD" /></div>
-            <h2><T en="Attempts, including the dead ends." /></h2>
-            <p className="muted">
-              <T en="No real research attempts are included in this snapshot. Exercise the integration contract below using local, clearly labeled mock records." zh="当前快照尚无真实研究记录。下方本地模拟接口仅用于验证任务通信流程。" />
-            </p>
-            {process.env.CONJMAP_STATIC_EXPORT === '1' ? (
-              <p className="muted"><T en="Research execution is only available in the local ConjMap edition. The public atlas is read-only." zh="研究执行仅在 ConjMap 本地版本提供；公开图谱为只读模式。" /></p>
-            ) : (
-              <ResearchPanel problemId={problem.id} />
-            )}
-          </section>
-          {process.env.CONJMAP_STATIC_EXPORT !== '1' ? (
-            <RealResearchPanel key={problem.id} problemId={problem.id} />
-          ) : null}
         </div>
         <aside className="detail-aside">
           <section className="aside-panel">

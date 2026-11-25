@@ -67,12 +67,6 @@ Types: `implies`, `equivalent`, `generalizes`, `special_case_of`, `depends_on`, 
 
 The shipped 82 `related_to` edges are mechanically constructed discovery associations from shared upstream subject tags, not claimed mathematical relationships. Both endpoints' source URLs and a warning are retained. All are `unverified` with null review dates. Future implication/equivalence claims must state hypotheses and reviewed mathematical evidence; they are never inferred from language-model similarity or taxonomy alone.
 
-## ResearchAttempt
-
-Fields: `problem_id`, `engine`, `run_id`, `timestamp`, `hypothesis`, `method`, `result`, `verification_status`, `artifact_urls`. V0.1 adds `kind:failed_route|candidate_proof` and required `is_mock:true`. The mock-only schema accepts only `engine:mock-mathforge` and `verification_status:unverified`. IDs and timestamps are assigned by the adapter; clients cannot override them. Result callbacks cannot update problem data. Artifacts remain links; the server neither fetches nor executes them.
-
-The independent interface and versioned task transport are documented in `research-api.md`. A real engine will require an explicitly versioned schema extension, authentication and verification policy; changing a label in the mock callback is intentionally rejected.
-
 ## Canonicalization and duplicate policy
 
 - Canonical IDs are stable within this pinned source import. Filename case changes or upstream renames require an explicit mapping migration; do not silently regenerate IDs.

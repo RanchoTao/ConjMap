@@ -201,6 +201,29 @@ textarea {
   margin: auto;
   min-height: 65vh;
 }
+.data-notice {
+  border-bottom: 1px solid var(--line);
+  background: color-mix(in srgb, #d7bd6e 14%, var(--bg));
+  color: var(--ink);
+  font-size: 13px;
+  line-height: 1.5;
+}
+.data-notice-inner {
+  max-width: 1376px;
+  margin: auto;
+  padding: 8px 48px;
+}
+.data-notice a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  overflow-wrap: anywhere;
+}
+@media (max-width: 760px) {
+  .data-notice-inner {
+    padding: 8px 20px;
+  }
+}
 .site-header {
   border-bottom: 1px solid var(--line);
   background: var(--bg);

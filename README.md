@@ -4,9 +4,32 @@
 
 **[Open the live atlas](https://ranchotao.com/ConjMap/)** · English / 简体中文
 
+## Data source · 数据来源（未独立核实）
+
+> **Nothing in ConjMap has been independently verified.** 本站所有内容均未经独立核实。
+
+- **All 120 problems** are imported from [google-deepmind/formal-conjectures](https://github.com/google-deepmind/formal-conjectures) (The Formal Conjectures Authors, Apache-2.0), snapshot of **2026-10-15** (revision `2c24ebe7eb2a`). Each record keeps the upstream file, line span and SHA-256. The live snapshot date is shown in the banner at the top of every page and in [`data/manifest.json`](data/manifest.json).
+- **Every status is `unknown`.** The upstream `research open` tag is shown as a source label, not as ConjMap's judgement.
+- **The 82 relationships are not verified.** They come from shared upstream AMS subject tags and are navigation aids only, not mathematical implications.
+- Erdős metadata (32 observations) and the 589-record `/frontier` index come from the community repository [teorth/erdosproblems](https://github.com/teorth/erdosproblems) (Apache-2.0); also unverified.
+- 120 个问题全部导入自 DeepMind formal-conjectures（2026-10-15 快照），状态均为“未知”；82 条关联由共享学科标签机械生成，没有核实。
+
+## Upstream sync
+
+[`scripts/sync-formal-conjectures.py`](scripts/sync-formal-conjectures.py) re-reads the same 120 theorems from the latest upstream. It never adds or removes problems and never changes a status. Text and line drift is applied; anything that needs a person (theorem removed, upstream category changed, title/field/AMS tags changed, a reviewed statement changed) is held at the old revision and listed in the report.
+
+The [monthly workflow](.github/workflows/sync-upstream.yml) runs it on the 1st of each month (and can be run by hand from the Actions tab), runs all checks, and opens or refreshes a pull request on branch `sync/formal-conjectures`. **It never merges.** To run it locally:
+
+```sh
+git clone --depth 1 https://github.com/google-deepmind/formal-conjectures /tmp/fc
+python scripts/sync-formal-conjectures.py --source /tmp/fc --report sync-report.md
+npx tsx scripts/build-dedup-report.ts
+npm run check
+```
+
 ## Status
 
-V0.2 adds licensed multi-source observations, evidence dimensions and a guarded MathForge transport. **Overall PARTIAL:** 30 scoped dossiers await rigorous clearance; no real MathForge run was possible through the inspected controller.
+Maintenance only: no new features are planned. The MathForge research-task interfaces (V1 mock, V2 transport) were removed in November 2026 because they never completed a real run. 30 scoped dossiers remain PARTIAL.
 
 ## Run locally
 
@@ -59,11 +82,10 @@ python adapters/erdos_open_index.py
 
 - Home, interactive Cytoscape atlas, searchable/sortable/paginated problem index, evidence-rich problem detail, sources, and about pages.
 - Responsive layouts and persisted dark/light themes. An accessible node index provides a keyboard alternative to the canvas.
-- **120 source statements, 6 fields, 82 unverified discovery associations.** All independent mathematical statuses are **unknown**. Source-reported `research open` is displayed separately. **0 independently verified problems, 0 real research runs.**
+- **120 source statements, 6 fields, 82 unverified discovery associations.** All independent mathematical statuses are **unknown**. Source-reported `research open` is displayed separately. **0 independently verified problems.**
 - Two independent licensed adapters: Formal Conjectures statements and 32 Erdős community metadata observations mapped to existing problems. Neutral `cm-000001` IDs retain all legacy `fc-*` links. Second-source observations add **0** independent problems.
 - 30 scoped PARTIAL dossiers, seven separate evidence dimensions and append-only review versions. **0 fully cleared dossiers.** Primary literature leads and full-method review gaps are explicit.
 - 12 substantive source-reviewed **candidate** relations and 12 declaration nodes (not additional problems); 0 verified relations. Separate navigation, logic, special-case and research-evidence layers; candidates require an explicit toggle.
-- Research API v1 remains **mock-only**. Independent v2 supports authenticated submission, status polling, signed callbacks, quotas, idempotency and immutable event snapshots. Default requests become **BLOCKED**; no real engine result is fabricated.
 - Isolated opt-in `/bench` exercises the actual renderer with 100/1,000/5,000 synthetic nodes. [Measured results](docs/performance/v02-graph-benchmark.json) are engineering evidence only.
 
 | Field | Statements |
@@ -90,35 +112,31 @@ npx playwright install chromium
 npm run test:e2e
 ```
 
-Python adapter checks require `python -m pip install -r requirements-adapters.txt` (PyYAML, no research service). `npm run check` runs both data validators, lint, typecheck, unit tests and build. Playwright starts its own production server on port 3100, tests browser interactions and API boundaries, and writes screenshots and benchmark measurements. CI uploads reports. See the PR and [V0.2 acceptance report](docs/acceptance-v0.2.md) for executed results; the [V0.1 report](docs/acceptance-report.md) is historical.
+Python adapter checks require `python -m pip install -r requirements-adapters.txt` (PyYAML, no research service). `npm run check` runs both data validators, lint, typecheck, unit tests and build. Playwright starts its own production server on port 3100, tests browser interactions, and writes screenshots and benchmark measurements. CI uploads reports. See the PR and [V0.2 acceptance report](docs/acceptance-v0.2.md) for executed results; the [V0.1 report](docs/acceptance-report.md) is historical.
 
 ## Minimal end-to-end acceptance
 
 1. Run `npm run dev`. Open `/atlas`; pan, zoom, select a node, and follow “Read problem & evidence”. Alternatively use the keyboard-accessible node index.
 2. Search `riemannHypothesis` on `/problems`. Select Number theory; toggle sort. Filtering by solved correctly yields no independently established solved entries.
 3. Open the Riemann problem. Inspect its KaTeX statement, exact Lean signature, pinned source lines, references, hashes and unknown/unverified labels.
-4. Create a mock request. Simulate a result. Both a failed-route placeholder and a candidate-proof placeholder appear as **MOCK / unverified**. Reload: the journal persists. The problem status stays unknown.
-5. Switch themes and inspect mobile width. Visit Sources and About for permissions and limitations.
-6. On Atlas select Mathematical logic: verified-only has no links. Enable unverified candidates to inspect amber dashed relations; inspect hypotheses and pinned declarations on problem details.
-7. On a dossier page inspect seven evidence dimensions and literature gaps. On Erdős #10 inspect the second-source metadata separately from the mathematical statement/status.
-8. Request a real MathForge audit with default configuration: the durable local record is BLOCKED, engine task ID not issued, actual runs 0. Reload and load real request history. This is not a successful research run.
+4. Switch themes and inspect mobile width. Visit Sources and About for permissions and limitations.
+5. On Atlas select Mathematical logic: verified-only has no links. Enable unverified candidates to inspect amber dashed relations; inspect hypotheses and pinned declarations on problem details.
+6. On a dossier page inspect seven evidence dimensions and literature gaps. On Erdős #10 inspect the second-source metadata separately from the mathematical statement/status.
 
 ## Documentation
 
 - [Architecture & ADRs](docs/architecture.md)
 - [Eight-source audit](docs/source-audit.md) and [bounded access receipts](docs/source-access.json)
 - [Data contract & canonicalization](docs/data-contract.md)
-- [Research Task API v1 mock / v2 real transport](docs/research-api.md)
 - [30 scoped mathematical dossiers and remaining gaps](docs/mathematical-audit-v0.2.md)
-- [MathForge capability discovery and integration blocker](docs/mathforge-discovery-v0.2.md)
 - [PostgreSQL evolution schema](docs/postgresql-schema.sql) (design only; not migrated or connected)
 - [Acceptance results](docs/acceptance-report.md)
 - [Contributing](CONTRIBUTING.md), [license decisions](docs/license-decision.md), [third-party attribution](NOTICE)
 
 ## Project boundaries
 
-**Math-CS-AI Atlas** maps learning and knowledge. **ConjMap** maps research problems and evidence. **MathForge** executes discovery, research, proofs and verification. ConjMap owns no MathForge execution logic and needs no access to its private repository.
+**Math-CS-AI Atlas** maps learning and knowledge. **ConjMap** maps research problems and evidence. ConjMap does not run research, proofs or verification.
 
-The application binds loopback. V1 is an unauthenticated local mock; V2 adds bearer authentication when configured, signed callbacks, active-task quotas and a separate journal. It remains a local integration boundary, with no public production service, deployment or scheduler configured. JSON stores require trusted filesystem access; interrupted writes may leave locks or unmatched snapshots that require reconciliation before recovery. See the architecture document before evolving storage or exposing an API.
+The local server binds loopback. The public site is a static, read-only export on GitHub Pages; there is no API or write path.
 
 ![ConjMap home](docs/screenshots/home-dark.png)

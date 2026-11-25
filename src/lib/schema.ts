@@ -112,22 +112,6 @@ export const RelationshipSchema = z
       ctx.addIssue({ code: 'custom', message: 'Reviewed edges require a date' });
   });
 export type Relationship = z.infer<typeof RelationshipSchema>;
-export const ResearchAttemptSchema = z
-  .object({
-    problem_id: z.string(),
-    engine: z.literal('mock-mathforge'),
-    run_id: z.uuid(),
-    timestamp: z.iso.datetime(),
-    hypothesis: z.string().min(1).max(4000),
-    method: z.string().min(1).max(4000),
-    result: z.string().min(1).max(12000),
-    verification_status: z.literal('unverified'),
-    artifact_urls: z.array(safeUrl).max(20),
-    kind: z.enum(['failed_route', 'candidate_proof']),
-    is_mock: z.literal(true),
-  })
-  .strict();
-export type ResearchAttempt = z.infer<typeof ResearchAttemptSchema>;
 
 export function validateCatalog(input: unknown, edges: unknown) {
   const problems = z.array(ProblemSchema).parse(input);

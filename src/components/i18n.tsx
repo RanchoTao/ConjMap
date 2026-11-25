@@ -61,7 +61,7 @@ const translations: Record<string, string> = {
   'A map built in the open.':'一张开放共建的地图。',
   'Source code, data contracts, and import provenance are inspectable. Better references and corrections are welcome.':'代码、数据规范和导入出处均可检查。欢迎提交更好的文献与勘误。',
   'Connected to what comes next.':'连接未来的研究。',
-  'Separate mock and authenticated real adapters preserve research provenance. The real MathForge connection remains blocked pending a compatible engine API.':'模拟接口与受认证的真实接口相互隔离。MathForge 的真实连接仍需兼容的引擎 API。',
+  'Each record keeps its source revision, file hash and line span, so any upstream change can be reviewed before it reaches the map.':'每条记录都保留来源版本、文件哈希和行号范围，上游的任何变化都要先经过审阅才会进入地图。',
   'COLLECTION SNAPSHOT':'数据快照',
   'Read the source audit':'查看数据来源审计',
   'THE RESEARCH LANDSCAPE':'数学研究全景',

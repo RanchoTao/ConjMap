@@ -26,7 +26,7 @@ test('home, actual graph nodes, zoom and accessible node navigation', async ({ p
   await expect(page.locator('.katex').first()).toBeVisible();
   await expect(page.getByRole('link', { name: /Inspect pinned source/ })).toHaveAttribute(
     'href',
-    /2c24ebe.*#L/,
+    /formal-conjectures\/blob\/[0-9a-f]{40}\/.*#L/,
   );
   expect(errors).toEqual([]);
 });
@@ -82,41 +82,8 @@ test('problem search, composed filters, sort, pagination and permalink', async (
   await expect(page.locator('html')).toHaveAttribute('data-theme', 'light');
   await page.locator('.problem-row').click();
   await expect(page.getByText('research open', { exact: true })).toBeVisible();
-  await expect(page.getByText('No real research attempts', { exact: false })).toBeVisible();
-});
-test('mock task submit, query, failed route, candidate and browser reload persistence', async ({
-  page,
-  request,
-}) => {
-  await page.goto('/problems/fc-millennium-riemannhypothesis');
-  await page.getByRole('button', { name: 'Create mock request', exact: true }).click();
-  await expect(page.locator('.task-record').first()).toContainText('MOCK · queued');
-  await page.getByRole('button', { name: 'Simulate result (mock)', exact: true }).first().click();
-  await expect(page.locator('.task-record').first()).toContainText('MOCK · completed');
-  await expect(page.getByText('Failed route · MOCK', { exact: true }).first()).toBeVisible();
-  await expect(page.getByText('Candidate proof · MOCK', { exact: true }).first()).toBeVisible();
-  await page.reload();
-  await expect(page.locator('.task-record').first()).toContainText('MOCK · completed');
-  await page.screenshot({ path: 'docs/screenshots/problem-evidence.png', fullPage: true });
-  const invalid = await request.post('/api/v1/research-tasks', {
-    data: {
-      api_version: 'v1',
-      engine: 'real-mathforge',
-      problem_id: 'fc-millennium-riemannhypothesis',
-      objective: 'Never submit real research',
-    },
-  });
-  expect(invalid.status()).toBe(400);
-  const cross = await request.post('/api/v1/research-tasks', {
-    headers: { Origin: 'https://example.com' },
-    data: {},
-  });
-  expect(cross.status()).toBe(403);
-  const malformed = await request.post('/api/v1/research-tasks', {
-    headers: { 'Content-Type': 'application/json' },
-    data: '{',
-  });
-  expect(malformed.status()).toBe(400);
+  await expect(page.getByTestId('data-notice')).toContainText('Not independently verified');
+  await expect(page.getByTestId('data-notice')).toContainText('google-deepmind/formal-conjectures');
 });
 test('all public pages, 404 and mobile layout have no horizontal overflow', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
@@ -141,52 +108,4 @@ test('all public pages, 404 and mobile layout have no horizontal overflow', asyn
   }
   expect((await page.goto('/problems/no-such-canonical-id'))?.status()).toBe(404);
   await expect(page.getByRole('heading', { name: 'This problem isn’t indexed.' })).toBeVisible();
-});
-test('HTTP task lifecycle accepts evidence, queries status, rejects replay and forged verification', async ({
-  request,
-}) => {
-  const submitted = await request.post('/api/v1/research-tasks', {
-    data: {
-      api_version: 'v1',
-      engine: 'mock-mathforge',
-      problem_id: 'fc-wikipedia-abc',
-      objective: 'Exercise a result callback with evidence links.',
-    },
-  });
-  expect(submitted.status()).toBe(201);
-  const task = await submitted.json();
-  expect((await request.get(`/api/v1/research-tasks/${task.id}`)).status()).toBe(200);
-  const data = {
-    api_version: 'v1',
-    engine: 'mock-mathforge',
-    is_mock: true,
-    attempts: [
-      {
-        engine: 'mock-mathforge',
-        is_mock: true,
-        kind: 'failed_route',
-        hypothesis: '[MOCK] Callback contract',
-        method: '[MOCK] Transport only',
-        result: '[MOCK] No mathematics was executed.',
-        verification_status: 'unverified',
-        artifact_urls: ['https://example.org/unverified-fixture'],
-      },
-    ],
-  };
-  const forged = await request.post(`/api/v1/research-tasks/${task.id}/results`, {
-    data: { ...data, attempts: [{ ...data.attempts[0], verification_status: 'verified' }] },
-  });
-  expect(forged.status()).toBe(400);
-  const completed = await request.post(`/api/v1/research-tasks/${task.id}/results`, { data });
-  expect(completed.status()).toBe(200);
-  expect((await completed.json()).attempts[0].artifact_urls).toEqual([
-    'https://example.org/unverified-fixture',
-  ]);
-  expect((await request.post(`/api/v1/research-tasks/${task.id}/results`, { data })).status()).toBe(
-    409,
-  );
-  expect((await request.get('/api/v1/research-tasks/not-a-uuid')).status()).toBe(400);
-  expect(
-    (await request.get('/api/v1/research-tasks/00000000-0000-4000-8000-000000000000')).status(),
-  ).toBe(404);
 });

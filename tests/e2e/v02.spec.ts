@@ -1,55 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { writeFileSync, mkdirSync } from 'node:fs';
 import { arch, platform, cpus, totalmem } from 'node:os';
-test('V2 HTTP boundary persists blocked idempotent requests and rejects unsafe input', async ({
-  request,
-}) => {
-  const input = {
-    problem_id: 'fc-millennium-riemannhypothesis',
-    objective: 'HTTP boundary exercise only.',
-    budget: { wall_seconds: 1, max_tasks: 1, network: false },
-  };
-  const headers = { 'Idempotency-Key': 'v02-http-boundary-test' };
-  const first = await request.post('/api/v2/research-tasks', { headers, data: input });
-  expect(first.status()).toBe(202);
-  const row = await first.json();
-  expect(row.status).toBe('blocked');
-  expect(row.engine_task_id).toBeNull();
-  const replay = await request.post('/api/v2/research-tasks', { headers, data: input });
-  expect((await replay.json()).id).toBe(row.id);
-  expect(
-    (
-      await request.post('/api/v2/research-tasks', {
-        headers,
-        data: { ...input, objective: 'Conflicting objective' },
-      })
-    ).status(),
-  ).toBe(409);
-  expect((await request.get(`/api/v2/research-tasks/${row.id}`)).status()).toBe(200);
-  expect(
-    (
-      await request.post('/api/v2/research-tasks', {
-        headers: { ...headers, Origin: 'https://example.com' },
-        data: input,
-      })
-    ).status(),
-  ).toBe(403);
-  expect(
-    (
-      await request.post('/api/v2/research-tasks', {
-        headers,
-        data: { ...input, status: 'solved' },
-      })
-    ).status(),
-  ).toBe(400);
-  expect(
-    (
-      await request.post(`/api/v2/research-tasks/${row.id}/results`, {
-        data: { engine: 'mathforge', status: 'solved' },
-      })
-    ).status(),
-  ).toBe(503);
-});
 test('V0.2 separates graph layers and scoped evidence from mathematical verification', async ({
   page,
 }) => {
@@ -68,12 +19,6 @@ test('V0.2 separates graph layers and scoped evidence from mathematical verifica
   await expect(page.getByText('SOURCE_IMPORTED', { exact: true })).toBeVisible();
   await expect(page.getByText('PROOF_KERNEL_VERIFIED', { exact: true })).toBeVisible();
   await expect(page.getByText('status: unknown', { exact: true })).toBeVisible();
-  await page.getByRole('button', { name: 'Request real MathForge audit' }).click();
-  await expect(page.getByText('REAL ADAPTER · BLOCKED', { exact: true })).toBeVisible();
-  await expect(page.getByText('Engine task ID: Not issued', { exact: false })).toBeVisible();
-  await page.reload();
-  await page.getByRole('button', { name: 'Load real request history' }).click();
-  await expect(page.getByText('REAL ADAPTER · BLOCKED', { exact: true })).toBeVisible();
   await page.setViewportSize({ width: 390, height: 844 });
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
   await page.screenshot({ path: 'docs/screenshots/v02-evidence-mobile.png', fullPage: true });

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Footer, Header } from '@/components/shell';
 import { LanguageProvider, T } from '@/components/i18n';
+import { DataNotice } from '@/components/data-notice';
 import 'katex/dist/katex.min.css';
 import './globals.css';
 
@@ -21,6 +22,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <a href="#main" className="skip-link">
             <T en="Skip to content" />
           </a>
+          <DataNotice />
           <Header />
           <main id="main">{children}</main>
           <Footer />

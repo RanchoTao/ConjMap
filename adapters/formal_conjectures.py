@@ -27,7 +27,7 @@ FIELDS = {
 }
 
 
-def extract(text: str, relative: str) -> dict | None:
+def extract(text: str, relative: str, revision: str = REVISION, date: str = DATE) -> dict | None:
     # Refuse unclear licensing, oversized comment fragments, or detached documentation.
     if "The Formal Conjectures Authors" not in text[:800] or "Apache License" not in text[:800]:
         return None
@@ -77,7 +77,7 @@ def extract(text: str, relative: str) -> dict | None:
             title = f"{title} ({qualifier})"
         start_line = text.count("\n", 0, match.start()) + 1
         end_line = text.count("\n", 0, end) + 1
-        url = f"{REPO}/blob/{REVISION}/{relative}#L{start_line}-L{end_line}"
+        url = f"{REPO}/blob/{revision}/{relative}#L{start_line}-L{end_line}"
         # References are preserved as documentary links, not claimed as read papers.
         links = list(dict.fromkeys(re.findall(r"\]\((https?://[^\s)]+)\)", text)))
         slug = re.sub(r"[^a-z0-9]+", "-", str(Path(relative).with_suffix("")).lower()).strip("-")
@@ -91,7 +91,7 @@ def extract(text: str, relative: str) -> dict | None:
             "formal_statement": formal, "field": field,
             "MSC": [f"{code:02d}" for code in codes],
             "status": "unknown",
-            "status_evidence": [{"url": url, "accessed_at": DATE,
+            "status_evidence": [{"url": url, "accessed_at": date,
                 "claim": "Upstream tags this selected theorem research open. ConjMap has not independently checked its current mathematical status.",
                 "review_status": "unverified"}],
             "source_urls": [url, *links],
@@ -101,9 +101,9 @@ def extract(text: str, relative: str) -> dict | None:
             "difficulty_estimate": None, "review_status": "unverified",
             "aliases": [Path(relative).stem, theorem],
             "source_mappings": [{"source_id": "formal-conjectures", "external_id": f"{relative}::{theorem}", "url": url}],
-            "provenance": {"source_id": "formal-conjectures", "revision": REVISION,
+            "provenance": {"source_id": "formal-conjectures", "revision": revision,
                 "path": relative, "sha256": hashlib.sha256(text.encode()).hexdigest(),
-                "retrieved_at": DATE, "license": "Apache-2.0", "extraction": "documented-research-open-theorem-v1",
+                "retrieved_at": date, "license": "Apache-2.0", "extraction": "documented-research-open-theorem-v1",
                 "source_reported_status": "open", "start_line": start_line, "end_line": end_line},
         }
     return None
