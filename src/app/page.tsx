@@ -164,7 +164,7 @@ export default function Home() {
           <BookOpen size={22} />
           <h3><T en="Connected to what comes next." /></h3>
           <p>
-            <T en="Separate mock and authenticated real adapters preserve research provenance. The real MathForge connection remains blocked pending a compatible engine API." />
+            <T en="Each record keeps its source revision, file hash and line span, so any upstream change can be reviewed before it reaches the map." />
           </p>
         </div>
       </section>

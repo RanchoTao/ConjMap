@@ -11,7 +11,8 @@ class AdapterTests(unittest.TestCase):
             with self.subTest(id=row["id"]):
                 relative = row["provenance"]["path"]
                 text = (Path("data/upstream/formal-conjectures") / relative).read_text(encoding="utf-8")
-                self.assertEqual(extract(text, relative), row)
+                provenance = row["provenance"]
+                self.assertEqual(extract(text, relative, provenance["revision"], provenance["retrieved_at"]), row)
 
     def test_unlicensed_or_undocumented_input_is_not_imported(self):
         self.assertIsNone(extract("@[category research open, AMS 11] theorem foo : True := by sorry", "foo.lean"))

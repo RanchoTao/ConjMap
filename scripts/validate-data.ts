@@ -7,7 +7,9 @@ for (const p of problems) {
   const hash = createHash('sha256').update(content).digest('hex');
   if (hash !== p.provenance.sha256) throw new Error(`Source hash mismatch: ${p.id}`);
   const entry = manifest.files.find((f) => f.path === p.provenance.path);
-  if (entry?.sha256 !== hash || p.provenance.revision !== manifest.revision)
+  // Files held back by the upstream sync keep their own older revision.
+  const revision = (entry as { revision?: string } | undefined)?.revision ?? manifest.revision;
+  if (entry?.sha256 !== hash || p.provenance.revision !== revision)
     throw new Error(`Manifest mismatch: ${p.id}`);
   const span = content
     .toString('utf8')

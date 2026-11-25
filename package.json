@@ -1,6 +1,6 @@
 {
   "name": "conjmap",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "private": true,
   "license": "Apache-2.0",
   "scripts": {
@@ -20,7 +20,7 @@
     "cytoscape": "^3.33.1",
     "katex": "^0.19.0",
     "lucide-react": "^0.468.0",
-    "next": "16.4.1",
+    "next": "16.4.6",
     "react": "19.3.1",
     "react-dom": "19.3.1",
     "zod": "^4.1.0"
@@ -41,8 +41,8 @@
     "tailwindcss": "^4.1.0",
     "tsx": "^4.20.0",
     "typescript": "^5.9.0",
-    "typescript-eslint": "^8.71.2",
-    "vitest": "^4.1.11"
+    "typescript-eslint": "^8.74.0",
+    "vitest": "^4.1.12"
   },
   "type": "module"
 }

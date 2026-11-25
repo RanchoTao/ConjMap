@@ -6,7 +6,6 @@ import {
   validateCatalog,
   ProblemSchema,
   RelationshipSchema,
-  ResearchAttemptSchema,
   safeUrl,
 } from '../src/lib/schema';
 import { queryProblems } from '../src/lib/query';
@@ -111,15 +110,6 @@ describe('source-backed catalog', () => {
   it('rejects script and data evidence URLs', () => {
     expect(safeUrl.safeParse('javascript:alert(1)').success).toBe(false);
     expect(safeUrl.safeParse('data:text/html,test').success).toBe(false);
-  });
-  it('rejects mock attempts claiming verification or real execution', () => {
-    expect(
-      ResearchAttemptSchema.safeParse({
-        engine: 'MathForge',
-        verification_status: 'verified',
-        is_mock: false,
-      }).success,
-    ).toBe(false);
   });
 });
 describe('search and sorting', () => {

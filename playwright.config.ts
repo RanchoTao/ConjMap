@@ -1,5 +1,4 @@
 import { defineConfig, devices } from '@playwright/test';
-import { randomUUID } from 'node:crypto';
 export default defineConfig({
   testDir: './tests/e2e',
   fullyParallel: false,
@@ -17,8 +16,6 @@ export default defineConfig({
     reuseExistingServer: false,
     timeout: 120000,
     env: {
-      CONJMAP_TASK_DIR: `.local/e2e-tasks/${randomUUID()}`,
-      CONJMAP_REAL_TASK_DIR: `.local/e2e-real/${randomUUID()}`,
       CONJMAP_ENABLE_BENCHMARK: '1',
     },
   },

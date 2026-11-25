@@ -35,10 +35,10 @@ jobs:
           CONJMAP_STATIC_EXPORT: '1'
           NEXT_TELEMETRY_DISABLED: '1'
         run: |
-          # GitHub Pages has no Node runtime: remove server-only routes
-          # and test modules that import those routes from this ephemeral checkout.
+          # GitHub Pages has no Node runtime: drop the opt-in /bench page and the
+          # test modules from this ephemeral checkout before the static export.
           # The complete tests already passed in the previous step; Git history is unchanged.
-          rm -rf src/app/api src/app/bench tests
+          rm -rf src/app/bench tests
           npm run build
           test -f out/index.html
           test -f out/atlas/index.html
